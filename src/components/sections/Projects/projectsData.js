@@ -1,15 +1,15 @@
-import project01_01 from "../../../assets/projects/project-01/project-01-01.jpeg";
-import project01_02 from "../../../assets/projects/project-01/project-01-02.jpeg";
-import project01_03 from "../../../assets/projects/project-01/project-01-03.jpeg";
-import project01_04 from "../../../assets/projects/project-01/project-01-04.jpeg";
-import project01_05 from "../../../assets/projects/project-01/project-01-05.jpeg";
-import project01_06 from "../../../assets/projects/project-01/project-01-06.jpeg";
-import project01_07 from "../../../assets/projects/project-01/project-01-07.jpeg";
+import project01_01 from "../../../assets/projects/1/01.jpeg";
+import project01_02 from "../../../assets/projects/1/02.jpeg";
+import project01_03 from "../../../assets/projects/1/03.jpeg";
+import project01_04 from "../../../assets/projects/1/04.jpeg";
+import project01_05 from "../../../assets/projects/1/05.jpeg";
+import project01_06 from "../../../assets/projects/1/06.jpeg";
+import project01_07 from "../../../assets/projects/1/07.jpeg";
 
-import project02_01 from "../../../assets/projects/project-02/project-02-01.jpeg";
-import project02_02 from "../../../assets/projects/project-02/project-02-02.jpeg";
-import project02_03 from "../../../assets/projects/project-02/project-02-03.jpeg";
-import project02_04 from "../../../assets/projects/project-02/project-02-04.jpeg";
+import project02_01 from "../../../assets/projects/2/01.jpeg";
+import project02_02 from "../../../assets/projects/2/02.jpeg";
+import project02_03 from "../../../assets/projects/2/03.jpeg";
+import project02_04 from "../../../assets/projects/2/04.jpeg";
 
 const projects = [
     {

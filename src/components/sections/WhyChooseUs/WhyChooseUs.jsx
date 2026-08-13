@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
                 <div className="why-us-header">
 
                     <div className="why-us-eyebrow">
-                        WHY CIRCUITS ES
+                        WHY CIRCUITSES
                     </div>
 
 

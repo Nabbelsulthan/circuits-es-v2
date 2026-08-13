@@ -126,7 +126,7 @@ const Solutions = () => {
 
                     <p>
 
-                        Circuits ES delivers complete electrical
+                        CircuitsES delivers complete electrical
                         engineering, industrial automation and
                         control panel solutions tailored to modern
                         industries. From design and manufacturing

@@ -1,5 +1,5 @@
 /* =========================================================
-   CIRCUITS ES — SOLUTIONS
+   CIRCUITSES — SOLUTIONS
    ========================================================= */
 
 .solutions-section {
@@ -7,7 +7,7 @@
     position: relative;
 
     padding:
-        120px 0;
+        20px 0;
 
     background:
         var(--white, #ffffff);

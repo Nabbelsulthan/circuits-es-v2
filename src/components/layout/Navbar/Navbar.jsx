@@ -912,12 +912,12 @@ const Navbar = () => {
                         onClick={
                             handleHomeNavigation
                         }
-                        aria-label="Circuits ES Home"
+                        aria-label="CircuitsES Home"
                     >
 
                         <img
                             src={logo}
-                            alt="Circuits ES"
+                            alt="CircuitsES"
                         />
 
                     </button>
@@ -948,12 +948,12 @@ const Navbar = () => {
                                 onClick={
                                     handleHomeNavigation
                                 }
-                                aria-label="Circuits ES Home"
+                                aria-label="CircuitsES Home"
                             >
 
                                 <img
                                     src={logo}
-                                    alt="Circuits ES"
+                                    alt="CircuitsES"
                                     className="drawer-logo"
                                 />
 

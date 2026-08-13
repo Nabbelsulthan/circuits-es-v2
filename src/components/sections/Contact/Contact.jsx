@@ -516,7 +516,7 @@ Thank you.
                     <div className="contact-page-intro-content">
 
                         <span className="contact-page-eyebrow">
-                            CONTACT CIRCUITS ES
+                            CONTACT CIRCUITSES
                         </span>
 
 
@@ -957,7 +957,7 @@ Thank you.
                                 <div className="contact-form-field">
 
                                     <label htmlFor="contact-name">
-                                        Name
+                                        Name*
                                     </label>
 
                                     <input
@@ -977,7 +977,7 @@ Thank you.
                                 <div className="contact-form-field">
 
                                     <label htmlFor="contact-phone">
-                                        Phone
+                                        Phone*
                                     </label>
 
                                     <input
@@ -1008,7 +1008,7 @@ Thank you.
                                 <div className="contact-form-field">
 
                                     <label htmlFor="contact-email">
-                                        Email
+                                        Email*
                                     </label>
 
                                     <input
@@ -1028,7 +1028,7 @@ Thank you.
                                 <div className="contact-form-field">
 
                                     <label htmlFor="contact-company">
-                                        Company
+                                        Company*
                                     </label>
 
                                     <input
@@ -1047,7 +1047,7 @@ Thank you.
                                 <div className="contact-form-field">
 
                                     <label htmlFor="contact-requirement">
-                                        Requirement
+                                        Requirement*
                                     </label>
 
                                     <textarea

@@ -1,5 +1,5 @@
 /* =========================================================
-   CIRCUITS ES — ABOUT PREVIEW
+   CIRCUITSES — ABOUT PREVIEW
    PREMIUM / GLOBAL GREEN SYSTEM
    ========================================================= */
 
@@ -2540,4 +2540,755 @@
         break-inside:
             avoid;
     }
+}
+
+
+/* =========================================================
+   QUALITY & CERTIFICATION
+   ========================================================= */
+
+.about-certification {
+
+    position: relative;
+
+    width: min(
+        calc(100% - 136px),
+        1400px
+    );
+
+    margin: 110px auto 0;
+
+    padding: 75px 0 0;
+
+    border-top:
+        1px solid rgba(15, 23, 42, 0.09);
+
+}
+
+
+.about-certification-container {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(0, 1.08fr);
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-certification-content {
+
+    max-width: 610px;
+
+}
+
+
+.about-certification-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 28px 0 22px;
+
+    color: var(--green);
+
+    background:
+        rgba(76, 180, 63, 0.07);
+
+    border:
+        1px solid rgba(76, 180, 63, 0.20);
+
+    border-radius: 12px;
+
+}
+
+
+.about-certification-content h2 {
+
+    margin: 0;
+
+    color: var(--heading);
+
+    font-size:
+        clamp(
+            2.4rem,
+            3.5vw,
+            4rem
+        );
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.055em;
+
+}
+
+
+.about-certification-content h2 span {
+
+    color: var(--green);
+
+}
+
+
+.about-certification-content > p {
+
+    max-width: 560px;
+
+    margin: 24px 0 0;
+
+    color:
+        rgba(15, 23, 42, 0.60);
+
+    font-size: 0.94rem;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   ISO BADGE
+   ========================================================= */
+
+.about-certification-badge {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 27px;
+
+    padding:
+        15px 19px;
+
+    border:
+        1px solid rgba(76, 180, 63, 0.20);
+
+    border-radius: 12px;
+
+    background:
+        rgba(76, 180, 63, 0.045);
+
+}
+
+
+.about-certification-badge strong {
+
+    color: var(--heading);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+.about-certification-badge span {
+
+    color: var(--green);
+
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+}
+
+
+/* =========================================================
+   CERTIFICATION DETAILS
+   ========================================================= */
+
+.about-certification-details {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.about-certification-details > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding:
+        13px 14px;
+
+    border:
+        1px solid rgba(15, 23, 42, 0.075);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+}
+
+
+.about-certification-details span {
+
+    color:
+        rgba(15, 23, 42, 0.40);
+
+    font-size: 0.48rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+}
+
+
+.about-certification-details strong {
+
+    color: var(--heading);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.about-certificate-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+    min-height: 50px;
+
+    padding:
+        0 20px;
+
+    color: #ffffff;
+
+    background: var(--green);
+
+    border:
+        1px solid var(--green);
+
+    border-radius: 9px;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 250ms ease,
+        background 250ms ease,
+        box-shadow 250ms ease;
+
+}
+
+
+.about-certificate-button:hover {
+
+    color: #ffffff;
+
+    background: #3f9f35;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(76, 180, 63, 0.20);
+
+}
+
+
+.about-certificate-button svg {
+
+    transition:
+        transform 250ms ease;
+
+}
+
+
+.about-certificate-button:hover svg {
+
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+
+}
+
+
+/* =========================================================
+   CERTIFICATE DOCUMENT
+   ========================================================= */
+
+.about-certificate-document {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+.certificate-document-frame {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(15, 23, 42, 0.10);
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 25px 70px
+        rgba(15, 23, 42, 0.10);
+
+}
+
+
+.certificate-document-top {
+
+    min-height: 50px;
+
+    padding:
+        0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid rgba(15, 23, 42, 0.07);
+
+    background:
+        rgba(248, 250, 249, 0.96);
+
+}
+
+
+.certificate-document-top span {
+
+    color:
+        rgba(15, 23, 42, 0.48);
+
+    font-size: 0.52rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+}
+
+
+.certificate-document-top span:last-child {
+
+    color: var(--green);
+
+}
+
+
+/* =========================================================
+   PDF VIEWER
+   ========================================================= */
+
+.certificate-document-viewer {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 560px;
+
+    overflow: hidden;
+
+    background:
+        #f5f7f6;
+
+}
+
+
+.certificate-document-viewer iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+}
+
+
+/* =========================================================
+   DOCUMENT FOOTER
+   ========================================================= */
+
+.certificate-document-bottom {
+
+    min-height: 48px;
+
+    padding:
+        0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(15, 23, 42, 0.07);
+
+    background:
+        rgba(248, 250, 249, 0.96);
+
+}
+
+
+.certificate-document-bottom span {
+
+    color:
+        rgba(15, 23, 42, 0.40);
+
+    font-size: 0.50rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+}
+
+
+.certificate-document-bottom a {
+
+    color: var(--green);
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+}
+
+
+.certificate-document-bottom a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-certification {
+
+        width:
+            min(
+                calc(100% - 80px),
+                1400px
+            );
+
+        margin-top: 90px;
+
+    }
+
+
+    .about-certification-container {
+
+        gap: 50px;
+
+    }
+
+
+    .certificate-document-viewer {
+
+        height: 500px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-certification {
+
+        width:
+            calc(100% - 56px);
+
+        margin-top: 75px;
+
+        padding-top: 60px;
+
+    }
+
+
+    .about-certification-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+
+    .about-certification-content {
+
+        max-width: 760px;
+
+    }
+
+
+    .certificate-document-viewer {
+
+        height: 650px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-certification {
+
+        width:
+            calc(100% - 40px);
+
+        margin-top: 60px;
+
+        padding-top: 50px;
+
+    }
+
+
+    .about-certification-container {
+
+        gap: 35px;
+
+    }
+
+
+    .about-certification-icon {
+
+        width: 42px;
+
+        height: 42px;
+
+        margin:
+            22px 0 18px;
+
+    }
+
+
+    .about-certification-content h2 {
+
+        font-size:
+            clamp(
+                2.3rem,
+                9vw,
+                3.5rem
+            );
+
+    }
+
+
+    .about-certification-content > p {
+
+        font-size: 0.84rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .about-certification-details {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .about-certification-details > div {
+
+        padding:
+            12px 13px;
+
+    }
+
+
+    .about-certificate-button {
+
+        width: 100%;
+
+    }
+
+
+    .certificate-document-viewer {
+
+        height: 540px;
+
+    }
+
+
+    .certificate-document-top {
+
+        padding:
+            0 13px;
+
+    }
+
+
+    .certificate-document-top span {
+
+        font-size: 0.45rem;
+
+    }
+
+
+    .certificate-document-bottom {
+
+        padding:
+            0 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .about-certification {
+
+        width:
+            calc(100% - 30px);
+
+        margin-top: 50px;
+
+        padding-top: 42px;
+
+    }
+
+
+    .about-certification-content h2 {
+
+        font-size:
+            clamp(
+                2.1rem,
+                10.5vw,
+                3.1rem
+            );
+
+    }
+
+
+    .about-certification-badge {
+
+        width: 100%;
+
+    }
+
+
+    .certificate-document-frame {
+
+        border-radius: 14px;
+
+    }
+
+
+    .certificate-document-viewer {
+
+        height: 450px;
+
+    }
+
+
+    .certificate-document-bottom span {
+
+        font-size: 0.43rem;
+
+    }
+
+
+    .certificate-document-bottom a {
+
+        font-size: 0.58rem;
+
+    }
+
 }

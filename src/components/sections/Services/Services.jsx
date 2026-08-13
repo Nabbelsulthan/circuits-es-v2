@@ -77,7 +77,7 @@
 
 //                                 From engineering and precision fabrication
 //                                 to installation, commissioning and lifecycle
-//                                 support, Circuits ES provides complete
+//                                 support, CircuitsES provides complete
 //                                 electrical and automation solutions for
 //                                 demanding industrial applications.
 
@@ -2346,7 +2346,7 @@ const Services = () => {
                             <p>
                                 From engineering and precision fabrication
                                 to installation, commissioning and lifecycle
-                                support, Circuits ES provides complete
+                                support, CircuitsES provides complete
                                 electrical and automation solutions for
                                 demanding industrial applications.
                             </p>

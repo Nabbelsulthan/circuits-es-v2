@@ -314,7 +314,7 @@ const PLC = () => {
                             data-aos="fade-up"
                             data-aos-delay="350"
                         >
-                            Circuits ES engineers PLC-based automation
+                            CircuitsES engineers PLC-based automation
                             systems that connect machines, processes,
                             operators and industrial data into one
                             coordinated control environment.

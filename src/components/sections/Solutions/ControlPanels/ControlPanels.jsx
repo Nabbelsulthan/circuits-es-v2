@@ -51,7 +51,7 @@
 //                         </h1>
 
 //                         <p>
-//                             Circuits ES designs and manufactures custom-built
+//                             CircuitsES designs and manufactures custom-built
 //                             Low Voltage (LT) panels for safe power
 //                             distribution, motor control, power factor
 //                             correction and generator synchronization. Every
@@ -119,7 +119,7 @@
 //                         >
 
 //                             <p>
-//                                 At Circuits ES, we understand that every industry has
+//                                 At CircuitsES, we understand that every industry has
 //                                 unique operational requirements. That's why we design
 //                                 and manufacture custom Low Voltage (LT) panels tailored
 //                                 to your electrical systems, process requirements and
@@ -370,7 +370,7 @@ const ControlPanels = () => {
 
                         <p>
 
-                            Circuits ES designs and manufactures
+                            CircuitsES designs and manufactures
                             custom-built Low Voltage (LT) panels for
                             safe power distribution, motor control,
                             power factor correction and generator
@@ -492,7 +492,7 @@ const ControlPanels = () => {
 
                             <p>
 
-                                At Circuits ES, we understand that every
+                                At CircuitsES, we understand that every
                                 industry has unique operational requirements.
                                 That's why we design and manufacture custom
                                 Low Voltage (LT) panels tailored to your

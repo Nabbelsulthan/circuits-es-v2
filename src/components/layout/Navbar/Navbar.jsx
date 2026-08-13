@@ -16,7 +16,7 @@ import {
     HiOutlineX,
 } from "react-icons/hi";
 
-import logo from "../../../assets/logos/CircuitES1-logo.png";
+import logo from "../../../assets/logos/circuitES1-logo.png";
 
 import "./Navbar.css";
 

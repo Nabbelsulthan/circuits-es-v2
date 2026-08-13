@@ -1,6 +1,6 @@
 import project01_01 from "../../../assets/projects/project-01/project-01-01.jpeg";
 import project01_02 from "../../../assets/projects/project-01/project-01-02.jpeg";
-import project01_03 from "../../../assets/projects/project-01/project-01-03.jpeg";;
+import project01_03 from "../../../assets/projects/project-01/project-01-03.jpeg";
 import project01_04 from "../../../assets/projects/project-01/project-01-04.jpeg";
 import project01_05 from "../../../assets/projects/project-01/project-01-05.jpeg";
 import project01_06 from "../../../assets/projects/project-01/project-01-06.jpeg";
@@ -41,12 +41,6 @@ const projects = [
         ],
     },
 
-
-
-    // =========================================================
-    // PROJECT 02
-    // =========================================================
-
     {
         id: "project-02",
         number: "02",
@@ -69,14 +63,9 @@ const projects = [
             project02_01,
             project02_02,
             project02_03,
-            project02_04
+            project02_04,
         ],
     },
-
-
-
-
 ];
-
 
 export default projects;

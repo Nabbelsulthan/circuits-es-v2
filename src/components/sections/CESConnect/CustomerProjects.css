@@ -1,0 +1,1468 @@
+/* =========================================================
+   CES CONNECT — PROJECT LIBRARY
+   FULLY SCOPED
+   CES GREEN BRAND VERSION
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.ces-connect-projects {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    padding-top: 84px;
+
+    color: var(--text-primary);
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(85, 181, 50, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(85, 181, 50, 0.07),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(85, 181, 50, 0.055),
+            transparent 32%
+        ),
+        #f4f7f5;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   SUBTLE TECHNICAL GRID
+========================================================= */
+
+.ces-connect-projects::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.28;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ces-connect-projects__container {
+
+    width: min(1400px, 100%);
+
+    margin: 0 auto;
+
+    padding: 42px 30px 70px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ces-connect-projects__header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 32px;
+
+    padding: 34px 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(248, 250, 252, 0.96)
+        );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.ces-connect-projects__header-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   DOCUMENT LIBRARY TAG
+========================================================= */
+
+.ces-connect-projects__tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 14px;
+
+    background: #eef8e8;
+
+    border: 1px solid rgba(85, 181, 50, 0.14);
+
+    border-radius: 30px;
+
+    color: #429124;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.ces-connect-projects__title {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 2.6rem;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ces-connect-projects__description {
+
+    max-width: 680px;
+
+    margin: 14px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.ces-connect-projects__summary {
+
+    width: 170px;
+
+    min-width: 170px;
+
+    height: 170px;
+
+    flex: 0 0 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55b532,
+            #429124
+        );
+
+    border-radius: 24px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(85, 181, 50, 0.24);
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.ces-connect-projects__summary-icon {
+
+    width: 42px !important;
+
+    height: 42px !important;
+
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   PROJECT COUNT
+========================================================= */
+
+.ces-connect-projects__count {
+
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SUMMARY LABEL
+========================================================= */
+
+.ces-connect-projects__summary-label {
+
+    display: block;
+
+    margin-top: 9px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 13px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.ces-connect-projects__grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(320px, 1fr)
+        );
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.ces-connect-projects__card {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 27px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.055);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.ces-connect-projects__card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(85, 181, 50, 0.25);
+
+    box-shadow:
+        0 18px 40px rgba(85, 181, 50, 0.12);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.ces-connect-projects__card-top {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   FOLDER
+========================================================= */
+
+.ces-connect-projects__folder {
+
+    width: 58px;
+
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border: 1px solid rgba(85, 181, 50, 0.08);
+
+    border-radius: 17px;
+
+    color: #55b532;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ces-connect-projects__card:hover
+.ces-connect-projects__folder {
+
+    background: #e5f5dc;
+
+    transform: translateY(-2px);
+}
+
+
+.ces-connect-projects__folder svg {
+
+    width: 32px;
+
+    height: 32px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.ces-connect-projects__status {
+
+    min-width: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 7px 12px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.ces-connect-projects__status svg {
+
+    width: 16px;
+
+    height: 16px;
+
+    flex: 0 0 16px;
+}
+
+
+/* =========================================================
+   ACTIVE STATUS
+========================================================= */
+
+.ces-connect-projects__status--active {
+
+    background: #eef8e8;
+
+    color: #429124;
+
+    border: 1px solid rgba(85, 181, 50, 0.10);
+}
+
+
+/* =========================================================
+   COMPLETED STATUS
+   Keep green instead of introducing blue.
+========================================================= */
+
+.ces-connect-projects__status--completed {
+
+    background: #e7f6df;
+
+    color: #327b1d;
+
+    border: 1px solid rgba(85, 181, 50, 0.14);
+}
+
+
+/* =========================================================
+   PROJECT NAME
+========================================================= */
+
+.ces-connect-projects__project-name {
+
+    min-height: 58px;
+
+    margin: 22px 0 20px;
+
+    color: var(--text-primary);
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 750;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PROJECT INFORMATION
+========================================================= */
+
+.ces-connect-projects__project-info {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.ces-connect-projects__info-item {
+
+    min-width: 0;
+}
+
+
+.ces-connect-projects__info-item span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.ces-connect-projects__info-item strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.ces-connect-projects__progress {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+}
+
+
+.ces-connect-projects__progress-track {
+
+    width: 100%;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    background: #e6ece3;
+
+    border-radius: 20px;
+}
+
+
+.ces-connect-projects__progress-value {
+
+    height: 100%;
+
+    max-width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #55b532,
+            #429124
+        );
+
+    border-radius: inherit;
+
+    transition:
+        width 0.5s ease;
+}
+
+
+/* =========================================================
+   OPEN PROJECT BUTTON
+========================================================= */
+
+.ces-connect-projects__open {
+
+    width: 100%;
+
+    min-height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: auto;
+
+    padding: 12px 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55b532,
+            #429124
+        );
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ces-connect-projects__open svg {
+
+    width: 18px;
+
+    height: 18px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.ces-connect-projects__open:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #429124,
+            #327b1d
+        );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(85, 181, 50, 0.24);
+}
+
+
+.ces-connect-projects__open:hover svg {
+
+    transform: translateX(3px);
+}
+
+
+.ces-connect-projects__open:active {
+
+    transform: translateY(0);
+
+    box-shadow: none;
+}
+
+
+.ces-connect-projects__open:focus-visible {
+
+    outline:
+        3px solid rgba(85, 181, 50, 0.22);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.ces-connect-projects__empty {
+
+    min-height: 55vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border:
+        1px dashed
+        var(--border-color);
+
+    border-radius: 24px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EMPTY ICON
+========================================================= */
+
+.ces-connect-projects__empty-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.10);
+
+    border-radius: 22px;
+
+    color: #55b532;
+}
+
+
+.ces-connect-projects__empty-icon svg {
+
+    width: 42px;
+
+    height: 42px;
+}
+
+
+/* =========================================================
+   EMPTY TITLE
+========================================================= */
+
+.ces-connect-projects__empty-title {
+
+    margin: 0 0 10px;
+
+    color: var(--text-primary);
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   EMPTY DESCRIPTION
+========================================================= */
+
+.ces-connect-projects__empty-description {
+
+    max-width: 420px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   901px — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .ces-connect-projects__container {
+
+        padding-left: 22px;
+
+        padding-right: 22px;
+    }
+
+
+    .ces-connect-projects__header {
+
+        padding: 30px;
+
+        gap: 28px;
+    }
+
+
+    .ces-connect-projects__title {
+
+        font-size: 2.3rem;
+    }
+
+
+    .ces-connect-projects__summary {
+
+        width: 155px;
+
+        min-width: 155px;
+
+        height: 155px;
+
+        flex-basis: 155px;
+    }
+
+
+    .ces-connect-projects__grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ces-connect-projects {
+
+        padding-top: 76px;
+    }
+
+
+    .ces-connect-projects__container {
+
+        padding:
+            30px
+            18px
+            50px;
+    }
+
+
+    .ces-connect-projects__header {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 25px;
+
+        padding: 30px 24px;
+
+        border-radius: 22px;
+    }
+
+
+    .ces-connect-projects__description {
+
+        max-width: 680px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .ces-connect-projects__summary {
+
+        width: 135px;
+
+        min-width: 135px;
+
+        height: 135px;
+
+        flex-basis: 135px;
+
+        border-radius: 20px;
+    }
+
+
+    .ces-connect-projects__summary-icon {
+
+        width: 34px !important;
+
+        height: 34px !important;
+    }
+
+
+    .ces-connect-projects__count {
+
+        font-size: 40px;
+    }
+
+
+    .ces-connect-projects__summary-label {
+
+        font-size: 12px;
+    }
+
+
+    .ces-connect-projects__grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 18px;
+    }
+
+
+    .ces-connect-projects__card {
+
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   601px — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-connect-projects {
+
+        padding-top: 70px;
+    }
+
+
+    .ces-connect-projects__container {
+
+        padding:
+            25px
+            16px
+            40px;
+    }
+
+
+    .ces-connect-projects__header {
+
+        margin-bottom: 24px;
+
+        padding: 26px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .ces-connect-projects__tag {
+
+        margin-bottom: 12px;
+
+        padding: 6px 12px;
+
+        font-size: 10px;
+    }
+
+
+    .ces-connect-projects__title {
+
+        font-size: 1.9rem;
+
+        line-height: 1.2;
+    }
+
+
+    .ces-connect-projects__description {
+
+        margin-top: 12px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    .ces-connect-projects__summary {
+
+        width: 120px;
+
+        min-width: 120px;
+
+        height: 120px;
+
+        flex-basis: 120px;
+    }
+
+
+    .ces-connect-projects__count {
+
+        font-size: 36px;
+    }
+
+
+    .ces-connect-projects__summary-label {
+
+        margin-top: 7px;
+
+        font-size: 11px;
+    }
+
+
+    .ces-connect-projects__grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .ces-connect-projects__card {
+
+        padding: 21px;
+
+        border-radius: 19px;
+    }
+
+
+    .ces-connect-projects__project-name {
+
+        min-height: auto;
+
+        margin: 18px 0;
+
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ces-connect-projects__container {
+
+        padding:
+            22px
+            14px
+            35px;
+    }
+
+
+    .ces-connect-projects__header {
+
+        padding: 24px 18px;
+    }
+
+
+    .ces-connect-projects__title {
+
+        font-size: 1.7rem;
+    }
+
+
+    .ces-connect-projects__description {
+
+        font-size: 13px;
+    }
+
+
+    .ces-connect-projects__card {
+
+        padding: 19px;
+    }
+
+
+    .ces-connect-projects__folder {
+
+        width: 52px;
+
+        height: 52px;
+
+        flex-basis: 52px;
+
+        border-radius: 15px;
+    }
+
+
+    .ces-connect-projects__folder svg {
+
+        width: 29px;
+
+        height: 29px;
+    }
+
+
+    .ces-connect-projects__status {
+
+        padding: 6px 9px;
+
+        font-size: 10px;
+    }
+
+
+    .ces-connect-projects__project-info {
+
+        gap: 13px;
+    }
+
+
+    .ces-connect-projects__open {
+
+        min-height: 44px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ces-connect-projects__container {
+
+        padding:
+            20px
+            12px
+            32px;
+    }
+
+
+    .ces-connect-projects__header {
+
+        padding: 21px 15px;
+
+        border-radius: 18px;
+    }
+
+
+    .ces-connect-projects__title {
+
+        font-size: 1.5rem;
+    }
+
+
+    .ces-connect-projects__description {
+
+        font-size: 12.5px;
+
+        line-height: 1.6;
+    }
+
+
+    .ces-connect-projects__summary {
+
+        width: 110px;
+
+        min-width: 110px;
+
+        height: 110px;
+
+        flex-basis: 110px;
+
+        border-radius: 17px;
+    }
+
+
+    .ces-connect-projects__summary-icon {
+
+        width: 30px !important;
+
+        height: 30px !important;
+
+        margin-bottom: 6px;
+    }
+
+
+    .ces-connect-projects__count {
+
+        font-size: 32px;
+    }
+
+
+    .ces-connect-projects__summary-label {
+
+        font-size: 10px;
+    }
+
+
+    .ces-connect-projects__card {
+
+        padding: 17px;
+
+        border-radius: 17px;
+    }
+
+
+    .ces-connect-projects__card-top {
+
+        gap: 8px;
+    }
+
+
+    .ces-connect-projects__folder {
+
+        width: 48px;
+
+        height: 48px;
+
+        flex-basis: 48px;
+    }
+
+
+    .ces-connect-projects__folder svg {
+
+        width: 26px;
+
+        height: 26px;
+    }
+
+
+    .ces-connect-projects__status {
+
+        padding: 5px 8px;
+
+        font-size: 9px;
+    }
+
+
+    .ces-connect-projects__status svg {
+
+        width: 14px;
+
+        height: 14px;
+    }
+
+
+    .ces-connect-projects__project-name {
+
+        margin: 16px 0;
+
+        font-size: 18px;
+    }
+
+
+    .ces-connect-projects__project-info {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .ces-connect-projects__info-item span {
+
+        font-size: 10px;
+    }
+
+
+    .ces-connect-projects__info-item strong {
+
+        font-size: 13px;
+    }
+
+
+    .ces-connect-projects__progress {
+
+        margin-bottom: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   ULTRA SMALL
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ces-connect-projects__container {
+
+        padding:
+            18px
+            10px
+            28px;
+    }
+
+
+    .ces-connect-projects__title {
+
+        font-size: 1.4rem;
+    }
+
+
+    .ces-connect-projects__description {
+
+        font-size: 12px;
+    }
+
+
+    .ces-connect-projects__summary {
+
+        width: 100px;
+
+        min-width: 100px;
+
+        height: 100px;
+
+        flex-basis: 100px;
+    }
+
+
+    .ces-connect-projects__count {
+
+        font-size: 29px;
+    }
+
+
+    .ces-connect-projects__card {
+
+        padding: 15px;
+    }
+
+
+    .ces-connect-projects__status {
+
+        max-width: 120px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    .ces-connect-projects__project-name {
+
+        font-size: 17px;
+    }
+
+
+    .ces-connect-projects__info-item strong {
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ces-connect-projects *,
+    .ces-connect-projects *::before,
+    .ces-connect-projects *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

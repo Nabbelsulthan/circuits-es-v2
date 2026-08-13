@@ -1,0 +1,695 @@
+/* =========================================================
+   HOTSPOT
+   CES GLOBAL COLOURS
+   ========================================================= */
+
+.hotspot {
+
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+
+    z-index: 30;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.hotspot:hover {
+
+    z-index: 60;
+}
+
+
+.hotspot.active {
+
+    z-index: 70;
+}
+
+
+/* =========================================================
+   LEADER LINE
+   ========================================================= */
+
+.hotspot-line {
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 56px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #55bd45 0%,
+            rgba(85, 189, 69, 0.2) 100%
+        );
+
+    transform-origin: left center;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OUTER PULSE
+   ========================================================= */
+
+.hotspot-pulse {
+
+    position: absolute;
+
+    left: -22px;
+    top: -22px;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(85, 189, 69, 0.18);
+
+    animation:
+        hotspotPulse 2.5s ease-out infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ROTATING RING
+   ========================================================= */
+
+.hotspot-ring {
+
+    position: absolute;
+
+    left: -15px;
+    top: -15px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid #55bd45;
+
+    animation:
+        hotspotRotate 8s linear infinite;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CENTER DOT
+   ========================================================= */
+
+.hotspot-dot {
+
+    position: absolute;
+
+    left: -8px;
+    top: -8px;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background: #55bd45;
+
+    border:
+        3px solid #ffffff;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(85, 189, 69, 0.7),
+
+        0 0 25px
+        rgba(85, 189, 69, 0.45);
+
+    transition:
+        all 0.3s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HOVER DOT
+   ========================================================= */
+
+.hotspot:hover
+.hotspot-dot {
+
+    transform:
+        scale(1.35);
+
+    background:
+        #49b23d;
+}
+
+
+/* =========================================================
+   ACTIVE DOT
+   ========================================================= */
+
+.hotspot.active
+.hotspot-dot {
+
+    transform:
+        scale(1.45);
+
+    background:
+        #55bd45;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.hotspot-label {
+
+    position: absolute;
+
+    min-width: 170px;
+    max-width: 250px;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(20, 38, 61, 0.95);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    border:
+        1px solid
+        rgba(85, 189, 69, 0.25);
+
+    color:
+        #ffffff;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.4;
+
+    white-space:
+        nowrap;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.18);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================================
+   LABEL HOVER
+   ========================================================= */
+
+.hotspot:hover
+.hotspot-label {
+
+    background:
+        #55bd45;
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================================
+   LABEL ACTIVE
+   ========================================================= */
+
+.hotspot.active
+.hotspot-label {
+
+    background:
+        #49b23d;
+
+    border-color:
+        #55bd45;
+}
+
+
+/* =========================================================
+   RIGHT POSITION
+   ========================================================= */
+
+.hotspot.right
+.hotspot-label {
+
+    left: 62px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+
+.hotspot.right
+.hotspot-line {
+
+    left: 0;
+    top: 0;
+
+    width: 62px;
+    height: 2px;
+}
+
+
+/* =========================================================
+   LEFT POSITION
+   ========================================================= */
+
+.hotspot.left
+.hotspot-label {
+
+    right: 62px;
+
+    left: auto;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+}
+
+
+.hotspot.left
+.hotspot-line {
+
+    right: 0;
+
+    left: auto;
+
+    top: 0;
+
+    width: 62px;
+    height: 2px;
+}
+
+
+/* =========================================================
+   TOP POSITION
+   ========================================================= */
+
+.hotspot.top
+.hotspot-label {
+
+    left: 50%;
+
+    top: -82px;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.hotspot.top
+.hotspot-line {
+
+    width: 2px;
+    height: 52px;
+
+    left: 0;
+
+    top: -52px;
+}
+
+
+/* =========================================================
+   BOTTOM POSITION
+   ========================================================= */
+
+.hotspot.bottom
+.hotspot-label {
+
+    left: 50%;
+
+    top: 42px;
+
+    transform:
+        translateX(-50%);
+}
+
+
+.hotspot.bottom
+.hotspot-line {
+
+    width: 2px;
+    height: 42px;
+
+    left: 0;
+
+    top: 0;
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+   ========================================================= */
+
+.hotspot.right:hover
+.hotspot-label {
+
+    transform:
+        translateY(-50%)
+        translateX(8px);
+}
+
+
+.hotspot.left:hover
+.hotspot-label {
+
+    transform:
+        translateY(-50%)
+        translateX(-8px);
+}
+
+
+.hotspot.top:hover
+.hotspot-label {
+
+    transform:
+        translateX(-50%)
+        translateY(-6px);
+}
+
+
+.hotspot.bottom:hover
+.hotspot-label {
+
+    transform:
+        translateX(-50%)
+        translateY(6px);
+}
+
+
+/* =========================================================
+   HOVER RING
+   ========================================================= */
+
+.hotspot:hover
+.hotspot-ring {
+
+    border-color:
+        #55bd45;
+
+    box-shadow:
+
+        0 0 18px
+        rgba(85, 189, 69, 0.55);
+}
+
+
+/* =========================================================
+   ACTIVE RING
+   ========================================================= */
+
+.hotspot.active
+.hotspot-ring {
+
+    border-color:
+        #55bd45;
+
+    box-shadow:
+
+        0 0 20px
+        rgba(85, 189, 69, 0.75);
+}
+
+
+/* =========================================================
+   ACTIVE LINE
+   ========================================================= */
+
+.hotspot.active
+.hotspot-line {
+
+    background:
+        linear-gradient(
+            90deg,
+            #55bd45,
+            rgba(85, 189, 69, 0.2)
+        );
+}
+
+
+/* =========================================================
+   ACTIVE PULSE
+   ========================================================= */
+
+.hotspot.active
+.hotspot-pulse {
+
+    background:
+        rgba(85, 189, 69, 0.18);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes hotspotPulse {
+
+    0% {
+
+        transform:
+            scale(0.45);
+
+        opacity:
+            0.9;
+    }
+
+
+    70% {
+
+        opacity:
+            0.2;
+    }
+
+
+    100% {
+
+        transform:
+            scale(1.9);
+
+        opacity:
+            0;
+    }
+
+}
+
+
+@keyframes hotspotRotate {
+
+    from {
+
+        transform:
+            rotate(0deg);
+    }
+
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .hotspot-label {
+
+        min-width:
+            150px;
+
+        max-width:
+            200px;
+
+        font-size:
+            0.76rem;
+
+        padding:
+            8px 14px;
+    }
+
+
+    .hotspot.right
+    .hotspot-label {
+
+        left:
+            54px;
+    }
+
+
+    .hotspot.left
+    .hotspot-label {
+
+        right:
+            54px;
+    }
+
+
+    .hotspot.top
+    .hotspot-label {
+
+        top:
+            -72px;
+    }
+
+
+    .hotspot.bottom
+    .hotspot-label {
+
+        top:
+            38px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hotspot-label {
+
+        display:
+            none;
+    }
+
+
+    .hotspot-line {
+
+        display:
+            none;
+    }
+
+
+    .hotspot-pulse {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        left:
+            -18px;
+
+        top:
+            -18px;
+    }
+
+
+    .hotspot-ring {
+
+        width:
+            24px;
+
+        height:
+            24px;
+
+        left:
+            -12px;
+
+        top:
+            -12px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .hotspot-dot {
+
+        width:
+            14px;
+
+        height:
+            14px;
+
+        left:
+            -7px;
+
+        top:
+            -7px;
+    }
+
+
+    .hotspot-ring {
+
+        width:
+            22px;
+
+        height:
+            22px;
+
+        left:
+            -11px;
+
+        top:
+            -11px;
+    }
+
+
+    .hotspot-pulse {
+
+        width:
+            32px;
+
+        height:
+            32px;
+
+        left:
+            -16px;
+
+        top:
+            -16px;
+    }
+
+}

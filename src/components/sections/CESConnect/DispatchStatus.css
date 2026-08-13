@@ -1,0 +1,1512 @@
+/* =========================================================
+   CES CONNECT — DISPATCH STATUS
+   FULLY SCOPED
+   CES GREEN BRAND
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.ces-connect-dispatch {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    padding-top: 84px;
+
+    color: var(--text-primary);
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(85, 181, 50, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(85, 181, 50, 0.07),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(85, 181, 50, 0.05),
+            transparent 32%
+        ),
+        #f4f7f5;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.ces-connect-dispatch::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.25;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ces-connect-dispatch__container {
+
+    width: min(1400px, 100%);
+
+    margin: 0 auto;
+
+    padding: 42px 30px 70px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ces-connect-dispatch__header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    margin-bottom: 30px;
+
+    padding: 34px 38px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(248, 250, 252, 0.96)
+        );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   HEADER CONTENT
+========================================================= */
+
+.ces-connect-dispatch__header-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.ces-connect-dispatch__tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 14px;
+
+    margin-bottom: 14px;
+
+    background: #eef8e8;
+
+    border: 1px solid rgba(85, 181, 50, 0.14);
+
+    border-radius: 30px;
+
+    color: #429124;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.ces-connect-dispatch__tag svg {
+
+    width: 16px;
+
+    height: 16px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.ces-connect-dispatch__title {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 2.6rem;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.ces-connect-dispatch__description {
+
+    max-width: 680px;
+
+    margin: 14px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HEADER COUNT
+========================================================= */
+
+.ces-connect-dispatch__header-count {
+
+    width: 150px;
+
+    min-width: 150px;
+
+    height: 150px;
+
+    flex: 0 0 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55b532,
+            #429124
+        );
+
+    border-radius: 22px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(85, 181, 50, 0.23);
+}
+
+
+.ces-connect-dispatch__header-count svg {
+
+    width: 34px;
+
+    height: 34px;
+
+    margin-bottom: 6px;
+}
+
+
+.ces-connect-dispatch__header-count strong {
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.ces-connect-dispatch__header-count span {
+
+    margin-top: 6px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+========================================================= */
+
+.ces-connect-dispatch__list {
+
+    display: grid;
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.ces-connect-dispatch__project-card {
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(0, 1fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 24px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.055);
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+}
+
+
+.ces-connect-dispatch__project-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(85, 181, 50, 0.24);
+
+    box-shadow:
+        0 16px 34px rgba(85, 181, 50, 0.11);
+}
+
+
+/* =========================================================
+   PROJECT ICON
+========================================================= */
+
+.ces-connect-dispatch__project-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.10);
+
+    border-radius: 17px;
+
+    color: #55b532;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ces-connect-dispatch__project-card:hover
+.ces-connect-dispatch__project-icon {
+
+    background: #e5f5dc;
+
+    transform: translateY(-2px);
+}
+
+
+.ces-connect-dispatch__project-icon svg {
+
+    width: 31px;
+
+    height: 31px;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+.ces-connect-dispatch__project-content {
+
+    min-width: 0;
+}
+
+
+.ces-connect-dispatch__project-label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.ces-connect-dispatch__project-content h2 {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--text-primary);
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PROJECT STATUS
+========================================================= */
+
+.ces-connect-dispatch__project-status {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    gap: 6px;
+}
+
+
+.ces-connect-dispatch__status-label {
+
+    color: var(--text-light);
+
+    font-size: 9px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 0.9px;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.ces-connect-dispatch__status-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    max-width: 220px;
+
+    padding: 8px 13px;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.12);
+
+    border-radius: 30px;
+
+    color: #429124;
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.ces-connect-dispatch__status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    flex: 0 0 7px;
+
+    background: #55b532;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 3px rgba(85, 181, 50, 0.12);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.ces-connect-dispatch__project-arrow {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f4f7f5;
+
+    border-radius: 12px;
+
+    color: #55b532;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ces-connect-dispatch__project-card:hover
+.ces-connect-dispatch__project-arrow {
+
+    background: #eef8e8;
+
+    color: #429124;
+
+    transform: translateX(3px);
+}
+
+
+.ces-connect-dispatch__project-arrow svg {
+
+    width: 20px;
+
+    height: 20px;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.ces-connect-dispatch__details {
+
+    padding: 30px;
+
+    background: var(--surface);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.ces-connect-dispatch__back {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 28px;
+
+    padding: 10px 14px;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.10);
+
+    border-radius: 10px;
+
+    color: #429124;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.ces-connect-dispatch__back:hover {
+
+    background: #e5f5dc;
+
+    transform: translateX(-2px);
+}
+
+
+.ces-connect-dispatch__back svg {
+
+    width: 18px;
+
+    height: 18px;
+}
+
+
+/* =========================================================
+   DETAILS HEADING
+========================================================= */
+
+.ces-connect-dispatch__details-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+
+.ces-connect-dispatch__details-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    flex: 0 0 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55b532,
+            #429124
+        );
+
+    border-radius: 18px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 22px rgba(85, 181, 50, 0.20);
+}
+
+
+.ces-connect-dispatch__details-icon svg {
+
+    width: 32px;
+
+    height: 32px;
+}
+
+
+.ces-connect-dispatch__details-heading span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #429124;
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.ces-connect-dispatch__details-heading h2 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    font-weight: 750;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   INFO GRID
+========================================================= */
+
+.ces-connect-dispatch__info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.ces-connect-dispatch__info-card {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: #f8faf9;
+
+    border:
+        1px solid
+        #e8eee5;
+
+    border-radius: 16px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.ces-connect-dispatch__info-card:hover {
+
+    background: #f3faef;
+
+    border-color:
+        rgba(85, 181, 50, 0.18);
+}
+
+
+/* =========================================================
+   INFO ICON
+========================================================= */
+
+.ces-connect-dispatch__info-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border-radius: 13px;
+
+    color: #55b532;
+}
+
+
+.ces-connect-dispatch__info-icon svg {
+
+    width: 22px;
+
+    height: 22px;
+}
+
+
+/* =========================================================
+   INFO TEXT
+========================================================= */
+
+.ces-connect-dispatch__info-card > div:last-child {
+
+    min-width: 0;
+}
+
+
+.ces-connect-dispatch__info-card span {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    line-height: 1.3;
+}
+
+
+.ces-connect-dispatch__info-card strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.ces-connect-dispatch__info-card
+.ces-connect-dispatch__info-status {
+
+    color: #429124;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.ces-connect-dispatch__empty {
+
+    min-height: 50vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.75);
+
+    border:
+        1px dashed
+        var(--border-color);
+
+    border-radius: 24px;
+
+    text-align: center;
+}
+
+
+.ces-connect-dispatch__empty-icon {
+
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #eef8e8;
+
+    border-radius: 22px;
+
+    color: #55b532;
+}
+
+
+.ces-connect-dispatch__empty-icon svg {
+
+    width: 40px;
+
+    height: 40px;
+}
+
+
+.ces-connect-dispatch__empty h2 {
+
+    margin: 0 0 10px;
+
+    color: var(--text-primary);
+
+    font-size: 24px;
+
+    font-weight: 700;
+}
+
+
+.ces-connect-dispatch__empty p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .ces-connect-dispatch__container {
+
+        padding-left: 22px;
+
+        padding-right: 22px;
+    }
+
+
+    .ces-connect-dispatch__header {
+
+        padding: 30px;
+    }
+
+
+    .ces-connect-dispatch__title {
+
+        font-size: 2.3rem;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ces-connect-dispatch {
+
+        padding-top: 76px;
+    }
+
+
+    .ces-connect-dispatch__container {
+
+        padding:
+            30px
+            18px
+            50px;
+    }
+
+
+    .ces-connect-dispatch__header {
+
+        padding: 28px 24px;
+
+        gap: 25px;
+    }
+
+
+    .ces-connect-dispatch__header-count {
+
+        width: 125px;
+
+        min-width: 125px;
+
+        height: 125px;
+
+        flex-basis: 125px;
+    }
+
+
+    .ces-connect-dispatch__header-count strong {
+
+        font-size: 34px;
+    }
+
+
+    .ces-connect-dispatch__project-card {
+
+        grid-template-columns:
+            auto
+            minmax(0, 1fr)
+            auto;
+    }
+
+
+    .ces-connect-dispatch__project-status {
+
+        grid-column: 2;
+
+        grid-row: 2;
+
+        align-items: flex-start;
+    }
+
+
+    .ces-connect-dispatch__project-arrow {
+
+        grid-column: 3;
+
+        grid-row: 1 / span 2;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-connect-dispatch {
+
+        padding-top: 70px;
+    }
+
+
+    .ces-connect-dispatch__container {
+
+        padding:
+            25px
+            16px
+            40px;
+    }
+
+
+    .ces-connect-dispatch__header {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 26px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .ces-connect-dispatch__description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 14px;
+    }
+
+
+    .ces-connect-dispatch__header-count {
+
+        width: 115px;
+
+        min-width: 115px;
+
+        height: 115px;
+
+        flex-basis: 115px;
+    }
+
+
+    .ces-connect-dispatch__header-count svg {
+
+        width: 28px;
+
+        height: 28px;
+    }
+
+
+    .ces-connect-dispatch__header-count strong {
+
+        font-size: 32px;
+    }
+
+
+    .ces-connect-dispatch__list {
+
+        gap: 14px;
+    }
+
+
+    .ces-connect-dispatch__project-card {
+
+        grid-template-columns:
+            auto
+            minmax(0, 1fr)
+            auto;
+
+        gap: 14px;
+
+        padding: 18px;
+    }
+
+
+    .ces-connect-dispatch__project-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        flex-basis: 50px;
+    }
+
+
+    .ces-connect-dispatch__project-icon svg {
+
+        width: 27px;
+
+        height: 27px;
+    }
+
+
+    .ces-connect-dispatch__project-content h2 {
+
+        font-size: 17px;
+    }
+
+
+    .ces-connect-dispatch__status-badge {
+
+        max-width: 180px;
+    }
+
+
+    .ces-connect-dispatch__details {
+
+        padding: 22px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .ces-connect-dispatch__info-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .ces-connect-dispatch__details-heading h2 {
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ces-connect-dispatch__container {
+
+        padding:
+            22px
+            14px
+            35px;
+    }
+
+
+    .ces-connect-dispatch__title {
+
+        font-size: 1.9rem;
+    }
+
+
+    .ces-connect-dispatch__description {
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .ces-connect-dispatch__project-card {
+
+        grid-template-columns:
+            auto
+            minmax(0, 1fr)
+            auto;
+
+        padding: 16px;
+
+        border-radius: 17px;
+    }
+
+
+    .ces-connect-dispatch__project-label {
+
+        font-size: 9px;
+    }
+
+
+    .ces-connect-dispatch__project-content h2 {
+
+        font-size: 16px;
+    }
+
+
+    .ces-connect-dispatch__project-status {
+
+        gap: 5px;
+    }
+
+
+    .ces-connect-dispatch__status-label {
+
+        font-size: 8px;
+    }
+
+
+    .ces-connect-dispatch__status-badge {
+
+        max-width: 150px;
+
+        padding: 6px 9px;
+
+        font-size: 10px;
+    }
+
+
+    .ces-connect-dispatch__project-arrow {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .ces-connect-dispatch__project-arrow svg {
+
+        width: 17px;
+
+        height: 17px;
+    }
+
+
+    .ces-connect-dispatch__details-heading {
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+
+    .ces-connect-dispatch__details-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        flex-basis: 50px;
+
+        border-radius: 14px;
+    }
+
+
+    .ces-connect-dispatch__details-icon svg {
+
+        width: 26px;
+
+        height: 26px;
+    }
+
+
+    .ces-connect-dispatch__details-heading h2 {
+
+        font-size: 19px;
+    }
+
+
+    .ces-connect-dispatch__info-card {
+
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+
+    .ces-connect-dispatch__info-icon {
+
+        width: 40px;
+
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+
+    .ces-connect-dispatch__info-card strong {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .ces-connect-dispatch__container {
+
+        padding:
+            20px
+            12px
+            30px;
+    }
+
+
+    .ces-connect-dispatch__header {
+
+        padding: 22px 16px;
+    }
+
+
+    .ces-connect-dispatch__title {
+
+        font-size: 1.65rem;
+    }
+
+
+    .ces-connect-dispatch__project-card {
+
+        grid-template-columns:
+            auto
+            minmax(0, 1fr)
+            auto;
+
+        gap: 10px;
+
+        padding: 14px;
+    }
+
+
+    .ces-connect-dispatch__project-icon {
+
+        width: 44px;
+
+        height: 44px;
+
+        flex-basis: 44px;
+
+        border-radius: 13px;
+    }
+
+
+    .ces-connect-dispatch__project-icon svg {
+
+        width: 23px;
+
+        height: 23px;
+    }
+
+
+    .ces-connect-dispatch__project-content h2 {
+
+        font-size: 14px;
+    }
+
+
+    .ces-connect-dispatch__status-badge {
+
+        max-width: 125px;
+
+        font-size: 9px;
+    }
+
+
+    .ces-connect-dispatch__details {
+
+        padding: 18px 14px;
+    }
+
+
+    .ces-connect-dispatch__back {
+
+        margin-bottom: 22px;
+
+        padding: 8px 11px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ces-connect-dispatch *,
+    .ces-connect-dispatch *::before,
+    .ces-connect-dispatch *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

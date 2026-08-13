@@ -1,0 +1,2902 @@
+/* =========================================================
+   CIRCUITS ES — PREMIUM INDUSTRIAL HERO
+   PART 1 — FOUNDATION / BACKGROUND / TOP BAR
+   ========================================================= */
+
+
+/* =========================================================
+   HERO ROOT
+   ========================================================= */
+
+.hero {
+    --mouse-x: 72%;
+    --mouse-y: 48%;
+    --panel-focus: 0;
+
+    position: relative;
+
+    width: 100%;
+    min-height: 860px;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    background:
+        var(--heading);
+
+    color:
+        var(--white);
+}
+
+
+/* =========================================================
+   INDUSTRIAL BACKGROUND IMAGE
+   ========================================================= */
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -5;
+
+    pointer-events: none;
+
+    background-image:
+        url("../../../assets/images/hero-background.png");
+
+    background-repeat:
+        no-repeat;
+
+    background-size:
+        cover;
+
+    background-position:
+        center center;
+
+    transform:
+        scale(1.015);
+
+    transition:
+        transform 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   DARK CINEMATIC OVERLAY
+   ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -4;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+
+            rgba(5, 18, 29, 0.96) 0%,
+
+            rgba(5, 18, 29, 0.88) 28%,
+
+            rgba(5, 18, 29, 0.68) 55%,
+
+            rgba(5, 18, 29, 0.48) 76%,
+
+            rgba(5, 18, 29, 0.68) 100%
+        );
+}
+
+
+/* =========================================================
+   BOTTOM CINEMATIC SHADOW
+   ========================================================= */
+
+.hero-overlay::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 45%;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            0deg,
+
+            rgba(4, 14, 23, 0.92),
+
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MOUSE FOLLOW LIGHT
+   ========================================================= */
+
+.hero-mouse-light {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -3;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle 260px
+            at var(--mouse-x) var(--mouse-y),
+
+            rgba(76, 180, 63, 0.14),
+
+            rgba(76, 180, 63, 0.035) 38%,
+
+            transparent 72%
+        );
+
+    opacity: 0.95;
+
+    transition:
+        background-position 100ms linear;
+}
+
+
+/* =========================================================
+   PANEL FOCUS AREA
+   ========================================================= */
+
+.hero-panel-focus {
+    position: absolute;
+
+    top: 17%;
+    right: 4%;
+
+    width: 43%;
+    height: 66%;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    opacity:
+        calc(
+            0.22 +
+            (var(--panel-focus) * 0.78)
+        );
+
+    border:
+        1px solid
+        rgba(76, 180, 63, 0.08);
+
+    background:
+        linear-gradient(
+            135deg,
+
+            rgba(76, 180, 63, 0.025),
+
+            transparent 55%
+        );
+
+    box-shadow:
+        inset
+        0 0 90px
+        rgba(76, 180, 63, 0.025);
+
+    transition:
+        opacity 450ms ease,
+        border-color 450ms ease,
+        box-shadow 450ms ease;
+}
+
+
+/* =========================================================
+   PANEL FOCUS — HOVER
+   ========================================================= */
+
+.hero:hover .hero-panel-focus {
+    border-color:
+        rgba(76, 180, 63, 0.22);
+
+    box-shadow:
+        inset
+        0 0 100px
+        rgba(76, 180, 63, 0.055),
+
+        0 0 80px
+        rgba(76, 180, 63, 0.035);
+}
+
+
+/* =========================================================
+   PANEL TECHNICAL LINES
+   ========================================================= */
+
+.hero-panel-line {
+    position: absolute;
+
+    display: block;
+
+    height: 1px;
+
+    background:
+        var(--green);
+
+    opacity: 0.28;
+
+    transform-origin:
+        left center;
+
+    transition:
+        opacity 500ms ease,
+
+        transform 700ms
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   TECHNICAL LINE — ONE
+   ========================================================= */
+
+.line-one {
+    top: 23%;
+    left: 12%;
+
+    width: 31%;
+
+    transform:
+        scaleX(
+            calc(
+                0.55 +
+                (var(--panel-focus) * 0.45)
+            )
+        );
+}
+
+
+/* =========================================================
+   TECHNICAL LINE — TWO
+   ========================================================= */
+
+.line-two {
+    top: 49%;
+    left: 25%;
+
+    width: 45%;
+
+    transform:
+        scaleX(
+            calc(
+                0.45 +
+                (var(--panel-focus) * 0.55)
+            )
+        );
+}
+
+
+/* =========================================================
+   TECHNICAL LINE — THREE
+   ========================================================= */
+
+.line-three {
+    top: 73%;
+    left: 9%;
+
+    width: 22%;
+
+    transform:
+        scaleX(
+            calc(
+                0.40 +
+                (var(--panel-focus) * 0.60)
+            )
+        );
+}
+
+
+/* =========================================================
+   TECHNICAL LINES — HOVER
+   ========================================================= */
+
+.hero:hover .hero-panel-line {
+    opacity: 0.58;
+}
+
+
+/* =========================================================
+   PANEL STATUS
+   ========================================================= */
+
+.hero-panel-label {
+    position: absolute;
+
+    right: 7%;
+    bottom: 9%;
+
+    color:
+        rgba(255, 255, 255, 0.36);
+
+    font-size:
+        0.60rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+
+    transition:
+        color 400ms ease;
+}
+
+
+/* =========================================================
+   PANEL STATUS — HOVER
+   ========================================================= */
+
+.hero:hover .hero-panel-label {
+    color:
+        rgba(76, 180, 63, 0.78);
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+   ========================================================= */
+
+.hero-grid {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.10;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255, 255, 255, 0.10) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.10) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        72px 72px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+
+            black 0%,
+
+            rgba(0, 0, 0, 0.75) 48%,
+
+            transparent 88%
+        );
+}
+
+
+/* =========================================================
+   GREEN ATMOSPHERIC GLOW
+   ========================================================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    right: -220px;
+    bottom: -300px;
+
+    width: 700px;
+    height: 700px;
+
+    z-index: -1;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+
+            rgba(76, 180, 63, 0.13),
+
+            transparent 68%
+        );
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.hero-container {
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        min(
+            calc(100% - 128px),
+            1440px
+        );
+
+    min-height:
+        860px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.hero-topbar {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    min-height:
+        82px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================================
+   BRAND MARK
+   ========================================================= */
+
+.hero-brand-mark {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+}
+
+
+/* =========================================================
+   BRAND STATUS DOT
+   ========================================================= */
+
+.hero-brand-dot {
+    width:
+        8px;
+
+    height:
+        8px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(76, 180, 63, 0.13),
+
+        0 0 14px
+        rgba(76, 180, 63, 0.30);
+}
+
+
+/* =========================================================
+   TOP RIGHT META
+   ========================================================= */
+
+.hero-topbar-right {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        rgba(255, 255, 255, 0.50);
+
+    font-size:
+        0.64rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.12em;
+}
+
+
+/* =========================================================
+   TOP RIGHT SLASH
+   ========================================================= */
+
+.hero-slash {
+    color:
+        var(--green);
+
+    opacity:
+        0.85;
+}
+
+
+/* =========================================================
+   REDUCED MOTION — FOUNDATION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-background,
+    .hero-panel-focus,
+    .hero-panel-line,
+    .hero-panel-label {
+        transition:
+            none;
+    }
+}
+
+/* =========================================================
+   CIRCUITS ES — PREMIUM INDUSTRIAL HERO
+   PART 2 — MAIN CONTENT / HEADING / ACTIONS
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN CONTENT AREA
+   ========================================================= */
+
+.hero-main {
+    position:
+        relative;
+
+    flex:
+        1;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    padding:
+        92px 0
+        82px;
+}
+
+
+/* =========================================================
+   HERO COPY
+   ========================================================= */
+
+.hero-copy {
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    width:
+        72%;
+
+    max-width:
+        1050px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.hero-eyebrow {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+    margin:
+        0 0 30px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        );
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+
+    line-height:
+        1.2;
+}
+
+
+/* =========================================================
+   EYEBROW LINE
+   ========================================================= */
+
+.hero-eyebrow-line {
+    width:
+        55px;
+
+    height:
+        1px;
+
+    flex-shrink:
+        0;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 14px
+        rgba(
+            76,
+            180,
+            63,
+            0.45
+        );
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.hero h1 {
+    max-width:
+        1000px;
+
+    margin:
+        0;
+
+    color:
+        var(--white);
+
+    font-size:
+        clamp(
+            4.3rem,
+            6.4vw,
+            7.2rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        0.91;
+
+    letter-spacing:
+        -0.065em;
+}
+
+
+/* =========================================================
+   GREEN HEADING LINE
+   ========================================================= */
+
+.hero h1 span {
+    display:
+        block;
+
+    color:
+        var(--green);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+    max-width:
+        680px;
+
+    margin:
+        34px 0 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.68
+        );
+
+    font-size:
+        1.08rem;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.75;
+}
+
+
+/* =========================================================
+   LOCATION / SEO LINE
+   ========================================================= */
+
+.hero-location {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        11px;
+
+    margin:
+        22px 0 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.52
+        );
+
+    font-size:
+        0.68rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.13em;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   LOCATION DOTS
+   ========================================================= */
+
+.hero-location i {
+    display:
+        block;
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            76,
+            180,
+            63,
+            0.50
+        );
+}
+
+
+/* =========================================================
+   ACTION GROUP
+   ========================================================= */
+
+.hero-actions {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin:
+        34px 0 0;
+}
+
+
+/* =========================================================
+   HERO PRIMARY BUTTON
+   ========================================================= */
+
+.hero-actions .primary-btn {
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    min-height:
+        60px;
+
+    padding:
+        0 32px;
+
+    border:
+        1px solid
+        var(--green);
+
+    border-radius:
+        999px;
+
+    color:
+        var(--white) !important;
+
+    background:
+        var(--green);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        700;
+
+    line-height:
+        1;
+
+    text-decoration:
+        none;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            76,
+            180,
+            63,
+            0.18
+        );
+
+    transform:
+        translateY(0);
+
+    transition:
+        transform 280ms ease,
+        background 280ms ease,
+        border-color 280ms ease,
+        box-shadow 280ms ease;
+}
+
+
+/* =========================================================
+   REMOVE OLD BLUE / SHINE EFFECT
+   ========================================================= */
+
+.hero-actions .primary-btn::before {
+    display:
+        none !important;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON ICON
+   ========================================================= */
+
+.hero-actions .primary-btn svg {
+    width:
+        18px;
+
+    height:
+        18px;
+
+    flex-shrink:
+        0;
+
+    transition:
+        transform 280ms ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON HOVER
+   ========================================================= */
+
+.hero-actions .primary-btn:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        var(--green-dark);
+
+    border-color:
+        var(--green-dark);
+
+    box-shadow:
+        0 16px 38px
+        rgba(
+            76,
+            180,
+            63,
+            0.28
+        );
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON ARROW
+   ========================================================= */
+
+.hero-actions .primary-btn:hover svg {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   HERO SECONDARY BUTTON
+   ========================================================= */
+
+.hero-actions .secondary-btn {
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    min-height:
+        60px;
+
+    padding:
+        0 32px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.22
+        );
+
+    border-radius:
+        999px;
+
+    color:
+        var(--white);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.055
+        );
+
+    backdrop-filter:
+        blur(14px);
+
+    font-size:
+        0.95rem;
+
+    font-weight:
+        600;
+
+    line-height:
+        1;
+
+    text-decoration:
+        none;
+
+    transform:
+        translateY(0);
+
+    transition:
+        background 280ms ease,
+        border-color 280ms ease,
+        transform 280ms ease,
+        box-shadow 280ms ease;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON ICON
+   ========================================================= */
+
+.hero-actions .secondary-btn svg {
+    width:
+        17px;
+
+    height:
+        17px;
+
+    flex-shrink:
+        0;
+
+    transition:
+        transform 280ms ease;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON HOVER
+   ========================================================= */
+
+.hero-actions .secondary-btn:hover {
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(
+            76,
+            180,
+            63,
+            0.10
+        );
+
+    border-color:
+        rgba(
+            76,
+            180,
+            63,
+            0.50
+        );
+
+    color:
+        var(--white);
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON ARROW
+   ========================================================= */
+
+.hero-actions .secondary-btn:hover svg {
+    transform:
+        translate(
+            3px,
+            -3px
+        );
+}
+
+
+/* =========================================================
+   CONTENT FADE / ENTRY
+   ========================================================= */
+
+.hero-copy {
+    animation:
+        hero-content-enter
+        900ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
+}
+
+
+@keyframes hero-content-enter {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(24px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-copy {
+        animation:
+            none;
+    }
+
+    .hero-actions .primary-btn,
+    .hero-actions .secondary-btn {
+        transition:
+            none;
+    }
+
+}
+
+/* =========================================================
+   CIRCUITS ES — PREMIUM INDUSTRIAL HERO
+   PART 3 — TECHNICAL PANEL / CREDIBILITY BAR / SCROLL
+   ========================================================= */
+
+
+/* =========================================================
+   RIGHT-SIDE TECHNICAL PANEL
+   ========================================================= */
+
+.hero-panel-info {
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        5%;
+
+    z-index:
+        5;
+
+    width:
+        285px;
+
+    padding:
+        26px;
+
+    transform:
+        translateY(-50%);
+
+    border-left:
+        1px solid
+        rgba(
+            76,
+            180,
+            63,
+            0.45
+        );
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                5,
+                18,
+                29,
+                0.08
+            ),
+            rgba(
+                5,
+                18,
+                29,
+                0.34
+            )
+        );
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity:
+        0.78;
+
+    transition:
+        opacity 400ms ease,
+        transform 500ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* =========================================================
+   PANEL INFO — HOVER
+   ========================================================= */
+
+.hero:hover .hero-panel-info {
+    opacity:
+        1;
+
+    transform:
+        translateY(
+            calc(
+                -50% - 5px
+            )
+        );
+}
+
+
+/* =========================================================
+   PANEL INFO TOP
+   ========================================================= */
+
+.hero-panel-info-top {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding-bottom:
+        14px;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.11
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.48
+        );
+
+    font-size:
+        0.58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.14em;
+}
+
+
+/* =========================================================
+   PANEL INFO STATUS
+   ========================================================= */
+
+.hero-panel-info-top span:first-child {
+    color:
+        var(--green);
+}
+
+
+/* =========================================================
+   PANEL INFO TITLE
+   ========================================================= */
+
+.hero-panel-info-title {
+    padding:
+        24px 0;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.12;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* =========================================================
+   PANEL INFO BOTTOM
+   ========================================================= */
+
+.hero-panel-info-bottom {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding-top:
+        14px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.11
+        );
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.46
+        );
+
+    font-size:
+        0.52rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.13em;
+}
+
+
+/* =========================================================
+   PANEL INFO GREEN LINE
+   ========================================================= */
+
+.hero-info-line {
+    width:
+        18px;
+
+    height:
+        1px;
+
+    flex-shrink:
+        0;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            76,
+            180,
+            63,
+            0.35
+        );
+}
+
+
+/* =========================================================
+   BOTTOM CREDIBILITY BAR
+   ========================================================= */
+
+.hero-bottom {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    min-height:
+        112px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.14
+        );
+}
+
+
+/* =========================================================
+   CREDIBILITY ITEM
+   ========================================================= */
+
+.hero-bottom-item {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    padding:
+        20px 30px 20px 0;
+
+    margin-right:
+        30px;
+
+    border-right:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+}
+
+
+/* =========================================================
+   REMOVE LAST BORDER
+   ========================================================= */
+
+.hero-bottom-item:last-child {
+    margin-right:
+        0;
+
+    border-right:
+        0;
+}
+
+
+/* =========================================================
+   CREDIBILITY NUMBER
+   ========================================================= */
+
+.hero-bottom-item > strong {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        rgba(
+            76,
+            180,
+            63,
+            0.40
+        );
+
+    border-radius:
+        50%;
+
+    color:
+        var(--green);
+
+    background:
+        rgba(
+            76,
+            180,
+            63,
+            0.06
+        );
+
+    font-size:
+        0.62rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.05em;
+
+    transition:
+        background 300ms ease,
+        border-color 300ms ease,
+        box-shadow 300ms ease;
+}
+
+
+/* =========================================================
+   NUMBER HOVER
+   ========================================================= */
+
+.hero-bottom-item:hover > strong {
+    border-color:
+        rgba(
+            76,
+            180,
+            63,
+            0.80
+        );
+
+    background:
+        rgba(
+            76,
+            180,
+            63,
+            0.14
+        );
+
+    box-shadow:
+        0 0 22px
+        rgba(
+            76,
+            180,
+            63,
+            0.16
+        );
+}
+
+
+/* =========================================================
+   CREDIBILITY TEXT
+   ========================================================= */
+
+.hero-bottom-item div {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+}
+
+
+/* =========================================================
+   CREDIBILITY TITLE
+   ========================================================= */
+
+.hero-bottom-item span {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.76
+        );
+
+    font-size:
+        0.72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.11em;
+
+    line-height:
+        1.2;
+}
+
+
+/* =========================================================
+   CREDIBILITY DESCRIPTION
+   ========================================================= */
+
+.hero-bottom-item small {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.48
+        );
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.45;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.hero-scroll {
+    position:
+        absolute;
+
+    right:
+        0;
+
+    bottom:
+        32px;
+
+    z-index:
+        8;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        11px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.48
+        );
+
+    font-size:
+        0.62rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.14em;
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+   ========================================================= */
+
+.hero-scroll svg {
+    width:
+        19px;
+
+    height:
+        19px;
+
+    flex-shrink:
+        0;
+
+    color:
+        var(--green);
+
+    animation:
+        hero-scroll
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+
+@keyframes hero-scroll {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(5px);
+    }
+
+}
+
+
+/* =========================================================
+   PANEL HOVER MICRO-INTERACTION
+   ========================================================= */
+
+.hero-panel-info::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        -1px;
+
+    top:
+        0;
+
+    width:
+        1px;
+
+    height:
+        0;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 14px
+        rgba(
+            76,
+            180,
+            63,
+            0.55
+        );
+
+    transition:
+        height 600ms
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+.hero:hover .hero-panel-info::before {
+    height:
+        100%;
+}
+
+
+/* =========================================================
+   DESKTOP PANEL POSITION
+   ========================================================= */
+
+@media (max-width: 1350px) {
+
+    .hero-panel-info {
+        right:
+            2%;
+
+        width:
+            250px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-panel-info {
+        transition:
+            none;
+    }
+
+    .hero-panel-info::before {
+        transition:
+            none;
+    }
+
+    .hero-scroll svg {
+        animation:
+            none;
+    }
+
+}
+
+/* =========================================================
+   CIRCUITS ES — PREMIUM INDUSTRIAL HERO
+   PART 4 — RESPONSIVE / TABLET / MOBILE
+   ========================================================= */
+
+
+/* =========================================================
+   LARGE TABLET / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        min-height:
+            800px;
+    }
+
+
+    .hero-container {
+        width:
+            min(
+                calc(100% - 80px),
+                1440px
+            );
+
+        min-height:
+            800px;
+    }
+
+
+    /* -----------------------------------------
+       Main content
+       ----------------------------------------- */
+
+    .hero-copy {
+        width:
+            78%;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                4rem,
+                6.8vw,
+                6.2rem
+            );
+    }
+
+
+    .hero-description {
+        max-width:
+            620px;
+
+        font-size:
+            1rem;
+    }
+
+
+    /* -----------------------------------------
+       Right technical panel
+       ----------------------------------------- */
+
+    .hero-panel-info {
+        right:
+            1%;
+
+        width:
+            220px;
+
+        padding:
+            20px;
+    }
+
+
+    .hero-panel-info-title {
+        font-size:
+            1.05rem;
+    }
+
+
+    /* -----------------------------------------
+       Bottom credibility
+       ----------------------------------------- */
+
+    .hero-bottom-item {
+        gap:
+            12px;
+
+        padding-right:
+            18px;
+
+        margin-right:
+            18px;
+    }
+
+
+    .hero-bottom-item span {
+        font-size:
+            0.64rem;
+    }
+
+
+    .hero-bottom-item small {
+        font-size:
+            0.70rem;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height:
+            760px;
+    }
+
+
+    .hero-container {
+        width:
+            calc(
+                100% - 56px
+            );
+
+        min-height:
+            760px;
+    }
+
+
+    /* -----------------------------------------
+       Top bar
+       ----------------------------------------- */
+
+    .hero-topbar {
+        min-height:
+            72px;
+    }
+
+
+    .hero-topbar-right {
+        display:
+            none;
+    }
+
+
+    /* -----------------------------------------
+       Main content
+       ----------------------------------------- */
+
+    .hero-main {
+        align-items:
+            flex-start;
+
+        padding:
+            76px 0
+            62px;
+    }
+
+
+    .hero-copy {
+        width:
+            90%;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                3.6rem,
+                8vw,
+                5.6rem
+            );
+
+        line-height:
+            0.93;
+    }
+
+
+    .hero-description {
+        max-width:
+            620px;
+
+        font-size:
+            0.96rem;
+
+        line-height:
+            1.72;
+    }
+
+
+    /* -----------------------------------------
+       Right panel
+       ----------------------------------------- */
+
+    .hero-panel-info {
+        display:
+            none;
+    }
+
+
+    .hero-panel-focus {
+        top:
+            13%;
+
+        right:
+            0;
+
+        width:
+            55%;
+
+        height:
+            66%;
+
+        opacity:
+            0.40;
+    }
+
+
+    /* -----------------------------------------
+       Bottom credibility
+       ----------------------------------------- */
+
+    .hero-bottom {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+        min-height:
+            auto;
+    }
+
+
+    .hero-bottom-item {
+        min-height:
+            82px;
+
+        padding:
+            18px 20px 18px 0;
+
+        margin-right:
+            20px;
+
+        border-bottom:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+    }
+
+
+    .hero-bottom-item:nth-child(2) {
+        margin-right:
+            0;
+
+        border-right:
+            0;
+    }
+
+
+    .hero-bottom-item:nth-child(3),
+    .hero-bottom-item:nth-child(4) {
+        border-bottom:
+            0;
+    }
+
+
+    .hero-scroll {
+        display:
+            none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height:
+            auto;
+
+        padding-bottom:
+            32px;
+    }
+
+
+    .hero-container {
+        width:
+            calc(
+                100% - 40px
+            );
+
+        min-height:
+            auto;
+    }
+
+
+    /* -----------------------------------------
+       Background
+       ----------------------------------------- */
+
+    .hero-background {
+        background-position:
+            63% center;
+    }
+
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.97
+                ) 0%,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.91
+                ) 55%,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.78
+                ) 100%
+            );
+    }
+
+
+    .hero-grid {
+        opacity:
+            0.07;
+
+        background-size:
+            56px 56px;
+
+        mask-image:
+            linear-gradient(
+                90deg,
+                black,
+                transparent
+            );
+    }
+
+
+    /* -----------------------------------------
+       Panel background
+       ----------------------------------------- */
+
+    .hero-panel-focus {
+        top:
+            15%;
+
+        right:
+            -10%;
+
+        width:
+            70%;
+
+        height:
+            56%;
+
+        opacity:
+            0.30;
+    }
+
+
+    /* -----------------------------------------
+       Top bar
+       ----------------------------------------- */
+
+    .hero-topbar {
+        min-height:
+            64px;
+    }
+
+
+    .hero-brand-mark {
+        font-size:
+            0.58rem;
+
+        letter-spacing:
+            0.13em;
+    }
+
+
+    .hero-brand-dot {
+        width:
+            7px;
+
+        height:
+            7px;
+    }
+
+
+    /* -----------------------------------------
+       Main content
+       ----------------------------------------- */
+
+    .hero-main {
+        padding:
+            68px 0
+            52px;
+    }
+
+
+    .hero-copy {
+        width:
+            100%;
+    }
+
+
+    .hero-eyebrow {
+        gap:
+            11px;
+
+        margin-bottom:
+            23px;
+
+        font-size:
+            0.60rem;
+
+        letter-spacing:
+            0.13em;
+    }
+
+
+    .hero-eyebrow-line {
+        width:
+            38px;
+    }
+
+
+    .hero h1 {
+        max-width:
+            700px;
+
+        font-size:
+            clamp(
+                3.1rem,
+                9.5vw,
+                4.8rem
+            );
+
+        line-height:
+            0.94;
+
+        letter-spacing:
+            -0.058em;
+    }
+
+
+    .hero-description {
+        max-width:
+            610px;
+
+        margin-top:
+            25px;
+
+        font-size:
+            0.90rem;
+
+        line-height:
+            1.72;
+    }
+
+
+    /* -----------------------------------------
+       Location
+       ----------------------------------------- */
+
+    .hero-location {
+        gap:
+            8px;
+
+        margin-top:
+            18px;
+
+        font-size:
+            0.57rem;
+
+        letter-spacing:
+            0.10em;
+    }
+
+
+    .hero-location i {
+        width:
+            4px;
+
+        height:
+            4px;
+    }
+
+
+    /* -----------------------------------------
+       Buttons
+       ----------------------------------------- */
+
+    .hero-actions {
+        gap:
+            10px;
+
+        margin-top:
+            28px;
+    }
+
+
+    .hero-actions .primary-btn,
+    .hero-actions .secondary-btn {
+        min-height:
+            56px;
+
+        padding:
+            0 25px;
+
+        font-size:
+            0.88rem;
+    }
+
+
+    /* -----------------------------------------
+       Bottom credibility
+       ----------------------------------------- */
+
+    .hero-bottom-item {
+        gap:
+            12px;
+    }
+
+
+    .hero-bottom-item > strong {
+        width:
+            34px;
+
+        height:
+            34px;
+
+        font-size:
+            0.56rem;
+    }
+
+
+    .hero-bottom-item span {
+        font-size:
+            0.60rem;
+    }
+
+
+    .hero-bottom-item small {
+        font-size:
+            0.68rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+    .hero {
+        min-height:
+            720px;
+
+        padding-bottom:
+            28px;
+    }
+
+
+    .hero-container {
+        width:
+            calc(
+                100% - 30px
+            );
+    }
+
+
+    /* -----------------------------------------
+       Background
+       ----------------------------------------- */
+
+    .hero-background {
+        background-position:
+            68% center;
+
+        transform:
+            scale(1.02);
+    }
+
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.985
+                ) 0%,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.94
+                ) 58%,
+
+                rgba(
+                    5,
+                    18,
+                    29,
+                    0.84
+                ) 100%
+            );
+    }
+
+
+    .hero-grid {
+        opacity:
+            0.055;
+
+        background-size:
+            48px 48px;
+    }
+
+
+    /* -----------------------------------------
+       Panel background
+       ----------------------------------------- */
+
+    .hero-panel-focus {
+        top:
+            18%;
+
+        right:
+            -28%;
+
+        width:
+            100%;
+
+        height:
+            52%;
+
+        opacity:
+            0.20;
+    }
+
+
+    /* -----------------------------------------
+       Top bar
+       ----------------------------------------- */
+
+    .hero-topbar {
+        min-height:
+            58px;
+    }
+
+
+    .hero-brand-mark {
+        font-size:
+            0.50rem;
+
+        letter-spacing:
+            0.11em;
+    }
+
+
+    .hero-brand-dot {
+        width:
+            6px;
+
+        height:
+            6px;
+    }
+
+
+    /* -----------------------------------------
+       Main content
+       ----------------------------------------- */
+
+    .hero-main {
+        padding:
+            58px 0
+            40px;
+    }
+
+
+    .hero-eyebrow {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            9px;
+
+        margin-bottom:
+            21px;
+
+        font-size:
+            0.52rem;
+
+        letter-spacing:
+            0.12em;
+    }
+
+
+    .hero-eyebrow-line {
+        width:
+            38px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                2.75rem,
+                13vw,
+                4rem
+            );
+
+        line-height:
+            0.95;
+
+        letter-spacing:
+            -0.055em;
+    }
+
+
+    .hero-description {
+        margin-top:
+            22px;
+
+        font-size:
+            0.82rem;
+
+        line-height:
+            1.72;
+    }
+
+
+    /* -----------------------------------------
+       Location
+       ----------------------------------------- */
+
+    .hero-location {
+        gap:
+            6px;
+
+        margin-top:
+            17px;
+
+        font-size:
+            0.46rem;
+
+        letter-spacing:
+            0.09em;
+
+        line-height:
+            1.8;
+    }
+
+
+    .hero-location i {
+        width:
+            3px;
+
+        height:
+            3px;
+    }
+
+
+    /* -----------------------------------------
+       Buttons
+       ----------------------------------------- */
+
+    .hero-actions {
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            9px;
+
+        width:
+            100%;
+
+        margin-top:
+            26px;
+    }
+
+
+    .hero-actions .primary-btn,
+    .hero-actions .secondary-btn {
+        width:
+            100%;
+
+        min-height:
+            54px;
+
+        padding:
+            0 22px;
+
+        font-size:
+            0.84rem;
+    }
+
+
+    /* -----------------------------------------
+       Bottom credibility
+       ----------------------------------------- */
+
+    .hero-bottom {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .hero-bottom-item,
+    .hero-bottom-item:nth-child(2),
+    .hero-bottom-item:nth-child(3),
+    .hero-bottom-item:nth-child(4) {
+        min-height:
+            auto;
+
+        padding:
+            15px 0;
+
+        margin:
+            0;
+
+        border-right:
+            0;
+
+        border-bottom:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.10
+            );
+    }
+
+
+    .hero-bottom-item:last-child {
+        border-bottom:
+            0;
+    }
+
+
+    .hero-bottom-item > strong {
+        width:
+            30px;
+
+        height:
+            30px;
+
+        font-size:
+            0.50rem;
+    }
+
+
+    .hero-bottom-item span {
+        font-size:
+            0.55rem;
+
+        letter-spacing:
+            0.09em;
+    }
+
+
+    .hero-bottom-item small {
+        font-size:
+            0.63rem;
+    }
+
+
+    /* -----------------------------------------
+       Disable scroll indicator
+       ----------------------------------------- */
+
+    .hero-scroll {
+        display:
+            none;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        min-height:
+            690px;
+    }
+
+
+    .hero-container {
+        width:
+            calc(
+                100% - 24px
+            );
+    }
+
+
+    .hero-main {
+        padding-top:
+            52px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            2.55rem;
+
+        line-height:
+            0.96;
+    }
+
+
+    .hero-description {
+        font-size:
+            0.76rem;
+    }
+
+
+    .hero-location {
+        font-size:
+            0.42rem;
+    }
+
+
+    .hero-actions .primary-btn,
+    .hero-actions .secondary-btn {
+        min-height:
+            52px;
+
+        font-size:
+            0.80rem;
+    }
+
+
+    .hero-bottom-item {
+        padding:
+            13px 0;
+    }
+
+
+    .hero-bottom-item small {
+        font-size:
+            0.58rem;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-background,
+    .hero-panel-focus,
+    .hero-panel-line,
+    .hero-panel-label,
+    .hero-copy,
+    .hero-actions .primary-btn,
+    .hero-actions .secondary-btn,
+    .hero-bottom-item > strong {
+        animation:
+            none;
+
+        transition:
+            none;
+    }
+
+
+    .hero-scroll svg {
+        animation:
+            none;
+    }
+
+}

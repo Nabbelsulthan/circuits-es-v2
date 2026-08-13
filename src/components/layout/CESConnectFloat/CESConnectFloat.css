@@ -1,0 +1,424 @@
+/* =========================================================
+   CIRCUITS ES — CES CONNECT FLOAT
+========================================================= */
+
+.ces-connect-float {
+  position: fixed !important;
+
+  right: 24px;
+  bottom: 100px;
+
+  left: auto;
+  top: auto;
+
+  width: auto;
+  min-height: 60px;
+
+  display: flex !important;
+
+  align-items: center;
+
+  padding: 8px 10px 8px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(135deg,
+      #101815 0%,
+      #18221c 48%,
+      #3f982f 100%);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  z-index: 2147483646;
+
+  cursor: grab;
+
+  touch-action: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.24),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+
+  -webkit-user-drag: none;
+  /* user-drag: none; */
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: none;
+
+  cursor: grab;
+}
+
+.ces-connect-dragging {
+  cursor: grabbing !important;
+
+  transform: scale(1.03);
+
+  transition: none !important;
+}
+
+.ces-connect-float * {
+  pointer-events: none;
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.ces-connect-float:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 16px 42px rgba(0, 0, 0, 0.28),
+    0 5px 16px rgba(88, 185, 71, 0.18);
+}
+
+
+/* =========================================================
+   DRAGGING
+========================================================= */
+
+.ces-connect-dragging {
+
+  cursor: grabbing;
+
+  transform:
+    scale(1.03);
+
+  transition: none;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.32);
+}
+
+
+/* =========================================================
+   PORTAL ICON
+========================================================= */
+
+.portal-icon {
+
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(145deg,
+      rgba(88, 185, 71, 0.95),
+      rgba(45, 125, 39, 0.95));
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   LIGHTNING
+========================================================= */
+
+.portal-icon span {
+
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.ces-connect-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  margin-left: 11px;
+
+  padding-right: 12px;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.portal-label {
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   NAME
+========================================================= */
+
+.portal-name {
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.portal-arrow {
+
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 14px;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.ces-connect-float:hover .portal-arrow {
+
+  background:
+    rgba(255, 255, 255, 0.16);
+
+  transform:
+    translate(2px,
+      -2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .ces-connect-float {
+
+    right: 18px;
+    bottom: 90px;
+
+    min-height: 56px;
+
+    padding: 7px 9px 7px 8px;
+  }
+
+
+  .portal-icon {
+
+    width: 41px;
+    height: 41px;
+
+    flex-basis: 41px;
+  }
+
+
+  .portal-icon span {
+
+    font-size: 18px;
+  }
+
+
+  .ces-connect-text {
+
+    margin-left: 9px;
+
+    padding-right: 8px;
+  }
+
+
+  .portal-label {
+
+    font-size: 7px;
+  }
+
+
+  .portal-name {
+
+    font-size: 14px;
+  }
+
+
+  .portal-arrow {
+
+    width: 29px;
+    height: 29px;
+
+    flex-basis: 29px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .ces-connect-float {
+
+    right: 16px;
+    bottom: 88px;
+
+    min-height: 53px;
+
+    padding: 6px 8px 6px 7px;
+
+    border-radius: 999px;
+  }
+
+
+  .portal-icon {
+
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+  }
+
+
+  .portal-icon span {
+
+    font-size: 17px;
+  }
+
+
+  .ces-connect-text {
+
+    margin-left: 8px;
+
+    padding-right: 6px;
+  }
+
+
+  .portal-label {
+
+    font-size: 6.5px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .portal-name {
+
+    font-size: 13px;
+  }
+
+
+  .portal-arrow {
+
+    width: 27px;
+    height: 27px;
+
+    flex-basis: 27px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .ces-connect-float {
+
+    right: 12px;
+    bottom: 82px;
+  }
+
+
+  .portal-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+
+  .portal-name {
+
+    font-size: 12px;
+  }
+
+
+  .portal-arrow {
+
+    display: none;
+  }
+
+}

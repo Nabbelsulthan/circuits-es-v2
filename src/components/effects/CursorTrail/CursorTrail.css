@@ -1,0 +1,54 @@
+.cursor-node {
+
+    position: fixed;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 999999;
+
+    background: #006DFF;
+
+    transform: translate(-50%, -50%);
+
+    box-shadow:
+        0 0 8px #006DFF,
+        0 0 18px rgba(0, 109, 255, .8);
+
+    animation: circuitFade .65s ease forwards;
+
+}
+
+
+@keyframes circuitFade {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%) scale(1);
+
+    }
+
+    70% {
+
+        opacity: .8;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%) scale(.25);
+
+    }
+
+}

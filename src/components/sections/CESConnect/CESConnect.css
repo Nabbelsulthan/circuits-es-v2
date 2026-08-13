@@ -1,0 +1,1137 @@
+/* =========================================================
+   CES CONNECT — MAIN DASHBOARD
+   Scoped exclusively to CESConnect.jsx
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.ces-connect-page {
+    min-height: 100vh;
+    width: 100%;
+
+    color: var(--text-primary);
+
+    /*
+     * Fixed Navbar
+     * Desktop: 84px
+     */
+    padding-top: 84px;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 8% 12%,
+            rgba(85, 181, 50, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 92% 18%,
+            rgba(14, 94, 255, 0.07),
+            transparent 26%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(85, 181, 50, 0.06),
+            transparent 32%
+        ),
+        #f4f7f5;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   TECHNICAL GRID
+========================================================= */
+
+.ces-connect-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: 0.35;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.6) 45%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.6) 45%,
+            transparent 100%
+        );
+}
+
+
+/* =========================================================
+   SOFT TOP GLOW
+========================================================= */
+
+.ces-connect-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(85, 181, 50, 0.055) 0%,
+            rgba(85, 181, 50, 0.02) 35%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.ces-connect-page__container {
+    width: min(1400px, 100%);
+
+    margin: 0 auto;
+
+    padding: 42px 25px 60px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.ces-connect-page__header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+
+    margin-bottom: 25px;
+}
+
+
+.ces-connect-page__header-content {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.ces-connect-page__eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--secondary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+.ces-connect-page__title {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 2rem;
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.ces-connect-page__welcome {
+    max-width: 760px;
+
+    margin: 8px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.ces-connect-page__logout {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100px;
+    min-height: 44px;
+
+    padding: 11px 22px;
+
+    background: #ef4444;
+
+    border: none;
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.ces-connect-page__logout:hover {
+    background: #dc2626;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(220, 38, 38, 0.18);
+}
+
+
+.ces-connect-page__logout:active {
+    transform: translateY(0);
+}
+
+
+.ces-connect-page__logout:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, 0.2);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   CHILD COMPONENT WRAPPERS
+   IMPORTANT:
+   These are DIVs instead of SECTIONs because the
+   global CSS contains:
+       section { padding: 100px 0; }
+========================================================= */
+
+.ces-connect-page__customer-banner {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    padding: 0;
+}
+
+
+.ces-connect-page__project-details {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    padding: 0;
+}
+
+
+.ces-connect-page__stats {
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   MAIN DASHBOARD GRID
+========================================================= */
+
+.ces-connect-page__dashboard-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(300px, 1fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   PROJECTS AREA
+========================================================= */
+
+.ces-connect-page__projects {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 0;
+}
+
+
+.ces-connect-page__project-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.ces-connect-page__section-header {
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin: 0 0 22px;
+
+    padding: 14px 18px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-sm);
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.ces-connect-page__section-header:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(85, 181, 50, 0.25);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+.ces-connect-page__section-header:focus-visible {
+    outline: 3px solid rgba(85, 181, 50, 0.2);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.ces-connect-page__section-heading {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.ces-connect-page__section-title {
+    min-width: 0;
+
+    overflow: hidden;
+
+    color: var(--text-primary);
+
+    font-size: 23px;
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   SECTION ICON
+========================================================= */
+
+.ces-connect-page__section-icon {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.ces-connect-page__section-icon--active {
+    background: #10b981;
+}
+
+
+.ces-connect-page__section-icon--completed {
+    background: #2563eb;
+}
+
+
+/* =========================================================
+   SECTION RIGHT
+========================================================= */
+
+.ces-connect-page__section-right {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   SECTION COUNT
+========================================================= */
+
+.ces-connect-page__section-count {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 8px;
+
+    border-radius: 50%;
+
+    background: #ecfdf5;
+
+    color: #10b981;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.ces-connect-page__section-count--completed {
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   EXPAND ICON
+========================================================= */
+
+.ces-connect-page__expand-icon {
+    width: 24px;
+
+    flex: 0 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #6b7280;
+
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.ces-connect-page__section-header:hover
+.ces-connect-page__expand-icon {
+    color: #55b532;
+}
+
+
+.ces-connect-page__expand-icon--expanded {
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   COMPLETED PROJECTS
+========================================================= */
+
+.ces-connect-page__completed-section {
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.ces-connect-page__empty-state {
+    width: 100%;
+
+    padding: 28px 20px;
+
+    background: var(--surface);
+
+    border: 1px dashed var(--border-color);
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+}
+
+
+.ces-connect-page__empty-state p {
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RECENT UPDATES
+========================================================= */
+
+.ces-connect-page__recent-updates {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   1201px+
+========================================================= */
+
+@media (min-width: 1201px) {
+
+    .ces-connect-page__container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL DESKTOP
+   1101px — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .ces-connect-page__container {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+
+    .ces-connect-page__dashboard-grid {
+        grid-template-columns:
+            minmax(0, 1.7fr)
+            minmax(280px, 1fr);
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   769px — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ces-connect-page {
+        padding-top: 76px;
+    }
+
+
+    .ces-connect-page__container {
+        padding:
+            32px
+            20px
+            50px;
+    }
+
+
+    .ces-connect-page__header {
+        gap: 18px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .ces-connect-page__title {
+        font-size: 1.85rem;
+    }
+
+
+    .ces-connect-page__welcome {
+        font-size: 14px;
+    }
+
+
+    /*
+     * Stack project/update columns on tablet.
+     */
+
+    .ces-connect-page__dashboard-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+    }
+
+
+    .ces-connect-page__projects,
+    .ces-connect-page__recent-updates {
+        width: 100%;
+    }
+
+
+    .ces-connect-page__customer-banner {
+        margin-bottom: 22px;
+    }
+
+
+    .ces-connect-page__project-details {
+        margin-bottom: 25px;
+    }
+
+
+    .ces-connect-page__stats {
+        margin-bottom: 25px;
+    }
+
+
+    .ces-connect-page__section-title {
+        font-size: 21px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   769px — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ces-connect-page__container {
+        padding:
+            28px
+            18px
+            45px;
+    }
+
+
+    .ces-connect-page__header {
+        align-items: flex-start;
+    }
+
+
+    .ces-connect-page__logout {
+        min-width: 105px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    .ces-connect-page__section-header {
+        padding: 14px 16px;
+    }
+
+
+    .ces-connect-page__section-title {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+   601px — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-connect-page {
+        padding-top: 70px;
+    }
+
+
+    .ces-connect-page__container {
+        padding:
+            25px
+            16px
+            40px;
+    }
+
+
+    /* Header stacks */
+
+    .ces-connect-page__header {
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 16px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .ces-connect-page__header-content {
+        width: 100%;
+    }
+
+
+    .ces-connect-page__eyebrow {
+        margin-bottom: 5px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.4px;
+    }
+
+
+    .ces-connect-page__title {
+        font-size: 1.75rem;
+
+        line-height: 1.2;
+    }
+
+
+    .ces-connect-page__welcome {
+        max-width: 100%;
+
+        margin-top: 7px;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+    }
+
+
+    /* Full width logout */
+
+    .ces-connect-page__logout {
+        width: 100%;
+
+        min-height: 46px;
+
+        padding: 12px 18px;
+    }
+
+
+    /* Child spacing */
+
+    .ces-connect-page__customer-banner {
+        margin-bottom: 18px;
+    }
+
+
+    .ces-connect-page__project-details {
+        margin-bottom: 20px;
+    }
+
+
+    .ces-connect-page__stats {
+        margin-bottom: 20px;
+    }
+
+
+    .ces-connect-page__dashboard-grid {
+        gap: 20px;
+    }
+
+
+    /* Section header */
+
+    .ces-connect-page__section-header {
+        gap: 10px;
+
+        margin-bottom: 16px;
+
+        padding: 12px 13px;
+
+        border-radius: 12px;
+    }
+
+
+    .ces-connect-page__section-heading {
+        gap: 9px;
+    }
+
+
+    .ces-connect-page__section-icon {
+        width: 30px;
+        height: 30px;
+
+        flex-basis: 30px;
+
+        font-size: 12px;
+    }
+
+
+    .ces-connect-page__section-title {
+        font-size: 17px;
+
+        line-height: 1.25;
+    }
+
+
+    .ces-connect-page__section-right {
+        gap: 7px;
+    }
+
+
+    .ces-connect-page__section-count {
+        min-width: 34px;
+        height: 34px;
+
+        padding: 0 6px;
+
+        font-size: 14px;
+    }
+
+
+    .ces-connect-page__expand-icon {
+        width: 20px;
+
+        flex-basis: 20px;
+
+        font-size: 14px;
+    }
+
+
+    .ces-connect-page__project-list {
+        gap: 14px;
+    }
+
+
+    .ces-connect-page__completed-section {
+        margin-top: 28px;
+    }
+
+
+    .ces-connect-page__empty-state {
+        padding: 22px 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   481px — 600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ces-connect-page__container {
+        padding:
+            22px
+            14px
+            35px;
+    }
+
+
+    .ces-connect-page__title {
+        font-size: 1.65rem;
+    }
+
+
+    .ces-connect-page__welcome {
+        font-size: 13.5px;
+    }
+
+
+    .ces-connect-page__dashboard-grid {
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   381px — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ces-connect-page__container {
+        padding:
+            20px
+            12px
+            32px;
+    }
+
+
+    .ces-connect-page__header {
+        gap: 14px;
+    }
+
+
+    .ces-connect-page__eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    .ces-connect-page__title {
+        font-size: 1.5rem;
+    }
+
+
+    .ces-connect-page__welcome {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .ces-connect-page__logout {
+        min-height: 44px;
+
+        font-size: 13px;
+    }
+
+
+    .ces-connect-page__section-header {
+        padding: 11px 11px;
+
+        gap: 8px;
+    }
+
+
+    .ces-connect-page__section-heading {
+        gap: 8px;
+    }
+
+
+    .ces-connect-page__section-icon {
+        width: 28px;
+        height: 28px;
+
+        flex-basis: 28px;
+    }
+
+
+    .ces-connect-page__section-title {
+        font-size: 15px;
+    }
+
+
+    .ces-connect-page__section-right {
+        gap: 5px;
+    }
+
+
+    .ces-connect-page__section-count {
+        min-width: 32px;
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+
+    .ces-connect-page__expand-icon {
+        width: 18px;
+
+        flex-basis: 18px;
+
+        font-size: 13px;
+    }
+
+
+    .ces-connect-page__project-list {
+        gap: 12px;
+    }
+
+
+    .ces-connect-page__completed-section {
+        margin-top: 24px;
+    }
+
+}
+
+
+/* =========================================================
+   ULTRA SMALL
+   360px and below
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ces-connect-page__container {
+        padding:
+            18px
+            10px
+            28px;
+    }
+
+
+    .ces-connect-page__title {
+        font-size: 1.4rem;
+    }
+
+
+    .ces-connect-page__welcome {
+        font-size: 12.5px;
+    }
+
+
+    .ces-connect-page__section-title {
+        font-size: 14px;
+    }
+
+
+    .ces-connect-page__section-icon {
+        width: 26px;
+        height: 26px;
+
+        flex-basis: 26px;
+    }
+
+
+    .ces-connect-page__section-count {
+        min-width: 30px;
+        height: 30px;
+    }
+
+
+    .ces-connect-page__expand-icon {
+        width: 16px;
+
+        flex-basis: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ces-connect-page *,
+    .ces-connect-page *::before,
+    .ces-connect-page *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+
+}

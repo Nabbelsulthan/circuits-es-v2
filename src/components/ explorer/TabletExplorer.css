@@ -1,0 +1,222 @@
+/* =========================================================
+   TABLET LAYOUT
+   CES GLOBAL COLOURS
+   FUNCTIONALITY / LAYOUT UNCHANGED
+   ========================================================= */
+
+.tablet-layout {
+
+    width:
+        min(1200px, 95%);
+
+    margin:
+        auto;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        28px;
+}
+
+
+/* =========================================================
+   PANEL CANVAS
+   ========================================================= */
+
+.tablet-layout
+.panel-canvas {
+
+    width:
+        100%;
+}
+
+
+/* =========================================================
+   INFO PANEL
+   ========================================================= */
+
+.tablet-layout
+.info-panel {
+
+    width:
+        100%;
+
+    position:
+        static;
+}
+
+
+/* =========================================================
+   INFO PANEL RADIUS
+   ========================================================= */
+
+.tablet-layout
+.info-panel {
+
+    border-radius:
+        20px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.tablet-layout
+.toolbar {
+
+    margin-top:
+        20px;
+}
+
+
+/* =========================================================
+   DRAWER OVERLAY
+   ========================================================= */
+
+.drawer-overlay {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    background:
+        rgba(20, 38, 61, 0.35);
+
+    z-index:
+        999;
+}
+
+
+/* =========================================================
+   TABLET DRAWER
+   ========================================================= */
+
+.tablet-drawer {
+
+    position:
+        fixed;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    background:
+        #ffffff;
+
+    border-radius:
+        28px 28px 0 0;
+
+    transform:
+        translateY(105%);
+
+    transition:
+        0.35s ease;
+
+    z-index:
+        1000;
+
+    max-height:
+        70vh;
+
+    overflow:
+        auto;
+
+    padding:
+        24px;
+
+    box-shadow:
+        0 -20px 60px
+        rgba(20, 38, 61, 0.18);
+}
+
+
+/* =========================================================
+   OPEN DRAWER
+   ========================================================= */
+
+.tablet-drawer.open {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   DRAWER HANDLE
+   ========================================================= */
+
+.drawer-handle {
+
+    width:
+        64px;
+
+    height:
+        6px;
+
+    border-radius:
+        999px;
+
+    background:
+        #cfd8d0;
+
+    margin:
+        0 auto 22px;
+}
+
+
+/* =========================================================
+   DRAWER CLOSE BUTTON
+   ========================================================= */
+
+.drawer-close {
+
+    position:
+        absolute;
+
+    right:
+        18px;
+
+    top:
+        18px;
+
+    border:
+        none;
+
+    background:
+        none;
+
+    color:
+        #14263d;
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.drawer-close:hover {
+
+    color:
+        #55bd45;
+
+    transform:
+        scale(1.08);
+}

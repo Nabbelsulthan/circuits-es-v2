@@ -1,0 +1,110 @@
+/*==========================================================
+CIRCUITS ES — ANIMATIONS
+==========================================================*/
+
+
+/*==========================================================
+GLOBAL TRANSITION HELPERS
+==========================================================*/
+
+.hover-lift {
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+
+}
+
+.hover-lift:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/*==========================================================
+GREEN GLOW
+==========================================================*/
+
+.green-glow {
+
+    transition:
+        box-shadow var(--transition);
+
+}
+
+.green-glow:hover {
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/*==========================================================
+IMAGE ZOOM
+==========================================================*/
+
+.image-zoom {
+
+    overflow: hidden;
+
+}
+
+.image-zoom img {
+
+    transition:
+        transform var(--transition-slow);
+
+}
+
+.image-zoom:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+/*==========================================================
+AOS SAFETY
+==========================================================*/
+
+[data-aos] {
+
+    will-change: transform, opacity;
+
+}
+
+
+/*==========================================================
+REDUCED MOTION
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+    [data-aos] {
+
+        transition: none !important;
+
+        transform: none !important;
+
+        opacity: 1 !important;
+
+    }
+
+}

@@ -1,0 +1,778 @@
+/* =========================================================
+   CES CONNECT
+   RECENT UPDATES
+   Fully scoped component CSS
+========================================================= */
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.updates-card {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border: 1px solid #e6ece4;
+
+    border-radius: 22px;
+
+    padding: 26px 28px;
+
+    box-shadow:
+        0 8px 24px rgba(15, 23, 42, 0.055);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.updates-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+    padding-bottom: 16px;
+
+    border-bottom:
+        1px solid #edf1ed;
+}
+
+
+/* =========================================================
+   TITLE GROUP
+========================================================= */
+
+.updates-title-group {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.updates-eyebrow {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #55b532;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.updates-header h3 {
+
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 21px;
+
+    font-weight: 750;
+
+    line-height: 1.3;
+
+    letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   UPDATE COUNT
+========================================================= */
+
+.updates-count {
+
+    min-width: 30px;
+
+    height: 30px;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    border-radius: 999px;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.14);
+
+    color: #3f8f2f;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.updates-timeline {
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+========================================================= */
+
+.timeline-item {
+
+    position: relative;
+
+    display: flex;
+
+    gap: 17px;
+
+    min-width: 0;
+
+    padding-bottom: 22px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LAST ITEM
+========================================================= */
+
+.timeline-item:last-child {
+
+    padding-bottom: 0;
+}
+
+
+/* =========================================================
+   TIMELINE MARKER
+========================================================= */
+
+.timeline-marker {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 14px;
+
+    flex: 0 0 14px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.timeline-item:not(:last-child)::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 17px;
+
+    left: 6px;
+
+    width: 2px;
+
+    height: calc(100% - 1px);
+
+    background: #dfe9dc;
+
+    border-radius: 999px;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   TIMELINE DOT
+========================================================= */
+
+.timeline-dot {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 14px;
+
+    height: 14px;
+
+    margin-top: 4px;
+
+    flex: 0 0 14px;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+
+    background: #55b532;
+
+    border: 3px solid #eaf6e6;
+
+    box-shadow:
+        0 0 0 1px
+        rgba(85, 181, 50, 0.18);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.timeline-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding-top: 1px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROJECT NAME
+========================================================= */
+
+.update-project {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   UPDATE TEXT
+========================================================= */
+
+.update-text {
+
+    margin: 6px 0 8px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    font-weight: 450;
+
+    line-height: 1.65;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.update-date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.timeline-item:hover .timeline-dot {
+
+    transform: scale(1.12);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(85, 181, 50, 0.10);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-updates {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 120px;
+
+    margin: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    border:
+        1px dashed #dce5da;
+
+    border-radius: 16px;
+
+    background: #fafcf9;
+
+    color: #7b8794;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   EMPTY STATE ICON
+========================================================= */
+
+.no-updates-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 10px;
+
+    border-radius: 50%;
+
+    background: #eef8e8;
+
+    color: #55b532;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .updates-card {
+
+        padding: 23px 22px;
+
+        border-radius: 19px;
+    }
+
+
+    .updates-header {
+
+        margin-bottom: 20px;
+    }
+
+
+    .updates-header h3 {
+
+        font-size: 20px;
+    }
+
+
+    .timeline-item {
+
+        gap: 15px;
+
+        padding-bottom: 20px;
+    }
+
+
+    .update-project {
+
+        font-size: 15px;
+    }
+
+
+    .update-text {
+
+        font-size: 13.5px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .updates-card {
+
+        padding: 20px 17px;
+
+        border-radius: 17px;
+    }
+
+
+    .updates-header {
+
+        padding-bottom: 14px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .updates-eyebrow {
+
+        font-size: 8px;
+    }
+
+
+    .updates-header h3 {
+
+        font-size: 18px;
+    }
+
+
+    .updates-count {
+
+        min-width: 28px;
+
+        height: 28px;
+
+        font-size: 11px;
+    }
+
+
+    .timeline-item {
+
+        gap: 13px;
+
+        padding-bottom: 18px;
+    }
+
+
+    .timeline-item:not(:last-child)::before {
+
+        left: 5px;
+
+        top: 17px;
+    }
+
+
+    .timeline-marker {
+
+        width: 12px;
+
+        flex-basis: 12px;
+    }
+
+
+    .timeline-dot {
+
+        width: 12px;
+
+        height: 12px;
+
+        flex-basis: 12px;
+
+        margin-top: 4px;
+
+        border-width: 2px;
+    }
+
+
+    .update-project {
+
+        font-size: 14px;
+    }
+
+
+    .update-text {
+
+        margin-top: 5px;
+
+        margin-bottom: 7px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .update-date {
+
+        font-size: 10px;
+    }
+
+
+    .no-updates {
+
+        min-height: 100px;
+
+        font-size: 13px;
+    }
+
+
+    .no-updates-icon {
+
+        width: 31px;
+
+        height: 31px;
+
+        flex-basis: 31px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .updates-card {
+
+        padding: 18px 14px;
+
+        border-radius: 15px;
+    }
+
+
+    .updates-header {
+
+        margin-bottom: 16px;
+    }
+
+
+    .updates-header h3 {
+
+        font-size: 17px;
+    }
+
+
+    .updates-count {
+
+        min-width: 27px;
+
+        height: 27px;
+
+        font-size: 10px;
+    }
+
+
+    .timeline-item {
+
+        gap: 11px;
+
+        padding-bottom: 16px;
+    }
+
+
+    .update-project {
+
+        font-size: 13px;
+    }
+
+
+    .update-text {
+
+        font-size: 12px;
+
+        line-height: 1.55;
+    }
+
+
+    .update-date {
+
+        font-size: 9.5px;
+    }
+
+
+    .no-updates {
+
+        padding: 16px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .updates-card {
+
+        padding: 16px 12px;
+    }
+
+
+    .updates-header {
+
+        margin-bottom: 15px;
+    }
+
+
+    .updates-header h3 {
+
+        font-size: 16px;
+    }
+
+
+    .updates-eyebrow {
+
+        font-size: 7px;
+
+        letter-spacing: 0.12em;
+    }
+
+
+    .timeline-item {
+
+        gap: 9px;
+
+        padding-bottom: 14px;
+    }
+
+
+    .timeline-marker {
+
+        width: 11px;
+
+        flex-basis: 11px;
+    }
+
+
+    .timeline-dot {
+
+        width: 11px;
+
+        height: 11px;
+
+        flex-basis: 11px;
+    }
+
+
+    .timeline-item:not(:last-child)::before {
+
+        left: 4.5px;
+
+        top: 16px;
+    }
+
+
+    .update-project {
+
+        font-size: 12.5px;
+    }
+
+
+    .update-text {
+
+        font-size: 11.5px;
+    }
+
+
+    .update-date {
+
+        font-size: 9px;
+    }
+
+
+    .no-updates-icon {
+
+        width: 29px;
+
+        height: 29px;
+
+        flex-basis: 29px;
+
+        margin-right: 8px;
+    }
+
+}

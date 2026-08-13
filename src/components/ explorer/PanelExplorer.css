@@ -1,0 +1,434 @@
+/* =========================================================
+   PANEL EXPLORER
+   CES GLOBAL COLOURS
+   FUNCTIONALITY / LAYOUT UNCHANGED
+   ========================================================= */
+
+.panel-explorer {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 90px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f1f8ef 0%,
+            #ffffff 100%
+        );
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.explorer-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(85, 189, 69, 0.04) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(85, 189, 69, 0.04) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        60px 60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.explorer-header {
+
+    width:
+        min(1450px, 94%);
+
+    margin:
+        0 auto 50px;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* =========================================================
+   EXPLORER BADGE
+   ========================================================= */
+
+.explorer-badge {
+
+    display:
+        inline-block;
+
+    padding:
+        8px 18px;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(85, 189, 69, 0.09);
+
+    color:
+        #55bd45;
+
+    font-size:
+        0.82rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        18px;
+}
+
+
+/* =========================================================
+   HEADER TITLE
+   ========================================================= */
+
+.explorer-header h2 {
+
+    margin:
+        0 0 18px;
+
+    font-size:
+        clamp(2rem, 4vw, 3.2rem);
+
+    color:
+        #14263d;
+}
+
+
+/* =========================================================
+   HEADER DESCRIPTION
+   ========================================================= */
+
+.explorer-header p {
+
+    max-width:
+        760px;
+
+    margin:
+        auto;
+
+    color:
+        #6d7f92;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.explorer-layout {
+
+    width:
+        min(1450px, 94%);
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap:
+        32px;
+
+    align-items:
+        start;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.explorer-footer {
+
+    width:
+        min(1450px, 94%);
+
+    margin:
+        40px auto 0;
+}
+
+
+/* =========================================================
+   LEGEND TITLE
+   ========================================================= */
+
+.legend-title {
+
+    margin-bottom:
+        18px;
+
+    color:
+        #14263d;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   LEGEND LIST
+   ========================================================= */
+
+.legend-list {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+}
+
+
+/* =========================================================
+   LEGEND ITEM
+   ========================================================= */
+
+.legend-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        12px 18px;
+
+    border:
+        1px solid
+        rgba(20, 38, 61, 0.10);
+
+    border-radius:
+        999px;
+
+    background:
+        #ffffff;
+
+    color:
+        #34495e;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.3s;
+}
+
+
+/* =========================================================
+   LEGEND HOVER
+   ========================================================= */
+
+.legend-item:hover {
+
+    border-color:
+        #55bd45;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   ACTIVE LEGEND
+   ========================================================= */
+
+.legend-item.active {
+
+    background:
+        #55bd45;
+
+    color:
+        #ffffff;
+
+    border-color:
+        #55bd45;
+
+    box-shadow:
+        0 8px 22px
+        rgba(85, 189, 69, 0.20);
+}
+
+
+/* =========================================================
+   LEGEND DOT
+   ========================================================= */
+
+.legend-dot {
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    border-radius:
+        50%;
+
+    background:
+        #55bd45;
+
+    flex-shrink:
+        0;
+}
+
+
+/* =========================================================
+   ACTIVE LEGEND DOT
+   ========================================================= */
+
+.legend-item.active
+.legend-dot {
+
+    background:
+        #ffffff;
+}
+
+
+/* =========================================================
+   GLOBAL MODE HELPERS
+   ========================================================= */
+
+.panel-explorer.normal {
+
+    --accent:
+        #55bd45;
+}
+
+
+.panel-explorer.wiring {
+
+    --accent:
+        #55bd45;
+}
+
+
+.panel-explorer.power {
+
+    --accent:
+        #49b23d;
+}
+
+
+.panel-explorer.blueprint {
+
+    --accent:
+        #55bd45;
+}
+
+
+.panel-explorer.xray {
+
+    --accent:
+        #6f8f72;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .explorer-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .panel-explorer {
+
+        padding:
+            70px 0;
+    }
+
+
+    .explorer-header {
+
+        margin-bottom:
+            35px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .legend-list {
+
+        gap:
+            10px;
+    }
+
+
+    .legend-item {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+    }
+
+}

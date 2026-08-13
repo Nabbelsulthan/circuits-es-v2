@@ -1,0 +1,635 @@
+/* =========================================================
+   CES CONNECT — LOADING SCREEN
+   Fully scoped to prevent global CSS conflicts
+========================================================= */
+
+.ces-connect-loading {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(85, 181, 50, 0.10),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(85, 181, 50, 0.08),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #f1f6ef 50%,
+            #f8fafc 100%
+        );
+
+    color: var(--text-primary, #0f172a);
+
+    animation: cesConnectLoadingFadeIn 0.35s ease;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.ces-connect-loading::before {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: -260px;
+    right: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(85, 181, 50, 0.14),
+            rgba(85, 181, 50, 0)
+        );
+
+    pointer-events: none;
+}
+
+
+.ces-connect-loading::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    bottom: -240px;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(85, 181, 50, 0.10),
+            rgba(85, 181, 50, 0)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGO AREA
+========================================================= */
+
+.ces-connect-loading-logo-wrap {
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    animation:
+        cesConnectLoadingFloat 3.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   OUTER RING
+========================================================= */
+
+.ces-connect-loading-ring {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(85, 181, 50, 0.12);
+
+    border-top-color: #55b532;
+
+    animation:
+        cesConnectLoadingSpin 2.2s linear infinite;
+}
+
+
+/* =========================================================
+   LOGO CONTAINER
+========================================================= */
+
+.ces-connect-loading-logo {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(85, 181, 50, 0.14);
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.10),
+        0 5px 15px rgba(85, 181, 50, 0.08);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.ces-connect-loading-logo img {
+    width: 88px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.ces-connect-loading-title {
+    margin: 0;
+
+    color: var(--primary, #0b1f3a);
+
+    font-size: 40px;
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.ces-connect-loading-subtitle {
+    margin: 8px 0 28px;
+
+    color: var(--text-light, #64748b);
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   LOADING MESSAGE
+========================================================= */
+
+.ces-connect-loading-message {
+    min-height: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    color: var(--text-secondary, #475569);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.ces-connect-loading-message span:last-child {
+    animation:
+        cesConnectLoadingMessage 0.45s ease;
+}
+
+
+/* =========================================================
+   STATUS DOT
+========================================================= */
+
+.ces-connect-loading-dot {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+
+    border-radius: 50%;
+
+    background: #55b532;
+
+    box-shadow:
+        0 0 0 4px rgba(85, 181, 50, 0.12);
+
+    animation:
+        cesConnectLoadingPulse 1.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+
+.ces-connect-loading-bar {
+    position: relative;
+
+    width: 320px;
+    max-width: 90vw;
+
+    height: 6px;
+
+    margin-top: 24px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #dfe8dc;
+
+    box-shadow:
+        inset 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+
+.ces-connect-loading-progress {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 35%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            #3f982f,
+            #55b532,
+            #8ee35d
+        );
+
+    box-shadow:
+        0 0 12px rgba(85, 181, 50, 0.28);
+
+    animation:
+        cesConnectLoadingProgress 1.7s
+        ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ces-connect-loading-footer {
+    margin-top: 38px;
+
+    color: var(--text-light, #64748b);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    letter-spacing: 0.02em;
+
+    text-align: center;
+}
+
+
+.ces-connect-loading-footer strong {
+    color: #4a9638;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes cesConnectLoadingSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes cesConnectLoadingFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes cesConnectLoadingPulse {
+
+    0% {
+        opacity: 0.45;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.45;
+        transform: scale(0.85);
+    }
+
+}
+
+
+@keyframes cesConnectLoadingProgress {
+
+    0% {
+        left: -35%;
+        width: 30%;
+    }
+
+    50% {
+        left: 35%;
+        width: 45%;
+    }
+
+    100% {
+        left: 105%;
+        width: 30%;
+    }
+
+}
+
+
+@keyframes cesConnectLoadingMessage {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes cesConnectLoadingFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-connect-loading {
+        padding: 25px 20px;
+    }
+
+
+    .ces-connect-loading-logo-wrap {
+        width: 130px;
+        height: 130px;
+
+        margin-bottom: 26px;
+    }
+
+
+    .ces-connect-loading-logo {
+        width: 104px;
+        height: 104px;
+    }
+
+
+    .ces-connect-loading-logo img {
+        width: 78px;
+    }
+
+
+    .ces-connect-loading-title {
+        font-size: 34px;
+    }
+
+
+    .ces-connect-loading-subtitle {
+        margin-bottom: 24px;
+
+        font-size: 12px;
+    }
+
+
+    .ces-connect-loading-message {
+        font-size: 14px;
+    }
+
+
+    .ces-connect-loading-bar {
+        width: 280px;
+
+        margin-top: 22px;
+    }
+
+
+    .ces-connect-loading-footer {
+        margin-top: 32px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ces-connect-loading {
+        padding: 20px 16px;
+    }
+
+
+    .ces-connect-loading-logo-wrap {
+        width: 112px;
+        height: 112px;
+
+        margin-bottom: 23px;
+    }
+
+
+    .ces-connect-loading-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    .ces-connect-loading-logo img {
+        width: 68px;
+    }
+
+
+    .ces-connect-loading-title {
+        font-size: 30px;
+
+        letter-spacing: -0.025em;
+    }
+
+
+    .ces-connect-loading-subtitle {
+        margin-top: 7px;
+        margin-bottom: 22px;
+
+        font-size: 10px;
+
+        letter-spacing: 0.13em;
+    }
+
+
+    .ces-connect-loading-message {
+        max-width: 90vw;
+
+        font-size: 13px;
+
+        gap: 8px;
+    }
+
+
+    .ces-connect-loading-dot {
+        width: 7px;
+        height: 7px;
+
+        flex-basis: 7px;
+    }
+
+
+    .ces-connect-loading-bar {
+        width: 240px;
+
+        height: 5px;
+
+        margin-top: 20px;
+    }
+
+
+    .ces-connect-loading-footer {
+        margin-top: 28px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ces-connect-loading-logo-wrap {
+        width: 96px;
+        height: 96px;
+    }
+
+
+    .ces-connect-loading-logo {
+        width: 78px;
+        height: 78px;
+    }
+
+
+    .ces-connect-loading-logo img {
+        width: 60px;
+    }
+
+
+    .ces-connect-loading-title {
+        font-size: 27px;
+    }
+
+
+    .ces-connect-loading-message {
+        font-size: 12px;
+    }
+
+
+    .ces-connect-loading-bar {
+        width: 210px;
+    }
+
+}

@@ -1,0 +1,286 @@
+/* =========================================================
+   PANEL EXPLORER
+   EXPLORER TOOLBAR
+   CES GLOBAL VISUAL SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.panel-explorer .explorer-toolbar {
+
+    width: min(1450px, 94%);
+
+    margin: 20px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   TOOLBAR BUTTON
+   ========================================================= */
+
+.panel-explorer .explorer-toolbar button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 10px;
+
+    background: #17243b;
+
+    color: #a5b3c3;
+
+    font-family: inherit;
+
+    font-size: 0.88rem;
+
+    font-weight: 650;
+
+    letter-spacing: 0.35px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.panel-explorer
+.explorer-toolbar
+button:hover {
+
+    background: #1d3049;
+
+    color: #ffffff;
+
+    border-color:
+        rgba(85, 189, 69, 0.45);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 24px rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.panel-explorer
+.explorer-toolbar
+button.active {
+
+    background: #55bd45;
+
+    color: #ffffff;
+
+    border-color: #55bd45;
+
+    box-shadow:
+        0 9px 24px
+        rgba(85, 189, 69, 0.24);
+}
+
+
+/* Active hover */
+
+.panel-explorer
+.explorer-toolbar
+button.active:hover {
+
+    background: #49b23d;
+
+    border-color: #49b23d;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(85, 189, 69, 0.28);
+}
+
+
+/* =========================================================
+   PRESS
+   ========================================================= */
+
+.panel-explorer
+.explorer-toolbar
+button:active {
+
+    transform: translateY(0);
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   KEYBOARD FOCUS
+   ========================================================= */
+
+.panel-explorer
+.explorer-toolbar
+button:focus-visible {
+
+    outline: 2px solid #55bd45;
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   DISABLED
+   ========================================================= */
+
+.panel-explorer
+.explorer-toolbar
+button:disabled {
+
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .panel-explorer
+    .explorer-toolbar {
+
+        width: 94%;
+
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding: 4px 2px 10px;
+
+        gap: 8px;
+
+        scrollbar-width: thin;
+
+        scrollbar-color:
+            rgba(85, 189, 69, 0.45)
+            transparent;
+    }
+
+
+    .panel-explorer
+    .explorer-toolbar
+    button {
+
+        flex: 0 0 auto;
+
+        min-height: 43px;
+
+        padding: 0 16px;
+
+        font-size: 0.84rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .panel-explorer
+    .explorer-toolbar {
+
+        margin-top: 15px;
+
+        width: 92%;
+
+        gap: 7px;
+    }
+
+
+    .panel-explorer
+    .explorer-toolbar
+    button {
+
+        min-height: 41px;
+
+        padding: 0 14px;
+
+        border-radius: 9px;
+
+        font-size: 0.80rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .panel-explorer
+    .explorer-toolbar
+    button {
+
+        transition: none;
+    }
+
+}

@@ -1,0 +1,2044 @@
+/* =========================================================
+   CIRCUITS ES — CONTROL PANELS
+   LT PANEL SOLUTIONS
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.control-panels-page {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        var(--surface, #f7f9fc);
+
+    color:
+        var(--heading, #14253a);
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+   ========================================================= */
+
+.cp-container {
+
+    width:
+        min(
+            calc(100% - 136px),
+            1400px
+        );
+
+    margin:
+        0 auto;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+
+    max-width:
+        850px;
+
+    margin:
+        0 auto 65px;
+
+    text-align:
+        center;
+}
+
+
+/*
+   section-tag is intentionally NOT styled here.
+
+   It comes from the global CSS.
+*/
+
+
+.section-heading h2 {
+
+    margin:
+        22px 0 20px;
+
+    color:
+        var(--heading, #14253a);
+
+    font-size:
+        clamp(
+            2.6rem,
+            5vw,
+            4.2rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.045em;
+}
+
+
+.section-heading h2 span {
+
+    color:
+        var(--green, #50b947);
+}
+
+
+.section-heading p {
+
+    max-width:
+        700px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--text-muted, #64748b);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.cp-hero {
+
+    position:
+        relative;
+
+    padding:
+        145px 0 90px;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--white, #ffffff);
+}
+
+
+/* =========================================================
+   SUBTLE TECHNICAL GRID
+   ========================================================= */
+
+.cp-hero::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0.45;
+
+    background-image:
+
+        linear-gradient(
+            rgba(20, 37, 58, 0.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(20, 37, 58, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        64px 64px;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.cp-hero .cp-container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.9fr);
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.cp-hero-content {
+
+    max-width:
+        720px;
+}
+
+
+/*
+   Global section-tag handles:
+   background
+   color
+   typography
+   spacing
+*/
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.cp-hero h1 {
+
+    margin:
+        22px 0 26px;
+
+    color:
+        var(--heading, #14253a);
+
+    font-size:
+        clamp(
+            3.3rem,
+            6vw,
+            5.4rem
+        );
+
+    font-weight:
+        800;
+
+    line-height:
+        0.96;
+
+    letter-spacing:
+        -0.06em;
+}
+
+
+.cp-hero h1 span {
+
+    color:
+        var(--green, #50b947);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.cp-hero p {
+
+    max-width:
+        680px;
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted, #64748b);
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.85;
+}
+
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.cp-buttons {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    margin-top:
+        38px;
+}
+
+
+/*
+   .primary-btn and .secondary-btn are global.
+
+   Do NOT redefine their colours here.
+*/
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.cp-hero-image {
+
+    position:
+        relative;
+
+    min-width:
+        0;
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+   ========================================================= */
+
+.cp-hero-image::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -12px;
+
+    border:
+        1px solid
+        rgba(76, 180, 63, 0.14);
+
+    border-radius:
+        30px;
+
+    pointer-events:
+        none;
+
+    transition:
+        border-color 350ms ease,
+        transform 350ms ease;
+}
+
+
+.cp-hero-image:hover::before {
+
+    border-color:
+        rgba(76, 180, 63, 0.32);
+
+    transform:
+        translate(5px, -5px);
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.cp-hero-image img {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        520px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        24px;
+
+    border:
+        1px solid
+        rgba(20, 37, 58, 0.08);
+
+    box-shadow:
+        0 30px 70px
+        rgba(20, 37, 58, 0.12);
+
+    transition:
+        transform 500ms ease,
+        box-shadow 500ms ease;
+}
+
+
+.cp-hero-image:hover img {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 35px 80px
+        rgba(20, 37, 58, 0.16);
+}
+
+
+/* =========================================================
+   CUSTOM LT PANEL SECTION
+   ========================================================= */
+
+.cp-custom {
+
+    position:
+        relative;
+
+    padding:
+        110px 0;
+
+    background:
+        var(--surface, #f7f9fc);
+}
+
+
+/* =========================================================
+   CUSTOM GRID
+   ========================================================= */
+
+.custom-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.05fr
+        1fr;
+
+    gap:
+        80px;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   CUSTOM CONTENT
+   ========================================================= */
+
+.custom-content {
+
+    max-width:
+        650px;
+}
+
+
+.custom-content p {
+
+    margin:
+        0 0 24px;
+
+    color:
+        var(--text-muted, #64748b);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.9;
+}
+
+
+.custom-content p:last-child {
+
+    margin-bottom:
+        0;
+}
+
+/* =========================================================
+   CUSTOM FEATURES
+   ========================================================= */
+
+.custom-features {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        16px;
+}
+
+
+/* =========================================================
+   FEATURE CARD
+   ========================================================= */
+
+.feature-card {
+
+    position:
+        relative;
+
+    min-height:
+        225px;
+
+    padding:
+        30px;
+
+    background:
+        var(--white, #ffffff);
+
+    border:
+        1px solid
+        rgba(20, 37, 58, 0.09);
+
+    border-radius:
+        18px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 8px 28px
+        rgba(20, 37, 58, 0.035);
+
+    transition:
+        transform 350ms ease,
+        border-color 350ms ease,
+        box-shadow 350ms ease;
+}
+
+
+/* =========================================================
+   GREEN EDGE
+   ========================================================= */
+
+.feature-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        0;
+
+    width:
+        3px;
+
+    height:
+        100%;
+
+    background:
+        var(--green, #50b947);
+
+    transform:
+        scaleY(0);
+
+    transform-origin:
+        bottom;
+
+    transition:
+        transform 400ms ease;
+}
+
+
+.feature-card:hover::before {
+
+    transform:
+        scaleY(1);
+}
+
+
+/* =========================================================
+   FEATURE HOVER
+   ========================================================= */
+
+.feature-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(76, 180, 63, 0.25);
+
+    box-shadow:
+        0 18px 45px
+        rgba(20, 37, 58, 0.08);
+}
+
+
+/* =========================================================
+   FEATURE ICON
+   ========================================================= */
+
+.feature-card > span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    margin-bottom:
+        20px;
+
+    border:
+        1px solid
+        rgba(76, 180, 63, 0.18);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(76, 180, 63, 0.07);
+
+    font-size:
+        1.35rem;
+
+    line-height:
+        1;
+
+    transition:
+        transform 300ms ease,
+        background-color 300ms ease;
+}
+
+
+.feature-card:hover > span {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(76, 180, 63, 0.12);
+}
+
+
+/* =========================================================
+   FEATURE HEADING
+   ========================================================= */
+
+.feature-card h3 {
+
+    margin:
+        0 0 11px;
+
+    color:
+        var(--heading, #14253a);
+
+    font-size:
+        1.12rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.3;
+
+    letter-spacing:
+        -0.02em;
+}
+
+
+/* =========================================================
+   FEATURE DESCRIPTION
+   ========================================================= */
+
+.feature-card p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted, #64748b);
+
+    font-size:
+        0.87rem;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   LT PANEL PORTFOLIO
+   ========================================================= */
+
+.cp-panels {
+
+    position:
+        relative;
+
+    padding:
+        115px 0 125px;
+
+    background:
+        var(--white, #ffffff);
+
+    overflow:
+        hidden;
+}
+
+
+/* =========================================================
+   PANEL BACKGROUND GRID
+   ========================================================= */
+
+.cp-panels::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0.5;
+
+    background-image:
+
+        linear-gradient(
+            rgba(20, 37, 58, 0.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(20, 37, 58, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        64px 64px;
+}
+
+
+/* =========================================================
+   PANEL GRID
+   ========================================================= */
+
+.panel-grid {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        18px;
+}
+
+
+/* =========================================================
+   PANEL CARD
+   ========================================================= */
+
+.panel-card {
+
+    position:
+        relative;
+
+    min-height:
+        360px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        34px 34px 28px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid
+        rgba(20, 37, 58, 0.10);
+
+    border-radius:
+        20px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 8px 30px
+        rgba(20, 37, 58, 0.035);
+
+    transition:
+        transform 350ms ease,
+        border-color 350ms ease,
+        box-shadow 350ms ease;
+}
+
+
+/* =========================================================
+   PANEL CARD TOP ACCENT
+   ========================================================= */
+
+.panel-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+        var(--green, #50b947);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 400ms ease;
+}
+
+
+.panel-card:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+
+/* =========================================================
+   PANEL CARD HOVER
+   ========================================================= */
+
+.panel-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(76, 180, 63, 0.27);
+
+    box-shadow:
+        0 22px 55px
+        rgba(20, 37, 58, 0.09);
+}
+
+
+/* =========================================================
+   PANEL ICON
+   ========================================================= */
+
+.panel-icon {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        68px;
+
+    height:
+        68px;
+
+    margin-bottom:
+        27px;
+
+    border:
+        1px solid
+        rgba(76, 180, 63, 0.20);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(76, 180, 63, 0.07);
+
+    font-size:
+        1.7rem;
+
+    transition:
+        transform 350ms ease,
+        background-color 350ms ease;
+}
+
+
+.panel-card:hover .panel-icon {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(76, 180, 63, 0.12);
+}
+
+
+/* =========================================================
+   PANEL CONTENT
+   ========================================================= */
+
+.panel-card-content {
+
+    position:
+        relative;
+
+    flex:
+        1;
+}
+
+
+/* =========================================================
+   PANEL NUMBER
+   ========================================================= */
+
+.panel-card-number {
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    right:
+        0;
+
+    color:
+        rgba(20, 37, 58, 0.22);
+
+    font-size:
+        0.65rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.14em;
+
+    transition:
+        color 300ms ease;
+}
+
+
+.panel-card:hover .panel-card-number {
+
+    color:
+        var(--green, #50b947);
+}
+
+
+/* =========================================================
+   PANEL HEADING
+   ========================================================= */
+
+.panel-card h3 {
+
+    margin:
+        0 0 15px;
+
+    padding-right:
+        55px;
+
+    color:
+        var(--heading, #14253a);
+
+    font-size:
+        1.45rem;
+
+    font-weight:
+        750;
+
+    line-height:
+        1.25;
+
+    letter-spacing:
+        -0.025em;
+}
+
+
+/* =========================================================
+   PANEL DESCRIPTION
+   ========================================================= */
+
+.panel-card p {
+
+    margin:
+        0;
+
+    max-width:
+        620px;
+
+    color:
+        var(--text-muted, #64748b);
+
+    font-size:
+        0.92rem;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   PANEL CARD LINK
+   ========================================================= */
+
+.panel-card-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    align-self:
+        flex-start;
+
+    margin-top:
+        30px;
+
+    color:
+        var(--green, #50b947);
+
+    font-size:
+        0.78rem;
+
+    font-weight:
+        750;
+
+    text-decoration:
+        none;
+
+    transition:
+        color 300ms ease,
+        transform 300ms ease;
+}
+
+
+.panel-card-link span {
+
+    font-size:
+        1rem;
+
+    line-height:
+        1;
+
+    transition:
+        transform 300ms ease;
+}
+
+
+.panel-card-link:hover {
+
+    color:
+        var(--green-dark, #3f9634);
+
+    transform:
+        translateX(2px);
+}
+
+
+.panel-card-link:hover span {
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   PANEL CARD TECHNICAL DETAIL
+   ========================================================= */
+
+.panel-card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        -100px;
+
+    bottom:
+        -100px;
+
+    width:
+        200px;
+
+    height:
+        200px;
+
+    border:
+        1px solid
+        rgba(76, 180, 63, 0.07);
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+    transition:
+        transform 500ms ease,
+        border-color 500ms ease;
+}
+
+
+.panel-card:hover::after {
+
+    transform:
+        scale(1.15);
+
+    border-color:
+        rgba(76, 180, 63, 0.15);
+}
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .cp-container {
+
+        width:
+            min(
+                calc(100% - 80px),
+                1100px
+            );
+    }
+
+
+    .cp-hero .cp-container {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(360px, 0.85fr);
+
+        gap:
+            55px;
+    }
+
+
+    .cp-hero h1 {
+
+        font-size:
+            clamp(
+                3rem,
+                5.5vw,
+                4.5rem
+            );
+    }
+
+
+    .cp-hero-image img {
+
+        height:
+            460px;
+    }
+
+
+    .custom-grid {
+
+        gap:
+            55px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    /* -----------------------------------------------------
+       COMMON
+       ----------------------------------------------------- */
+
+    .cp-container {
+
+        width:
+            min(
+                calc(100% - 64px),
+                850px
+            );
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .cp-hero {
+
+        padding:
+            115px 0 75px;
+    }
+
+
+    .cp-hero .cp-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+    }
+
+
+    .cp-hero-content {
+
+        max-width:
+            760px;
+
+        text-align:
+            center;
+
+        margin:
+            0 auto;
+    }
+
+
+    .cp-hero p {
+
+        margin:
+            0 auto;
+    }
+
+
+    .cp-buttons {
+
+        justify-content:
+            center;
+    }
+
+
+    .cp-hero-image {
+
+        width:
+            min(
+                100%,
+                720px
+            );
+
+        margin:
+            0 auto;
+    }
+
+
+    .cp-hero-image img {
+
+        height:
+            430px;
+    }
+
+
+    /* -----------------------------------------------------
+       CUSTOM SECTION
+       ----------------------------------------------------- */
+
+    .cp-custom {
+
+        padding:
+            90px 0;
+    }
+
+
+    .custom-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+    }
+
+
+    .custom-content {
+
+        max-width:
+            760px;
+
+        margin:
+            0 auto;
+
+        text-align:
+            center;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURES
+       ----------------------------------------------------- */
+
+    .custom-features {
+
+        width:
+            100%;
+
+        max-width:
+            760px;
+
+        margin:
+            0 auto;
+    }
+
+
+    /* -----------------------------------------------------
+       PANEL PORTFOLIO
+       ----------------------------------------------------- */
+
+    .cp-panels {
+
+        padding:
+            90px 0 100px;
+    }
+
+
+    .panel-grid {
+
+        grid-template-columns:
+            1fr;
+
+        max-width:
+            760px;
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       COMMON
+       ----------------------------------------------------- */
+
+    .cp-container {
+
+        width:
+            calc(100% - 36px);
+    }
+
+
+    .section-heading {
+
+        margin-bottom:
+            42px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            clamp(
+                2.25rem,
+                10vw,
+                3.1rem
+            );
+
+        line-height:
+            1;
+    }
+
+
+    .section-heading p {
+
+        font-size:
+            0.9rem;
+
+        line-height:
+            1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .cp-hero {
+
+        padding:
+            100px 0 60px;
+    }
+
+
+    .cp-hero .cp-container {
+
+        gap:
+            38px;
+    }
+
+
+    .cp-hero-content {
+
+        text-align:
+            left;
+    }
+
+
+    .cp-hero h1 {
+
+        margin:
+            20px 0 22px;
+
+        font-size:
+            clamp(
+                2.65rem,
+                12vw,
+                4rem
+            );
+
+        line-height:
+            0.98;
+    }
+
+
+    .cp-hero p {
+
+        font-size:
+            0.92rem;
+
+        line-height:
+            1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO ACTIONS
+       ----------------------------------------------------- */
+
+    .cp-buttons {
+
+        align-items:
+            stretch;
+
+        flex-direction:
+            column;
+
+        gap:
+            11px;
+
+        margin-top:
+            30px;
+    }
+
+
+    .cp-buttons .primary-btn,
+    .cp-buttons .secondary-btn {
+
+        width:
+            100%;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO IMAGE
+       ----------------------------------------------------- */
+
+    .cp-hero-image {
+
+        width:
+            100%;
+    }
+
+
+    .cp-hero-image::before {
+
+        inset:
+            -7px;
+
+        border-radius:
+            21px;
+    }
+
+
+    .cp-hero-image img {
+
+        width:
+            100%;
+
+        height:
+            280px;
+
+        border-radius:
+            18px;
+    }
+
+
+    /* -----------------------------------------------------
+       CUSTOM SECTION
+       ----------------------------------------------------- */
+
+    .cp-custom {
+
+        padding:
+            75px 0;
+    }
+
+
+    .custom-grid {
+
+        gap:
+            35px;
+    }
+
+
+    .custom-content {
+
+        text-align:
+            left;
+    }
+
+
+    .custom-content p {
+
+        font-size:
+            0.91rem;
+
+        line-height:
+            1.8;
+
+        margin-bottom:
+            20px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEATURE GRID
+       ----------------------------------------------------- */
+
+    .custom-features {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+    }
+
+
+    .feature-card {
+
+        min-height:
+            auto;
+
+        padding:
+            25px;
+
+        border-radius:
+            15px;
+    }
+
+
+    .feature-card > span {
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+        margin-bottom:
+            16px;
+
+        font-size:
+            1.2rem;
+    }
+
+
+    .feature-card h3 {
+
+        font-size:
+            1.05rem;
+    }
+
+
+    .feature-card p {
+
+        font-size:
+            0.84rem;
+
+        line-height:
+            1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       PANEL PORTFOLIO
+       ----------------------------------------------------- */
+
+    .cp-panels {
+
+        padding:
+            75px 0 85px;
+    }
+
+
+    .panel-grid {
+
+        gap:
+            13px;
+    }
+
+
+    .panel-card {
+
+        min-height:
+            330px;
+
+        padding:
+            27px 24px 24px;
+
+        border-radius:
+            17px;
+    }
+
+
+    .panel-icon {
+
+        width:
+            56px;
+
+        height:
+            56px;
+
+        margin-bottom:
+            23px;
+
+        border-radius:
+            13px;
+
+        font-size:
+            1.45rem;
+    }
+
+
+    .panel-card h3 {
+
+        margin-bottom:
+            12px;
+
+        padding-right:
+            45px;
+
+        font-size:
+            1.2rem;
+    }
+
+
+    .panel-card p {
+
+        font-size:
+            0.86rem;
+
+        line-height:
+            1.72;
+    }
+
+
+    .panel-card-link {
+
+        margin-top:
+            25px;
+
+        font-size:
+            0.74rem;
+    }
+
+
+    .panel-card-number {
+
+        font-size:
+            0.6rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .cp-container {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .cp-hero {
+
+        padding:
+            88px 0 50px;
+    }
+
+
+    .cp-hero h1 {
+
+        font-size:
+            2.55rem;
+    }
+
+
+    .cp-hero p {
+
+        font-size:
+            0.86rem;
+    }
+
+
+    .cp-hero-image img {
+
+        height:
+            230px;
+
+        border-radius:
+            16px;
+    }
+
+
+    .cp-custom {
+
+        padding:
+            65px 0;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            2.1rem;
+    }
+
+
+    .feature-card {
+
+        padding:
+            22px;
+    }
+
+
+    .panel-card {
+
+        min-height:
+            310px;
+
+        padding:
+            24px 21px 22px;
+    }
+
+
+    .panel-icon {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .panel-card h3 {
+
+        font-size:
+            1.1rem;
+    }
+
+
+    .panel-card p {
+
+        font-size:
+            0.82rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cp-hero-image::before,
+    .cp-hero-image img,
+    .feature-card,
+    .feature-card::before,
+    .feature-card > span,
+    .panel-card,
+    .panel-card::before,
+    .panel-card::after,
+    .panel-icon,
+    .panel-card-link,
+    .panel-card-link span {
+
+        transition:
+            none;
+    }
+
+}
+
+
+
+/* =========================================================
+   CONTROL PANELS — HERO BUTTONS
+   Uses global design language, scoped to this page only
+   ========================================================= */
+
+.cp-buttons .primary-btn,
+.cp-buttons .secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 54px;
+
+    padding: 0 26px;
+
+    border-radius: 999px;
+
+    font-size: 0.88rem;
+    font-weight: 750;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform 300ms ease,
+        background-color 300ms ease,
+        border-color 300ms ease,
+        color 300ms ease,
+        box-shadow 300ms ease;
+}
+
+
+/* =========================================================
+   PRIMARY
+   ========================================================= */
+
+.cp-buttons .primary-btn {
+
+    color: var(--white, #ffffff);
+
+    background:
+        var(--green, #50b947);
+
+    border:
+        1px solid
+        var(--green, #50b947);
+
+    box-shadow:
+        0 8px 22px
+        rgba(76, 180, 63, 0.16);
+}
+
+
+.cp-buttons .primary-btn:hover {
+
+    color: var(--white, #ffffff);
+
+    background:
+        var(--green-dark, #3f9634);
+
+    border-color:
+        var(--green-dark, #3f9634);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(76, 180, 63, 0.24);
+}
+
+
+.cp-buttons .primary-btn:active {
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 7px 16px
+        rgba(76, 180, 63, 0.18);
+}
+
+
+/* =========================================================
+   SECONDARY
+   ========================================================= */
+
+.cp-buttons .secondary-btn {
+
+    color:
+        var(--heading, #14253a);
+
+    background:
+        var(--white, #ffffff);
+
+    border:
+        1px solid
+        rgba(20, 37, 58, 0.16);
+
+    box-shadow:
+        0 6px 18px
+        rgba(20, 37, 58, 0.04);
+}
+
+
+.cp-buttons .secondary-btn:hover {
+
+    color:
+        var(--green, #50b947);
+
+    background:
+        rgba(76, 180, 63, 0.045);
+
+    border-color:
+        rgba(76, 180, 63, 0.42);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(20, 37, 58, 0.07);
+}
+
+
+.cp-buttons .secondary-btn:active {
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   FOCUS — ACCESSIBILITY
+   ========================================================= */
+
+.cp-buttons .primary-btn:focus-visible,
+.cp-buttons .secondary-btn:focus-visible {
+
+    outline:
+        3px solid
+        rgba(76, 180, 63, 0.25);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .cp-buttons .primary-btn,
+    .cp-buttons .secondary-btn {
+
+        width:
+            100%;
+
+        min-height:
+            52px;
+    }
+
+}

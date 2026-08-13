@@ -1,0 +1,4530 @@
+/* =========================================================
+   PRODUCTS PAGE
+   PART 1 — PREMIUM HERO
+   ========================================================= */
+
+.products-page {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #f5f8f6;
+
+    color: #142235;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.products-showcase {
+    position: relative;
+
+    min-height: 820px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 125px 0 110px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8faf9 0%,
+            #f3f7f5 48%,
+            #eaf1ee 100%
+        );
+}
+
+
+/* =========================================================
+   ARCHITECTURAL BACKGROUND
+   ========================================================= */
+
+.products-hero-grid {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 64px 64px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            black 15%,
+            black 85%,
+            transparent 100%
+        );
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   BACKGROUND TECHNICAL LINES
+   ========================================================= */
+
+.products-showcase::before {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    top: -300px;
+    right: -220px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.12);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 70px rgba(79, 189, 69, 0.025),
+        0 0 0 140px rgba(79, 189, 69, 0.018);
+
+    pointer-events: none;
+}
+
+
+.products-showcase::after {
+    content: "";
+
+    position: absolute;
+
+    width: 460px;
+    height: 460px;
+
+    left: -260px;
+    bottom: -280px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.07);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 65px rgba(20, 45, 64, 0.018),
+        0 0 0 130px rgba(20, 45, 64, 0.012);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SOFT LIGHT
+   ========================================================= */
+
+.products-hero-glow {
+    position: absolute;
+
+    pointer-events: none;
+
+    border-radius: 50%;
+}
+
+
+.products-hero-glow-one {
+    width: 650px;
+    height: 650px;
+
+    top: -260px;
+    right: -100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 189, 69, 0.13) 0%,
+            rgba(79, 189, 69, 0.045) 35%,
+            transparent 72%
+        );
+
+    filter: blur(5px);
+}
+
+
+.products-hero-glow-two {
+    width: 500px;
+    height: 500px;
+
+    left: 28%;
+    bottom: -360px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(31, 111, 145, 0.07) 0%,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.products-showcase .container {
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   MAIN HERO GRID
+   ========================================================= */
+
+.showcase-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.92fr)
+        minmax(500px, 1.08fr);
+
+    align-items: center;
+
+    gap: 64px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.showcase-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.products-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    padding: 9px 14px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.10);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, 0.70);
+
+    color: #617180;
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(20, 45, 64, 0.045);
+}
+
+
+.products-status-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #4fbd45;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(79, 189, 69, 0.10),
+        0 0 12px
+        rgba(79, 189, 69, 0.35);
+
+    animation:
+        productsStatusPulse 2.2s ease-in-out infinite;
+}
+
+
+@keyframes productsStatusPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(0.78);
+
+        opacity: 0.55;
+    }
+}
+
+
+.products-status-divider {
+    width: 1px;
+
+    height: 12px;
+
+    background:
+        rgba(20, 45, 64, 0.15);
+}
+
+
+/* =========================================================
+   SECTION TAG
+   ========================================================= */
+
+.products-showcase .section-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    color: #4fbd45;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.products-showcase .section-tag::before {
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    margin-right: 12px;
+
+    background: #4fbd45;
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.showcase-content h1 {
+    max-width: 720px;
+
+    margin: 20px 0 25px;
+
+    color: #142235;
+
+    font-size:
+        clamp(
+            3.25rem,
+            5vw,
+            5.25rem
+        );
+
+    line-height: 0.99;
+
+    font-weight: 800;
+
+    letter-spacing: -0.065em;
+}
+
+
+.showcase-content h1 span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #4fbd45;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.showcase-description {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #617180;
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.showcase-highlights {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 32px;
+}
+
+
+.showcase-highlight {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.showcase-highlight strong {
+    color: #142235;
+
+    font-size: 1.25rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.03em;
+}
+
+
+.showcase-highlight span {
+    color: #7a8996;
+
+    font-size: 0.64rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.showcase-highlight-divider {
+    width: 1px;
+
+    height: 38px;
+
+    background:
+        rgba(20, 45, 64, 0.12);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.showcase-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 38px;
+}
+
+
+.showcase-buttons .primary-btn,
+.showcase-buttons .secondary-btn {
+    min-height: 56px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 0 18px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.showcase-buttons .primary-btn {
+    min-width: 190px;
+
+    background: #4fbd45;
+
+    border:
+        1px solid
+        #4fbd45;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px
+        rgba(79, 189, 69, 0.20);
+}
+
+
+.showcase-buttons .secondary-btn {
+    min-width: 185px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.14);
+
+    color: #26384a;
+
+    box-shadow:
+        0 8px 24px
+        rgba(20, 45, 64, 0.045);
+}
+
+
+.showcase-buttons .primary-btn span,
+.showcase-buttons .secondary-btn span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.showcase-buttons .primary-btn span {
+    background:
+        rgba(255, 255, 255, 0.16);
+}
+
+
+.showcase-buttons .secondary-btn span {
+    background:
+        rgba(20, 45, 64, 0.06);
+}
+
+
+.showcase-buttons .primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: #5acb50;
+
+    border-color: #5acb50;
+
+    box-shadow:
+        0 18px 38px
+        rgba(79, 189, 69, 0.27);
+}
+
+
+.showcase-buttons .secondary-btn:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    border-color:
+        rgba(79, 189, 69, 0.35);
+
+    box-shadow:
+        0 15px 34px
+        rgba(20, 45, 64, 0.08);
+}
+
+
+.showcase-buttons a:hover span {
+    transform: translate(3px, -2px);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.showcase-visual {
+    position: relative;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 4;
+}
+
+
+/* =========================================================
+   PREMIUM IMAGE FRAME
+   ========================================================= */
+
+.visual-card {
+    position: relative;
+
+    width: min(100%, 680px);
+
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.11);
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 35px 90px
+        rgba(20, 45, 64, 0.15),
+        0 8px 24px
+        rgba(20, 45, 64, 0.05);
+
+    backdrop-filter: blur(16px);
+}
+
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.visual-image-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       IMPORTANT:
+       Do not force a short card height.
+       This prevents the product image from being
+       unnecessarily cropped/zoomed.
+    */
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf2ef 0%,
+            #f8faf9 50%,
+            #e8efeb 100%
+        );
+}
+
+
+/* =========================================================
+   PRODUCT HERO IMAGE
+   ========================================================= */
+
+.visual-image-wrapper img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       This is the major change:
+       contain instead of cover.
+    */
+
+    object-fit: contain;
+
+    object-position: center;
+
+    /*
+       Give the image breathing room rather than
+       forcing it against the frame.
+    */
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.visual-card:hover
+.visual-image-wrapper img {
+    transform: scale(1.015);
+}
+
+
+/* =========================================================
+   IMAGE LIGHTING
+   ========================================================= */
+
+.visual-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.08),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            transparent 65%,
+            rgba(20, 45, 64, 0.05) 100%
+        );
+}
+
+
+/* =========================================================
+   PREMIUM FRAME DETAILS
+   ========================================================= */
+
+.visual-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.10);
+
+    border-radius: 23px;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+.visual-card::after {
+    content: "CES / INDUSTRIAL SYSTEMS";
+
+    position: absolute;
+
+    top: 25px;
+    left: 28px;
+
+    z-index: 6;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.10);
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    color: #637381;
+
+    font-size: 0.5rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   VISUAL FOOTER
+   ========================================================= */
+
+.visual-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        17px 7px 4px;
+}
+
+
+.visual-footer > div:first-child {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.visual-footer strong {
+    color: #1b2c3d;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+}
+
+
+.visual-footer span {
+    color: #7b8995;
+
+    font-size: 0.62rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MANUFACTURING STATUS
+   ========================================================= */
+
+.status-badge {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    padding:
+        8px 11px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.20);
+
+    border-radius: 999px;
+
+    background:
+        rgba(79, 189, 69, 0.07);
+
+    color: #4d6b50 !important;
+
+    font-size: 0.58rem !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: 0.6px;
+}
+
+
+.status-pulse {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #4fbd45;
+
+    box-shadow:
+        0 0 10px
+        rgba(79, 189, 69, 0.55);
+}
+
+
+/* =========================================================
+   FLOATING TAGS
+   ========================================================= */
+
+/*
+   Keep these subtle.
+   They should support the product image,
+   not cover it.
+*/
+
+.floating-tag {
+    position: absolute;
+
+    z-index: 8;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        9px 12px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.10);
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    color: #425466;
+
+    font-size: 0.6rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 30px
+        rgba(20, 45, 64, 0.10);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.floating-tag.one {
+    top: 13%;
+
+    right: -25px;
+}
+
+
+.floating-tag.two {
+    top: 48%;
+
+    left: -30px;
+}
+
+
+.floating-tag.three {
+    bottom: 22%;
+
+    right: -28px;
+}
+
+
+/* =========================================================
+   HERO STRIP
+   ========================================================= */
+
+.products-hero-strip {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 8;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    padding:
+        10px 24px;
+
+    border-top:
+        1px solid
+        rgba(20, 45, 64, 0.08);
+
+    background:
+        rgba(247, 250, 248, 0.82);
+
+    color: #71808c;
+
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    backdrop-filter: blur(14px);
+}
+
+
+.products-hero-strip i {
+    width: 4px;
+    height: 4px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #4fbd45;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .products-showcase {
+        min-height: 760px;
+
+        padding:
+            110px 0 95px;
+    }
+
+
+    .showcase-grid {
+        grid-template-columns:
+            minmax(0, 0.95fr)
+            minmax(430px, 1.05fr);
+
+        gap: 44px;
+    }
+
+
+    .showcase-content h1 {
+        font-size:
+            clamp(
+                3rem,
+                5vw,
+                4.6rem
+            );
+    }
+
+
+    .visual-image-wrapper {
+        min-height: 440px;
+    }
+
+
+    .floating-tag.one {
+        right: -12px;
+    }
+
+
+    .floating-tag.two {
+        left: -12px;
+    }
+
+
+    .floating-tag.three {
+        right: -12px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .products-showcase {
+        min-height: auto;
+
+        padding:
+            105px 0 85px;
+    }
+
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .showcase-content {
+        max-width: 850px;
+    }
+
+
+    .showcase-visual {
+        width: min(100%, 680px);
+
+        margin: 0 auto;
+    }
+
+
+    .visual-image-wrapper {
+        min-height: 480px;
+    }
+
+
+    .products-hero-strip {
+        position: relative;
+
+        margin-top: 55px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 700
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .products-showcase {
+        padding:
+            90px 0 70px;
+    }
+
+
+    .products-status {
+        font-size: 0.56rem;
+
+        letter-spacing: 0.9px;
+    }
+
+
+    .showcase-content h1 {
+        margin-top: 18px;
+
+        font-size:
+            clamp(
+                2.7rem,
+                11vw,
+                4rem
+            );
+
+        line-height: 1.01;
+
+        letter-spacing: -0.055em;
+    }
+
+
+    .showcase-description {
+        font-size: 0.9rem;
+
+        line-height: 1.8;
+    }
+
+
+    .showcase-highlights {
+        gap: 14px;
+
+        margin-top: 28px;
+    }
+
+
+    .showcase-highlight strong {
+        font-size: 1.05rem;
+    }
+
+
+    .showcase-highlight span {
+        font-size: 0.56rem;
+    }
+
+
+    .showcase-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 32px;
+    }
+
+
+    .showcase-buttons .primary-btn,
+    .showcase-buttons .secondary-btn {
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .showcase-visual {
+        width: 100%;
+    }
+
+
+    .visual-image-wrapper {
+        min-height: 390px;
+    }
+
+
+    .visual-image-wrapper img {
+        padding: 14px;
+    }
+
+
+    .floating-tag {
+        display: none;
+    }
+
+
+    .visual-card {
+        padding: 9px;
+
+        border-radius: 20px;
+    }
+
+
+    .visual-card::before {
+        inset: 4px;
+
+        border-radius: 17px;
+    }
+
+
+    .visual-card::after {
+        top: 20px;
+        left: 22px;
+
+        font-size: 0.46rem;
+    }
+
+
+    .visual-image-wrapper {
+        border-radius: 14px;
+    }
+
+
+    .visual-footer {
+        padding:
+            14px 4px 3px;
+    }
+
+
+    .products-hero-strip {
+        gap: 10px 14px;
+
+        justify-content: flex-start;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        font-size: 0.51rem;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .products-showcase {
+        padding:
+            78px 0 62px;
+    }
+
+
+    .products-status {
+        padding:
+            8px 11px;
+
+        gap: 7px;
+
+        font-size: 0.5rem;
+    }
+
+
+    .showcase-content h1 {
+        font-size: 2.35rem;
+
+        line-height: 1.03;
+    }
+
+
+    .showcase-description {
+        font-size: 0.84rem;
+
+        line-height: 1.75;
+    }
+
+
+    .showcase-highlights {
+        justify-content: space-between;
+
+        gap: 8px;
+    }
+
+
+    .showcase-highlight strong {
+        font-size: 0.95rem;
+    }
+
+
+    .showcase-highlight span {
+        font-size: 0.51rem;
+    }
+
+
+    .showcase-highlight-divider {
+        height: 30px;
+    }
+
+
+    .showcase-buttons .primary-btn,
+    .showcase-buttons .secondary-btn {
+        min-height: 54px;
+
+        padding: 0 15px;
+
+        font-size: 0.7rem;
+    }
+
+
+    .visual-card {
+        padding: 7px;
+
+        border-radius: 17px;
+    }
+
+
+    .visual-image-wrapper {
+        min-height: 300px;
+
+        border-radius: 12px;
+    }
+
+
+    .visual-image-wrapper img {
+        padding: 10px;
+    }
+
+
+    .visual-footer strong {
+        font-size: 0.68rem;
+    }
+
+
+    .visual-footer span {
+        font-size: 0.53rem;
+    }
+
+
+    .status-badge {
+        padding:
+            7px 9px;
+
+        font-size: 0.5rem !important;
+    }
+
+
+    .products-hero-strip {
+        display: none;
+    }
+}
+
+/* part 2 */
+
+
+/* =========================================================
+   PRODUCTS
+   PART 2 — FEATURED PRODUCTS
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.featured-products {
+    position: relative;
+
+    padding: 115px 0 125px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f7faf8 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SUBTLE ENGINEERING GRID
+   ========================================================= */
+
+.featured-products::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image:
+        linear-gradient(
+            180deg,
+            black,
+            transparent 85%
+        );
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.featured-products .section-heading {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 820px;
+
+    margin: 0 auto 62px;
+
+    text-align: center;
+}
+
+
+.featured-products .section-heading > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #4fbd45;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.featured-products .section-heading > span::before,
+.featured-products .section-heading > span::after {
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    background: #4fbd45;
+
+    opacity: 0.65;
+}
+
+
+.featured-products .section-heading h2 {
+    margin: 0 0 18px;
+
+    color: #142235;
+
+    font-size:
+        clamp(
+            2.35rem,
+            4vw,
+            3.7rem
+        );
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+}
+
+
+.featured-products .section-heading p {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #6d7d8b;
+
+    font-size: 0.96rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+   ========================================================= */
+
+.featured-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+   ========================================================= */
+
+.featured-card {
+    position: relative;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 14px 38px
+        rgba(20, 45, 64, 0.055);
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.7,.2,1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.featured-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(79, 189, 69, 0.24);
+
+    box-shadow:
+        0 25px 60px
+        rgba(20, 45, 64, 0.11);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+   ========================================================= */
+
+.featured-preview {
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf3f0 0%,
+            #f8faf9 52%,
+            #e8efeb 100%
+        );
+}
+
+
+/* =========================================================
+   IMAGE TECHNICAL GRID
+   ========================================================= */
+
+.featured-preview::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+   ========================================================= */
+
+.featured-image {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.55s cubic-bezier(.2,.7,.2,1);
+}
+
+
+.featured-card:hover .featured-image {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.preview-overlay {
+    position: absolute;
+
+    left: 16px;
+    top: 16px;
+
+    z-index: 4;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    color: #566976;
+
+    font-size: 0.52rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.1px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 7px 20px
+        rgba(20, 45, 64, 0.06);
+}
+
+
+/* =========================================================
+   IMAGE BOTTOM FADE
+   ========================================================= */
+
+.featured-preview::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 75px;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(20, 45, 64, 0.055)
+        );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.featured-content {
+    position: relative;
+
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    padding: 27px 27px 25px;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.featured-number {
+    position: absolute;
+
+    top: 27px;
+    right: 27px;
+
+    color:
+        rgba(20, 45, 64, 0.10);
+
+    font-size: 1.9rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.06em;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.featured-content h3 {
+    max-width: 78%;
+
+    margin: 0 0 12px;
+
+    color: #17293b;
+
+    font-size: 1.28rem;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.featured-content p {
+    margin: 0;
+
+    color: #6e7d89;
+
+    font-size: 0.82rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   SPECIFICATIONS
+   ========================================================= */
+
+.featured-content ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin: 20px 0 24px;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.featured-content li {
+    position: relative;
+
+    padding-left: 18px;
+
+    color: #455969;
+
+    font-size: 0.72rem;
+
+    font-weight: 650;
+
+    line-height: 1.5;
+}
+
+
+.featured-content li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0.52em;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #4fbd45;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 189, 69, 0.09);
+}
+
+
+/* =========================================================
+   PRODUCT LINK
+   ========================================================= */
+
+.product-link {
+    margin-top: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    width: 100%;
+
+    min-height: 46px;
+
+    padding:
+        0 14px 0 16px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 10px;
+
+    background: #f7faf8;
+
+    color: #304656;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.product-link span {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(79, 189, 69, 0.10);
+
+    color: #4fbd45;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.product-link:hover {
+    background: #4fbd45;
+
+    border-color: #4fbd45;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.product-link:hover span {
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CARD ACCENT
+   ========================================================= */
+
+.featured-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4fbd45,
+            transparent
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.featured-card:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .featured-products {
+        padding:
+            100px 0 110px;
+    }
+
+
+    .featured-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+    }
+
+
+    .featured-preview {
+        height: 300px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .featured-products {
+        padding:
+            85px 0 95px;
+    }
+
+
+    .featured-products .section-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .featured-products .section-heading h2 {
+        font-size:
+            clamp(
+                2.1rem,
+                7vw,
+                3rem
+            );
+    }
+
+
+    .featured-products .section-heading p {
+        font-size: 0.88rem;
+
+        line-height: 1.75;
+    }
+
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .featured-card {
+        border-radius: 20px;
+    }
+
+
+    .featured-preview {
+        height: 330px;
+    }
+
+
+    .featured-content {
+        padding:
+            25px 24px 23px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .featured-products {
+        padding:
+            72px 0 80px;
+    }
+
+
+    .featured-products .section-heading {
+        margin-bottom: 38px;
+    }
+
+
+    .featured-products .section-heading > span {
+        font-size: 0.59rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .featured-products .section-heading h2 {
+        font-size: 2rem;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    .featured-products .section-heading p {
+        font-size: 0.82rem;
+
+        line-height: 1.75;
+    }
+
+
+    .featured-grid {
+        gap: 17px;
+    }
+
+
+    .featured-card {
+        border-radius: 18px;
+    }
+
+
+    .featured-preview {
+        height: 270px;
+    }
+
+
+    .featured-image {
+        padding: 15px;
+    }
+
+
+    .preview-overlay {
+        left: 12px;
+        top: 12px;
+
+        padding:
+            6px 8px;
+
+        font-size: 0.47rem;
+    }
+
+
+    .featured-content {
+        padding:
+            23px 20px 20px;
+    }
+
+
+    .featured-number {
+        top: 24px;
+        right: 20px;
+
+        font-size: 1.55rem;
+    }
+
+
+    .featured-content h3 {
+        max-width: 75%;
+
+        font-size: 1.15rem;
+    }
+
+
+    .featured-content p {
+        font-size: 0.78rem;
+
+        line-height: 1.72;
+    }
+
+
+    .featured-content ul {
+        margin:
+            17px 0 21px;
+
+        gap: 7px;
+    }
+
+
+    .featured-content li {
+        font-size: 0.69rem;
+    }
+
+
+    .product-link {
+        min-height: 45px;
+
+        font-size: 0.65rem;
+    }
+}
+
+
+/* part 3 */
+
+
+/* =========================================================
+   PRODUCTS
+   PART 3 — COMPLETE PRODUCT PORTFOLIO
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.product-portfolio {
+    position: relative;
+
+    padding: 120px 0 125px;
+
+    background:
+        #eef3f1;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ARCHITECTURAL BACKGROUND
+   ========================================================= */
+
+.product-portfolio::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 72px 72px;
+
+    mask-image:
+        linear-gradient(
+            180deg,
+            black 0%,
+            rgba(0,0,0,.35) 65%,
+            transparent 100%
+        );
+}
+
+
+/* =========================================================
+   SOFT ACCENT
+   ========================================================= */
+
+.product-portfolio::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: -300px;
+    right: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 189, 69, 0.10),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.product-portfolio .section-heading {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    margin: 0 auto 62px;
+
+    text-align: center;
+}
+
+
+.product-portfolio .section-heading > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #4fbd45;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.product-portfolio .section-heading > span::before,
+.product-portfolio .section-heading > span::after {
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    background: #4fbd45;
+
+    opacity: 0.65;
+}
+
+
+.product-portfolio .section-heading h2 {
+    margin: 0 0 18px;
+
+    color: #142235;
+
+    font-size:
+        clamp(
+            2.35rem,
+            4vw,
+            3.65rem
+        );
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+}
+
+
+.product-portfolio .section-heading p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #687985;
+
+    font-size: 0.96rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   PORTFOLIO GRID
+   ========================================================= */
+
+.portfolio-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   PORTFOLIO CARD
+   ========================================================= */
+
+.portfolio-card {
+    position: relative;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px 27px 25px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    box-shadow:
+        0 12px 35px
+        rgba(20, 45, 64, 0.055);
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.7,.2,1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    isolation: isolate;
+}
+
+
+.portfolio-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(79, 189, 69, 0.25);
+
+    box-shadow:
+        0 24px 55px
+        rgba(20, 45, 64, 0.10);
+}
+
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.portfolio-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+
+.portfolio-card-top::after {
+    content: "";
+
+    width: 42px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4fbd45,
+            rgba(79, 189, 69, 0.15)
+        );
+}
+
+
+.portfolio-card-top span {
+    color:
+        rgba(20, 45, 64, 0.22);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.portfolio-card h3 {
+    margin: 0 0 20px;
+
+    color: #172a3c;
+
+    font-size: 1.25rem;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   PRODUCT LIST
+   ========================================================= */
+
+.portfolio-card ul {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.portfolio-card li {
+    position: relative;
+
+    padding-left: 19px;
+
+    color: #637582;
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.portfolio-card li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0.57em;
+
+    width: 6px;
+    height: 6px;
+
+    border:
+        1.5px solid
+        #4fbd45;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition:
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.portfolio-card:hover li {
+    color: #455b6a;
+}
+
+
+.portfolio-card:hover li::before {
+    background: #4fbd45;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(79, 189, 69, 0.08);
+}
+
+
+/* =========================================================
+   ENGINEERING WATERMARK
+   ========================================================= */
+
+.portfolio-card::before {
+    content: "CES";
+
+    position: absolute;
+
+    right: -12px;
+    bottom: -25px;
+
+    z-index: -1;
+
+    color:
+        rgba(20, 45, 64, 0.028);
+
+    font-size: 7rem;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -0.08em;
+
+    pointer-events: none;
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.portfolio-card:hover::before {
+    color:
+        rgba(79, 189, 69, 0.045);
+
+    transform:
+        translate(-5px, -5px);
+}
+
+
+/* =========================================================
+   BOTTOM ACCENT
+   ========================================================= */
+
+.portfolio-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            #4fbd45 50%,
+            transparent 100%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.portfolio-card:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   DESKTOP LARGE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .product-portfolio {
+        padding:
+            105px 0 110px;
+    }
+
+
+    .portfolio-grid {
+        gap: 15px;
+    }
+
+
+    .portfolio-card {
+        min-height: 290px;
+
+        padding:
+            26px 24px 23px;
+    }
+
+
+    .portfolio-card h3 {
+        font-size: 1.18rem;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .product-portfolio {
+        padding:
+            90px 0 100px;
+    }
+
+
+    .product-portfolio .section-heading {
+        margin-bottom: 48px;
+    }
+
+
+    .portfolio-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+
+    .portfolio-card {
+        min-height: 285px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .product-portfolio {
+        padding:
+            78px 0 85px;
+    }
+
+
+    .product-portfolio .section-heading {
+        margin-bottom: 38px;
+    }
+
+
+    .product-portfolio .section-heading > span {
+        font-size: 0.59rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .product-portfolio .section-heading h2 {
+        font-size: 2rem;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    .product-portfolio .section-heading p {
+        font-size: 0.82rem;
+
+        line-height: 1.75;
+    }
+
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .portfolio-card {
+        min-height: auto;
+
+        padding:
+            23px 21px 24px;
+
+        border-radius: 17px;
+    }
+
+
+    .portfolio-card-top {
+        margin-bottom: 23px;
+    }
+
+
+    .portfolio-card h3 {
+        margin-bottom: 17px;
+
+        font-size: 1.12rem;
+    }
+
+
+    .portfolio-card ul {
+        gap: 9px;
+    }
+
+
+    .portfolio-card li {
+        font-size: 0.72rem;
+    }
+
+
+    .portfolio-card::before {
+        font-size: 5rem;
+
+        right: -8px;
+        bottom: -16px;
+    }
+}
+
+/* part 4 */
+
+/* =========================================================
+   PRODUCTS
+   PART 4 — ENGINEERING EXCELLENCE
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.engineering-capability {
+    position: relative;
+
+    padding: 125px 0 120px;
+
+    background:
+        #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+.engineering-capability::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.026) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.026) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   TOP ACCENT
+   ========================================================= */
+
+.engineering-capability::after {
+    content: "";
+
+    position: absolute;
+
+    width: 480px;
+    height: 480px;
+
+    top: -330px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 189, 69, 0.075),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.engineering-capability .section-heading {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 820px;
+
+    margin: 0 auto 68px;
+
+    text-align: center;
+}
+
+
+.engineering-capability .section-heading > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #4fbd45;
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.engineering-capability .section-heading > span::before,
+.engineering-capability .section-heading > span::after {
+    content: "";
+
+    width: 24px;
+    height: 1px;
+
+    background: #4fbd45;
+
+    opacity: 0.65;
+}
+
+
+.engineering-capability .section-heading h2 {
+    margin: 0 0 18px;
+
+    color: #142235;
+
+    font-size:
+        clamp(
+            2.35rem,
+            4vw,
+            3.65rem
+        );
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+}
+
+
+.engineering-capability .section-heading p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: #6b7b88;
+
+    font-size: 0.96rem;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   ENGINEERING PROCESS
+   ========================================================= */
+
+.engineering-process {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        42px
+        minmax(0, 1fr)
+        42px
+        minmax(0, 1fr)
+        42px
+        minmax(0, 1fr)
+        42px
+        minmax(0, 1fr);
+
+    align-items: stretch;
+
+    gap: 0;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+   ========================================================= */
+
+.process-card {
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 285px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px 25px 26px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f8faf9 100%
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(20, 45, 64, 0.055);
+
+    transition:
+        transform 0.4s cubic-bezier(.2,.7,.2,1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.process-card:hover {
+    transform: translateY(-7px);
+
+    border-color:
+        rgba(79, 189, 69, 0.25);
+
+    box-shadow:
+        0 25px 55px
+        rgba(20, 45, 64, 0.10);
+}
+
+
+/* =========================================================
+   PROCESS NUMBER
+   ========================================================= */
+
+.process-number {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.20);
+
+    border-radius: 13px;
+
+    background:
+        rgba(79, 189, 69, 0.075);
+
+    color: #4fbd45;
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.process-card:hover .process-number {
+    background: #4fbd45;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+   ========================================================= */
+
+.process-card h3 {
+    margin: 0 0 13px;
+
+    color: #17293b;
+
+    font-size: 1.08rem;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   PROCESS DESCRIPTION
+   ========================================================= */
+
+.process-card p {
+    margin: 0;
+
+    color: #6d7d89;
+
+    font-size: 0.76rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROCESS CARD BOTTOM LINE
+   ========================================================= */
+
+.process-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #4fbd45,
+            transparent
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.process-card:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   PROCESS ARROWS
+   ========================================================= */
+
+.process-arrow {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        rgba(79, 189, 69, 0.70);
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   ARROW CONNECTOR
+   ========================================================= */
+
+.process-arrow::before {
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+    right: 3px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(79, 189, 69, 0.10),
+            rgba(79, 189, 69, 0.42),
+            rgba(79, 189, 69, 0.10)
+        );
+
+    z-index: -1;
+}
+
+
+.process-arrow {
+    text-shadow:
+        0 0 10px
+        rgba(79, 189, 69, 0.10);
+}
+
+
+/* =========================================================
+   ENGINEERING STATS
+   ========================================================= */
+
+.engineering-stats {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    margin-top: 48px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.09);
+
+    border-radius: 18px;
+
+    background:
+        #f7faf8;
+
+    box-shadow:
+        0 12px 35px
+        rgba(20, 45, 64, 0.045);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   STAT ITEM
+   ========================================================= */
+
+.engineering-stats > div {
+    position: relative;
+
+    min-height: 120px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   STAT DIVIDERS
+   ========================================================= */
+
+.engineering-stats > div:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+    right: 0;
+    bottom: 25px;
+
+    width: 1px;
+
+    background:
+        rgba(20, 45, 64, 0.10);
+}
+
+
+/* =========================================================
+   STAT VALUE
+   ========================================================= */
+
+.engineering-stats h3 {
+    margin: 0;
+
+    color: #4fbd45;
+
+    font-size: 1.45rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   STAT LABEL
+   ========================================================= */
+
+.engineering-stats span {
+    color: #71808b;
+
+    font-size: 0.65rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .engineering-capability {
+        padding:
+            105px 0 110px;
+    }
+
+
+    .engineering-process {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+
+    .process-arrow {
+        display: none;
+    }
+
+
+    .process-card {
+        min-height: 275px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .engineering-capability {
+        padding:
+            90px 0 100px;
+    }
+
+
+    .engineering-capability .section-heading {
+        margin-bottom: 48px;
+    }
+
+
+    .engineering-process {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+
+    .process-card {
+        min-height: 255px;
+
+        padding:
+            25px 22px;
+    }
+
+
+    .engineering-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .engineering-stats > div:nth-child(2)::after {
+        display: none;
+    }
+
+
+    .engineering-stats > div:nth-child(1),
+    .engineering-stats > div:nth-child(2) {
+        border-bottom:
+            1px solid
+            rgba(20, 45, 64, 0.10);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .engineering-capability {
+        padding:
+            78px 0 85px;
+    }
+
+
+    .engineering-capability .section-heading {
+        margin-bottom: 38px;
+    }
+
+
+    .engineering-capability .section-heading > span {
+        font-size: 0.59rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .engineering-capability .section-heading h2 {
+        font-size: 2rem;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.045em;
+    }
+
+
+    .engineering-capability .section-heading p {
+        font-size: 0.82rem;
+
+        line-height: 1.75;
+    }
+
+
+    .engineering-process {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .process-card {
+        min-height: auto;
+
+        padding:
+            23px 21px 24px;
+
+        border-radius: 17px;
+    }
+
+
+    .process-number {
+        width: 44px;
+        height: 44px;
+
+        margin-bottom: 21px;
+
+        border-radius: 12px;
+
+        font-size: 0.67rem;
+    }
+
+
+    .process-card h3 {
+        margin-bottom: 10px;
+
+        font-size: 1rem;
+    }
+
+
+    .process-card p {
+        font-size: 0.74rem;
+
+        line-height: 1.72;
+    }
+
+
+    .process-card::after {
+        left: 21px;
+        right: 21px;
+    }
+
+
+    .engineering-stats {
+        grid-template-columns: 1fr;
+
+        margin-top: 30px;
+
+        border-radius: 16px;
+    }
+
+
+    .engineering-stats > div {
+        min-height: 95px;
+
+        padding:
+            18px 16px;
+    }
+
+
+    .engineering-stats > div:not(:last-child)::after {
+        top: auto;
+        right: 20px;
+        bottom: 0;
+        left: 20px;
+
+        width: auto;
+        height: 1px;
+    }
+
+
+    .engineering-stats > div:nth-child(2)::after {
+        display: block;
+    }
+
+
+    .engineering-stats > div:last-child::after {
+        display: none;
+    }
+
+
+    .engineering-stats > div:nth-child(1),
+    .engineering-stats > div:nth-child(2) {
+        border-bottom: none;
+    }
+
+
+    .engineering-stats h3 {
+        font-size: 1.25rem;
+    }
+
+
+    .engineering-stats span {
+        font-size: 0.61rem;
+    }
+}
+
+/* part 5 */
+/* =========================================================
+   PRODUCTS
+   PART 5 — CUSTOM ENGINEERING SOLUTIONS
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.custom-engineering {
+    position: relative;
+
+    padding: 125px 0 130px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eef3f1 0%,
+            #f7faf8 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   ENGINEERING GRID
+   ========================================================= */
+
+.custom-engineering::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 45, 64, 0.028) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(20, 45, 64, 0.028) 1px,
+            transparent 1px
+        );
+
+    background-size: 64px 64px;
+
+    opacity: .8;
+}
+
+
+/* =========================================================
+   AMBIENT GREEN LIGHT
+   ========================================================= */
+
+.custom-engineering::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -330px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 189, 69, 0.10) 0%,
+            rgba(79, 189, 69, 0.035) 38%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN BOX
+   ========================================================= */
+
+.custom-engineering-box {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(350px, .75fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 70px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.10);
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(248, 251, 249, 0.90)
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(20, 45, 64, 0.10);
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   INNER ENGINEERING FRAME
+   ========================================================= */
+
+.custom-engineering-box::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 15px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.10);
+
+    border-radius: 21px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   DECORATIVE TECHNICAL CIRCLE
+   ========================================================= */
+
+.custom-engineering-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -290px;
+    bottom: -300px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.10);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 55px rgba(79, 189, 69, 0.025),
+        0 0 0 110px rgba(79, 189, 69, 0.018),
+        0 0 0 165px rgba(79, 189, 69, 0.012);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   CUSTOM CONTENT
+   ========================================================= */
+
+.custom-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 720px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.custom-content > span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #4fbd45;
+
+    font-size: .68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.custom-content > span::before {
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    background: #4fbd45;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.custom-content h2 {
+    max-width: 720px;
+
+    margin: 0 0 23px;
+
+    color: #142235;
+
+    font-size:
+        clamp(
+            2.55rem,
+            4vw,
+            4rem
+        );
+
+    line-height: 1.03;
+
+    font-weight: 800;
+
+    letter-spacing: -0.06em;
+}
+
+
+.custom-content h2 span {
+    display: block;
+
+    color: #4fbd45;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.custom-content > p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #687985;
+
+    font-size: .92rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   FEATURE GRID
+   ========================================================= */
+
+.custom-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px 12px;
+
+    margin-top: 32px;
+}
+
+
+/* =========================================================
+   FEATURE ITEM
+   ========================================================= */
+
+.custom-features > div {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 48px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid
+        rgba(20, 45, 64, 0.075);
+
+    border-radius: 10px;
+
+    background:
+        rgba(247, 250, 248, 0.9);
+
+    color: #435867;
+
+    font-size: .68rem;
+
+    font-weight: 750;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.custom-features > div:hover {
+    transform: translateX(4px);
+
+    border-color:
+        rgba(79, 189, 69, .22);
+
+    background:
+        rgba(79, 189, 69, .055);
+
+    box-shadow:
+        0 8px 22px
+        rgba(20, 45, 64, .05);
+}
+
+
+/* =========================================================
+   FEATURE CHECK
+   ========================================================= */
+
+.custom-features > div::first-letter {
+    color: #4fbd45;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+   ========================================================= */
+
+.quote-card {
+    position: relative;
+
+    z-index: 4;
+
+    padding: 34px 32px 31px;
+
+    border:
+        1px solid
+        rgba(79, 189, 69, 0.20);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172b3d 0%,
+            #102132 100%
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 25px 60px
+        rgba(20, 45, 64, .20);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   QUOTE CARD GLOW
+   ========================================================= */
+
+.quote-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -120px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 189, 69, .22),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   QUOTE CARD GRID
+   ========================================================= */
+
+.quote-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 30px 30px;
+
+    mask-image:
+        linear-gradient(
+            135deg,
+            black,
+            transparent 70%
+        );
+}
+
+
+/* =========================================================
+   QUOTE LABEL
+   ========================================================= */
+
+.quote-card-label {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #72d76a;
+
+    font-size: .58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.7px;
+
+    text-transform: uppercase;
+}
+
+
+.quote-card-label::before {
+    content: "";
+
+    width: 18px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #4fbd45;
+}
+
+
+/* =========================================================
+   QUOTE TITLE
+   ========================================================= */
+
+.quote-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 1.65rem;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -.035em;
+}
+
+
+/* =========================================================
+   QUOTE DESCRIPTION
+   ========================================================= */
+
+.quote-card > p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size: .75rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   QUOTE POINTS
+   ========================================================= */
+
+.quote-points {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+
+    margin-top: 24px;
+}
+
+
+.quote-points span {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 34px;
+
+    padding:
+        0 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 8px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size: .58rem;
+
+    font-weight: 700;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease;
+}
+
+
+.quote-points span:hover {
+    border-color:
+        rgba(79,189,69,.28);
+
+    background:
+        rgba(79,189,69,.08);
+}
+
+
+/* =========================================================
+   QUOTE BUTTON
+   ========================================================= */
+
+.quote-btn-product {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    width: 100%;
+
+    min-height: 53px;
+
+    margin-top: 27px;
+
+    padding:
+        0 15px 0 18px;
+
+    border:
+        1px solid
+        #4fbd45;
+
+    border-radius: 11px;
+
+    background: #4fbd45;
+
+    color: #ffffff;
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.quote-btn-product span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.15);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.quote-btn-product:hover {
+    transform: translateY(-3px);
+
+    background: #5acb50;
+
+    box-shadow:
+        0 14px 30px
+        rgba(79,189,69,.25);
+}
+
+
+.quote-btn-product:hover span {
+    transform: translate(3px,-2px);
+
+    background:
+        rgba(255,255,255,.22);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .custom-engineering {
+        padding:
+            105px 0 110px;
+    }
+
+
+    .custom-engineering-box {
+        grid-template-columns:
+            minmax(0, 1.15fr)
+            minmax(320px, .85fr);
+
+        gap: 45px;
+
+        padding: 55px;
+    }
+
+
+    .custom-content h2 {
+        font-size:
+            clamp(
+                2.4rem,
+                4vw,
+                3.5rem
+            );
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .custom-engineering {
+        padding:
+            90px 0 100px;
+    }
+
+
+    .custom-engineering-box {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+
+        padding: 48px;
+    }
+
+
+    .custom-content {
+        max-width: 100%;
+    }
+
+
+    .quote-card {
+        max-width: 560px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .custom-engineering {
+        padding:
+            72px 0 80px;
+    }
+
+
+    .custom-engineering-box {
+        gap: 32px;
+
+        padding:
+            34px 21px 21px;
+
+        border-radius: 21px;
+    }
+
+
+    .custom-engineering-box::before {
+        inset: 9px;
+
+        border-radius: 15px;
+    }
+
+
+    .custom-content > span {
+        margin-bottom: 17px;
+
+        font-size: .57rem;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .custom-content > span::before {
+        width: 22px;
+    }
+
+
+    .custom-content h2 {
+        margin-bottom: 18px;
+
+        font-size: 2.05rem;
+
+        line-height: 1.06;
+
+        letter-spacing: -.045em;
+    }
+
+
+    .custom-content > p {
+        font-size: .79rem;
+
+        line-height: 1.78;
+    }
+
+
+    .custom-features {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        margin-top: 24px;
+    }
+
+
+    .custom-features > div {
+        min-height: 43px;
+
+        padding:
+            0 12px;
+
+        font-size: .62rem;
+
+        border-radius: 9px;
+    }
+
+
+    .quote-card {
+        padding:
+            27px 21px 22px;
+
+        border-radius: 17px;
+    }
+
+
+    .quote-card-label {
+        margin-bottom: 15px;
+
+        font-size: .53rem;
+
+        letter-spacing: 1.4px;
+    }
+
+
+    .quote-card h3 {
+        margin-bottom: 12px;
+
+        font-size: 1.38rem;
+
+        line-height: 1.18;
+    }
+
+
+    .quote-card > p {
+        font-size: .69rem;
+
+        line-height: 1.75;
+    }
+
+
+    .quote-points {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        margin-top: 20px;
+    }
+
+
+    .quote-points span {
+        min-height: 32px;
+
+        padding:
+            0 9px;
+
+        font-size: .55rem;
+    }
+
+
+    .quote-btn-product {
+        min-height: 50px;
+
+        margin-top: 22px;
+
+        font-size: .65rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .custom-engineering-box {
+        padding:
+            29px 17px 17px;
+    }
+
+
+    .custom-content h2 {
+        font-size: 1.85rem;
+    }
+
+
+    .quote-card {
+        padding:
+            24px 17px 19px;
+    }
+}
+
+
+
+
+/* nabbel */
+

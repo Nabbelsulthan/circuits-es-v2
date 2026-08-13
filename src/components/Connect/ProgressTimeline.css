@@ -1,0 +1,645 @@
+/* =========================================================
+   CES CONNECT
+   PROJECT PROGRESS TIMELINE
+========================================================= */
+
+.ces-progress-timeline {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DESKTOP SCROLL WRAPPER
+
+   Prevents the timeline from becoming compressed when
+   the project card is narrower than the ideal timeline.
+========================================================= */
+
+.ces-progress-desktop-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 12px 4px 18px;
+
+    box-sizing: border-box;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.ces-progress-desktop-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+.ces-progress-desktop-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ces-progress-desktop-scroll::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 999px;
+}
+
+
+/* =========================================================
+   DESKTOP TIMELINE
+========================================================= */
+
+.ces-progress-desktop {
+    position: relative;
+
+    /*
+      7 stages need enough horizontal space.
+
+      This prevents:
+
+      Design Fabrication Assembly
+
+      from touching each other.
+    */
+
+    min-width: 760px;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INDIVIDUAL STAGE
+========================================================= */
+
+.ces-progress-item {
+    position: relative;
+
+    flex: 1;
+
+    min-width: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PROGRESS CIRCLE
+========================================================= */
+
+.ces-progress-circle {
+    position: relative;
+
+    z-index: 3;
+
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    border: 3px solid #d8e0e8;
+
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   COMPLETED
+========================================================= */
+
+.ces-progress-circle.is-completed {
+    background:
+        linear-gradient(
+            135deg,
+            #55b532 0%,
+            #3f982f 100%
+        );
+
+    border-color: #55b532;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 14px rgba(85, 181, 50, 0.22);
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.ces-progress-circle.is-active {
+    background: #ffffff;
+
+    border-color: #55b532;
+
+    color: #55b532;
+
+    box-shadow:
+        0 0 0 6px rgba(85, 181, 50, 0.13);
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.ces-progress-label {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 12px;
+
+    padding: 0 4px;
+
+    box-sizing: border-box;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* Completed label */
+
+.ces-progress-item.is-completed
+    .ces-progress-label {
+
+    color: #3f8f2f;
+}
+
+
+/* Active label */
+
+.ces-progress-item.is-active
+    .ces-progress-label {
+
+    color: #3f8f2f;
+}
+
+
+/* =========================================================
+   CONNECTING LINE
+========================================================= */
+
+.ces-progress-line {
+    position: absolute;
+
+    /*
+      Circle is 46px.
+
+      Center = 23px.
+
+      Line starts exactly after the center of the
+      current circle and ends at the center of the
+      next circle.
+    */
+
+    top: 21px;
+
+    left: 50%;
+
+    width: 100%;
+
+    height: 4px;
+
+    z-index: 1;
+
+    background: #dfe6ed;
+
+    border-radius: 999px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   COMPLETED LINE
+========================================================= */
+
+.ces-progress-line.is-completed {
+    background:
+        linear-gradient(
+            90deg,
+            #55b532,
+            #55b532
+        );
+}
+
+
+/* =========================================================
+   MOBILE — HIDDEN ON DESKTOP
+========================================================= */
+
+.ces-progress-mobile {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /*
+      Keep desktop timeline on tablets but make it
+      horizontally scrollable instead of crushing
+      the stages together.
+    */
+
+    .ces-progress-desktop {
+        min-width: 720px;
+    }
+
+    .ces-progress-item {
+        min-width: 96px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-progress-desktop-scroll {
+        display: none;
+    }
+
+
+    .ces-progress-mobile {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+
+        margin-top: 18px;
+    }
+
+
+    /* =====================================================
+       MOBILE STAGE CARD
+    ===================================================== */
+
+    .ces-mobile-progress-item {
+        width: 100%;
+
+        min-width: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+
+        padding: 13px 15px;
+
+        box-sizing: border-box;
+
+        background: #ffffff;
+
+        border: 1px solid #e5eaf0;
+
+        border-radius: 14px;
+
+        box-shadow:
+            0 4px 14px rgba(15, 23, 42, 0.045);
+
+        transition:
+            border-color 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+
+    /* =====================================================
+       ACTIVE MOBILE CARD
+    ===================================================== */
+
+    .ces-mobile-progress-item.is-active {
+
+        border-color:
+            rgba(85, 181, 50, 0.35);
+
+        background:
+            linear-gradient(
+                135deg,
+                #ffffff,
+                #f7fcf4
+            );
+
+        box-shadow:
+            0 7px 20px
+            rgba(85, 181, 50, 0.08);
+    }
+
+
+    /* =====================================================
+       MOBILE ICON
+    ===================================================== */
+
+    .ces-mobile-progress-icon {
+
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #f1f5f9;
+
+        border: 1px solid #dfe6ed;
+
+        color: #94a3b8;
+
+        font-size: 13px;
+
+        font-weight: 800;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       COMPLETED MOBILE ICON
+    ===================================================== */
+
+    .ces-mobile-progress-icon.is-completed {
+
+        background:
+            linear-gradient(
+                135deg,
+                #55b532,
+                #3f982f
+            );
+
+        border-color: #55b532;
+
+        color: #ffffff;
+
+        box-shadow:
+            0 4px 10px
+            rgba(85, 181, 50, 0.18);
+    }
+
+
+    /* =====================================================
+       ACTIVE MOBILE ICON
+    ===================================================== */
+
+    .ces-mobile-progress-icon.is-active {
+
+        background: #ffffff;
+
+        border: 2px solid #55b532;
+
+        color: #55b532;
+
+        box-shadow:
+            0 0 0 4px
+            rgba(85, 181, 50, 0.10);
+    }
+
+
+    /* =====================================================
+       MOBILE CONTENT
+    ===================================================== */
+
+    .ces-mobile-progress-content {
+
+        flex: 1;
+
+        min-width: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 12px;
+    }
+
+
+    /* =====================================================
+       MOBILE STAGE NAME
+    ===================================================== */
+
+    .ces-mobile-stage-name {
+
+        min-width: 0;
+
+        color: #0f172a;
+
+        font-size: 14px;
+
+        font-weight: 700;
+
+        line-height: 1.4;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       MOBILE STATUS
+    ===================================================== */
+
+    .ces-mobile-stage-status {
+
+        flex: 0 0 auto;
+
+        padding: 5px 10px;
+
+        border-radius: 999px;
+
+        background: #f1f5f9;
+
+        color: #64748b;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       COMPLETED STATUS
+    ===================================================== */
+
+    .ces-mobile-stage-status.is-completed {
+
+        background: #eef8e8;
+
+        color: #3f8f2f;
+
+        border: 1px solid
+            rgba(85, 181, 50, 0.14);
+    }
+
+
+    /* =====================================================
+       ACTIVE STATUS
+    ===================================================== */
+
+    .ces-mobile-stage-status.is-active {
+
+        background: #f0faeb;
+
+        color: #4a9638;
+
+        border: 1px solid
+            rgba(85, 181, 50, 0.18);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .ces-progress-mobile {
+        gap: 8px;
+    }
+
+
+    .ces-mobile-progress-item {
+        padding: 12px;
+
+        gap: 11px;
+
+        border-radius: 12px;
+    }
+
+
+    .ces-mobile-progress-icon {
+
+        width: 34px;
+        height: 34px;
+
+        flex-basis: 34px;
+    }
+
+
+    .ces-mobile-progress-content {
+        gap: 8px;
+    }
+
+
+    .ces-mobile-stage-name {
+        font-size: 13px;
+    }
+
+
+    .ces-mobile-stage-status {
+        padding: 5px 8px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ces-mobile-progress-item {
+        padding: 10px;
+    }
+
+
+    .ces-mobile-progress-icon {
+
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
+
+        font-size: 12px;
+    }
+
+
+    .ces-mobile-stage-name {
+        font-size: 12px;
+    }
+
+
+    .ces-mobile-stage-status {
+
+        font-size: 8px;
+
+        padding: 4px 7px;
+    }
+
+}

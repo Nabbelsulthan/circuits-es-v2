@@ -1,0 +1,2516 @@
+/* =========================================================
+   CIRCUITS ES — PREMIUM CONTACT PAGE
+   PART 1
+   PAGE + INTRO + MAP
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.contact-page {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background:
+        var(--white);
+
+    color:
+        var(--heading);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.contact-page-container {
+    width: min(calc(100% - 128px),
+            1400px);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.contact-page-intro {
+    position: relative;
+
+    padding:
+        95px 0 70px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(180deg,
+            #ffffff 0%,
+            #fbfdfb 100%);
+}
+
+
+.contact-page-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: -220px;
+    right: -180px;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(74, 178, 62, 0.09),
+            transparent 68%);
+
+    pointer-events: none;
+}
+
+
+.contact-page-intro::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            var(--border),
+            transparent);
+}
+
+
+.contact-page-intro .contact-page-container {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.contact-page-intro-content {
+    position: relative;
+
+    max-width: 850px;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.contact-page-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 0.82rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+}
+
+
+.contact-page-eyebrow::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 0 4px rgba(76, 180, 63, 0.10);
+}
+
+
+/* =========================================================
+   INTRO HEADING
+   ========================================================= */
+
+.contact-page-intro h1 {
+    max-width: 900px;
+
+    margin:
+        22px 0 0;
+
+    color:
+        var(--heading);
+
+    font-size:
+        clamp(3.8rem,
+            6.2vw,
+            6.6rem);
+
+    font-weight: 800;
+
+    line-height: 0.96;
+
+    letter-spacing: -0.06em;
+}
+
+
+.contact-page-intro h1 span {
+    color:
+        var(--green);
+}
+
+
+.contact-page-intro-content>p {
+    max-width: 700px;
+
+    margin:
+        30px 0 0;
+
+    color:
+        var(--muted);
+
+    font-size:
+        clamp(1rem,
+            1.25vw,
+            1.15rem);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INTRO META
+   ========================================================= */
+
+.contact-page-intro-meta {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 235px;
+
+    padding-bottom: 5px;
+}
+
+
+.contact-page-meta-item {
+    padding-left: 20px;
+
+    border-left:
+        2px solid rgba(76, 180, 63, 0.28);
+}
+
+
+.contact-page-meta-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.68rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+.contact-page-meta-item strong {
+    display: block;
+
+    color:
+        var(--heading);
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.contact-page-section-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+}
+
+
+/* =========================================================
+   MAP SECTION
+   ========================================================= */
+
+.contact-map-section {
+    position: relative;
+
+    padding:
+        62px 0 76px;
+
+    background:
+        #ffffff;
+}
+
+
+.contact-map-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 28px;
+}
+
+
+.contact-map-header h2 {
+    margin: 0;
+
+    color:
+        var(--heading);
+
+    font-size:
+        clamp(2rem,
+            3vw,
+            3rem);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.04em;
+}
+
+
+.contact-map-header h2 span {
+    color:
+        var(--green);
+}
+
+
+/* =========================================================
+   MAP DIRECTIONS
+   ========================================================= */
+
+.contact-map-directions {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    min-height: 52px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    color:
+        var(--heading);
+
+    background:
+        var(--white);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    font-size: 0.82rem;
+
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        transform 280ms ease,
+        border-color 280ms ease,
+        color 280ms ease,
+        box-shadow 280ms ease;
+}
+
+
+.contact-map-directions svg:first-child {
+    width: 18px;
+    height: 18px;
+
+    color:
+        var(--green);
+}
+
+
+.contact-map-directions svg:last-child {
+    width: 16px;
+    height: 16px;
+
+    transition:
+        transform 280ms ease;
+}
+
+
+.contact-map-directions:hover {
+    transform:
+        translateY(-3px);
+
+    color:
+        var(--green-dark);
+
+    border-color:
+        rgba(76, 180, 63, 0.35);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.contact-map-directions:hover svg:last-child {
+    transform:
+        translate(2px,
+            -2px);
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.contact-map {
+    position: relative;
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(18, 37, 58, 0.10);
+
+    border-radius:
+        24px;
+
+    background:
+        #e9eee8;
+
+    box-shadow:
+        0 20px 55px rgba(18, 37, 58, 0.10);
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   MAP BACKGROUND
+   ========================================================= */
+
+.contact-map-background {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+}
+
+
+.contact-map-background iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    filter:
+        saturate(0.72) contrast(0.94) brightness(1.04);
+}
+
+
+/* =========================================================
+   MAP OVERLAY
+   ========================================================= */
+
+.contact-map::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.08),
+            transparent 32%,
+            transparent 68%,
+            rgba(255, 255, 255, 0.08));
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   LOCATION CARDS
+   ========================================================= */
+
+.contact-map-overlay {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    top: 22px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+.contact-map-location {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    width: min(330px,
+            36%);
+
+    padding:
+        16px 18px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.72);
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    box-shadow:
+        0 12px 35px rgba(18, 37, 58, 0.12);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.contact-map-pin {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    color:
+        var(--white);
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 7px 18px rgba(76, 180, 63, 0.25);
+}
+
+
+.contact-map-pin svg {
+    width: 19px;
+    height: 19px;
+}
+
+
+.contact-map-location span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+}
+
+
+.contact-map-location strong {
+    display: block;
+
+    color:
+        var(--heading);
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+.contact-map-location p {
+    max-width: 230px;
+
+    margin:
+        5px 0 0;
+
+    color:
+        var(--muted);
+
+    font-size: 0.75rem;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   MAP CAPTION
+   ========================================================= */
+
+.contact-map-caption {
+    position: absolute;
+
+    left: 24px;
+    bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        11px 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.75);
+
+    border-radius:
+        9px;
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    box-shadow:
+        0 10px 25px rgba(18, 37, 58, 0.10);
+
+    backdrop-filter:
+        blur(10px);
+
+    z-index: 4;
+}
+
+
+.contact-map-caption span {
+    color:
+        var(--muted);
+
+    font-size: 0.6rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+}
+
+
+.contact-map-caption strong {
+    color:
+        var(--heading);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+}
+
+/* =========================================================
+   CIRCUITS ES — PREMIUM CONTACT PAGE
+   PART 2
+   CONTACT INFORMATION + FORM
+   ========================================================= */
+
+
+/* =========================================================
+   ENQUIRY SECTION
+   ========================================================= */
+
+.contact-enquiry-section {
+    position: relative;
+
+    padding:
+        80px 0 100px;
+
+    background:
+        linear-gradient(180deg,
+            #f8fbf8 0%,
+            #ffffff 100%);
+}
+
+
+.contact-enquiry-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.82fr) minmax(0, 1.18fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-information {
+    padding-top: 8px;
+}
+
+
+.contact-information h2 {
+    margin: 0;
+
+    color:
+        var(--heading);
+
+    font-size:
+        clamp(2.2rem,
+            3.5vw,
+            3.4rem);
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+
+.contact-information h2 span {
+    color:
+        var(--green);
+}
+
+
+.contact-information-intro {
+    max-width: 520px;
+
+    margin:
+        22px 0 36px;
+
+    color:
+        var(--muted);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   INFORMATION ITEMS
+   ========================================================= */
+
+.contact-information-item {
+    display: grid;
+
+    grid-template-columns:
+        48px minmax(0, 1fr) 20px;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 76px;
+
+    padding:
+        11px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+    color:
+        inherit;
+
+    text-decoration: none;
+
+    transition:
+        padding-left 280ms ease;
+}
+
+
+.contact-information-item:first-of-type {
+    border-top:
+        1px solid var(--border);
+}
+
+
+.contact-information-item:hover {
+    padding-left: 8px;
+}
+
+
+/* =========================================================
+   INFORMATION ICON
+   ========================================================= */
+
+.contact-information-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border:
+        1px solid rgba(76, 180, 63, 0.18);
+
+    border-radius: 12px;
+
+    color:
+        var(--green);
+
+    background:
+        rgba(76, 180, 63, 0.055);
+}
+
+
+.contact-information-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* =========================================================
+   INFORMATION LABEL
+   ========================================================= */
+
+.contact-information-item>div:nth-child(2) span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--muted);
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   INFORMATION VALUE
+   ========================================================= */
+
+.contact-information-item>div:nth-child(2) strong {
+    display: block;
+
+    overflow: hidden;
+
+    color:
+        var(--heading);
+
+    font-size: 0.95rem;
+
+    font-weight: 750;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.contact-information-item>svg:last-child {
+    width: 17px;
+    height: 17px;
+
+    color:
+        var(--muted);
+
+    transition:
+        transform 280ms ease,
+        color 280ms ease;
+}
+
+
+.contact-information-item:hover>svg:last-child {
+    color:
+        var(--green);
+
+    transform:
+        translate(2px,
+            -2px);
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.contact-social-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 28px;
+}
+
+
+.contact-social-links a {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 12px;
+
+    color:
+        var(--heading);
+
+    background:
+        var(--white);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform 280ms ease,
+        color 280ms ease,
+        border-color 280ms ease,
+        box-shadow 280ms ease;
+}
+
+
+.contact-social-links a:hover {
+    transform:
+        translateY(-4px);
+
+    color:
+        var(--green-dark);
+
+    border-color:
+        rgba(76, 180, 63, 0.35);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.contact-social-letter {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color:
+        inherit;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ADDRESSES
+   ========================================================= */
+
+.contact-addresses {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 24px;
+
+    margin-top: 38px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.contact-addresses>div {
+    min-width: 0;
+}
+
+
+.contact-addresses span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 0.62rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.contact-addresses p {
+    margin: 0;
+
+    color:
+        var(--muted);
+
+    font-size: 0.84rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.contact-form-wrapper {
+    position: relative;
+
+    padding:
+        36px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        22px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    box-shadow:
+        0 20px 55px rgba(18, 37, 58, 0.08);
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.contact-form-header {
+    margin-bottom: 28px;
+}
+
+
+.contact-form-header>span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 0.66rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+}
+
+
+.contact-form-header h2 {
+    margin: 0;
+
+    color:
+        var(--heading);
+
+    font-size:
+        clamp(1.7rem,
+            2.5vw,
+            2.3rem);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.04em;
+}
+
+
+.contact-form-header p {
+    margin:
+        11px 0 0;
+
+    color:
+        var(--muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.contact-form {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        19px 17px;
+}
+
+
+.contact-form-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.contact-form-field:nth-child(5) {
+    grid-column:
+        1 / -1;
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+.contact-form-field label {
+    color:
+        var(--heading);
+
+    font-size: 0.72rem;
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.contact-form-field input,
+.contact-form-field textarea {
+    width: 100%;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        10px;
+
+    outline: none;
+
+    color:
+        var(--heading);
+
+    background:
+        #fbfcfb;
+
+    font-family:
+        inherit;
+
+    font-size: 0.88rem;
+
+    transition:
+        border-color 220ms ease,
+        background 220ms ease,
+        box-shadow 220ms ease;
+}
+
+
+.contact-form-field input {
+    height: 52px;
+
+    padding:
+        0 15px;
+}
+
+
+.contact-form-field textarea {
+    min-height: 135px;
+
+    padding:
+        14px 15px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.contact-form-field input::placeholder,
+.contact-form-field textarea::placeholder {
+    color:
+        #98a5b1;
+
+    opacity:
+        0.9;
+}
+
+
+/* =========================================================
+   INPUT FOCUS
+   ========================================================= */
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+    border-color:
+        rgba(76, 180, 63, 0.55);
+
+    background:
+        var(--white);
+
+    box-shadow:
+        0 0 0 4px rgba(76, 180, 63, 0.075);
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+   ========================================================= */
+
+.contact-form-actions {
+    display: flex;
+
+    grid-column:
+        1 / -1;
+
+    gap: 11px;
+
+    margin-top: 3px;
+}
+
+
+.contact-form-submit,
+.contact-form-whatsapp {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 54px;
+
+    border-radius:
+        var(--radius-sm);
+
+    cursor: pointer;
+
+    font-family:
+        inherit;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    transition:
+        transform 280ms ease,
+        box-shadow 280ms ease,
+        background 280ms ease,
+        border-color 280ms ease;
+}
+
+
+/* =========================================================
+   SEND ENQUIRY
+   ========================================================= */
+
+.contact-form-submit {
+    flex: 1;
+
+    border:
+        1px solid var(--green);
+
+    color:
+        var(--white);
+
+    background:
+        linear-gradient(135deg,
+            var(--green),
+            var(--green-dark));
+
+    box-shadow:
+        var(--shadow-green);
+}
+
+
+.contact-form-submit:hover:not(:disabled) {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        var(--shadow-green-strong);
+}
+
+
+.contact-form-submit svg {
+    width: 18px;
+    height: 18px;
+
+    transition:
+        transform 280ms ease;
+}
+
+
+.contact-form-submit:hover:not(:disabled) svg:last-child {
+    transform:
+        translate(2px,
+            -2px);
+}
+
+
+.contact-form-submit:disabled {
+    cursor:
+        not-allowed;
+
+    opacity:
+        0.65;
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.contact-form-whatsapp {
+    flex:
+        0 0 140px;
+
+    border:
+        1px solid rgba(76, 180, 63, 0.25);
+
+    color:
+        var(--green-dark);
+
+    background:
+        rgba(76, 180, 63, 0.06);
+}
+
+
+.contact-form-whatsapp:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(76, 180, 63, 0.45);
+
+    background:
+        rgba(76, 180, 63, 0.11);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.contact-form-whatsapp svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+.contact-notification {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    max-width: 380px;
+
+    padding:
+        15px 20px;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--white);
+
+    background:
+        var(--heading);
+
+    box-shadow:
+        0 18px 45px rgba(18, 37, 58, 0.22);
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    z-index: 9999;
+
+    animation:
+        contactNotificationIn 350ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+
+.contact-notification.success {
+    background:
+        var(--green-dark);
+}
+
+
+.contact-notification.error {
+    background:
+        #b42318;
+}
+
+
+/* =========================================================
+   NOTIFICATION ANIMATION
+   ========================================================= */
+
+@keyframes contactNotificationIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+/* =========================================================
+   CIRCUITS ES — PREMIUM CONTACT PAGE
+   PART 3
+   RESPONSIVE + MOBILE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .contact-page-container {
+        width:
+            min(calc(100% - 80px),
+                1400px);
+    }
+
+
+    /* Intro */
+
+    .contact-page-intro {
+        padding:
+            75px 0 60px;
+    }
+
+
+    .contact-page-intro h1 {
+        font-size:
+            clamp(3.2rem,
+                6vw,
+                5.4rem);
+    }
+
+
+    .contact-page-intro-content>p {
+        font-size:
+            1rem;
+    }
+
+
+    /* Enquiry */
+
+    .contact-enquiry-grid {
+        gap:
+            55px;
+    }
+
+
+    .contact-form-wrapper {
+        padding:
+            30px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Intro */
+
+    .contact-page-intro .contact-page-container {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            35px;
+    }
+
+
+    .contact-page-intro-meta {
+        flex-direction:
+            row;
+
+        gap:
+            35px;
+    }
+
+
+    /* Map */
+
+    .contact-map {
+        height:
+            390px;
+    }
+
+
+    /* Enquiry */
+
+    .contact-enquiry-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            60px;
+    }
+
+
+    .contact-information {
+        max-width:
+            760px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       CONTAINER
+       ----------------------------------------------------- */
+
+    .contact-page-container {
+        width:
+            calc(100% - 36px);
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
+
+    .contact-page-intro {
+        padding:
+            58px 0 48px;
+    }
+
+
+    .contact-page-intro h1 {
+        max-width:
+            100%;
+
+        font-size:
+            clamp(2.7rem,
+                12vw,
+                4rem);
+
+        line-height:
+            0.98;
+
+        letter-spacing:
+            -0.055em;
+    }
+
+
+    .contact-page-eyebrow {
+        font-size:
+            0.7rem;
+
+        letter-spacing:
+            0.15em;
+    }
+
+
+    .contact-page-eyebrow::before {
+        width:
+            7px;
+
+        height:
+            7px;
+    }
+
+
+    .contact-page-intro-content>p {
+        margin-top:
+            20px;
+
+        font-size:
+            0.9rem;
+
+        line-height:
+            1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO META
+       ----------------------------------------------------- */
+
+    .contact-page-intro-meta {
+        width:
+            100%;
+
+        flex-direction:
+            row;
+
+        justify-content:
+            space-between;
+
+        gap:
+            18px;
+    }
+
+
+    .contact-page-meta-item {
+        flex:
+            1;
+
+        padding-left:
+            13px;
+    }
+
+
+    .contact-page-meta-item span {
+        margin-bottom:
+            5px;
+
+        font-size:
+            0.56rem;
+    }
+
+
+    .contact-page-meta-item strong {
+        font-size:
+            0.78rem;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION LABEL
+       ----------------------------------------------------- */
+
+    .contact-page-section-label {
+        margin-bottom:
+            10px;
+
+        font-size:
+            0.62rem;
+
+        letter-spacing:
+            0.15em;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP SECTION
+       ----------------------------------------------------- */
+
+    .contact-map-section {
+        padding:
+            48px 0 55px;
+    }
+
+
+    .contact-map-header {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            18px;
+
+        margin-bottom:
+            20px;
+    }
+
+
+    .contact-map-header h2 {
+        font-size:
+            1.95rem;
+
+        line-height:
+            1.08;
+    }
+
+
+    .contact-map-directions {
+        min-height:
+            46px;
+
+        padding:
+            0 15px;
+
+        font-size:
+            0.72rem;
+    }
+
+
+    .contact-map-directions svg:first-child {
+        width:
+            17px;
+
+        height:
+            17px;
+    }
+
+
+    .contact-map {
+        height:
+            390px;
+
+        border-radius:
+            18px;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP LOCATION CARDS
+       ----------------------------------------------------- */
+
+    .contact-map-overlay {
+        left:
+            12px;
+
+        right:
+            12px;
+
+        top:
+            12px;
+
+        flex-direction:
+            column;
+
+        gap:
+            8px;
+    }
+
+
+    .contact-map-location {
+        width:
+            min(260px,
+                78%);
+
+        padding:
+            11px 12px;
+
+        gap:
+            10px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .contact-map-location:nth-child(2) {
+        align-self:
+            flex-end;
+    }
+
+
+    .contact-map-pin {
+        width:
+            32px;
+
+        height:
+            32px;
+
+        border-radius:
+            8px;
+    }
+
+
+    .contact-map-pin svg {
+        width:
+            15px;
+
+        height:
+            15px;
+    }
+
+
+    .contact-map-location span {
+        margin-bottom:
+            3px;
+
+        font-size:
+            0.48rem;
+    }
+
+
+    .contact-map-location strong {
+        font-size:
+            0.82rem;
+    }
+
+
+    .contact-map-location p {
+        margin-top:
+            4px;
+
+        font-size:
+            0.61rem;
+
+        line-height:
+            1.5;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP CAPTION
+       ----------------------------------------------------- */
+
+    .contact-map-caption {
+        left:
+            12px;
+
+        right:
+            12px;
+
+        bottom:
+            12px;
+
+        justify-content:
+            space-between;
+
+        gap:
+            8px;
+
+        padding:
+            9px 11px;
+    }
+
+
+    .contact-map-caption span {
+        font-size:
+            0.45rem;
+    }
+
+
+    .contact-map-caption strong {
+        font-size:
+            0.52rem;
+    }
+
+
+    /* -----------------------------------------------------
+       ENQUIRY SECTION
+       ----------------------------------------------------- */
+
+    .contact-enquiry-section {
+        padding:
+            60px 0 70px;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT INFORMATION
+       ----------------------------------------------------- */
+
+    .contact-information h2 {
+        font-size:
+            2.45rem;
+
+        line-height:
+            1.02;
+    }
+
+
+    .contact-information-intro {
+        margin:
+            18px 0 30px;
+
+        font-size:
+            0.88rem;
+
+        line-height:
+            1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATION ITEMS
+       ----------------------------------------------------- */
+
+    .contact-information-item {
+        grid-template-columns:
+            43px minmax(0, 1fr) 17px;
+
+        gap:
+            11px;
+
+        min-height:
+            72px;
+    }
+
+
+    .contact-information-icon {
+        width:
+            41px;
+
+        height:
+            41px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .contact-information-icon svg {
+        width:
+            18px;
+
+        height:
+            18px;
+    }
+
+
+    .contact-information-item>div:nth-child(2) span {
+        margin-bottom:
+            4px;
+
+        font-size:
+            0.54rem;
+    }
+
+
+    .contact-information-item>div:nth-child(2) strong {
+        font-size:
+            0.82rem;
+
+        white-space:
+            normal;
+
+        line-height:
+            1.35;
+    }
+
+
+    .contact-information-item>svg:last-child {
+        width:
+            15px;
+
+        height:
+            15px;
+    }
+
+
+    /* -----------------------------------------------------
+       SOCIAL
+       ----------------------------------------------------- */
+
+    .contact-social-links {
+        margin-top:
+            24px;
+    }
+
+
+    .contact-social-links a {
+        width:
+            43px;
+
+        height:
+            43px;
+
+        border-radius:
+            11px;
+    }
+
+
+    .contact-social-letter {
+        font-size:
+            0.82rem;
+    }
+
+
+    /* -----------------------------------------------------
+       ADDRESSES
+       ----------------------------------------------------- */
+
+    .contact-addresses {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            20px;
+
+        margin-top:
+            32px;
+
+        padding-top:
+            25px;
+    }
+
+
+    .contact-addresses span {
+        margin-bottom:
+            8px;
+
+        font-size:
+            0.56rem;
+    }
+
+
+    .contact-addresses p {
+        font-size:
+            0.78rem;
+
+        line-height:
+            1.65;
+    }
+
+
+    /* -----------------------------------------------------
+       FORM
+       ----------------------------------------------------- */
+
+    .contact-form-wrapper {
+        padding:
+            26px 20px;
+
+        border-radius:
+            17px;
+    }
+
+
+    .contact-form-header {
+        margin-bottom:
+            24px;
+    }
+
+
+    .contact-form-header>span {
+        margin-bottom:
+            9px;
+
+        font-size:
+            0.58rem;
+    }
+
+
+    .contact-form-header h2 {
+        font-size:
+            1.65rem;
+    }
+
+
+    .contact-form-header p {
+        margin-top:
+            9px;
+
+        font-size:
+            0.8rem;
+
+        line-height:
+            1.6;
+    }
+
+
+    .contact-form {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+    }
+
+
+    .contact-form-field:nth-child(5) {
+        grid-column:
+            auto;
+    }
+
+
+    /* -----------------------------------------------------
+       FORM FIELDS
+       ----------------------------------------------------- */
+
+    .contact-form-field {
+        gap:
+            7px;
+    }
+
+
+    .contact-form-field label {
+        font-size:
+            0.67rem;
+    }
+
+
+    .contact-form-field input,
+    .contact-form-field textarea {
+        font-size:
+            0.84rem;
+    }
+
+
+    .contact-form-field input {
+        height:
+            50px;
+
+        padding:
+            0 14px;
+    }
+
+
+    .contact-form-field textarea {
+        min-height:
+            125px;
+
+        padding:
+            13px 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       FORM BUTTONS
+       ----------------------------------------------------- */
+
+    .contact-form-actions {
+        grid-column:
+            auto;
+
+        flex-direction:
+            column;
+
+        gap:
+            9px;
+    }
+
+
+    .contact-form-submit,
+    .contact-form-whatsapp {
+        width:
+            100%;
+
+        min-height:
+            52px;
+
+        font-size:
+            0.74rem;
+    }
+
+
+    .contact-form-whatsapp {
+        flex:
+            none;
+    }
+
+
+    /* -----------------------------------------------------
+       NOTIFICATION
+       ----------------------------------------------------- */
+
+    .contact-notification {
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            18px;
+
+        max-width:
+            none;
+
+        padding:
+            14px 17px;
+
+        font-size:
+            0.76rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .contact-page-container {
+        width:
+            calc(100% - 28px);
+    }
+
+
+    /* -----------------------------------------------------
+       INTRO
+       ----------------------------------------------------- */
+
+    .contact-page-intro {
+        padding:
+            48px 0 40px;
+    }
+
+
+    .contact-page-intro h1 {
+        font-size:
+            2.55rem;
+
+        line-height:
+            0.99;
+    }
+
+
+    .contact-page-intro-content>p {
+        font-size:
+            0.84rem;
+    }
+
+
+    .contact-page-intro-meta {
+        gap:
+            12px;
+    }
+
+
+    .contact-page-meta-item {
+        padding-left:
+            11px;
+    }
+
+
+    .contact-page-meta-item span {
+        font-size:
+            0.48rem;
+    }
+
+
+    .contact-page-meta-item strong {
+        font-size:
+            0.7rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MAP
+       ----------------------------------------------------- */
+
+    .contact-map {
+        height:
+            350px;
+    }
+
+
+    .contact-map-header h2 {
+        font-size:
+            1.7rem;
+    }
+
+
+    .contact-map-location {
+        width:
+            72%;
+    }
+
+
+    .contact-map-location p {
+        display:
+            none;
+    }
+
+
+    .contact-map-caption {
+        display:
+            none;
+    }
+
+
+    /* -----------------------------------------------------
+       INFORMATION
+       ----------------------------------------------------- */
+
+    .contact-information h2 {
+        font-size:
+            2.2rem;
+    }
+
+
+    .contact-information-intro {
+        font-size:
+            0.82rem;
+    }
+
+
+    .contact-information-item {
+        grid-template-columns:
+            40px minmax(0, 1fr) 16px;
+
+        gap:
+            10px;
+    }
+
+
+    .contact-information-icon {
+        width:
+            38px;
+
+        height:
+            38px;
+    }
+
+
+    .contact-information-item>div:nth-child(2) strong {
+        font-size:
+            0.76rem;
+    }
+
+
+    .contact-addresses p {
+        font-size:
+            0.75rem;
+
+        line-height:
+            1.62;
+    }
+
+
+    /* -----------------------------------------------------
+       FORM
+       ----------------------------------------------------- */
+
+    .contact-form-wrapper {
+        padding:
+            23px 17px;
+    }
+
+
+    .contact-form-header h2 {
+        font-size:
+            1.5rem;
+    }
+
+
+    .contact-form-header p {
+        font-size:
+            0.76rem;
+    }
+
+
+    .contact-form-field label {
+        font-size:
+            0.64rem;
+    }
+
+
+    .contact-form-field input,
+    .contact-form-field textarea {
+        font-size:
+            0.8rem;
+    }
+
+
+    .contact-form-submit,
+    .contact-form-whatsapp {
+        min-height:
+            50px;
+
+        font-size:
+            0.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .contact-page-container {
+        width:
+            calc(100% - 22px);
+    }
+
+
+    .contact-page-intro h1 {
+        font-size:
+            2.25rem;
+    }
+
+
+    .contact-page-intro-meta {
+        flex-direction:
+            column;
+
+        gap:
+            12px;
+    }
+
+
+    .contact-page-meta-item {
+        width:
+            100%;
+    }
+
+
+    .contact-map {
+        height:
+            320px;
+    }
+
+
+    .contact-map-location {
+        width:
+            80%;
+    }
+
+
+    .contact-information h2 {
+        font-size:
+            2rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-map-directions,
+    .contact-map-directions svg,
+    .contact-information-item,
+    .contact-information-item>svg,
+    .contact-social-links a,
+    .contact-form-submit,
+    .contact-form-whatsapp {
+        transition:
+            none;
+    }
+
+
+    .contact-notification {
+        animation:
+            none;
+    }
+
+}

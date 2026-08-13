@@ -1,0 +1,304 @@
+/* =========================================================
+   CES CONNECT — COMPLETED PROJECT CARD
+   Scoped exclusively to this component
+========================================================= */
+
+.ces-completed-card {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 12px;
+
+    background: var(--surface, #ffffff);
+
+    border: 1px solid var(--border-color, #e2e8f0);
+
+    border-radius: var(--radius-md, 14px);
+
+    box-shadow:
+        0 4px 16px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.ces-completed-card:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(85, 181, 50, 0.28);
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   COMPLETED ICON
+========================================================= */
+
+.ces-completed-icon {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #55b532,
+            #3f982f
+        );
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 14px rgba(85, 181, 50, 0.22);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ces-completed-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.ces-completed-content h4 {
+    margin: 0;
+
+    color: var(--text-primary, #0f172a);
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.ces-completed-content p {
+    margin: 5px 0 0;
+
+    color: var(--text-secondary, #475569);
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.ces-completed-content p span {
+    color: var(--text-light, #64748b);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.ces-completed-status {
+    flex: 0 0 auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(85, 181, 50, 0.18);
+
+    border-radius: 999px;
+
+    background: #eef8e8;
+
+    color: #3f8f2f;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.ces-completed-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #55b532;
+
+    box-shadow:
+        0 0 0 3px rgba(85, 181, 50, 0.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ces-completed-card {
+        padding: 16px;
+
+        gap: 13px;
+
+        border-radius: 13px;
+    }
+
+
+    .ces-completed-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+
+        font-size: 18px;
+    }
+
+
+    .ces-completed-content h4 {
+        font-size: 15px;
+    }
+
+
+    .ces-completed-content p {
+        font-size: 12px;
+    }
+
+
+    .ces-completed-status {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .ces-completed-card {
+        display: grid;
+
+        grid-template-columns: auto 1fr;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+
+    .ces-completed-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: auto;
+
+        grid-row: 1;
+    }
+
+
+    .ces-completed-content {
+        min-width: 0;
+    }
+
+
+    .ces-completed-content h4 {
+        font-size: 15px;
+
+        white-space: normal;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+
+    .ces-completed-content p {
+        margin-top: 3px;
+    }
+
+
+    .ces-completed-status {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 9px 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .ces-completed-card {
+        padding: 13px;
+    }
+
+
+    .ces-completed-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 16px;
+    }
+
+
+    .ces-completed-content h4 {
+        font-size: 14px;
+    }
+
+
+    .ces-completed-status {
+        font-size: 10px;
+    }
+
+}

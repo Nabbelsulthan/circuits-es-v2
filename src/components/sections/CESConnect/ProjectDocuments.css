@@ -1,0 +1,1696 @@
+/* =========================================================
+   CES CONNECT
+   PROJECT DOCUMENTS
+   ISOLATED COMPONENT
+   CES GREEN THEME
+========================================================= */
+
+.ces-project-documents {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    /*
+       Navbar is fixed.
+       Reserve enough space so the project header
+       never disappears underneath it.
+    */
+    padding:
+        115px
+        30px
+        70px;
+
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(85, 181, 50, 0.07),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 20%,
+            rgba(85, 181, 50, 0.05),
+            transparent 25%
+        ),
+        #f4f7f5;
+
+    color: var(--text-primary);
+
+}
+
+
+/* =========================================================
+   LOADING / ERROR STATE
+========================================================= */
+
+.ces-project-documents-state {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        115px
+        30px
+        70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(85, 181, 50, 0.07),
+            transparent 28%
+        ),
+        #f4f7f5;
+
+}
+
+
+/* =========================================================
+   PROJECT ERROR
+========================================================= */
+
+.project-error-card {
+
+    width: min(100%, 520px);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.08);
+
+}
+
+
+.project-error-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #eef8e8;
+
+    color: #55b532;
+
+}
+
+
+.project-error-icon svg {
+
+    width: 38px;
+
+    height: 38px;
+
+}
+
+
+.project-error-card h1 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+
+.project-error-card p {
+
+    margin: 12px auto 25px;
+
+    max-width: 400px;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.project-back-btn,
+.project-back-top-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: #55b532;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.project-back-btn {
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+}
+
+
+.project-back-btn:hover,
+.project-back-top-btn:hover {
+
+    background: #429124;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(85, 181, 50, 0.20);
+
+}
+
+
+.project-back-btn svg {
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+
+/* =========================================================
+   PROJECT HEADER
+========================================================= */
+
+.ces-project-documents .project-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 28px 30px;
+
+    margin-bottom: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8faf9
+        );
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 23px;
+
+    box-shadow:
+        0 12px 30px rgba(15, 23, 42, 0.055);
+
+}
+
+
+.ces-project-documents .project-folder {
+
+    width: 68px;
+
+    height: 68px;
+
+    min-width: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border:
+        1px solid
+        rgba(85, 181, 50, 0.14);
+
+    border-radius: 18px;
+
+}
+
+
+.ces-project-documents .project-folder-icon {
+
+    width: 37px;
+
+    height: 37px;
+
+    color: #55b532;
+
+}
+
+
+.ces-project-documents .project-header-content {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.ces-project-documents .project-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 6px 13px;
+
+    margin-bottom: 9px;
+
+    background: #eef8e8;
+
+    border-radius: 30px;
+
+    color: #429124;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.ces-project-documents .project-header h1 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.ces-project-documents .project-header p {
+
+    max-width: 700px;
+
+    margin: 9px 0 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   HEADER BACK BUTTON
+========================================================= */
+
+.ces-project-documents .project-back-top-btn {
+
+    flex: 0 0 auto;
+
+    padding: 11px 15px;
+
+    border-radius: 11px;
+
+    font-size: 12px;
+
+}
+
+
+.ces-project-documents .project-back-top-btn svg {
+
+    width: 17px;
+
+    height: 17px;
+
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.ces-project-documents .section-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    margin:
+        18px
+        0
+        12px;
+
+    padding:
+        17px
+        19px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 20px rgba(15, 23, 42, 0.045);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.ces-project-documents .section-header:hover {
+
+    border-color:
+        rgba(85, 181, 50, 0.22);
+
+    box-shadow:
+        0 11px 25px rgba(85, 181, 50, 0.08);
+
+}
+
+
+/* =========================================================
+   SECTION LEFT
+========================================================= */
+
+.ces-project-documents .section-left {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.ces-project-documents .section-left svg {
+
+    flex: 0 0 auto;
+
+    width: 27px;
+
+    height: 27px;
+
+    color: #55b532;
+
+}
+
+
+.ces-project-documents .section-left h2 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+}
+
+
+/* =========================================================
+   SECTION RIGHT
+========================================================= */
+
+.ces-project-documents .section-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.ces-project-documents .section-count {
+
+    min-width: 32px;
+
+    padding: 5px 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border-radius: 20px;
+
+    color: #429124;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.ces-project-documents .expand-arrow {
+
+    width: 21px;
+
+    height: 21px;
+
+    color: #64748b;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.ces-project-documents .expand-arrow.expanded {
+
+    transform: rotate(90deg);
+
+    color: #55b532;
+
+}
+
+
+/* =========================================================
+   DOCUMENT GRID
+========================================================= */
+
+.ces-project-documents .document-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    gap: 13px;
+
+}
+
+
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
+
+.ces-project-documents .document-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 18px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.ces-project-documents .document-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(85, 181, 50, 0.20);
+
+    box-shadow:
+        0 12px 26px rgba(85, 181, 50, 0.08);
+
+}
+
+
+/* =========================================================
+   DOCUMENT LEFT
+========================================================= */
+
+.ces-project-documents .document-left {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.ces-project-documents .document-icon,
+.ces-project-documents .fat-document-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    min-width: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eef8e8;
+
+    border-radius: 14px;
+
+}
+
+
+.ces-project-documents .document-icon svg,
+.ces-project-documents .fat-document-icon svg {
+
+    width: 28px;
+
+    height: 28px;
+
+    color: #55b532;
+
+}
+
+
+/* =========================================================
+   DOCUMENT TEXT
+========================================================= */
+
+.ces-project-documents .document-text {
+
+    min-width: 0;
+
+}
+
+
+.ces-project-documents .document-title {
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.ces-project-documents .document-type {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.ces-project-documents .download-btn,
+.ces-project-documents .fat-download-btn {
+
+    flex: 0 0 auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        10px
+        15px;
+
+    border-radius: 10px;
+
+    background: #55b532;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.ces-project-documents .download-btn:hover,
+.ces-project-documents .fat-download-btn:hover {
+
+    background: #429124;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 15px rgba(85, 181, 50, 0.20);
+
+}
+
+
+.ces-project-documents .download-btn svg,
+.ces-project-documents .fat-download-btn svg {
+
+    width: 17px;
+
+    height: 17px;
+
+}
+
+
+/* =========================================================
+   FAT
+========================================================= */
+
+.ces-project-documents .fat-icon,
+.ces-project-documents .gallery-header-icon {
+
+    color: #55b532 !important;
+
+}
+
+
+.ces-project-documents .fat-count,
+.ces-project-documents .gallery-count {
+
+    background: #eef8e8;
+
+    color: #429124;
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.ces-project-documents .empty-section {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        45px
+        20px;
+
+    background:
+        rgba(255, 255, 255, 0.72);
+
+    border:
+        1px dashed
+        #d8e4d8;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+}
+
+
+.ces-project-documents .empty-section-icon {
+
+    width: 50px !important;
+
+    height: 50px !important;
+
+    margin-bottom: 14px;
+
+    color: #94a3b8;
+
+}
+
+
+.ces-project-documents .empty-section h3 {
+
+    margin: 0;
+
+    color: #374151;
+
+    font-size: 19px;
+
+}
+
+
+.ces-project-documents .empty-section p {
+
+    max-width: 430px;
+
+    margin:
+        8px
+        0
+        0;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.ces-project-documents .gallery-grid {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(280px, 1fr)
+        );
+
+    gap: 18px;
+
+}
+
+
+.ces-project-documents .gallery-card {
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 24px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.ces-project-documents .gallery-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(85, 181, 50, 0.18);
+
+    box-shadow:
+        0 16px 32px rgba(85, 181, 50, 0.10);
+
+}
+
+
+.ces-project-documents .gallery-image-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #edf2ef;
+
+}
+
+
+.ces-project-documents .gallery-image {
+
+    width: 100%;
+
+    height: 230px;
+
+    display: block;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+
+.ces-project-documents .gallery-card:hover
+.gallery-image {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================================
+   GALLERY OVERLAY
+========================================================= */
+
+.ces-project-documents .gallery-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(8, 20, 12, 0.58);
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease;
+
+}
+
+
+.ces-project-documents .gallery-card:hover
+.gallery-overlay {
+
+    opacity: 1;
+
+}
+
+
+.ces-project-documents .gallery-overlay svg {
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.ces-project-documents .gallery-overlay span {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.ces-project-documents .gallery-info {
+
+    padding:
+        14px
+        16px;
+
+}
+
+
+.ces-project-documents .gallery-info h4 {
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   IMAGE MODAL
+========================================================= */
+
+.ces-project-documents .image-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(5, 12, 8, 0.92);
+
+    cursor: pointer;
+
+    animation:
+        cesProjectFadeIn
+        0.2s ease;
+
+}
+
+
+.ces-project-documents .image-preview-container {
+
+    position: relative;
+
+    max-width: 92vw;
+
+    max-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.ces-project-documents .image-preview {
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 92vw;
+
+    max-height: 80vh;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.40);
+
+}
+
+
+.ces-project-documents .image-preview-caption {
+
+    max-width: 80vw;
+
+    margin-top: 14px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+}
+
+
+.ces-project-documents .close-image-btn {
+
+    position: absolute;
+
+    top: -52px;
+
+    right: 0;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.ces-project-documents .close-image-btn:hover {
+
+    background: #eef8e8;
+
+    color: #429124;
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes cesProjectFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ces-project-documents {
+
+        padding:
+            105px
+            22px
+            60px;
+
+    }
+
+
+    .ces-project-documents .gallery-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .ces-project-documents {
+
+        padding:
+            100px
+            18px
+            50px;
+
+    }
+
+
+    .ces-project-documents .project-header {
+
+        flex-wrap: wrap;
+
+        padding:
+            24px
+            21px;
+
+    }
+
+
+    .ces-project-documents .project-header-content {
+
+        flex-basis: calc(
+            100% - 90px
+        );
+
+    }
+
+
+    .ces-project-documents .project-back-top-btn {
+
+        margin-left: auto;
+
+    }
+
+
+    .ces-project-documents .project-header h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .ces-project-documents .gallery-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .ces-project-documents {
+
+        padding:
+            88px
+            13px
+            40px;
+
+    }
+
+
+    .ces-project-documents .project-header {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 14px;
+
+        padding:
+            23px
+            17px;
+
+        border-radius: 19px;
+
+        text-align: center;
+
+    }
+
+
+    .ces-project-documents .project-folder {
+
+        width: 57px;
+
+        height: 57px;
+
+        min-width: 57px;
+
+    }
+
+
+    .ces-project-documents .project-folder-icon {
+
+        width: 31px;
+
+        height: 31px;
+
+    }
+
+
+    .ces-project-documents .project-header-content {
+
+        width: 100%;
+
+        flex-basis: auto;
+
+    }
+
+
+    .ces-project-documents .project-tag {
+
+        font-size: 8px;
+
+    }
+
+
+    .ces-project-documents .project-header h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .ces-project-documents .project-header p {
+
+        font-size: 12px;
+
+        line-height: 1.65;
+
+    }
+
+
+    .ces-project-documents .project-back-top-btn {
+
+        width: 100%;
+
+        margin: 2px 0 0;
+
+    }
+
+
+    .ces-project-documents .section-header {
+
+        padding:
+            14px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .ces-project-documents .section-left {
+
+        gap: 9px;
+
+    }
+
+
+    .ces-project-documents .section-left svg {
+
+        width: 23px;
+
+        height: 23px;
+
+    }
+
+
+    .ces-project-documents .section-left h2 {
+
+        font-size: 16px;
+
+    }
+
+
+    .ces-project-documents .section-count {
+
+        min-width: 28px;
+
+        padding:
+            4px
+            8px;
+
+        font-size: 10px;
+
+    }
+
+
+    .ces-project-documents .expand-arrow {
+
+        width: 19px;
+
+        height: 19px;
+
+    }
+
+
+    .ces-project-documents .document-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 14px;
+
+        padding: 15px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .ces-project-documents .document-left {
+
+        width: 100%;
+
+    }
+
+
+    .ces-project-documents .document-icon,
+    .ces-project-documents .fat-document-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        min-width: 45px;
+
+    }
+
+
+    .ces-project-documents .document-icon svg,
+    .ces-project-documents .fat-document-icon svg {
+
+        width: 24px;
+
+        height: 24px;
+
+    }
+
+
+    .ces-project-documents .document-title {
+
+        font-size: 13px;
+
+        white-space: normal;
+
+        overflow-wrap: anywhere;
+
+    }
+
+
+    .ces-project-documents .document-type {
+
+        font-size: 10px;
+
+    }
+
+
+    .ces-project-documents .download-btn,
+    .ces-project-documents .fat-download-btn {
+
+        width: 100%;
+
+        padding:
+            11px
+            12px;
+
+    }
+
+
+    .ces-project-documents .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 13px;
+
+    }
+
+
+    .ces-project-documents .gallery-image {
+
+        height: 215px;
+
+    }
+
+
+    .ces-project-documents .empty-section {
+
+        padding:
+            38px
+            17px;
+
+    }
+
+
+    .ces-project-documents-state {
+
+        padding:
+            88px
+            15px
+            40px;
+
+    }
+
+
+    .project-error-card {
+
+        padding:
+            35px
+            20px;
+
+    }
+
+
+    .project-error-card h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .ces-project-documents .image-modal {
+
+        padding: 15px;
+
+    }
+
+
+    .ces-project-documents .image-preview {
+
+        max-width: 95vw;
+
+        max-height: 74vh;
+
+    }
+
+
+    .ces-project-documents .close-image-btn {
+
+        top: -48px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .ces-project-documents {
+
+        padding:
+            84px
+            10px
+            35px;
+
+    }
+
+
+    .ces-project-documents .project-header {
+
+        padding:
+            20px
+            14px;
+
+    }
+
+
+    .ces-project-documents .project-header h1 {
+
+        font-size: 21px;
+
+    }
+
+
+    .ces-project-documents .section-header {
+
+        padding:
+            12px;
+
+    }
+
+
+    .ces-project-documents .section-left h2 {
+
+        font-size: 15px;
+
+    }
+
+
+    .ces-project-documents .document-card {
+
+        padding:
+            13px;
+
+    }
+
+
+    .ces-project-documents .gallery-image {
+
+        height: 195px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ces-project-documents *,
+    .ces-project-documents *::before,
+    .ces-project-documents *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}

@@ -12,6 +12,7 @@ const MainLayout = () => {
     return (
         <>
             <Navbar />
+            
             <ScrollToTop />
 
 

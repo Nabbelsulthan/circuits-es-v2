@@ -78,7 +78,7 @@ const navItems = [
 
     {
         name: "Services",
-        section: "services",
+        section: "home-services",
     },
 
     {
@@ -99,7 +99,7 @@ const SECTION_IDS = [
     "about",
     "solutions",
     "products",
-    "services",
+    "home-services",
     "contact",
 ];
 

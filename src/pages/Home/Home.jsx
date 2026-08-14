@@ -100,7 +100,8 @@ import Hero from "../../components/sections/Hero";
 import AboutPreview from "../../components/sections/AboutPreview";
 import Solutions from "../../components/sections/Solutions";
 import Products from "../../components/sections/Products/Products";
-import Services from "../../components/sections/Services/Services";
+import HomeServices from "../../components/sections/HomeServices/HomeServices";
+// import Services from "../../components/sections/Services/Services";
 import Contact from "../../components/sections/Contact/Contact";
 import WhyChooseUs from "../../components/sections/WhyChooseUs/WhyChooseUs";
 import Customers from "../../components/sections/Customers/Customers";
@@ -176,7 +177,9 @@ const Home = () => {
 
             <Products />
 
-            <Services />
+            {/* <Services /> */}
+
+            <HomeServices />
 
             <WhyChooseUs />
 

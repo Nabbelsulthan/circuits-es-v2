@@ -1,0 +1,976 @@
+/* =========================================================
+   CIRCUITS ES — HOME SERVICES
+========================================================= */
+
+.home-services {
+    position: relative;
+
+    padding: 120px 24px;
+
+    overflow: hidden;
+
+    background: #f6f8f5;
+
+    color: #111713;
+}
+
+
+/* =========================================================
+   TECHNICAL BACKGROUND
+========================================================= */
+
+.home-services::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0.65;
+
+    background-image:
+        linear-gradient(rgba(17, 23, 19, 0.035) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(17, 23, 19, 0.035) 1px,
+            transparent 1px);
+
+    background-size: 55px 55px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent);
+}
+
+
+.home-services::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -190px;
+    top: 25%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(88, 185, 71, 0.10),
+            transparent 68%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.home-services-container {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(1240px, 100%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.home-services-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr) minmax(320px, 0.65fr);
+
+    gap: 80px;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+
+.home-services-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: #4d9f3d;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.19em;
+
+    text-transform: uppercase;
+}
+
+
+.home-services-eyebrow::before {
+    content: "";
+
+    width: 28px;
+    height: 2px;
+
+    background: #58b947;
+}
+
+
+.home-services-heading h2 {
+    max-width: 720px;
+
+    margin: 0;
+
+    font-size:
+        clamp(42px,
+            5.5vw,
+            72px);
+
+    font-weight: 600;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+}
+
+
+.home-services-heading h2 span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-weight: 400;
+
+    color: var(--green);
+}
+
+
+.home-services-intro {
+    max-width: 410px;
+}
+
+
+.home-services-intro p {
+    margin: 0 0 26px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #626b64;
+}
+
+
+.home-services-intro .btn,
+.home-services-intro a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.home-services-main {
+    display: grid;
+
+    grid-template-columns:
+        minmax(330px, 0.72fr) minmax(0, 1.28fr);
+
+    gap: 18px;
+
+    min-height: 570px;
+}
+
+
+/* =========================================================
+   ENGINEERING FLOW
+========================================================= */
+
+.home-services-flow {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.12);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(145deg,
+            #172019 0%,
+            #101612 100%);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 25px 70px rgba(17,
+            23,
+            19,
+            0.16);
+}
+
+
+.home-services-flow::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -120px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(88,
+            185,
+            71,
+            0.25);
+
+    box-shadow:
+        0 0 0 25px rgba(88,
+            185,
+            71,
+            0.035),
+        0 0 0 50px rgba(88,
+            185,
+            71,
+            0.02);
+
+    pointer-events: none;
+}
+
+
+.flow-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 24px;
+
+    border-bottom:
+        1px solid rgba(255,
+            255,
+            255,
+            0.09);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(255,
+            255,
+            255,
+            0.55);
+}
+
+
+.flow-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #7dcc6e;
+}
+
+
+.flow-status i {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #58b947;
+
+    box-shadow:
+        0 0 0 4px rgba(88,
+            185,
+            71,
+            0.12);
+}
+
+
+/* =========================================================
+   FLOW CONTENT
+========================================================= */
+
+.flow-content {
+    position: relative;
+
+    padding:
+        30px 5px 10px;
+}
+
+
+.flow-line {
+    position: absolute;
+
+    top: 58px;
+    bottom: 58px;
+
+    left: 25px;
+
+    width: 1px;
+
+    background:
+        linear-gradient(to bottom,
+            #58b947,
+            rgba(88,
+                185,
+                71,
+                0.12));
+}
+
+
+.flow-step {
+    position: relative;
+
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    gap: 18px;
+
+    align-items: center;
+
+    min-height: 82px;
+}
+
+
+.flow-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,
+            255,
+            255,
+            0.14);
+
+    border-radius: 10px;
+
+    background:
+        #172019;
+
+    color: #8bd57e;
+}
+
+
+.flow-step.active .flow-icon {
+    border-color:
+        rgba(88,
+            185,
+            71,
+            0.5);
+
+    background:
+        rgba(88,
+            185,
+            71,
+            0.12);
+
+    color: #72ca64;
+}
+
+
+.flow-step small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    color: rgba(255,
+            255,
+            255,
+            0.35);
+}
+
+
+.flow-step strong {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+
+.flow-step span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    color: rgba(255,
+            255,
+            255,
+            0.45);
+}
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
+
+.home-services-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.home-service-card {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 275px;
+
+    padding: 28px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(17,
+            23,
+            19,
+            0.09);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,
+            255,
+            255,
+            0.78);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22,
+            1,
+            0.36,
+            1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.home-service-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 110px;
+    height: 110px;
+
+    right: -55px;
+    bottom: -55px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(88,
+            185,
+            71,
+            0.08);
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.home-service-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(88,
+            185,
+            71,
+            0.28);
+
+    box-shadow:
+        0 20px 50px rgba(17,
+            23,
+            19,
+            0.09);
+}
+
+
+.home-service-card:hover::after {
+    transform:
+        scale(1.6);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.home-service-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.home-service-number {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+
+    color: #9aa19b;
+}
+
+
+.home-service-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(88,
+            185,
+            71,
+            0.22);
+
+    border-radius: 11px;
+
+    background:
+        rgba(88,
+            185,
+            71,
+            0.07);
+
+    color: #4d9f3d;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.home-service-card-content {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 35px;
+}
+
+
+.home-service-card h3 {
+    margin: 0;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.025em;
+}
+
+
+.home-service-card p {
+    max-width: 320px;
+
+    margin: 13px 0 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #6b746d;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.home-service-card-bottom {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(17,
+            23,
+            19,
+            0.08);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    color: #7a837c;
+}
+
+
+.home-service-card-bottom svg {
+    color: #4d9f3d;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.home-service-card:hover .home-service-card-bottom svg {
+    transform:
+        translate(3px,
+            -3px);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.home-services-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(17,
+            23,
+            19,
+            0.09);
+}
+
+
+.home-services-bottom-line {
+    width: 35px;
+    height: 2px;
+
+    flex: 0 0 auto;
+
+    background: #58b947;
+}
+
+
+.home-services-bottom p {
+    flex: 1;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #6a736c;
+}
+
+
+.home-services-bottom p strong {
+    color: #202721;
+
+    font-weight: 600;
+}
+
+
+.home-services-bottom a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex: 0 0 auto;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .home-services {
+        padding:
+            95px 24px;
+    }
+
+
+    .home-services-header {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-bottom: 45px;
+    }
+
+
+    .home-services-intro {
+        max-width: 600px;
+    }
+
+
+    .home-services-main {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home-services-flow {
+        min-height: 450px;
+    }
+
+
+    .home-services-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .home-services {
+        padding:
+            75px 18px;
+    }
+
+
+    .home-services-header {
+        gap: 22px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .home-services-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 9px;
+    }
+
+
+    .home-services-heading h2 {
+        font-size:
+            clamp(38px,
+                11vw,
+                55px);
+    }
+
+
+    .home-services-intro p {
+        font-size: 14px;
+    }
+
+
+    .home-services-main {
+        gap: 14px;
+    }
+
+
+    .home-services-flow {
+        min-height: auto;
+
+        padding: 23px;
+
+        border-radius: 18px;
+    }
+
+
+    .flow-header {
+        font-size: 8px;
+    }
+
+
+    .flow-content {
+        padding:
+            25px 0 5px;
+    }
+
+
+    .flow-line {
+        left: 20px;
+
+        top: 50px;
+        bottom: 50px;
+    }
+
+
+    .flow-step {
+        grid-template-columns:
+            40px 1fr;
+
+        gap: 15px;
+
+        min-height: 76px;
+    }
+
+
+    .flow-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .flow-step strong {
+        font-size: 13px;
+    }
+
+
+    .flow-step span {
+        font-size: 9px;
+    }
+
+
+    .home-services-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .home-service-card {
+        min-height: 235px;
+
+        padding: 24px;
+
+        border-radius: 17px;
+    }
+
+
+    .home-service-card-content {
+        margin-top: 28px;
+    }
+
+
+    .home-service-card h3 {
+        font-size: 20px;
+    }
+
+
+    .home-service-card p {
+        font-size: 12px;
+    }
+
+
+    .home-services-bottom {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        margin-top: 25px;
+
+        padding-top: 25px;
+    }
+
+
+    .home-services-bottom p {
+        width: calc(100% - 50px);
+
+        flex: none;
+
+        font-size: 12px;
+    }
+
+
+    .home-services-bottom a {
+        margin-left: 50px;
+    }
+
+}

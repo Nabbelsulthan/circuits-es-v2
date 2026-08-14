@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const WHATSAPP_NUMBER = "919445468377";
-const QUOTE_EMAIL = "design@circuitses.com";
+const QUOTE_EMAIL = "info@circuitses.com";
 
 
 const panelTypes = [

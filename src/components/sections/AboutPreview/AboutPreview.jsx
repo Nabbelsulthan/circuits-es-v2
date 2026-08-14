@@ -963,7 +963,7 @@ const AboutPreview = () => {
                         </div>
 
 
-                        <a
+                        {/* <a
                             href={ISO9001Certificate}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -976,7 +976,7 @@ const AboutPreview = () => {
 
                             <ArrowUpRight size={17} />
 
-                        </a>
+                        </a> */}
 
                     </div>
 
@@ -1022,13 +1022,13 @@ const AboutPreview = () => {
                                     QUALITY MANAGEMENT SYSTEM
                                 </span>
 
-                                <a
+                                {/* <a
                                     href={ISO9001Certificate}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     Open Certificate ↗
-                                </a>
+                                </a> */}
 
                             </div>
 

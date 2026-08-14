@@ -695,7 +695,7 @@ Thank you.
                             </span>
 
                             <strong>
-                                Salem · Hosur · Tamil Nadu
+                                 Hosur · Tamil Nadu
                             </strong>
 
                         </div>

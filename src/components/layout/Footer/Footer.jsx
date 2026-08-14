@@ -203,7 +203,7 @@ const Footer = () => {
               <MapPin />
 
               <span>
-                Salem · Hosur
+                 Hosur
               </span>
 
               <ArrowUpRight />

@@ -6,6 +6,12 @@ import {
   Phone,
 } from "lucide-react";
 
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaFacebookF,
+} from "react-icons/fa";
+
 import "./Footer.css";
 
 import logo from "../../../assets/logos/CircuitsES connect logo.png";
@@ -50,7 +56,7 @@ const Footer = () => {
 
 
 
-            <div className="site-footer-social">
+            {/* <div className="site-footer-social">
 
               <a
                 href="https://in.linkedin.com/company/circuitses"
@@ -73,6 +79,45 @@ const Footer = () => {
                 <span className="site-footer-social-letter">
                   ◎
                 </span>
+              </a>
+
+            </div> */}
+
+            <div className="site-footer-social">
+
+              {/* LinkedIn */}
+
+              <a
+                href="https://in.linkedin.com/company/circuitses"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CircuitsES LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+
+
+              {/* Instagram */}
+
+              <a
+                href="https://www.instagram.com/circuitses"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CircuitsES Instagram"
+              >
+                <FaInstagram />
+              </a>
+
+
+              {/* Facebook */}
+
+              <a
+                href="https://www.facebook.com/share/19Tc8z9c3T/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CircuitsES Facebook"
+              >
+                <FaFacebookF />
               </a>
 
             </div>
@@ -203,7 +248,7 @@ const Footer = () => {
               <MapPin />
 
               <span>
-                 Hosur
+                Hosur
               </span>
 
               <ArrowUpRight />

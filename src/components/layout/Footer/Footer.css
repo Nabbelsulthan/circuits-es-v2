@@ -1,45 +1,47 @@
 /* =========================================================
    CIRCUITSES — PREMIUM FOOTER
-   ========================================================= */
-
-/* .site-footer {
-    position: relative;
-
-    overflow: hidden;
-
-    color:
-        var(--white);
-
-    background:
-        var(--heading);
-} */
+========================================================= */
 
 
-/* Footer.css */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .site-footer {
-    --footer-bg: #12253A;
-    --footer-text: #FFFFFF;
-    --footer-muted: rgba(255, 255, 255, 0.62);
 
-    background: var(--footer-bg);
+    --footer-bg: #12253A;
+
+    --footer-text: #FFFFFF;
+
+    --footer-muted:
+        rgba(255, 255, 255, 0.62);
+
+    background:
+        var(--footer-bg);
+
+    color:
+        var(--footer-text);
 }
 
 
 /* =========================================================
    MAIN
-   ========================================================= */
+========================================================= */
 
 .site-footer-main {
+
     padding:
         70px 0 55px;
 }
 
 
 .site-footer-container {
+
     width:
-        min(calc(100% - 128px),
-            1400px);
+        min(
+            calc(100% - 128px),
+            1400px
+        );
 
     margin:
         0 auto;
@@ -48,13 +50,19 @@
 
 /* =========================================================
    GRID
-   ========================================================= */
+========================================================= */
 
-.site-footer-main .site-footer-container {
-    display: grid;
+.site-footer-main
+.site-footer-container {
+
+    display:
+        grid;
 
     grid-template-columns:
-        1.6fr 0.8fr 1fr 1.15fr;
+        1.6fr
+        0.8fr
+        1fr
+        1.15fr;
 
     gap:
         70px;
@@ -63,15 +71,17 @@
 
 /* =========================================================
    BRAND
-   ========================================================= */
+========================================================= */
 
 .site-footer-brand {
+
     max-width:
         350px;
 }
 
 
 .site-footer-logo {
+
     display:
         inline-flex;
 
@@ -80,10 +90,14 @@
 
     margin-bottom:
         22px;
+
+    text-decoration:
+        none;
 }
 
 
 .site-footer-logo img {
+
     display:
         block;
 
@@ -99,6 +113,7 @@
 
 
 .site-footer-brand p {
+
     max-width:
         330px;
 
@@ -118,9 +133,10 @@
 
 /* =========================================================
    LABEL
-   ========================================================= */
+========================================================= */
 
 .site-footer-label {
+
     display:
         block;
 
@@ -143,9 +159,10 @@
 
 /* =========================================================
    FOOTER COLUMNS
-   ========================================================= */
+========================================================= */
 
 .site-footer-column {
+
     display:
         flex;
 
@@ -161,6 +178,7 @@
 
 
 .site-footer-column a {
+
     position:
         relative;
 
@@ -183,6 +201,7 @@
 
 
 .site-footer-column a:hover {
+
     color:
         var(--white);
 
@@ -193,9 +212,10 @@
 
 /* =========================================================
    CONTACT
-   ========================================================= */
+========================================================= */
 
 .site-footer-contact {
+
     display:
         flex;
 
@@ -208,6 +228,7 @@
 
 
 .site-footer-contact-item {
+
     display:
         flex;
 
@@ -238,6 +259,7 @@
 
 
 .site-footer-contact-item svg {
+
     width:
         17px;
 
@@ -253,6 +275,7 @@
 
 
 .site-footer-contact-item svg:last-child {
+
     width:
         14px;
 
@@ -268,25 +291,34 @@
 
 
 .site-footer-contact-item:hover {
+
     color:
         var(--white);
 }
 
 
-.site-footer-contact-item:hover svg:last-child {
+.site-footer-contact-item:hover
+svg:last-child {
+
     transform:
-        translate(2px,
-            -2px);
+        translate(
+            2px,
+            -2px
+        );
 }
 
 
 /* =========================================================
    SOCIAL
-   ========================================================= */
+========================================================= */
 
 .site-footer-social {
+
     display:
         flex;
+
+    align-items:
+        center;
 
     gap:
         9px;
@@ -296,7 +328,12 @@
 }
 
 
+/* =========================================================
+   SOCIAL BUTTON
+========================================================= */
+
 .site-footer-social a {
+
     display:
         flex;
 
@@ -312,27 +349,81 @@
     height:
         40px;
 
+    flex-shrink:
+        0;
+
     border:
-        1px solid rgba(255, 255, 255, 0.12);
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
 
     border-radius:
         10px;
 
     color:
-        rgba(255, 255, 255, 0.7);
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
 
     background:
-        rgba(255, 255, 255, 0.04);
+        rgba(
+            255,
+            255,
+            255,
+            0.04
+        );
+
+    text-decoration:
+        none;
 
     transition:
         transform 250ms ease,
         color 250ms ease,
         border-color 250ms ease,
-        background 250ms ease;
+        background 250ms ease,
+        box-shadow 250ms ease;
 }
 
 
+/* =========================================================
+   REAL SOCIAL ICONS
+========================================================= */
+
+.site-footer-social a svg {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    display:
+        block;
+
+    flex-shrink:
+        0;
+
+    fill:
+        currentColor;
+
+    stroke:
+        none;
+}
+
+
+/* =========================================================
+   SOCIAL HOVER
+========================================================= */
+
 .site-footer-social a:hover {
+
     transform:
         translateY(-3px);
 
@@ -340,36 +431,75 @@
         var(--white);
 
     border-color:
-        rgba(76, 180, 63, 0.5);
+        rgba(
+            76,
+            180,
+            63,
+            0.5
+        );
 
     background:
-        rgba(76, 180, 63, 0.10);
+        rgba(
+            76,
+            180,
+            63,
+            0.10
+        );
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            76,
+            180,
+            63,
+            0.10
+        );
 }
 
 
-.site-footer-social svg {
-    width:
-        16px;
+/* =========================================================
+   SOCIAL FOCUS
+========================================================= */
 
-    height:
-        16px;
+.site-footer-social a:focus-visible {
+
+    outline:
+        2px solid
+        var(--green);
+
+    outline-offset:
+        3px;
 }
 
 
 /* =========================================================
    BOTTOM BAR
-   ========================================================= */
+========================================================= */
 
 .site-footer-bottom {
+
     border-top:
-        1px solid rgba(255, 255, 255, 0.09);
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
 
     background:
-        rgba(0, 0, 0, 0.10);
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
 }
 
 
-.site-footer-bottom .site-footer-container {
+.site-footer-bottom
+.site-footer-container {
+
     display:
         flex;
 
@@ -388,18 +518,29 @@
 
 
 .site-footer-bottom p {
+
     margin:
         0;
 
     color:
-        rgba(255, 255, 255, 0.42);
+        rgba(
+            255,
+            255,
+            255,
+            0.42
+        );
 
     font-size:
         0.64rem;
 }
 
 
+/* =========================================================
+   BOTTOM LINKS
+========================================================= */
+
 .site-footer-bottom-links {
+
     display:
         flex;
 
@@ -412,8 +553,14 @@
 
 
 .site-footer-bottom-links a {
+
     color:
-        rgba(255, 255, 255, 0.45);
+        rgba(
+            255,
+            255,
+            255,
+            0.45
+        );
 
     font-size:
         0.62rem;
@@ -427,14 +574,25 @@
 
 
 .site-footer-bottom-links a:hover {
+
     color:
         var(--white);
 }
 
 
+/* =========================================================
+   ENGINEERED TEXT
+========================================================= */
+
 .site-footer-engineered {
+
     color:
-        rgba(255, 255, 255, 0.35);
+        rgba(
+            255,
+            255,
+            255,
+            0.35
+        );
 
     font-size:
         0.55rem;
@@ -449,20 +607,27 @@
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1000px) {
 
     .site-footer-container {
+
         width:
-            min(calc(100% - 80px),
-                1400px);
+            min(
+                calc(100% - 80px),
+                1400px
+            );
     }
 
 
-    .site-footer-main .site-footer-container {
+    .site-footer-main
+    .site-footer-container {
+
         grid-template-columns:
-            1.4fr 1fr 1fr;
+            1.4fr
+            1fr
+            1fr;
 
         gap:
             45px;
@@ -470,6 +635,7 @@
 
 
     .site-footer-brand {
+
         grid-column:
             1 / -1;
 
@@ -478,7 +644,9 @@
     }
 
 
-    .site-footer-bottom .site-footer-container {
+    .site-footer-bottom
+    .site-footer-container {
+
         flex-wrap:
             wrap;
 
@@ -491,23 +659,27 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 700px) {
 
     .site-footer-main {
+
         padding:
             55px 0 40px;
     }
 
 
     .site-footer-container {
+
         width:
             calc(100% - 36px);
     }
 
 
-    .site-footer-main .site-footer-container {
+    .site-footer-main
+    .site-footer-container {
+
         grid-template-columns:
             1fr 1fr;
 
@@ -517,18 +689,21 @@
 
 
     .site-footer-brand {
+
         grid-column:
             1 / -1;
     }
 
 
     .site-footer-logo img {
+
         width:
             140px;
     }
 
 
     .site-footer-brand p {
+
         font-size:
             0.78rem;
 
@@ -538,6 +713,7 @@
 
 
     .site-footer-label {
+
         margin-bottom:
             16px;
 
@@ -547,6 +723,7 @@
 
 
     .site-footer-column {
+
         gap:
             10px;
     }
@@ -554,12 +731,56 @@
 
     .site-footer-column a,
     .site-footer-contact-item {
+
         font-size:
             0.72rem;
     }
 
 
-    .site-footer-bottom .site-footer-container {
+    /* =====================================================
+       MOBILE SOCIAL
+    ===================================================== */
+
+    .site-footer-social {
+
+        gap:
+            8px;
+
+        margin-top:
+            22px;
+    }
+
+
+    .site-footer-social a {
+
+        width:
+            38px;
+
+        height:
+            38px;
+
+        border-radius:
+            9px;
+    }
+
+
+    .site-footer-social a svg {
+
+        width:
+            16px;
+
+        height:
+            16px;
+    }
+
+
+    /* =====================================================
+       BOTTOM
+    ===================================================== */
+
+    .site-footer-bottom
+    .site-footer-container {
+
         align-items:
             flex-start;
 
@@ -575,6 +796,7 @@
 
 
     .site-footer-bottom-links {
+
         gap:
             16px;
 
@@ -584,6 +806,7 @@
 
 
     .site-footer-engineered {
+
         font-size:
             0.5rem;
     }
@@ -593,17 +816,20 @@
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 420px) {
 
     .site-footer-container {
+
         width:
             calc(100% - 28px);
     }
 
 
-    .site-footer-main .site-footer-container {
+    .site-footer-main
+    .site-footer-container {
+
         grid-template-columns:
             1fr;
 
@@ -613,18 +839,21 @@
 
 
     .site-footer-brand {
+
         grid-column:
             auto;
     }
 
 
     .site-footer-main {
+
         padding:
             48px 0 35px;
     }
 
 
     .site-footer-bottom-links {
+
         flex-direction:
             column;
 
@@ -635,27 +864,21 @@
             8px;
     }
 
-}
 
-/* =========================================================
-   SOCIAL BRAND MARKS
-   ========================================================= */
+    .site-footer-social {
 
-.site-footer-social-letter {
-    display: flex;
+        margin-top:
+            20px;
+    }
 
-    align-items: center;
 
-    justify-content: center;
+    .site-footer-social a {
 
-    width: 100%;
-    height: 100%;
+        width:
+            38px;
 
-    color: inherit;
+        height:
+            38px;
+    }
 
-    font-size: 0.85rem;
-
-    font-weight: 800;
-
-    line-height: 1;
 }

@@ -14,6 +14,13 @@ import {
     MessageCircle,
 } from "lucide-react";
 
+
+import {
+    FaLinkedinIn,
+    FaInstagram,
+    FaFacebookF,
+} from "react-icons/fa";
+
 import "./Contact.css";
 
 
@@ -695,7 +702,7 @@ Thank you.
                             </span>
 
                             <strong>
-                                 Hosur · Tamil Nadu
+                                Hosur · Tamil Nadu
                             </strong>
 
                         </div>
@@ -854,7 +861,7 @@ Thank you.
                             </div> */}
 
 
-                            <div className="contact-social-links">
+                            {/* <div className="contact-social-links">
 
                                 <a
                                     href="https://in.linkedin.com/company/circuitses"
@@ -877,6 +884,40 @@ Thank you.
                                     <span className="contact-social-letter">
                                         ◎
                                     </span>
+                                </a>
+
+                            </div> */}
+
+
+                            <div className="contact-social-links">
+
+                                <a
+                                    href="https://in.linkedin.com/company/circuitses"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="CircuitsES LinkedIn"
+                                >
+                                    <FaLinkedinIn />
+                                </a>
+
+
+                                <a
+                                    href="https://www.instagram.com/circuitses"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="CircuitsES Instagram"
+                                >
+                                    <FaInstagram />
+                                </a>
+
+
+                                <a
+                                    href="https://www.facebook.com/share/19Tc8z9c3T/?mibextid=wwXIfr"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="CircuitsES Facebook"
+                                >
+                                    <FaFacebookF />
                                 </a>
 
                             </div>

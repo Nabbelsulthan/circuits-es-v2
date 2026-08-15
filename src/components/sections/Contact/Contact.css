@@ -1,13 +1,12 @@
 /* =========================================================
    CIRCUITSES — PREMIUM CONTACT PAGE
-   PART 1
-   PAGE + INTRO + MAP
-   ========================================================= */
+   FULL RESPONSIVE CSS
+========================================================= */
 
 
 /* =========================================================
    PAGE
-   ========================================================= */
+========================================================= */
 
 .contact-page {
     position: relative;
@@ -26,19 +25,23 @@
 
 /* =========================================================
    CONTAINER
-   ========================================================= */
+========================================================= */
 
 .contact-page-container {
-    width: min(calc(100% - 128px),
-            1400px);
+    width:
+        min(
+            calc(100% - 128px),
+            1400px
+        );
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 }
 
 
 /* =========================================================
    INTRO
-   ========================================================= */
+========================================================= */
 
 .contact-page-intro {
     position: relative;
@@ -49,9 +52,11 @@
     overflow: hidden;
 
     background:
-        linear-gradient(180deg,
+        linear-gradient(
+            180deg,
             #ffffff 0%,
-            #fbfdfb 100%);
+            #fbfdfb 100%
+        );
 }
 
 
@@ -69,9 +74,11 @@
     border-radius: 50%;
 
     background:
-        radial-gradient(circle,
+        radial-gradient(
+            circle,
             rgba(74, 178, 62, 0.09),
-            transparent 68%);
+            transparent 68%
+        );
 
     pointer-events: none;
 }
@@ -89,10 +96,12 @@
     height: 1px;
 
     background:
-        linear-gradient(90deg,
+        linear-gradient(
+            90deg,
             transparent,
             var(--border),
-            transparent);
+            transparent
+        );
 }
 
 
@@ -118,7 +127,7 @@
 
 /* =========================================================
    EYEBROW
-   ========================================================= */
+========================================================= */
 
 .contact-page-eyebrow {
     display: inline-flex;
@@ -130,11 +139,14 @@
     color:
         var(--green-dark);
 
-    font-size: 0.82rem;
+    font-size:
+        0.82rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.17em;
+    letter-spacing:
+        0.17em;
 }
 
 
@@ -152,16 +164,18 @@
         var(--green);
 
     box-shadow:
-        0 0 0 4px rgba(76, 180, 63, 0.10);
+        0 0 0 4px
+        rgba(76, 180, 63, 0.10);
 }
 
 
 /* =========================================================
    INTRO HEADING
-   ========================================================= */
+========================================================= */
 
 .contact-page-intro h1 {
-    max-width: 900px;
+    max-width:
+        900px;
 
     margin:
         22px 0 0;
@@ -170,15 +184,20 @@
         var(--heading);
 
     font-size:
-        clamp(3.8rem,
+        clamp(
+            3.8rem,
             6.2vw,
-            6.6rem);
+            6.6rem
+        );
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    line-height: 0.96;
+    line-height:
+        0.96;
 
-    letter-spacing: -0.06em;
+    letter-spacing:
+        -0.06em;
 }
 
 
@@ -188,8 +207,9 @@
 }
 
 
-.contact-page-intro-content>p {
-    max-width: 700px;
+.contact-page-intro-content > p {
+    max-width:
+        700px;
 
     margin:
         30px 0 0;
@@ -198,93 +218,117 @@
         var(--muted);
 
     font-size:
-        clamp(1rem,
+        clamp(
+            1rem,
             1.25vw,
-            1.15rem);
+            1.15rem
+        );
 
-    line-height: 1.8;
+    line-height:
+        1.8;
 }
 
 
 /* =========================================================
    INTRO META
-   ========================================================= */
+========================================================= */
 
 .contact-page-intro-meta {
-    display: flex;
+    display:
+        flex;
 
-    flex-direction: column;
+    flex-direction:
+        column;
 
-    gap: 20px;
+    gap:
+        20px;
 
-    min-width: 235px;
+    min-width:
+        235px;
 
-    padding-bottom: 5px;
+    padding-bottom:
+        5px;
 }
 
 
 .contact-page-meta-item {
-    padding-left: 20px;
+    padding-left:
+        20px;
 
     border-left:
-        2px solid rgba(76, 180, 63, 0.28);
+        2px solid
+        rgba(76, 180, 63, 0.28);
 }
 
 
 .contact-page-meta-item span {
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 6px;
+    margin-bottom:
+        6px;
 
     color:
         var(--muted);
 
-    font-size: 0.68rem;
+    font-size:
+        0.68rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.14em;
+    letter-spacing:
+        0.14em;
 }
 
 
 .contact-page-meta-item strong {
-    display: block;
+    display:
+        block;
 
     color:
         var(--heading);
 
-    font-size: 0.95rem;
+    font-size:
+        0.95rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 }
 
 
 /* =========================================================
    SECTION LABEL
-   ========================================================= */
+========================================================= */
 
 .contact-page-section-label {
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 12px;
+    margin-bottom:
+        12px;
 
     color:
         var(--green-dark);
 
-    font-size: 0.72rem;
+    font-size:
+        0.72rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.17em;
+    letter-spacing:
+        0.17em;
 }
 
 
 /* =========================================================
    MAP SECTION
-   ========================================================= */
+========================================================= */
 
 .contact-map-section {
-    position: relative;
+    position:
+        relative;
 
     padding:
         62px 0 76px;
@@ -295,34 +339,45 @@
 
 
 .contact-map-header {
-    display: flex;
+    display:
+        flex;
 
-    align-items: flex-end;
+    align-items:
+        flex-end;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
 
-    gap: 40px;
+    gap:
+        40px;
 
-    margin-bottom: 28px;
+    margin-bottom:
+        28px;
 }
 
 
 .contact-map-header h2 {
-    margin: 0;
+    margin:
+        0;
 
     color:
         var(--heading);
 
     font-size:
-        clamp(2rem,
+        clamp(
+            2rem,
             3vw,
-            3rem);
+            3rem
+        );
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    line-height: 1.08;
+    line-height:
+        1.08;
 
-    letter-spacing: -0.04em;
+    letter-spacing:
+        -0.04em;
 }
 
 
@@ -334,24 +389,30 @@
 
 /* =========================================================
    MAP DIRECTIONS
-   ========================================================= */
+========================================================= */
 
 .contact-map-directions {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 10px;
+    gap:
+        10px;
 
-    flex-shrink: 0;
+    flex-shrink:
+        0;
 
-    min-height: 52px;
+    min-height:
+        52px;
 
     padding:
         0 18px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius:
         var(--radius-sm);
@@ -365,11 +426,14 @@
     box-shadow:
         var(--shadow-sm);
 
-    font-size: 0.82rem;
+    font-size:
+        0.82rem;
 
-    font-weight: 750;
+    font-weight:
+        750;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
     transition:
         transform 280ms ease,
@@ -380,8 +444,11 @@
 
 
 .contact-map-directions svg:first-child {
-    width: 18px;
-    height: 18px;
+    width:
+        18px;
+
+    height:
+        18px;
 
     color:
         var(--green);
@@ -389,8 +456,11 @@
 
 
 .contact-map-directions svg:last-child {
-    width: 16px;
-    height: 16px;
+    width:
+        16px;
+
+    height:
+        16px;
 
     transition:
         transform 280ms ease;
@@ -414,26 +484,33 @@
 
 .contact-map-directions:hover svg:last-child {
     transform:
-        translate(2px,
-            -2px);
+        translate(
+            2px,
+            -2px
+        );
 }
 
 
 /* =========================================================
    MAP
-   ========================================================= */
+========================================================= */
 
 .contact-map {
-    position: relative;
+    position:
+        relative;
 
-    width: 100%;
+    width:
+        100%;
 
-    height: 420px;
+    height:
+        420px;
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
     border:
-        1px solid rgba(18, 37, 58, 0.10);
+        1px solid
+        rgba(18, 37, 58, 0.10);
 
     border-radius:
         24px;
@@ -442,111 +519,142 @@
         #e9eee8;
 
     box-shadow:
-        0 20px 55px rgba(18, 37, 58, 0.10);
+        0 20px 55px
+        rgba(18, 37, 58, 0.10);
 
-    isolation: isolate;
+    isolation:
+        isolate;
 }
 
 
-/* =========================================================
-   MAP BACKGROUND
-   ========================================================= */
-
 .contact-map-background {
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
-    z-index: 0;
+    z-index:
+        0;
 }
 
 
 .contact-map-background iframe {
-    display: block;
+    display:
+        block;
 
-    width: 100%;
-    height: 100%;
+    width:
+        100%;
 
-    border: 0;
+    height:
+        100%;
+
+    border:
+        0;
 
     filter:
-        saturate(0.72) contrast(0.94) brightness(1.04);
+        saturate(0.72)
+        contrast(0.94)
+        brightness(1.04);
 }
 
-
-/* =========================================================
-   MAP OVERLAY
-   ========================================================= */
 
 .contact-map::after {
-    content: "";
+    content:
+        "";
 
-    position: absolute;
+    position:
+        absolute;
 
-    inset: 0;
+    inset:
+        0;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
     background:
-        linear-gradient(90deg,
-            rgba(255, 255, 255, 0.08),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08),
             transparent 32%,
             transparent 68%,
-            rgba(255, 255, 255, 0.08));
+            rgba(255,255,255,0.08)
+        );
 
-    z-index: 1;
+    z-index:
+        1;
 }
 
 
 /* =========================================================
-   LOCATION CARDS
-   ========================================================= */
+   MAP LOCATION CARDS
+========================================================= */
 
 .contact-map-overlay {
-    position: absolute;
+    position:
+        absolute;
 
-    left: 22px;
-    right: 22px;
-    top: 22px;
+    left:
+        22px;
 
-    display: flex;
+    right:
+        22px;
 
-    align-items: flex-start;
+    top:
+        22px;
 
-    justify-content: space-between;
+    display:
+        flex;
 
-    gap: 20px;
+    align-items:
+        flex-start;
 
-    pointer-events: none;
+    justify-content:
+        space-between;
 
-    z-index: 3;
+    gap:
+        20px;
+
+    pointer-events:
+        none;
+
+    z-index:
+        3;
 }
 
 
 .contact-map-location {
-    display: flex;
+    display:
+        flex;
 
-    align-items: flex-start;
+    align-items:
+        flex-start;
 
-    gap: 13px;
+    gap:
+        13px;
 
-    width: min(330px,
-            36%);
+    width:
+        min(
+            330px,
+            36%
+        );
 
     padding:
         16px 18px;
 
     border:
-        1px solid rgba(255, 255, 255, 0.72);
+        1px solid
+        rgba(255,255,255,0.72);
 
     border-radius:
         14px;
 
     background:
-        rgba(255, 255, 255, 0.92);
+        rgba(255,255,255,0.92);
 
     box-shadow:
-        0 12px 35px rgba(18, 37, 58, 0.12);
+        0 12px 35px
+        rgba(18,37,58,0.12);
 
     backdrop-filter:
         blur(12px);
@@ -554,18 +662,26 @@
 
 
 .contact-map-pin {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    width: 39px;
-    height: 39px;
+    width:
+        39px;
 
-    flex-shrink: 0;
+    height:
+        39px;
 
-    border-radius: 10px;
+    flex-shrink:
+        0;
+
+    border-radius:
+        10px;
 
     color:
         var(--white);
@@ -574,46 +690,59 @@
         var(--green);
 
     box-shadow:
-        0 7px 18px rgba(76, 180, 63, 0.25);
+        0 7px 18px
+        rgba(76,180,63,0.25);
 }
 
 
 .contact-map-pin svg {
-    width: 19px;
-    height: 19px;
+    width:
+        19px;
+
+    height:
+        19px;
 }
 
 
 .contact-map-location span {
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 4px;
+    margin-bottom:
+        4px;
 
     color:
         var(--muted);
 
-    font-size: 0.62rem;
+    font-size:
+        0.62rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.10em;
+    letter-spacing:
+        0.10em;
 }
 
 
 .contact-map-location strong {
-    display: block;
+    display:
+        block;
 
     color:
         var(--heading);
 
-    font-size: 1rem;
+    font-size:
+        1rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 }
 
 
 .contact-map-location p {
-    max-width: 230px;
+    max-width:
+        230px;
 
     margin:
         5px 0 0;
@@ -621,47 +750,59 @@
     color:
         var(--muted);
 
-    font-size: 0.75rem;
+    font-size:
+        0.75rem;
 
-    line-height: 1.55;
+    line-height:
+        1.55;
 }
 
 
 /* =========================================================
    MAP CAPTION
-   ========================================================= */
+========================================================= */
 
 .contact-map-caption {
-    position: absolute;
+    position:
+        absolute;
 
-    left: 24px;
-    bottom: 22px;
+    left:
+        24px;
 
-    display: flex;
+    bottom:
+        22px;
 
-    align-items: center;
+    display:
+        flex;
 
-    gap: 14px;
+    align-items:
+        center;
+
+    gap:
+        14px;
 
     padding:
         11px 15px;
 
     border:
-        1px solid rgba(255, 255, 255, 0.75);
+        1px solid
+        rgba(255,255,255,0.75);
 
     border-radius:
         9px;
 
     background:
-        rgba(255, 255, 255, 0.90);
+        rgba(255,255,255,0.90);
 
     box-shadow:
-        0 10px 25px rgba(18, 37, 58, 0.10);
+        0 10px 25px
+        rgba(18,37,58,0.10);
 
     backdrop-filter:
         blur(10px);
 
-    z-index: 4;
+    z-index:
+        4;
 }
 
 
@@ -669,11 +810,14 @@
     color:
         var(--muted);
 
-    font-size: 0.6rem;
+    font-size:
+        0.6rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.10em;
+    letter-spacing:
+        0.10em;
 }
 
 
@@ -681,72 +825,82 @@
     color:
         var(--heading);
 
-    font-size: 0.7rem;
+    font-size:
+        0.7rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 }
-
-/* =========================================================
-   CIRCUITSES — PREMIUM CONTACT PAGE
-   PART 2
-   CONTACT INFORMATION + FORM
-   ========================================================= */
 
 
 /* =========================================================
    ENQUIRY SECTION
-   ========================================================= */
+========================================================= */
 
 .contact-enquiry-section {
-    position: relative;
+    position:
+        relative;
 
     padding:
         80px 0 100px;
 
     background:
-        linear-gradient(180deg,
+        linear-gradient(
+            180deg,
             #f8fbf8 0%,
-            #ffffff 100%);
+            #ffffff 100%
+        );
 }
 
 
 .contact-enquiry-grid {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        minmax(0, 0.82fr) minmax(0, 1.18fr);
+        minmax(0,0.82fr)
+        minmax(0,1.18fr);
 
-    gap: 80px;
+    gap:
+        80px;
 
-    align-items: start;
+    align-items:
+        start;
 }
 
 
 /* =========================================================
    CONTACT INFORMATION
-   ========================================================= */
+========================================================= */
 
 .contact-information {
-    padding-top: 8px;
+    padding-top:
+        8px;
 }
 
 
 .contact-information h2 {
-    margin: 0;
+    margin:
+        0;
 
     color:
         var(--heading);
 
     font-size:
-        clamp(2.2rem,
+        clamp(
+            2.2rem,
             3.5vw,
-            3.4rem);
+            3.4rem
+        );
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    line-height: 1;
+    line-height:
+        1;
 
-    letter-spacing: -0.05em;
+    letter-spacing:
+        -0.05em;
 }
 
 
@@ -757,7 +911,8 @@
 
 
 .contact-information-intro {
-    max-width: 520px;
+    max-width:
+        520px;
 
     margin:
         22px 0 36px;
@@ -765,38 +920,46 @@
     color:
         var(--muted);
 
-    font-size: 1rem;
+    font-size:
+        1rem;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
 
 
 /* =========================================================
    INFORMATION ITEMS
-   ========================================================= */
+========================================================= */
 
 .contact-information-item {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
-        48px minmax(0, 1fr) 20px;
+        48px minmax(0,1fr) 20px;
 
-    align-items: center;
+    align-items:
+        center;
 
-    gap: 14px;
+    gap:
+        14px;
 
-    min-height: 76px;
+    min-height:
+        76px;
 
     padding:
         11px 0;
 
     border-bottom:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     color:
         inherit;
 
-    text-decoration: none;
+    text-decoration:
+        none;
 
     transition:
         padding-left 280ms ease;
@@ -805,93 +968,116 @@
 
 .contact-information-item:first-of-type {
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 
 .contact-information-item:hover {
-    padding-left: 8px;
+    padding-left:
+        8px;
 }
 
 
 /* =========================================================
    INFORMATION ICON
-   ========================================================= */
+========================================================= */
 
 .contact-information-icon {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    width: 46px;
-    height: 46px;
+    width:
+        46px;
+
+    height:
+        46px;
 
     border:
-        1px solid rgba(76, 180, 63, 0.18);
+        1px solid
+        rgba(76,180,63,0.18);
 
-    border-radius: 12px;
+    border-radius:
+        12px;
 
     color:
         var(--green);
 
     background:
-        rgba(76, 180, 63, 0.055);
+        rgba(76,180,63,0.055);
 }
 
 
 .contact-information-icon svg {
-    width: 20px;
-    height: 20px;
+    width:
+        20px;
+
+    height:
+        20px;
 }
 
 
 /* =========================================================
-   INFORMATION LABEL
-   ========================================================= */
+   INFORMATION TEXT
+========================================================= */
 
-.contact-information-item>div:nth-child(2) span {
-    display: block;
+.contact-information-item > div:nth-child(2) span {
+    display:
+        block;
 
-    margin-bottom: 5px;
+    margin-bottom:
+        5px;
 
     color:
         var(--muted);
 
-    font-size: 0.62rem;
+    font-size:
+        0.62rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.14em;
+    letter-spacing:
+        0.14em;
 }
 
 
-/* =========================================================
-   INFORMATION VALUE
-   ========================================================= */
+.contact-information-item > div:nth-child(2) strong {
+    display:
+        block;
 
-.contact-information-item>div:nth-child(2) strong {
-    display: block;
-
-    overflow: hidden;
+    overflow:
+        hidden;
 
     color:
         var(--heading);
 
-    font-size: 0.95rem;
+    font-size:
+        0.95rem;
 
-    font-weight: 750;
+    font-weight:
+        750;
 
-    text-overflow: ellipsis;
+    text-overflow:
+        ellipsis;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
 }
 
 
-.contact-information-item>svg:last-child {
-    width: 17px;
-    height: 17px;
+.contact-information-item > svg:last-child {
+    width:
+        17px;
+
+    height:
+        17px;
 
     color:
         var(--muted);
@@ -902,43 +1088,63 @@
 }
 
 
-.contact-information-item:hover>svg:last-child {
+.contact-information-item:hover > svg:last-child {
     color:
         var(--green);
 
     transform:
-        translate(2px,
-            -2px);
+        translate(
+            2px,
+            -2px
+        );
 }
 
 
 /* =========================================================
    SOCIAL
-   ========================================================= */
+   REAL LINKEDIN / INSTAGRAM / FACEBOOK ICONS
+========================================================= */
 
 .contact-social-links {
-    display: flex;
+    display:
+        flex;
 
-    gap: 10px;
+    align-items:
+        center;
 
-    margin-top: 28px;
+    gap:
+        10px;
+
+    margin-top:
+        28px;
 }
 
 
 .contact-social-links a {
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    width: 46px;
-    height: 46px;
+    width:
+        46px;
+
+    height:
+        46px;
+
+    flex-shrink:
+        0;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-    border-radius: 12px;
+    border-radius:
+        12px;
 
     color:
         var(--heading);
@@ -949,11 +1155,33 @@
     box-shadow:
         var(--shadow-sm);
 
+    text-decoration:
+        none;
+
     transition:
         transform 280ms ease,
         color 280ms ease,
         border-color 280ms ease,
+        background 280ms ease,
         box-shadow 280ms ease;
+}
+
+
+.contact-social-links a svg {
+    display:
+        block;
+
+    width:
+        18px;
+
+    height:
+        18px;
+
+    flex-shrink:
+        0;
+
+    fill:
+        currentColor;
 }
 
 
@@ -965,153 +1193,174 @@
         var(--green-dark);
 
     border-color:
-        rgba(76, 180, 63, 0.35);
+        rgba(76,180,63,0.35);
+
+    background:
+        rgba(76,180,63,0.045);
 
     box-shadow:
         var(--shadow-md);
 }
 
 
-.contact-social-letter {
-    display: flex;
+.contact-social-links a:focus-visible {
+    outline:
+        2px solid
+        var(--green);
 
-    align-items: center;
-
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    color:
-        inherit;
-
-    font-size: 0.9rem;
-
-    font-weight: 800;
-
-    line-height: 1;
+    outline-offset:
+        3px;
 }
 
 
 /* =========================================================
    ADDRESSES
-   ========================================================= */
+========================================================= */
 
 .contact-addresses {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap: 24px;
+    gap:
+        24px;
 
-    margin-top: 38px;
+    margin-top:
+        38px;
 
-    padding-top: 30px;
+    padding-top:
+        30px;
 
     border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 }
 
 
-.contact-addresses>div {
-    min-width: 0;
+.contact-addresses > div {
+    min-width:
+        0;
 }
 
 
 .contact-addresses span {
-    display: block;
+    display:
+        block;
 
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
     color:
         var(--green-dark);
 
-    font-size: 0.62rem;
+    font-size:
+        0.62rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.12em;
+    letter-spacing:
+        0.12em;
 }
 
 
 .contact-addresses p {
-    margin: 0;
+    margin:
+        0;
 
     color:
         var(--muted);
 
-    font-size: 0.84rem;
+    font-size:
+        0.84rem;
 
-    line-height: 1.7;
+    line-height:
+        1.7;
 }
 
 
 /* =========================================================
    FORM WRAPPER
-   ========================================================= */
+========================================================= */
 
 .contact-form-wrapper {
-    position: relative;
+    position:
+        relative;
 
     padding:
         36px;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius:
         22px;
 
     background:
-        rgba(255, 255, 255, 0.94);
+        rgba(255,255,255,0.94);
 
     box-shadow:
-        0 20px 55px rgba(18, 37, 58, 0.08);
+        0 20px 55px
+        rgba(18,37,58,0.08);
 }
 
 
 /* =========================================================
    FORM HEADER
-   ========================================================= */
+========================================================= */
 
 .contact-form-header {
-    margin-bottom: 28px;
+    margin-bottom:
+        28px;
 }
 
 
-.contact-form-header>span {
-    display: block;
+.contact-form-header > span {
+    display:
+        block;
 
-    margin-bottom: 10px;
+    margin-bottom:
+        10px;
 
     color:
         var(--green-dark);
 
-    font-size: 0.66rem;
+    font-size:
+        0.66rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 0.16em;
+    letter-spacing:
+        0.16em;
 }
 
 
 .contact-form-header h2 {
-    margin: 0;
+    margin:
+        0;
 
     color:
         var(--heading);
 
     font-size:
-        clamp(1.7rem,
+        clamp(
+            1.7rem,
             2.5vw,
-            2.3rem);
+            2.3rem
+        );
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    line-height: 1.08;
+    line-height:
+        1.08;
 
-    letter-spacing: -0.04em;
+    letter-spacing:
+        -0.04em;
 }
 
 
@@ -1122,18 +1371,21 @@
     color:
         var(--muted);
 
-    font-size: 0.88rem;
+    font-size:
+        0.88rem;
 
-    line-height: 1.65;
+    line-height:
+        1.65;
 }
 
 
 /* =========================================================
    FORM
-   ========================================================= */
+========================================================= */
 
 .contact-form {
-    display: grid;
+    display:
+        grid;
 
     grid-template-columns:
         1fr 1fr;
@@ -1144,11 +1396,14 @@
 
 
 .contact-form-field {
-    display: flex;
+    display:
+        flex;
 
-    flex-direction: column;
+    flex-direction:
+        column;
 
-    gap: 8px;
+    gap:
+        8px;
 }
 
 
@@ -1160,33 +1415,38 @@
 
 /* =========================================================
    FORM LABEL
-   ========================================================= */
+========================================================= */
 
 .contact-form-field label {
     color:
         var(--heading);
 
-    font-size: 0.72rem;
+    font-size:
+        0.72rem;
 
-    font-weight: 750;
+    font-weight:
+        750;
 }
 
 
 /* =========================================================
    FORM INPUTS
-   ========================================================= */
+========================================================= */
 
 .contact-form-field input,
 .contact-form-field textarea {
-    width: 100%;
+    width:
+        100%;
 
     border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
     border-radius:
         10px;
 
-    outline: none;
+    outline:
+        none;
 
     color:
         var(--heading);
@@ -1197,7 +1457,8 @@
     font-family:
         inherit;
 
-    font-size: 0.88rem;
+    font-size:
+        0.88rem;
 
     transition:
         border-color 220ms ease,
@@ -1207,7 +1468,8 @@
 
 
 .contact-form-field input {
-    height: 52px;
+    height:
+        52px;
 
     padding:
         0 15px;
@@ -1215,20 +1477,23 @@
 
 
 .contact-form-field textarea {
-    min-height: 135px;
+    min-height:
+        135px;
 
     padding:
         14px 15px;
 
-    resize: vertical;
+    resize:
+        vertical;
 
-    line-height: 1.6;
+    line-height:
+        1.6;
 }
 
 
 /* =========================================================
    PLACEHOLDER
-   ========================================================= */
+========================================================= */
 
 .contact-form-field input::placeholder,
 .contact-form-field textarea::placeholder {
@@ -1242,60 +1507,72 @@
 
 /* =========================================================
    INPUT FOCUS
-   ========================================================= */
+========================================================= */
 
 .contact-form-field input:focus,
 .contact-form-field textarea:focus {
     border-color:
-        rgba(76, 180, 63, 0.55);
+        rgba(76,180,63,0.55);
 
     background:
         var(--white);
 
     box-shadow:
-        0 0 0 4px rgba(76, 180, 63, 0.075);
+        0 0 0 4px
+        rgba(76,180,63,0.075);
 }
 
 
 /* =========================================================
    FORM ACTIONS
-   ========================================================= */
+========================================================= */
 
 .contact-form-actions {
-    display: flex;
+    display:
+        flex;
 
     grid-column:
         1 / -1;
 
-    gap: 11px;
+    gap:
+        11px;
 
-    margin-top: 3px;
+    margin-top:
+        3px;
 }
 
 
 .contact-form-submit,
 .contact-form-whatsapp {
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    gap: 10px;
+    gap:
+        10px;
 
-    min-height: 54px;
+    min-height:
+        54px;
 
     border-radius:
         var(--radius-sm);
 
-    cursor: pointer;
+    cursor:
+        pointer;
 
     font-family:
         inherit;
 
-    font-size: 0.78rem;
+    font-size:
+        0.78rem;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
     transition:
         transform 280ms ease,
@@ -1307,21 +1584,25 @@
 
 /* =========================================================
    SEND ENQUIRY
-   ========================================================= */
+========================================================= */
 
 .contact-form-submit {
-    flex: 1;
+    flex:
+        1;
 
     border:
-        1px solid var(--green);
+        1px solid
+        var(--green);
 
     color:
         var(--white);
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             var(--green),
-            var(--green-dark));
+            var(--green-dark)
+        );
 
     box-shadow:
         var(--shadow-green);
@@ -1338,18 +1619,24 @@
 
 
 .contact-form-submit svg {
-    width: 18px;
-    height: 18px;
+    width:
+        18px;
+
+    height:
+        18px;
 
     transition:
         transform 280ms ease;
 }
 
 
-.contact-form-submit:hover:not(:disabled) svg:last-child {
+.contact-form-submit:hover:not(:disabled)
+svg:last-child {
     transform:
-        translate(2px,
-            -2px);
+        translate(
+            2px,
+            -2px
+        );
 }
 
 
@@ -1364,20 +1651,21 @@
 
 /* =========================================================
    WHATSAPP
-   ========================================================= */
+========================================================= */
 
 .contact-form-whatsapp {
     flex:
         0 0 140px;
 
     border:
-        1px solid rgba(76, 180, 63, 0.25);
+        1px solid
+        rgba(76,180,63,0.25);
 
     color:
         var(--green-dark);
 
     background:
-        rgba(76, 180, 63, 0.06);
+        rgba(76,180,63,0.06);
 }
 
 
@@ -1386,10 +1674,10 @@
         translateY(-3px);
 
     border-color:
-        rgba(76, 180, 63, 0.45);
+        rgba(76,180,63,0.45);
 
     background:
-        rgba(76, 180, 63, 0.11);
+        rgba(76,180,63,0.11);
 
     box-shadow:
         var(--shadow-sm);
@@ -1397,22 +1685,30 @@
 
 
 .contact-form-whatsapp svg {
-    width: 18px;
-    height: 18px;
+    width:
+        18px;
+
+    height:
+        18px;
 }
 
 
 /* =========================================================
    NOTIFICATION
-   ========================================================= */
+========================================================= */
 
 .contact-notification {
-    position: fixed;
+    position:
+        fixed;
 
-    right: 25px;
-    bottom: 25px;
+    right:
+        25px;
 
-    max-width: 380px;
+    bottom:
+        25px;
+
+    max-width:
+        380px;
 
     padding:
         15px 20px;
@@ -1427,18 +1723,26 @@
         var(--heading);
 
     box-shadow:
-        0 18px 45px rgba(18, 37, 58, 0.22);
+        0 18px 45px
+        rgba(18,37,58,0.22);
 
-    font-size: 0.82rem;
+    font-size:
+        0.82rem;
 
-    font-weight: 700;
+    font-weight:
+        700;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 
-    z-index: 9999;
+    z-index:
+        9999;
 
     animation:
-        contactNotificationIn 350ms cubic-bezier(.22, 1, .36, 1) both;
+        contactNotificationIn
+        350ms
+        cubic-bezier(.22,1,.36,1)
+        both;
 }
 
 
@@ -1454,21 +1758,19 @@
 }
 
 
-/* =========================================================
-   NOTIFICATION ANIMATION
-   ========================================================= */
-
 @keyframes contactNotificationIn {
 
     from {
-        opacity: 0;
+        opacity:
+            0;
 
         transform:
             translateY(12px);
     }
 
     to {
-        opacity: 1;
+        opacity:
+            1;
 
         transform:
             translateY(0);
@@ -1476,27 +1778,21 @@
 
 }
 
-/* =========================================================
-   CIRCUITSES — PREMIUM CONTACT PAGE
-   PART 3
-   RESPONSIVE + MOBILE
-   ========================================================= */
-
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1100px) {
 
     .contact-page-container {
         width:
-            min(calc(100% - 80px),
-                1400px);
+            min(
+                calc(100% - 80px),
+                1400px
+            );
     }
 
-
-    /* Intro */
 
     .contact-page-intro {
         padding:
@@ -1506,19 +1802,19 @@
 
     .contact-page-intro h1 {
         font-size:
-            clamp(3.2rem,
+            clamp(
+                3.2rem,
                 6vw,
-                5.4rem);
+                5.4rem
+            );
     }
 
 
-    .contact-page-intro-content>p {
+    .contact-page-intro-content > p {
         font-size:
             1rem;
     }
 
-
-    /* Enquiry */
 
     .contact-enquiry-grid {
         gap:
@@ -1536,13 +1832,13 @@
 
 /* =========================================================
    SMALL LAPTOP / TABLET
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
 
-    /* Intro */
+    .contact-page-intro
+    .contact-page-container {
 
-    .contact-page-intro .contact-page-container {
         align-items:
             flex-start;
 
@@ -1555,6 +1851,7 @@
 
 
     .contact-page-intro-meta {
+
         flex-direction:
             row;
 
@@ -1563,17 +1860,14 @@
     }
 
 
-    /* Map */
-
     .contact-map {
         height:
             390px;
     }
 
 
-    /* Enquiry */
-
     .contact-enquiry-grid {
+
         grid-template-columns:
             1fr;
 
@@ -1592,13 +1886,9 @@
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 700px) {
-
-    /* -----------------------------------------------------
-       CONTAINER
-       ----------------------------------------------------- */
 
     .contact-page-container {
         width:
@@ -1608,7 +1898,7 @@
 
     /* -----------------------------------------------------
        INTRO
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-page-intro {
         padding:
@@ -1621,9 +1911,11 @@
             100%;
 
         font-size:
-            clamp(2.7rem,
+            clamp(
+                2.7rem,
                 12vw,
-                4rem);
+                4rem
+            );
 
         line-height:
             0.98;
@@ -1651,7 +1943,7 @@
     }
 
 
-    .contact-page-intro-content>p {
+    .contact-page-intro-content > p {
         margin-top:
             20px;
 
@@ -1665,7 +1957,7 @@
 
     /* -----------------------------------------------------
        INTRO META
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-page-intro-meta {
         width:
@@ -1708,7 +2000,7 @@
 
     /* -----------------------------------------------------
        SECTION LABEL
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-page-section-label {
         margin-bottom:
@@ -1724,7 +2016,7 @@
 
     /* -----------------------------------------------------
        MAP SECTION
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-map-section {
         padding:
@@ -1788,7 +2080,7 @@
 
     /* -----------------------------------------------------
        MAP LOCATION CARDS
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-map-overlay {
         left:
@@ -1810,8 +2102,10 @@
 
     .contact-map-location {
         width:
-            min(260px,
-                78%);
+            min(
+                260px,
+                78%
+            );
 
         padding:
             11px 12px;
@@ -1880,7 +2174,7 @@
 
     /* -----------------------------------------------------
        MAP CAPTION
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-map-caption {
         left:
@@ -1916,8 +2210,8 @@
 
 
     /* -----------------------------------------------------
-       ENQUIRY SECTION
-       ----------------------------------------------------- */
+       ENQUIRY
+    ----------------------------------------------------- */
 
     .contact-enquiry-section {
         padding:
@@ -1927,7 +2221,7 @@
 
     /* -----------------------------------------------------
        CONTACT INFORMATION
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-information h2 {
         font-size:
@@ -1952,11 +2246,11 @@
 
     /* -----------------------------------------------------
        INFORMATION ITEMS
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-information-item {
         grid-template-columns:
-            43px minmax(0, 1fr) 17px;
+            43px minmax(0,1fr) 17px;
 
         gap:
             11px;
@@ -1987,7 +2281,10 @@
     }
 
 
-    .contact-information-item>div:nth-child(2) span {
+    .contact-information-item
+    > div:nth-child(2)
+    span {
+
         margin-bottom:
             4px;
 
@@ -1996,7 +2293,10 @@
     }
 
 
-    .contact-information-item>div:nth-child(2) strong {
+    .contact-information-item
+    > div:nth-child(2)
+    strong {
+
         font-size:
             0.82rem;
 
@@ -2008,7 +2308,9 @@
     }
 
 
-    .contact-information-item>svg:last-child {
+    .contact-information-item
+    > svg:last-child {
+
         width:
             15px;
 
@@ -2019,11 +2321,14 @@
 
     /* -----------------------------------------------------
        SOCIAL
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-social-links {
         margin-top:
             24px;
+
+        gap:
+            9px;
     }
 
 
@@ -2039,15 +2344,18 @@
     }
 
 
-    .contact-social-letter {
-        font-size:
-            0.82rem;
+    .contact-social-links a svg {
+        width:
+            17px;
+
+        height:
+            17px;
     }
 
 
     /* -----------------------------------------------------
        ADDRESSES
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-addresses {
         grid-template-columns:
@@ -2084,7 +2392,7 @@
 
     /* -----------------------------------------------------
        FORM
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-form-wrapper {
         padding:
@@ -2101,7 +2409,7 @@
     }
 
 
-    .contact-form-header>span {
+    .contact-form-header > span {
         margin-bottom:
             9px;
 
@@ -2145,7 +2453,7 @@
 
     /* -----------------------------------------------------
        FORM FIELDS
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-form-field {
         gap:
@@ -2186,7 +2494,7 @@
 
     /* -----------------------------------------------------
        FORM BUTTONS
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-form-actions {
         grid-column:
@@ -2221,7 +2529,7 @@
 
     /* -----------------------------------------------------
        NOTIFICATION
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-notification {
         left:
@@ -2248,7 +2556,7 @@
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 420px) {
 
@@ -2260,7 +2568,7 @@
 
     /* -----------------------------------------------------
        INTRO
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-page-intro {
         padding:
@@ -2277,7 +2585,7 @@
     }
 
 
-    .contact-page-intro-content>p {
+    .contact-page-intro-content > p {
         font-size:
             0.84rem;
     }
@@ -2309,7 +2617,7 @@
 
     /* -----------------------------------------------------
        MAP
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-map {
         height:
@@ -2343,7 +2651,7 @@
 
     /* -----------------------------------------------------
        INFORMATION
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-information h2 {
         font-size:
@@ -2359,7 +2667,7 @@
 
     .contact-information-item {
         grid-template-columns:
-            40px minmax(0, 1fr) 16px;
+            40px minmax(0,1fr) 16px;
 
         gap:
             10px;
@@ -2375,9 +2683,39 @@
     }
 
 
-    .contact-information-item>div:nth-child(2) strong {
+    .contact-information-item
+    > div:nth-child(2)
+    strong {
+
         font-size:
             0.76rem;
+    }
+
+
+    .contact-social-links {
+        gap:
+            8px;
+    }
+
+
+    .contact-social-links a {
+        width:
+            41px;
+
+        height:
+            41px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .contact-social-links a svg {
+        width:
+            16px;
+
+        height:
+            16px;
     }
 
 
@@ -2392,7 +2730,7 @@
 
     /* -----------------------------------------------------
        FORM
-       ----------------------------------------------------- */
+    ----------------------------------------------------- */
 
     .contact-form-wrapper {
         padding:
@@ -2439,7 +2777,7 @@
 
 /* =========================================================
    VERY SMALL DEVICES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 350px) {
 
@@ -2492,17 +2830,18 @@
 
 /* =========================================================
    REDUCED MOTION
-   ========================================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     .contact-map-directions,
     .contact-map-directions svg,
     .contact-information-item,
-    .contact-information-item>svg,
+    .contact-information-item > svg,
     .contact-social-links a,
     .contact-form-submit,
     .contact-form-whatsapp {
+
         transition:
             none;
     }

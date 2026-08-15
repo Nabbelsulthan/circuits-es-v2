@@ -452,7 +452,7 @@ const IndependenceSplash = ({ onComplete }) => {
                     <span></span>
 
                     <strong>
-                        79
+                        80
                     </strong>
 
                     <span></span>

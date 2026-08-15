@@ -298,7 +298,7 @@ const Footer = () => {
 
 
           <span className="site-footer-engineered">
-            ENGINEERED FOR INDUSTRY
+           Designed And Developed By CircuitsES
           </span>
 
         </div>

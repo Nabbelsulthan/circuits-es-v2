@@ -29,10 +29,8 @@
 
 .contact-page-container {
     width:
-        min(
-            calc(100% - 128px),
-            1400px
-        );
+        min(calc(100% - 128px),
+            1400px);
 
     margin:
         0 auto;
@@ -52,11 +50,9 @@
     overflow: hidden;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #ffffff 0%,
-            #fbfdfb 100%
-        );
+            #fbfdfb 100%);
 }
 
 
@@ -74,11 +70,9 @@
     border-radius: 50%;
 
     background:
-        radial-gradient(
-            circle,
+        radial-gradient(circle,
             rgba(74, 178, 62, 0.09),
-            transparent 68%
-        );
+            transparent 68%);
 
     pointer-events: none;
 }
@@ -96,12 +90,10 @@
     height: 1px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             transparent,
             var(--border),
-            transparent
-        );
+            transparent);
 }
 
 
@@ -164,8 +156,7 @@
         var(--green);
 
     box-shadow:
-        0 0 0 4px
-        rgba(76, 180, 63, 0.10);
+        0 0 0 4px rgba(76, 180, 63, 0.10);
 }
 
 
@@ -184,11 +175,9 @@
         var(--heading);
 
     font-size:
-        clamp(
-            3.8rem,
+        clamp(3.8rem,
             6.2vw,
-            6.6rem
-        );
+            6.6rem);
 
     font-weight:
         800;
@@ -207,7 +196,7 @@
 }
 
 
-.contact-page-intro-content > p {
+.contact-page-intro-content>p {
     max-width:
         700px;
 
@@ -218,11 +207,9 @@
         var(--muted);
 
     font-size:
-        clamp(
-            1rem,
+        clamp(1rem,
             1.25vw,
-            1.15rem
-        );
+            1.15rem);
 
     line-height:
         1.8;
@@ -256,8 +243,7 @@
         20px;
 
     border-left:
-        2px solid
-        rgba(76, 180, 63, 0.28);
+        2px solid rgba(76, 180, 63, 0.28);
 }
 
 
@@ -364,11 +350,9 @@
         var(--heading);
 
     font-size:
-        clamp(
-            2rem,
+        clamp(2rem,
             3vw,
-            3rem
-        );
+            3rem);
 
     font-weight:
         800;
@@ -411,8 +395,7 @@
         0 18px;
 
     border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
     border-radius:
         var(--radius-sm);
@@ -484,10 +467,8 @@
 
 .contact-map-directions:hover svg:last-child {
     transform:
-        translate(
-            2px,
-            -2px
-        );
+        translate(2px,
+            -2px);
 }
 
 
@@ -509,8 +490,7 @@
         hidden;
 
     border:
-        1px solid
-        rgba(18, 37, 58, 0.10);
+        1px solid rgba(18, 37, 58, 0.10);
 
     border-radius:
         24px;
@@ -519,8 +499,7 @@
         #e9eee8;
 
     box-shadow:
-        0 20px 55px
-        rgba(18, 37, 58, 0.10);
+        0 20px 55px rgba(18, 37, 58, 0.10);
 
     isolation:
         isolate;
@@ -553,9 +532,7 @@
         0;
 
     filter:
-        saturate(0.72)
-        contrast(0.94)
-        brightness(1.04);
+        saturate(0.72) contrast(0.94) brightness(1.04);
 }
 
 
@@ -573,13 +550,11 @@
         none;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.08),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.08),
             transparent 32%,
             transparent 68%,
-            rgba(255,255,255,0.08)
-        );
+            rgba(255, 255, 255, 0.08));
 
     z-index:
         1;
@@ -606,11 +581,12 @@
     display:
         flex;
 
-    align-items:
-        flex-start;
+    /* align-items:
+        flex-start; */
 
-    justify-content:
-        space-between;
+    justify-content: flex-end;
+
+
 
     gap:
         20px;
@@ -634,27 +610,23 @@
         13px;
 
     width:
-        min(
-            330px,
-            36%
-        );
+        min(330px,
+            36%);
 
     padding:
         16px 18px;
 
     border:
-        1px solid
-        rgba(255,255,255,0.72);
+        1px solid rgba(255, 255, 255, 0.72);
 
     border-radius:
         14px;
 
     background:
-        rgba(255,255,255,0.92);
+        rgba(255, 255, 255, 0.92);
 
     box-shadow:
-        0 12px 35px
-        rgba(18,37,58,0.12);
+        0 12px 35px rgba(18, 37, 58, 0.12);
 
     backdrop-filter:
         blur(12px);
@@ -690,8 +662,7 @@
         var(--green);
 
     box-shadow:
-        0 7px 18px
-        rgba(76,180,63,0.25);
+        0 7px 18px rgba(76, 180, 63, 0.25);
 }
 
 
@@ -785,18 +756,16 @@
         11px 15px;
 
     border:
-        1px solid
-        rgba(255,255,255,0.75);
+        1px solid rgba(255, 255, 255, 0.75);
 
     border-radius:
         9px;
 
     background:
-        rgba(255,255,255,0.90);
+        rgba(255, 255, 255, 0.90);
 
     box-shadow:
-        0 10px 25px
-        rgba(18,37,58,0.10);
+        0 10px 25px rgba(18, 37, 58, 0.10);
 
     backdrop-filter:
         blur(10px);
@@ -845,11 +814,9 @@
         80px 0 100px;
 
     background:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             #f8fbf8 0%,
-            #ffffff 100%
-        );
+            #ffffff 100%);
 }
 
 
@@ -858,8 +825,7 @@
         grid;
 
     grid-template-columns:
-        minmax(0,0.82fr)
-        minmax(0,1.18fr);
+        minmax(0, 0.82fr) minmax(0, 1.18fr);
 
     gap:
         80px;
@@ -887,11 +853,9 @@
         var(--heading);
 
     font-size:
-        clamp(
-            2.2rem,
+        clamp(2.2rem,
             3.5vw,
-            3.4rem
-        );
+            3.4rem);
 
     font-weight:
         800;
@@ -937,7 +901,7 @@
         grid;
 
     grid-template-columns:
-        48px minmax(0,1fr) 20px;
+        48px minmax(0, 1fr) 20px;
 
     align-items:
         center;
@@ -952,8 +916,7 @@
         11px 0;
 
     border-bottom:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
     color:
         inherit;
@@ -968,8 +931,7 @@
 
 .contact-information-item:first-of-type {
     border-top:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 }
 
 
@@ -1000,8 +962,7 @@
         46px;
 
     border:
-        1px solid
-        rgba(76,180,63,0.18);
+        1px solid rgba(76, 180, 63, 0.18);
 
     border-radius:
         12px;
@@ -1010,7 +971,7 @@
         var(--green);
 
     background:
-        rgba(76,180,63,0.055);
+        rgba(76, 180, 63, 0.055);
 }
 
 
@@ -1027,7 +988,7 @@
    INFORMATION TEXT
 ========================================================= */
 
-.contact-information-item > div:nth-child(2) span {
+.contact-information-item>div:nth-child(2) span {
     display:
         block;
 
@@ -1048,7 +1009,7 @@
 }
 
 
-.contact-information-item > div:nth-child(2) strong {
+.contact-information-item>div:nth-child(2) strong {
     display:
         block;
 
@@ -1072,7 +1033,7 @@
 }
 
 
-.contact-information-item > svg:last-child {
+.contact-information-item>svg:last-child {
     width:
         17px;
 
@@ -1088,15 +1049,13 @@
 }
 
 
-.contact-information-item:hover > svg:last-child {
+.contact-information-item:hover>svg:last-child {
     color:
         var(--green);
 
     transform:
-        translate(
-            2px,
-            -2px
-        );
+        translate(2px,
+            -2px);
 }
 
 
@@ -1140,8 +1099,7 @@
         0;
 
     border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
     border-radius:
         12px;
@@ -1193,10 +1151,10 @@
         var(--green-dark);
 
     border-color:
-        rgba(76,180,63,0.35);
+        rgba(76, 180, 63, 0.35);
 
     background:
-        rgba(76,180,63,0.045);
+        rgba(76, 180, 63, 0.045);
 
     box-shadow:
         var(--shadow-md);
@@ -1205,8 +1163,7 @@
 
 .contact-social-links a:focus-visible {
     outline:
-        2px solid
-        var(--green);
+        2px solid var(--green);
 
     outline-offset:
         3px;
@@ -1234,12 +1191,11 @@
         30px;
 
     border-top:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 }
 
 
-.contact-addresses > div {
+.contact-addresses>div {
     min-width:
         0;
 }
@@ -1293,18 +1249,16 @@
         36px;
 
     border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
     border-radius:
         22px;
 
     background:
-        rgba(255,255,255,0.94);
+        rgba(255, 255, 255, 0.94);
 
     box-shadow:
-        0 20px 55px
-        rgba(18,37,58,0.08);
+        0 20px 55px rgba(18, 37, 58, 0.08);
 }
 
 
@@ -1318,7 +1272,7 @@
 }
 
 
-.contact-form-header > span {
+.contact-form-header>span {
     display:
         block;
 
@@ -1347,11 +1301,9 @@
         var(--heading);
 
     font-size:
-        clamp(
-            1.7rem,
+        clamp(1.7rem,
             2.5vw,
-            2.3rem
-        );
+            2.3rem);
 
     font-weight:
         800;
@@ -1439,8 +1391,7 @@
         100%;
 
     border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
     border-radius:
         10px;
@@ -1512,14 +1463,13 @@
 .contact-form-field input:focus,
 .contact-form-field textarea:focus {
     border-color:
-        rgba(76,180,63,0.55);
+        rgba(76, 180, 63, 0.55);
 
     background:
         var(--white);
 
     box-shadow:
-        0 0 0 4px
-        rgba(76,180,63,0.075);
+        0 0 0 4px rgba(76, 180, 63, 0.075);
 }
 
 
@@ -1591,18 +1541,15 @@
         1;
 
     border:
-        1px solid
-        var(--green);
+        1px solid var(--green);
 
     color:
         var(--white);
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--green),
-            var(--green-dark)
-        );
+            var(--green-dark));
 
     box-shadow:
         var(--shadow-green);
@@ -1630,13 +1577,10 @@
 }
 
 
-.contact-form-submit:hover:not(:disabled)
-svg:last-child {
+.contact-form-submit:hover:not(:disabled) svg:last-child {
     transform:
-        translate(
-            2px,
-            -2px
-        );
+        translate(2px,
+            -2px);
 }
 
 
@@ -1658,14 +1602,13 @@ svg:last-child {
         0 0 140px;
 
     border:
-        1px solid
-        rgba(76,180,63,0.25);
+        1px solid rgba(76, 180, 63, 0.25);
 
     color:
         var(--green-dark);
 
     background:
-        rgba(76,180,63,0.06);
+        rgba(76, 180, 63, 0.06);
 }
 
 
@@ -1674,10 +1617,10 @@ svg:last-child {
         translateY(-3px);
 
     border-color:
-        rgba(76,180,63,0.45);
+        rgba(76, 180, 63, 0.45);
 
     background:
-        rgba(76,180,63,0.11);
+        rgba(76, 180, 63, 0.11);
 
     box-shadow:
         var(--shadow-sm);
@@ -1723,8 +1666,7 @@ svg:last-child {
         var(--heading);
 
     box-shadow:
-        0 18px 45px
-        rgba(18,37,58,0.22);
+        0 18px 45px rgba(18, 37, 58, 0.22);
 
     font-size:
         0.82rem;
@@ -1739,10 +1681,7 @@ svg:last-child {
         9999;
 
     animation:
-        contactNotificationIn
-        350ms
-        cubic-bezier(.22,1,.36,1)
-        both;
+        contactNotificationIn 350ms cubic-bezier(.22, 1, .36, 1) both;
 }
 
 
@@ -1787,10 +1726,8 @@ svg:last-child {
 
     .contact-page-container {
         width:
-            min(
-                calc(100% - 80px),
-                1400px
-            );
+            min(calc(100% - 80px),
+                1400px);
     }
 
 
@@ -1802,15 +1739,13 @@ svg:last-child {
 
     .contact-page-intro h1 {
         font-size:
-            clamp(
-                3.2rem,
+            clamp(3.2rem,
                 6vw,
-                5.4rem
-            );
+                5.4rem);
     }
 
 
-    .contact-page-intro-content > p {
+    .contact-page-intro-content>p {
         font-size:
             1rem;
     }
@@ -1836,8 +1771,7 @@ svg:last-child {
 
 @media (max-width: 900px) {
 
-    .contact-page-intro
-    .contact-page-container {
+    .contact-page-intro .contact-page-container {
 
         align-items:
             flex-start;
@@ -1911,11 +1845,9 @@ svg:last-child {
             100%;
 
         font-size:
-            clamp(
-                2.7rem,
+            clamp(2.7rem,
                 12vw,
-                4rem
-            );
+                4rem);
 
         line-height:
             0.98;
@@ -1943,7 +1875,7 @@ svg:last-child {
     }
 
 
-    .contact-page-intro-content > p {
+    .contact-page-intro-content>p {
         margin-top:
             20px;
 
@@ -2102,10 +2034,8 @@ svg:last-child {
 
     .contact-map-location {
         width:
-            min(
-                260px,
-                78%
-            );
+            min(260px,
+                78%);
 
         padding:
             11px 12px;
@@ -2250,7 +2180,7 @@ svg:last-child {
 
     .contact-information-item {
         grid-template-columns:
-            43px minmax(0,1fr) 17px;
+            43px minmax(0, 1fr) 17px;
 
         gap:
             11px;
@@ -2281,9 +2211,7 @@ svg:last-child {
     }
 
 
-    .contact-information-item
-    > div:nth-child(2)
-    span {
+    .contact-information-item>div:nth-child(2) span {
 
         margin-bottom:
             4px;
@@ -2293,9 +2221,7 @@ svg:last-child {
     }
 
 
-    .contact-information-item
-    > div:nth-child(2)
-    strong {
+    .contact-information-item>div:nth-child(2) strong {
 
         font-size:
             0.82rem;
@@ -2308,8 +2234,7 @@ svg:last-child {
     }
 
 
-    .contact-information-item
-    > svg:last-child {
+    .contact-information-item>svg:last-child {
 
         width:
             15px;
@@ -2409,7 +2334,7 @@ svg:last-child {
     }
 
 
-    .contact-form-header > span {
+    .contact-form-header>span {
         margin-bottom:
             9px;
 
@@ -2585,7 +2510,7 @@ svg:last-child {
     }
 
 
-    .contact-page-intro-content > p {
+    .contact-page-intro-content>p {
         font-size:
             0.84rem;
     }
@@ -2667,7 +2592,7 @@ svg:last-child {
 
     .contact-information-item {
         grid-template-columns:
-            40px minmax(0,1fr) 16px;
+            40px minmax(0, 1fr) 16px;
 
         gap:
             10px;
@@ -2683,9 +2608,7 @@ svg:last-child {
     }
 
 
-    .contact-information-item
-    > div:nth-child(2)
-    strong {
+    .contact-information-item>div:nth-child(2) strong {
 
         font-size:
             0.76rem;
@@ -2837,7 +2760,7 @@ svg:last-child {
     .contact-map-directions,
     .contact-map-directions svg,
     .contact-information-item,
-    .contact-information-item > svg,
+    .contact-information-item>svg,
     .contact-social-links a,
     .contact-form-submit,
     .contact-form-whatsapp {
@@ -2852,4 +2775,33 @@ svg:last-child {
             none;
     }
 
+}
+
+
+
+/* map */
+
+
+.contact-map-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contact-map-background iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+
+    /* Allows the <a> underneath/over it to receive clicks */
+    pointer-events: none;
+}
+
+.contact-map-click-area {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: block;
+    cursor: pointer;
 }

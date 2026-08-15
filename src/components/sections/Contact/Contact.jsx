@@ -621,23 +621,34 @@ Thank you.
 
                     <div className="contact-map">
 
-                        {/* Map background */}
-
                         <div className="contact-map-background">
+                            <div className="contact-map-background">
 
-                            <iframe
-                                title="CircuitsES location map"
-                                src="https://www.google.com/maps?q=Hosur%2C%20Tamil%20Nadu%2C%20India&output=embed"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            />
+                                <iframe
+                                    title="CircuitsES location map"
+                                    src="https://www.google.com/maps?q=Circuits%20Energy%20System%20Pvt.%20Ltd.,%20Begapalli,%20Hosur,%20Tamil%20Nadu%20635126&output=embed"
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
 
+                                <a
+                                    href="https://maps.app.goo.gl/Sg6ncJunFLxbMjZN7?g_st=iw"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="contact-map-click-area"
+                                    aria-label="Open CircuitsES location in Google Maps"
+                                />
+
+                            </div>
                         </div>
+
+
 
 
                         {/* Map overlay */}
 
                         <div className="contact-map-overlay">
+
 
                             <div className="contact-map-location">
 
@@ -656,35 +667,8 @@ Thank you.
                                     </strong>
 
                                     <p>
-                                        SIPCOT / Begapalli,
+                                        SIPCOT-1 / Begapalli,
                                         Krishnagiri District,
-                                        Tamil Nadu.
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-
-                            <div className="contact-map-location">
-
-                                <div className="contact-map-pin">
-                                    <MapPin />
-                                </div>
-
-                                <div>
-
-                                    <span>
-                                        REGISTERED OFFICE
-                                    </span>
-
-                                    <strong>
-                                        Salem
-                                    </strong>
-
-                                    <p>
-                                        Omalur,
-                                        Salem District,
                                         Tamil Nadu.
                                     </p>
 
@@ -702,7 +686,7 @@ Thank you.
                             </span>
 
                             <strong>
-                                Hosur 
+                                Hosur
                             </strong>
 
                         </div>

@@ -4,6 +4,7 @@
 
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import connectLogo from "../../../assets/logos/connect-logo.png";
 import "./CESConnectFloat.css";
 
 
@@ -304,12 +305,20 @@ export default function CESConnectFloat() {
             "
     >
 
-      <div className="portal-icon">
+      {/* <div className="portal-icon">
 
         <span>
-          ⚡
+         😀
         </span>
 
+      </div> */}
+
+      <div className="portal-icon">
+        <img
+          src={connectLogo}
+          alt="CES Connect"
+          className="ces-connect-logo"
+        />
       </div>
 
 

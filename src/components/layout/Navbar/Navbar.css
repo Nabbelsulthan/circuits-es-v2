@@ -82,7 +82,7 @@
    03 — LOGO
    ========================================================= */
 
-.navbar-logo {
+/* .navbar-logo {
     width: 172px;
     height: 52px;
 
@@ -104,10 +104,33 @@
 
     -webkit-tap-highlight-color:
         transparent;
+} */
+
+
+
+.navbar-logo {
+    width: 272px;
+    height: 52px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-shrink: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+    appearance: none;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
-
-.navbar-logo img {
+/* .navbar-logo img {
     display: block;
 
     width: auto;
@@ -117,6 +140,21 @@
     height: 44px;
 
     object-fit: contain;
+} */
+
+
+
+
+.navbar-logo img {
+    display: block;
+
+    width: 210px;
+    height: 44px;
+
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: left center;
 }
 
 
@@ -929,13 +967,22 @@ body.navbar-menu-open {
     }
 
 
-    .navbar-logo {
+    /* .navbar-logo {
         width: 150px;
+    } */
+
+
+    /* .navbar-logo img {
+        height: 41px;
+    } */
+
+    .navbar-logo {
+        width: 220px;
     }
 
-
     .navbar-logo img {
-        height: 41px;
+        width: 175px;
+        height: 42px;
     }
 
 
@@ -1025,6 +1072,7 @@ body.navbar-menu-open {
 
         max-width: 170px;
     } */
+     
     .navbar-container {
         position: relative;
 

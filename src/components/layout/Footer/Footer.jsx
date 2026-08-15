@@ -14,7 +14,7 @@ import {
 
 import "./Footer.css";
 
-import logo from "../../../assets/logos/CircuitsES connect logo.png";
+import logo from "../../../assets/logos/footer-logo.png";
 
 
 const Footer = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="site-footer-brand">
 
             <a
-              // href="/"
+              href="/"
               className="site-footer-logo"
             >
               <img
@@ -272,7 +272,7 @@ const Footer = () => {
 
           <p>
             © {new Date().getFullYear()} Circuits Energy
-            System Pvt. Ltd. All rights reserved.
+            System. All rights reserved.
           </p>
 
 

@@ -195,7 +195,7 @@ const Hero = () => {
                         <span className="hero-brand-dot" />
 
                         <span>
-                            CIRCUITS ENERGY SYSTEM
+                            CIRCUITS ENERGY SYSTEM (OPC) PRIVATE LIMITED
                         </span>
 
                     </div>

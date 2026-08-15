@@ -12,7 +12,7 @@ const MainLayout = () => {
     return (
         <>
             <Navbar />
-            
+
             <ScrollToTop />
 
 
@@ -20,6 +20,7 @@ const MainLayout = () => {
                 <Outlet />
             </main>
 
+     
             <FloatingWhatsApp />
 
             <CESConnectFloat />

@@ -698,11 +698,11 @@ Thank you.
                         <div className="contact-map-caption">
 
                             <span>
-                                CIRCUITS ENERGY SYSTEM PVT. LTD.
+                                CIRCUITS ENERGY SYSTEM (OPC) PRIVATE LIMITED.
                             </span>
 
                             <strong>
-                                Hosur · Tamil Nadu
+                                Hosur 
                             </strong>
 
                         </div>

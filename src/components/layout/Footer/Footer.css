@@ -9,7 +9,9 @@
 
 .site-footer {
 
-    --footer-bg: #12253A;
+    /* --footer-bg: #1c1405ed; */
+
+        --footer-bg: #12253A;
 
     --footer-text: #FFFFFF;
 
@@ -96,13 +98,15 @@
         block;
 
     width:
-        155px;
+        260px;
 
     height:
         auto;
 
     object-fit:
         contain;
+
+    
 }
 
 

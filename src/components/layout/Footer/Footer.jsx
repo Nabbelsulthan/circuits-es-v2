@@ -107,7 +107,7 @@ const Footer = () => {
               Products
             </a>
 
-            <a href="/#services">
+            <a href="/#home-services">
               Services
             </a>
 

@@ -39,7 +39,6 @@
 
 
 
-
 import AppRoutes from "./routes/AppRoutes";
 
 import { useEffect, useState } from "react";
@@ -63,10 +62,6 @@ function App() {
 
     const [showSplash, setShowSplash] = useState(true);
 
-
-    /* =========================================================
-       AOS
-    ========================================================= */
 
     useEffect(() => {
 
@@ -100,7 +95,17 @@ function App() {
                 MAIN WEBSITE
             ================================================= */}
 
-            <AppRoutes />
+            <div
+                className={
+                    showSplash
+                        ? "website-under-splash"
+                        : ""
+                }
+            >
+
+                <AppRoutes />
+
+            </div>
 
         </>
     );

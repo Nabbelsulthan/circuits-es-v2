@@ -110,3 +110,17 @@ NO SELECT
     user-select: none;
 
 }
+
+
+
+/* =========================================================
+   INDEPENDENCE SPLASH
+   HIDE FLOATING ACTION BUTTONS
+========================================================= */
+
+.website-under-splash .floating-whatsapp,
+.website-under-splash .ces-connect-float {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

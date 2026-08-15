@@ -45,7 +45,7 @@ const projects = [
         id: "project-02",
         number: "02",
 
-        title: "Industrial MCC",
+        title: "Machine CCTV monitor and Operator control panel",
         titleLine: "Motor Control Panel",
 
         category: "MOTOR CONTROL",

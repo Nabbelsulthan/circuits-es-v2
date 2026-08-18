@@ -83,11 +83,11 @@ const navItems = [
         section: "home-services",
     },
 
-    // {
-    //     name: "Projects",
-    //     path: "/projects",
-    //     separatePage: true,
-    // },
+    {
+        name: "Projects",
+        path: "/projects",
+        separatePage: true,
+    },
 
     {
         name: "Contact",

@@ -22,7 +22,7 @@ const plcPlatforms = [
     },
     {
         name: "Schneider Electric",
-        type: "Modicon",
+        type: "Pro-face",
         description:
             "Flexible PLC solutions for machine automation, process control and connected industrial systems.",
     },

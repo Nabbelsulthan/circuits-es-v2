@@ -16,6 +16,9 @@ import "./Quote.css";
 
 import { useNavigate } from "react-router-dom";
 
+import SEO from "../../SEO/SEO";
+import BreadcrumbSchema from "../../SEO/BreadcrumbSchema";
+
 
 const WHATSAPP_NUMBER = "919445468377";
 const QUOTE_EMAIL = "info@circuitses.com";
@@ -404,848 +407,871 @@ Please contact the customer regarding this engineering enquiry.
 
 
     return (
-        <main className="quote-page">
+
+        <>
+
+            <SEO
+                title="Request a Quote | CircuitsES"
+                description="Request a quotation from CircuitsES for electrical control panels, MCC, PCC, PLC, industrial automation and customized electrical solutions."
+                path="/quote"
+            />
+
+            <BreadcrumbSchema
+                items={[
+                    {
+                        name: "Home",
+                        path: "/"
+                    },
+                    {
+                        name: "Request a Quote",
+                        path: "/quote"
+                    }
+                ]}
+            />
+            <main className="quote-page">
 
 
-            {/* =====================================================
+                {/* =====================================================
                 HERO
             ===================================================== */}
 
-            <section className="quote-hero">
+                <section className="quote-hero">
 
-                <div
-                    className="quote-grid"
-                    aria-hidden="true"
-                />
+                    <div
+                        className="quote-grid"
+                        aria-hidden="true"
+                    />
 
-                <div
-                    className="quote-orbit quote-orbit-one"
-                    aria-hidden="true"
-                />
+                    <div
+                        className="quote-orbit quote-orbit-one"
+                        aria-hidden="true"
+                    />
 
-                <div
-                    className="quote-orbit quote-orbit-two"
-                    aria-hidden="true"
-                />
+                    <div
+                        className="quote-orbit quote-orbit-two"
+                        aria-hidden="true"
+                    />
 
-                <div
-                    className="quote-energy-line quote-energy-line-one"
-                    aria-hidden="true"
-                />
+                    <div
+                        className="quote-energy-line quote-energy-line-one"
+                        aria-hidden="true"
+                    />
 
-                <div
-                    className="quote-energy-line quote-energy-line-two"
-                    aria-hidden="true"
-                />
-
-
-                <div className="quote-container">
+                    <div
+                        className="quote-energy-line quote-energy-line-two"
+                        aria-hidden="true"
+                    />
 
 
-                    {/* =================================================
+                    <div className="quote-container">
+
+
+                        {/* =================================================
                         INTRO
                     ================================================= */}
 
-                    <div
-                        className="quote-intro"
-                        data-aos="fade-right"
-                    >
+                        <div
+                            className="quote-intro"
+                            data-aos="fade-right"
+                        >
 
-                        <div className="quote-eyebrow">
+                            <div className="quote-eyebrow">
 
-                            <span className="quote-eyebrow-dot" />
+                                <span className="quote-eyebrow-dot" />
 
-                            ENGINEERING ENQUIRY
+                                ENGINEERING ENQUIRY
+
+                            </div>
+
+
+                            <h1>
+
+                                Let's build the
+
+                                <span>
+                                    right panel
+                                </span>
+
+                                for your project.
+
+                            </h1>
+
+
+                            <p className="quote-intro-text">
+
+                                Tell us what you're planning.
+                                Our engineering team will help
+                                turn your requirement into the
+                                right electrical panel and
+                                configuration.
+
+                            </p>
+
+
+                            <div className="quote-trust-list">
+
+
+                                <div className="quote-trust-item">
+
+                                    <div className="quote-trust-icon">
+                                        <CheckCircle size={19} />
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Engineered to your requirement
+                                        </strong>
+
+                                        <span>
+                                            Designed around your actual application
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div className="quote-trust-item">
+
+                                    <div className="quote-trust-icon">
+                                        <Shield size={19} />
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Quality-focused manufacturing
+                                        </strong>
+
+                                        <span>
+                                            Built, wired and tested with care
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div className="quote-trust-item">
+
+                                    <div className="quote-trust-icon">
+                                        <Zap size={19} />
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Engineering support
+                                        </strong>
+
+                                        <span>
+                                            Specification support from requirement to panel
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <div className="quote-note">
+
+                                <div className="quote-note-mark">
+                                    "
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Not sure which panel you need?
+                                    </strong>
+
+                                    <p>
+                                        No problem. Tell us about the
+                                        application and our team can help
+                                        identify the right solution.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div className="quote-direct-contact">
+
+                                <span>
+                                    Prefer to talk directly?
+                                </span>
+
+                                <a
+                                    href={`tel:+91${WHATSAPP_NUMBER.slice(2)}`}
+                                    className="quote-phone-link"
+                                >
+                                    <Phone size={16} />
+
+                                    +91 94454 68377
+                                </a>
+
+                            </div>
 
                         </div>
 
 
-                        <h1>
 
-                            Let's build the
+                        {/* =================================================
+                        FORM
+                    ================================================= */}
+
+                        <div
+                            className="quote-form-card"
+                            data-aos="fade-left"
+                        >
+
+                            <div className="quote-form-top">
+
+                                <div>
+
+                                    <span>
+                                        PROJECT ENQUIRY
+                                    </span>
+
+                                    <h2>
+                                        Tell us what
+                                        <br />
+                                        you're building.
+                                    </h2>
+
+                                </div>
+
+
+                                <div className="quote-form-number">
+                                    01
+                                </div>
+
+                            </div>
+
+
+                            <div className="quote-form-progress">
+
+                                <span className="active" />
+                                <span />
+                                <span />
+
+                            </div>
+
+
+                            <form
+                                onSubmit={handleSubmit}
+                                noValidate
+                            >
+
+                                {/* Honeypot */}
+
+                                <div
+                                    className="quote-honeypot"
+                                    aria-hidden="true"
+                                >
+
+                                    <label htmlFor="website">
+                                        Website
+                                    </label>
+
+                                    <input
+                                        id="website"
+                                        type="text"
+                                        name="website"
+                                        value={formData.website}
+                                        onChange={handleChange}
+                                        tabIndex="-1"
+                                        autoComplete="off"
+                                    />
+
+                                </div>
+
+
+                                {/* =================================================
+                                STEP 01
+                            ================================================= */}
+
+                                <div
+                                    className="quote-field-section"
+                                    id="quote-panel-selection"
+                                >
+
+                                    <div className="quote-field-heading">
+
+                                        <div>
+
+                                            <small>
+                                                STEP 01
+                                            </small>
+
+                                            <h3>
+                                                What are you looking for?
+                                            </h3>
+
+                                        </div>
+
+                                        <span>
+                                            Select one
+                                        </span>
+
+                                    </div>
+
+
+                                    <div className="quote-panel-grid">
+
+                                        {panelTypes.map(
+                                            (panel) => (
+
+                                                <button
+                                                    key={panel.id}
+                                                    type="button"
+                                                    className={`quote-panel-option ${selectedPanel === panel.id
+                                                        ? "selected"
+                                                        : ""
+                                                        }`}
+                                                    onClick={() =>
+                                                        selectPanel(panel.id)
+                                                    }
+                                                    aria-pressed={
+                                                        selectedPanel === panel.id
+                                                    }
+                                                >
+
+                                                    <span className="quote-panel-number">
+                                                        {panel.number}
+                                                    </span>
+
+                                                    <span className="quote-panel-icon">
+                                                        {panel.icon}
+                                                    </span>
+
+                                                    <span className="quote-panel-copy">
+
+                                                        <strong>
+                                                            {panel.title}
+                                                        </strong>
+
+                                                        <small>
+                                                            {panel.subtitle}
+                                                        </small>
+
+                                                    </span>
+
+                                                    <span className="quote-panel-check">
+
+                                                        <CheckCircle
+                                                            size={17}
+                                                        />
+
+                                                    </span>
+
+                                                </button>
+
+                                            )
+                                        )}
+
+                                    </div>
+
+                                </div>
+
+
+
+                                {/* =================================================
+                                STEP 02
+                            ================================================= */}
+
+                                <div className="quote-field-section">
+
+                                    <div className="quote-field-heading">
+
+                                        <div>
+
+                                            <small>
+                                                STEP 02
+                                            </small>
+
+                                            <h3>
+                                                Project details
+                                            </h3>
+
+                                        </div>
+
+                                        <span>
+                                            Tell us what you know
+                                        </span>
+
+                                    </div>
+
+
+                                    <div className="quote-input-grid">
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Company / Organisation
+                                            </span>
+
+                                            <input
+                                                type="text"
+                                                name="company"
+                                                value={formData.company}
+                                                onChange={handleChange}
+                                                placeholder="Your company name"
+                                                maxLength="120"
+                                                autoComplete="organization"
+                                            />
+
+                                        </label>
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Quantity *
+                                            </span>
+
+                                            <input
+                                                type="number"
+                                                name="quantity"
+                                                value={formData.quantity}
+                                                onChange={handleChange}
+                                                placeholder="e.g. 2"
+                                                min="1"
+                                                max="9999"
+                                                step="1"
+                                                required
+                                            />
+
+                                        </label>
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Required timeline *
+                                            </span>
+
+                                            <select
+                                                name="timeline"
+                                                value={formData.timeline}
+                                                onChange={handleChange}
+                                                required
+                                            >
+
+                                                <option value="">
+                                                    Select timeline
+                                                </option>
+
+                                                <option value="Urgent">
+                                                    Urgent
+                                                </option>
+
+                                                <option value="2–4 weeks">
+                                                    2–4 weeks
+                                                </option>
+
+                                                <option value="1–2 months">
+                                                    1–2 months
+                                                </option>
+
+                                                <option value="Planning stage">
+                                                    Planning stage
+                                                </option>
+
+                                            </select>
+
+                                        </label>
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Project location *
+                                            </span>
+
+                                            <input
+                                                type="text"
+                                                name="location"
+                                                value={formData.location}
+                                                onChange={handleChange}
+                                                placeholder="City / State"
+                                                minLength="2"
+                                                maxLength="100"
+                                                required
+                                                autoComplete="address-level2"
+                                            />
+
+                                        </label>
+
+
+                                    </div>
+
+
+                                    <label className="quote-input quote-input-full">
+
+                                        <span>
+                                            Tell us about your requirement *
+                                        </span>
+
+                                        <textarea
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            placeholder="Load details, incoming supply, motor details, automation requirements, application, or anything else you already know..."
+                                            rows="6"
+
+                                            maxLength="1500"
+                                            required
+                                        />
+
+                                        <small className="quote-character-count">
+                                            {formData.message.length} / 1500
+                                        </small>
+
+                                    </label>
+
+
+                                </div>
+
+
+
+                                {/* =================================================
+                                STEP 03
+                            ================================================= */}
+
+                                <div className="quote-field-section">
+
+                                    <div className="quote-field-heading">
+
+                                        <div>
+
+                                            <small>
+                                                STEP 03
+                                            </small>
+
+                                            <h3>
+                                                Where should we reach you?
+                                            </h3>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div className="quote-input-grid">
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Your name *
+                                            </span>
+
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                placeholder="Full name"
+                                                minLength="2"
+                                                maxLength="80"
+                                                required
+                                                autoComplete="name"
+                                            />
+
+                                        </label>
+
+
+                                        <label className="quote-input">
+
+                                            <span>
+                                                Phone number *
+                                            </span>
+
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                placeholder="+91"
+                                                minLength="10"
+                                                maxLength="15"
+                                                pattern="^(?:\+91[\s-]?)?[6-9]\d{9}$"
+                                                inputMode="tel"
+                                                required
+                                                autoComplete="tel"
+                                            />
+
+                                        </label>
+
+
+                                        <label className="quote-input quote-input-full">
+
+                                            <span>
+                                                Email address *
+                                            </span>
+
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                placeholder="you@company.com"
+                                                maxLength="150"
+                                                required
+                                                autoComplete="email"
+                                            />
+
+                                        </label>
+
+
+                                    </div>
+
+                                </div>
+
+
+
+                                {/* =================================================
+                                ERROR
+                            ================================================= */}
+
+                                {error && (
+
+                                    <div
+                                        className="quote-form-error"
+                                        role="alert"
+                                    >
+
+                                        <span>
+                                            !
+                                        </span>
+
+                                        {error}
+
+                                    </div>
+
+                                )}
+
+
+
+                                {/* =================================================
+                                SUCCESS
+                            ================================================= */}
+
+                                {submitted && (
+                                    <div
+                                        className="quote-form-success"
+                                        role="status"
+                                    >
+
+                                        <CheckCircle size={22} />
+
+                                        <div>
+
+                                            <strong>
+                                                Thank you — your enquiry has been received.
+                                            </strong>
+
+                                            <span>
+                                                Our engineering team will review your
+                                                requirement and get back to you shortly.
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+                                )}
+
+
+
+                                {/* =================================================
+                                SUBMIT
+                            ================================================= */}
+
+                                <div className="quote-submit-area">
+
+                                    <div className="quote-submit-copy">
+
+                                        <CheckCircle size={18} />
+
+                                        <span>
+                                            Your requirement will be securely sent to our
+                                            engineering team.
+                                        </span>
+
+                                    </div>
+
+
+                                    <button
+                                        type="submit"
+                                        className="quote-submit"
+                                        disabled={submitting}
+                                    >
+
+                                        <span>
+                                            {submitting
+                                                ? "Sending Enquiry..."
+                                                : "Get My Engineering Quote"
+                                            }
+                                        </span>
+
+                                        <span className="quote-submit-arrow">
+                                            <ArrowRight size={19} />
+                                        </span>
+
+                                    </button>
+
+                                    <p className="quote-submit-note">
+                                        We usually respond as soon as possible.
+                                    </p>
+
+                                </div>
+
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                {/* =====================================================
+                TRUST BAR
+            ===================================================== */}
+
+                <section className="quote-bottom">
+
+                    <div className="quote-bottom-container">
+
+                        <div>
 
                             <span>
-                                right panel
+                                ENGINEERED
                             </span>
 
-                            for your project.
+                            <strong>
+                                Around your application
+                            </strong>
 
-                        </h1>
+                        </div>
 
 
-                        <p className="quote-intro-text">
+                        <i />
 
-                            Tell us what you're planning.
-                            Our engineering team will help
-                            turn your requirement into the
-                            right electrical panel and
-                            configuration.
 
+                        <div>
+
+                            <span>
+                                MANUFACTURED
+                            </span>
+
+                            <strong>
+                                For industrial environments
+                            </strong>
+
+                        </div>
+
+
+                        <i />
+
+
+                        <div>
+
+                            <span>
+                                TESTED
+                            </span>
+
+                            <strong>
+                                Before it reaches you
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                {/* =====================================================
+                FINAL CTA
+            ===================================================== */}
+
+                <section className="quote-final-cta">
+
+                    <div className="quote-final-grid" />
+
+                    <div className="quote-final-glow" />
+
+                    <div
+                        className="quote-final-inner"
+                        data-aos="fade-up"
+                    >
+
+                        <span>
+                            HAVE A DRAWING OR SPECIFICATION?
+                        </span>
+
+                        <h2>
+                            Bring us the requirement.
+                            <br />
+                            We'll take it from there.
+                        </h2>
+
+                        <p>
+                            Even if your project is still being planned,
+                            our engineering team can start from the
+                            requirement and work toward the right panel
+                            solution.
                         </p>
 
 
-                        <div className="quote-trust-list">
-
-
-                            <div className="quote-trust-item">
-
-                                <div className="quote-trust-icon">
-                                    <CheckCircle size={19} />
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Engineered to your requirement
-                                    </strong>
-
-                                    <span>
-                                        Designed around your actual application
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div className="quote-trust-item">
-
-                                <div className="quote-trust-icon">
-                                    <Shield size={19} />
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Quality-focused manufacturing
-                                    </strong>
-
-                                    <span>
-                                        Built, wired and tested with care
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div className="quote-trust-item">
-
-                                <div className="quote-trust-icon">
-                                    <Zap size={19} />
-                                </div>
-
-                                <div>
-
-                                    <strong>
-                                        Engineering support
-                                    </strong>
-
-                                    <span>
-                                        Specification support from requirement to panel
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div className="quote-note">
-
-                            <div className="quote-note-mark">
-                                "
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Not sure which panel you need?
-                                </strong>
-
-                                <p>
-                                    No problem. Tell us about the
-                                    application and our team can help
-                                    identify the right solution.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
-                        <div className="quote-direct-contact">
-
-                            <span>
-                                Prefer to talk directly?
-                            </span>
+                        <div className="quote-final-actions">
 
                             <a
-                                href={`tel:+91${WHATSAPP_NUMBER.slice(2)}`}
-                                className="quote-phone-link"
+                                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="quote-contact-link quote-whatsapp-link"
                             >
-                                <Phone size={16} />
 
-                                +91 94454 68377
+                                <MessageCircle size={18} />
+
+                                WhatsApp an Engineer
+
+                            </a>
+
+
+                            <a
+                                href={`mailto:${QUOTE_EMAIL}`}
+                                className="quote-contact-link quote-email-link"
+                            >
+
+                                <Mail size={18} />
+
+                                Email Our Design Team
+
                             </a>
 
                         </div>
 
                     </div>
 
+                </section>
 
 
-                    {/* =================================================
-                        FORM
-                    ================================================= */}
+            </main>
 
-                    <div
-                        className="quote-form-card"
-                        data-aos="fade-left"
-                    >
-
-                        <div className="quote-form-top">
-
-                            <div>
-
-                                <span>
-                                    PROJECT ENQUIRY
-                                </span>
-
-                                <h2>
-                                    Tell us what
-                                    <br />
-                                    you're building.
-                                </h2>
-
-                            </div>
-
-
-                            <div className="quote-form-number">
-                                01
-                            </div>
-
-                        </div>
-
-
-                        <div className="quote-form-progress">
-
-                            <span className="active" />
-                            <span />
-                            <span />
-
-                        </div>
-
-
-                        <form
-                            onSubmit={handleSubmit}
-                            noValidate
-                        >
-
-                            {/* Honeypot */}
-
-                            <div
-                                className="quote-honeypot"
-                                aria-hidden="true"
-                            >
-
-                                <label htmlFor="website">
-                                    Website
-                                </label>
-
-                                <input
-                                    id="website"
-                                    type="text"
-                                    name="website"
-                                    value={formData.website}
-                                    onChange={handleChange}
-                                    tabIndex="-1"
-                                    autoComplete="off"
-                                />
-
-                            </div>
-
-
-                            {/* =================================================
-                                STEP 01
-                            ================================================= */}
-
-                            <div
-                                className="quote-field-section"
-                                id="quote-panel-selection"
-                            >
-
-                                <div className="quote-field-heading">
-
-                                    <div>
-
-                                        <small>
-                                            STEP 01
-                                        </small>
-
-                                        <h3>
-                                            What are you looking for?
-                                        </h3>
-
-                                    </div>
-
-                                    <span>
-                                        Select one
-                                    </span>
-
-                                </div>
-
-
-                                <div className="quote-panel-grid">
-
-                                    {panelTypes.map(
-                                        (panel) => (
-
-                                            <button
-                                                key={panel.id}
-                                                type="button"
-                                                className={`quote-panel-option ${selectedPanel === panel.id
-                                                    ? "selected"
-                                                    : ""
-                                                    }`}
-                                                onClick={() =>
-                                                    selectPanel(panel.id)
-                                                }
-                                                aria-pressed={
-                                                    selectedPanel === panel.id
-                                                }
-                                            >
-
-                                                <span className="quote-panel-number">
-                                                    {panel.number}
-                                                </span>
-
-                                                <span className="quote-panel-icon">
-                                                    {panel.icon}
-                                                </span>
-
-                                                <span className="quote-panel-copy">
-
-                                                    <strong>
-                                                        {panel.title}
-                                                    </strong>
-
-                                                    <small>
-                                                        {panel.subtitle}
-                                                    </small>
-
-                                                </span>
-
-                                                <span className="quote-panel-check">
-
-                                                    <CheckCircle
-                                                        size={17}
-                                                    />
-
-                                                </span>
-
-                                            </button>
-
-                                        )
-                                    )}
-
-                                </div>
-
-                            </div>
-
-
-
-                            {/* =================================================
-                                STEP 02
-                            ================================================= */}
-
-                            <div className="quote-field-section">
-
-                                <div className="quote-field-heading">
-
-                                    <div>
-
-                                        <small>
-                                            STEP 02
-                                        </small>
-
-                                        <h3>
-                                            Project details
-                                        </h3>
-
-                                    </div>
-
-                                    <span>
-                                        Tell us what you know
-                                    </span>
-
-                                </div>
-
-
-                                <div className="quote-input-grid">
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Company / Organisation
-                                        </span>
-
-                                        <input
-                                            type="text"
-                                            name="company"
-                                            value={formData.company}
-                                            onChange={handleChange}
-                                            placeholder="Your company name"
-                                            maxLength="120"
-                                            autoComplete="organization"
-                                        />
-
-                                    </label>
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Quantity *
-                                        </span>
-
-                                        <input
-                                            type="number"
-                                            name="quantity"
-                                            value={formData.quantity}
-                                            onChange={handleChange}
-                                            placeholder="e.g. 2"
-                                            min="1"
-                                            max="9999"
-                                            step="1"
-                                            required
-                                        />
-
-                                    </label>
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Required timeline *
-                                        </span>
-
-                                        <select
-                                            name="timeline"
-                                            value={formData.timeline}
-                                            onChange={handleChange}
-                                            required
-                                        >
-
-                                            <option value="">
-                                                Select timeline
-                                            </option>
-
-                                            <option value="Urgent">
-                                                Urgent
-                                            </option>
-
-                                            <option value="2–4 weeks">
-                                                2–4 weeks
-                                            </option>
-
-                                            <option value="1–2 months">
-                                                1–2 months
-                                            </option>
-
-                                            <option value="Planning stage">
-                                                Planning stage
-                                            </option>
-
-                                        </select>
-
-                                    </label>
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Project location *
-                                        </span>
-
-                                        <input
-                                            type="text"
-                                            name="location"
-                                            value={formData.location}
-                                            onChange={handleChange}
-                                            placeholder="City / State"
-                                            minLength="2"
-                                            maxLength="100"
-                                            required
-                                            autoComplete="address-level2"
-                                        />
-
-                                    </label>
-
-
-                                </div>
-
-
-                                <label className="quote-input quote-input-full">
-
-                                    <span>
-                                        Tell us about your requirement *
-                                    </span>
-
-                                    <textarea
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        placeholder="Load details, incoming supply, motor details, automation requirements, application, or anything else you already know..."
-                                        rows="6"
-
-                                        maxLength="1500"
-                                        required
-                                    />
-
-                                    <small className="quote-character-count">
-                                        {formData.message.length} / 1500
-                                    </small>
-
-                                </label>
-
-
-                            </div>
-
-
-
-                            {/* =================================================
-                                STEP 03
-                            ================================================= */}
-
-                            <div className="quote-field-section">
-
-                                <div className="quote-field-heading">
-
-                                    <div>
-
-                                        <small>
-                                            STEP 03
-                                        </small>
-
-                                        <h3>
-                                            Where should we reach you?
-                                        </h3>
-
-                                    </div>
-
-                                </div>
-
-
-                                <div className="quote-input-grid">
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Your name *
-                                        </span>
-
-                                        <input
-                                            type="text"
-                                            name="name"
-                                            value={formData.name}
-                                            onChange={handleChange}
-                                            placeholder="Full name"
-                                            minLength="2"
-                                            maxLength="80"
-                                            required
-                                            autoComplete="name"
-                                        />
-
-                                    </label>
-
-
-                                    <label className="quote-input">
-
-                                        <span>
-                                            Phone number *
-                                        </span>
-
-                                        <input
-                                            type="tel"
-                                            name="phone"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            placeholder="+91"
-                                            minLength="10"
-                                            maxLength="15"
-                                            pattern="^(?:\+91[\s-]?)?[6-9]\d{9}$"
-                                            inputMode="tel"
-                                            required
-                                            autoComplete="tel"
-                                        />
-
-                                    </label>
-
-
-                                    <label className="quote-input quote-input-full">
-
-                                        <span>
-                                            Email address *
-                                        </span>
-
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            placeholder="you@company.com"
-                                            maxLength="150"
-                                            required
-                                            autoComplete="email"
-                                        />
-
-                                    </label>
-
-
-                                </div>
-
-                            </div>
-
-
-
-                            {/* =================================================
-                                ERROR
-                            ================================================= */}
-
-                            {error && (
-
-                                <div
-                                    className="quote-form-error"
-                                    role="alert"
-                                >
-
-                                    <span>
-                                        !
-                                    </span>
-
-                                    {error}
-
-                                </div>
-
-                            )}
-
-
-
-                            {/* =================================================
-                                SUCCESS
-                            ================================================= */}
-
-                            {submitted && (
-                                <div
-                                    className="quote-form-success"
-                                    role="status"
-                                >
-
-                                    <CheckCircle size={22} />
-
-                                    <div>
-
-                                        <strong>
-                                            Thank you — your enquiry has been received.
-                                        </strong>
-
-                                        <span>
-                                            Our engineering team will review your
-                                            requirement and get back to you shortly.
-                                        </span>
-
-                                    </div>
-
-                                </div>
-                            )}
-
-
-
-                            {/* =================================================
-                                SUBMIT
-                            ================================================= */}
-
-                            <div className="quote-submit-area">
-
-                                <div className="quote-submit-copy">
-
-                                    <CheckCircle size={18} />
-
-                                    <span>
-                                        Your requirement will be securely sent to our
-                                        engineering team.
-                                    </span>
-
-                                </div>
-
-
-                                <button
-                                    type="submit"
-                                    className="quote-submit"
-                                    disabled={submitting}
-                                >
-
-                                    <span>
-                                        {submitting
-                                            ? "Sending Enquiry..."
-                                            : "Get My Engineering Quote"
-                                        }
-                                    </span>
-
-                                    <span className="quote-submit-arrow">
-                                        <ArrowRight size={19} />
-                                    </span>
-
-                                </button>
-
-                                <p className="quote-submit-note">
-                                    We usually respond as soon as possible.
-                                </p>
-
-                            </div>
-
-
-                        </form>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            {/* =====================================================
-                TRUST BAR
-            ===================================================== */}
-
-            <section className="quote-bottom">
-
-                <div className="quote-bottom-container">
-
-                    <div>
-
-                        <span>
-                            ENGINEERED
-                        </span>
-
-                        <strong>
-                            Around your application
-                        </strong>
-
-                    </div>
-
-
-                    <i />
-
-
-                    <div>
-
-                        <span>
-                            MANUFACTURED
-                        </span>
-
-                        <strong>
-                            For industrial environments
-                        </strong>
-
-                    </div>
-
-
-                    <i />
-
-
-                    <div>
-
-                        <span>
-                            TESTED
-                        </span>
-
-                        <strong>
-                            Before it reaches you
-                        </strong>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            {/* =====================================================
-                FINAL CTA
-            ===================================================== */}
-
-            <section className="quote-final-cta">
-
-                <div className="quote-final-grid" />
-
-                <div className="quote-final-glow" />
-
-                <div
-                    className="quote-final-inner"
-                    data-aos="fade-up"
-                >
-
-                    <span>
-                        HAVE A DRAWING OR SPECIFICATION?
-                    </span>
-
-                    <h2>
-                        Bring us the requirement.
-                        <br />
-                        We'll take it from there.
-                    </h2>
-
-                    <p>
-                        Even if your project is still being planned,
-                        our engineering team can start from the
-                        requirement and work toward the right panel
-                        solution.
-                    </p>
-
-
-                    <div className="quote-final-actions">
-
-                        <a
-                            href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="quote-contact-link quote-whatsapp-link"
-                        >
-
-                            <MessageCircle size={18} />
-
-                            WhatsApp an Engineer
-
-                        </a>
-
-
-                        <a
-                            href={`mailto:${QUOTE_EMAIL}`}
-                            className="quote-contact-link quote-email-link"
-                        >
-
-                            <Mail size={18} />
-
-                            Email Our Design Team
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-        </main>
+        </>
     );
 };
 

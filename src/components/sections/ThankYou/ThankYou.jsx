@@ -12,27 +12,27 @@ const ThankYou = () => {
     const [seconds, setSeconds] = useState(10);
 
 
- 
 
 
-    // useEffect(() => {
 
-    //     if (
-    //         typeof window.gtag === "function"
-    //     ) {
+    useEffect(() => {
 
-    //         window.gtag(
-    //             "event",
-    //             "conversion",
-    //             {
-    //                 send_to:
-    //                     "AW-18144290782/1x-zCOTYos8cEN7P78tD",
-    //             }
-    //         );
+        if (
+            typeof window.gtag === "function"
+        ) {
 
-    //     }
+            window.gtag(
+                "event",
+                "conversion",
+                {
+                    send_to:
+                        "AW-18144290782/1x-zCOTYos8cEN7P78tD",
+                }
+            );
 
-    // }, []);
+        }
+
+    }, []);
 
 
     useEffect(() => {

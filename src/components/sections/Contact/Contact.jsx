@@ -631,13 +631,13 @@ Thank you.
                                     referrerPolicy="no-referrer-when-downgrade"
                                 />
 
-                                <a
+                               <a
                                     href="https://maps.app.goo.gl/Sg6ncJunFLxbMjZN7?g_st=iw"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="contact-map-click-area"
                                     aria-label="Open CircuitsES location in Google Maps"
-                                />
+                                /> 
 
                             </div>
                         </div>
@@ -679,7 +679,7 @@ Thank you.
                         </div>
 
 
-                        <div className="contact-map-caption">
+                        {/* <div className="contact-map-caption">
 
                             <span>
                                 CIRCUITS ENERGY SYSTEM (OPC) PRIVATE LIMITED.
@@ -689,7 +689,7 @@ Thank you.
                                 Hosur
                             </strong>
 
-                        </div>
+                        </div> */}
 
                     </div>
 

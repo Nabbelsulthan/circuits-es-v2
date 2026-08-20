@@ -1,14 +1,15 @@
+import {
+    useEffect,
+    useState
+} from "react";
+
+import logo
+    from "../../../assets/logos/CircuitES-logo.png";
+
+import "./OnamSplash.css";
 
 
-
-import { useEffect, useState } from "react";
-
-import logo from "../../../assets/logos/CircuitES-logo.png";
-
-import "./IndependenceSplash.css";
-
-
-const IndependenceSplash = ({ onComplete }) => {
+const OnamSplash = ({ onComplete }) => {
 
     const [visible, setVisible] = useState(true);
 
@@ -18,21 +19,36 @@ const IndependenceSplash = ({ onComplete }) => {
     useEffect(() => {
 
         /* =====================================================
-           AUGUST 15 CHECK
+           ONAM DATE CHECK
         ===================================================== */
 
         const today = new Date();
 
-        const isIndependenceDay =
-            today.getMonth() === 7 &&
-            today.getDate() === 15;
+        /*
+         * TEMPORARY DEVELOPMENT PREVIEW
+         *
+         * Keep true while testing.
+         *
+         * Change back to the production date check later.
+         */
+
+        // const isOnam = true;
 
 
         /*
-         * Show the splash only on August 15.
-         */
+         * PRODUCTION:
+        */
+        const isOnam =
+            today.getMonth() === 7 &&
+            today.getDate() === 26;
 
-        if (!isIndependenceDay) {
+
+
+        /* =====================================================
+           NOT ONAM
+        ===================================================== */
+
+        if (!isOnam) {
 
             setVisible(false);
 
@@ -44,7 +60,28 @@ const IndependenceSplash = ({ onComplete }) => {
 
 
         /* =====================================================
-           SPLASH DURATION
+           SESSION STORAGE CHECK
+        ===================================================== */
+
+        const hasSeenOnam =
+            sessionStorage.getItem(
+                "ces_onam_splash_seen"
+            );
+
+
+        if (hasSeenOnam === "true") {
+
+            setVisible(false);
+
+            onComplete?.();
+
+            return;
+
+        }
+
+
+        /* =====================================================
+           SPLASH TIMERS
         ===================================================== */
 
         const closeTimer = setTimeout(() => {
@@ -55,6 +92,17 @@ const IndependenceSplash = ({ onComplete }) => {
 
 
         const completeTimer = setTimeout(() => {
+
+            /*
+             * Mark as seen only after the splash
+             * has successfully completed.
+             */
+
+            sessionStorage.setItem(
+                "ces_onam_splash_seen",
+                "true"
+            );
+
 
             setVisible(false);
 
@@ -75,11 +123,11 @@ const IndependenceSplash = ({ onComplete }) => {
 
         };
 
-    }, [onComplete]);
+    }, []);
 
 
     /* =========================================================
-       HIDE
+       HIDE SPLASH
     ========================================================= */
 
     if (!visible) {
@@ -92,34 +140,28 @@ const IndependenceSplash = ({ onComplete }) => {
     return (
 
         <div
-            className={`independence-splash ${closing ? "is-closing" : ""
+            className={`onam-splash ${closing
+                    ? "is-closing"
+                    : ""
                 }`}
         >
 
             {/* =================================================
-                TRICOLOUR LIGHT
+                ONAM GLOW
             ================================================= */}
 
-            <div className="splash-tricolour">
-
-                <span className="splash-saffron"></span>
-
-                <span className="splash-white"></span>
-
-                <span className="splash-green"></span>
-
-            </div>
+            <div className="onam-glow"></div>
 
 
             {/* =================================================
-                PARTICLES
+                FLOWER PARTICLES
             ================================================= */}
 
-            <div className="splash-particles">
+            <div className="onam-particles">
 
                 <span>✦</span>
 
-                <span>✦</span>
+                <span>✿</span>
 
                 <span>•</span>
 
@@ -127,7 +169,7 @@ const IndependenceSplash = ({ onComplete }) => {
 
                 <span>•</span>
 
-                <span>✦</span>
+                <span>✿</span>
 
             </div>
 
@@ -136,18 +178,26 @@ const IndependenceSplash = ({ onComplete }) => {
                 MAIN CONTENT
             ================================================= */}
 
-            <div className="splash-content">
+            <div className="onam-content">
 
 
                 {/* =================================================
-                    ASHOKA CHAKRA
+                    PUKKALAM
                 ================================================= */}
 
-                <div className="splash-chakra">
+                <div className="onam-pookalam">
 
-                    <div className="chakra-ring">
+                    <div className="pookalam-ring ring-one"></div>
 
-                        <div className="chakra-center"></div>
+                    <div className="pookalam-ring ring-two"></div>
+
+                    <div className="pookalam-ring ring-three"></div>
+
+                    <div className="pookalam-center">
+
+                        <span>
+                            ✦
+                        </span>
 
                     </div>
 
@@ -155,30 +205,30 @@ const IndependenceSplash = ({ onComplete }) => {
 
 
                 {/* =================================================
-                    CIRCUSES LOGO
+                    CES LOGO
                 ================================================= */}
 
-                <div className="splash-logo-wrap">
+                <div className="onam-logo-wrap">
 
                     <img
                         src={logo}
                         alt="Circuits Energy System"
-                        className="splash-logo"
+                        className="onam-logo"
                     />
 
                 </div>
 
 
                 {/* =================================================
-                    79 YEARS
+                    DIVIDER
                 ================================================= */}
 
-                <div className="splash-divider">
+                <div className="onam-divider">
 
                     <span></span>
 
                     <strong>
-                        80
+                        ✦
                     </strong>
 
                     <span></span>
@@ -190,9 +240,9 @@ const IndependenceSplash = ({ onComplete }) => {
                     KICKER
                 ================================================= */}
 
-                <p className="splash-kicker">
+                <p className="onam-kicker">
 
-                    PROUDLY INDIAN • PROUDLY BUILDING
+                    PROUDLY SOUTH INDIAN • PROUDLY BUILDING
 
                 </p>
 
@@ -201,12 +251,12 @@ const IndependenceSplash = ({ onComplete }) => {
                     MAIN TITLE
                 ================================================= */}
 
-                <h1 className="splash-title">
+                <h1 className="onam-title">
 
                     Happy
 
                     <strong>
-                        Independence Day
+                        Onam
                     </strong>
 
                 </h1>
@@ -216,22 +266,22 @@ const IndependenceSplash = ({ onComplete }) => {
                     DATE
                 ================================================= */}
 
-                <p className="splash-date">
+                <p className="onam-date">
 
-                    15 AUGUST 2026
+                    26 AUGUST 2026
 
                 </p>
 
 
                 {/* =================================================
-                    PATRIOTIC QUOTE
+                    ONAM QUOTE
                 ================================================= */}
 
-                <p className="splash-quote">
+                <p className="onam-quote">
 
-                    “Freedom is not merely a gift of the past,
-                    but a responsibility to build a stronger
-                    tomorrow.”
+                    May this Onam bring prosperity,
+                    happiness and new beginnings
+                    to you and your family.
 
                 </p>
 
@@ -240,18 +290,22 @@ const IndependenceSplash = ({ onComplete }) => {
                     CES MESSAGE
                 ================================================= */}
 
-                <p className="splash-message">
+                <p className="onam-message">
 
-                    Building India's industrial future, together.
+                    Building a brighter industrial future, together.
 
                 </p>
 
 
                 {/* =================================================
-                    MINI FLAG
+                    MINI DECORATION
                 ================================================= */}
 
-                <div className="splash-flag">
+                <div className="onam-decoration">
+
+                    <span></span>
+
+                    <span></span>
 
                     <span></span>
 
@@ -268,18 +322,18 @@ const IndependenceSplash = ({ onComplete }) => {
                 BOTTOM BRAND
             ================================================= */}
 
-            <div className="splash-bottom">
+            <div className="onam-bottom">
 
                 <span>
                     CIRCUITS ENERGY SYSTEM
                 </span>
 
-                <span className="splash-dot">
+                <span className="onam-dot">
                     •
                 </span>
 
                 <span>
-                    INDIA
+                    KERALA • INDIA
                 </span>
 
             </div>
@@ -291,4 +345,4 @@ const IndependenceSplash = ({ onComplete }) => {
 };
 
 
-export default IndependenceSplash;
+export default OnamSplash;

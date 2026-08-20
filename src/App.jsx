@@ -54,8 +54,10 @@ import "./components/styles/cards.css";
 import "./components/styles/animations.css";
 import "./components/styles/utilities.css";
 
-import IndependenceSplash
-    from "./components/effects/IndependenceSplash/IndependenceSplash";
+// import IndependenceSplash
+//     from "./components/effects/IndependenceSplash/IndependenceSplash";
+
+import OnamSplash from "./components/effects/IndependenceSplash/OnamSplash";
 
 
 function App() {
@@ -79,12 +81,12 @@ function App() {
         <>
 
             {/* =================================================
-                INDEPENDENCE DAY SPLASH
+                ONAM  SPLASH
             ================================================= */}
 
             {showSplash && (
 
-                <IndependenceSplash
+                <OnamSplash
                     onComplete={() => setShowSplash(false)}
                 />
 

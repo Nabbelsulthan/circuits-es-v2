@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_URL = "https://www.circuitses.com";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const SEO = ({
     title,
@@ -62,17 +63,17 @@ const SEO = ({
 
             <meta
                 property="og:image"
-                content={`${SITE_URL}/og-image.png`}
+                content={OG_IMAGE}
             />
 
             <meta
                 property="og:image:secure_url"
-                content={`${SITE_URL}/og-image.png`}
+                content={OG_IMAGE}
             />
 
             <meta
                 property="og:image:type"
-                content="image/png"
+                content="image/jpeg"
             />
 
             <meta
@@ -112,42 +113,71 @@ const SEO = ({
 
             <meta
                 name="twitter:image"
-                content={`${SITE_URL}/og-image.png`}
+                content={OG_IMAGE}
+            />
+
+            <meta
+                name="twitter:image:alt"
+                content="CircuitsES — Electrical & Industrial Automation Solutions"
             />
 
 
+            {/* ================================
+                ORGANIZATION
+            ================================= */}
 
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "Organization",
-                    "@id": "https://www.circuitses.com/#organization",
 
-                    "name": "Circuits Energy System (OPC) PVT LTD.",
-                    "alternateName": "CircuitsES",
+                    "@id":
+                        "https://www.circuitses.com/#organization",
 
-                    "url": "https://www.circuitses.com/",
+                    "name":
+                        "Circuits Energy System (OPC) PVT LTD.",
+
+                    "alternateName":
+                        "CircuitsES",
+
+                    "url":
+                        "https://www.circuitses.com/",
 
                     "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://www.circuitses.com/CircuitES-logo.png"
+                        "@type":
+                            "ImageObject",
+
+                        "url":
+                            "https://www.circuitses.com/CircuitES-logo.png"
                     },
 
                     "description":
                         "CircuitsES designs and manufactures electrical control panels, MCC, PCC, PLC and industrial automation systems, along with custom electrical and electronic enclosures for industrial applications.",
 
-                    "telephone": "+91-8072127505",
+                    "telephone":
+                        "+91-8072127505",
 
-                    "email": "info@circuitses.com",
+                    "email":
+                        "info@circuitses.com",
 
                     "address": {
-                        "@type": "PostalAddress",
+                        "@type":
+                            "PostalAddress",
+
                         "streetAddress":
                             "No.553/141, Begapalli SIPCOT-1, Begapalli–Nallur Agaraharam Road",
-                        "addressLocality": "Hosur",
-                        "postalCode": "635126",
-                        "addressRegion": "Tamil Nadu",
-                        "addressCountry": "IN"
+
+                        "addressLocality":
+                            "Hosur",
+
+                        "postalCode":
+                            "635126",
+
+                        "addressRegion":
+                            "Tamil Nadu",
+
+                        "addressCountry":
+                            "IN"
                     },
 
                     "sameAs": [
@@ -157,42 +187,63 @@ const SEO = ({
             </script>
 
 
+            {/* ================================
+                LOCAL BUSINESS
+            ================================= */}
+
             <script type="application/ld+json">
                 {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "LocalBusiness",
+                    "@context":
+                        "https://schema.org",
 
-                    "@id": "https://www.circuitses.com/#localbusiness",
+                    "@type":
+                        "LocalBusiness",
 
-                    "name": "Circuits Energy System (OPC) PVT LTD.",
-                    "alternateName": "CircuitsES",
+                    "@id":
+                        "https://www.circuitses.com/#localbusiness",
 
-                    "url": "https://www.circuitses.com/",
+                    "name":
+                        "Circuits Energy System (OPC) PVT LTD.",
 
-                    "logo": "https://www.circuitses.com/CircuitES-logo.png",
+                    "alternateName":
+                        "CircuitsES",
 
-                    "image": "https://www.circuitses.com/og-image.png",
+                    "url":
+                        "https://www.circuitses.com/",
 
-                    "telephone": "+91-8072127505",
+                    "logo":
+                        "https://www.circuitses.com/CircuitES-logo.png",
 
-                    "email": "info@circuitses.com",
+                    "image":
+                        OG_IMAGE,
+
+                    "telephone":
+                        "+91-8072127505",
+
+                    "email":
+                        "info@circuitses.com",
 
                     "description":
                         "CircuitsES designs and manufactures electrical control panels, MCC, PCC, PLC and industrial automation systems, along with custom electrical and electronic enclosures for industrial applications.",
 
                     "address": {
-                        "@type": "PostalAddress",
+                        "@type":
+                            "PostalAddress",
 
                         "streetAddress":
                             "No.553/141, Begapalli SIPCOT-1, Begapalli–Nallur Agaraharam Road",
 
-                        "addressLocality": "Hosur",
+                        "addressLocality":
+                            "Hosur",
 
-                        "postalCode": "635126",
+                        "postalCode":
+                            "635126",
 
-                        "addressRegion": "Tamil Nadu",
+                        "addressRegion":
+                            "Tamil Nadu",
 
-                        "addressCountry": "IN"
+                        "addressCountry":
+                            "IN"
                     },
 
                     "sameAs": [
@@ -202,23 +253,37 @@ const SEO = ({
             </script>
 
 
+            {/* ================================
+                WEBSITE
+            ================================= */}
+
             <script type="application/ld+json">
                 {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "WebSite",
+                    "@context":
+                        "https://schema.org",
 
-                    "@id": "https://www.circuitses.com/#website",
+                    "@type":
+                        "WebSite",
 
-                    "name": "CircuitsES",
-                    "alternateName": "Circuits Energy System",
+                    "@id":
+                        "https://www.circuitses.com/#website",
 
-                    "url": "https://www.circuitses.com/",
+                    "name":
+                        "CircuitsES",
+
+                    "alternateName":
+                        "Circuits Energy System",
+
+                    "url":
+                        "https://www.circuitses.com/",
 
                     "publisher": {
-                        "@id": "https://www.circuitses.com/#organization"
+                        "@id":
+                            "https://www.circuitses.com/#organization"
                     },
 
-                    "inLanguage": "en-IN"
+                    "inLanguage":
+                        "en-IN"
                 })}
             </script>
 

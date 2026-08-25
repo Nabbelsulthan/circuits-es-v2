@@ -343,6 +343,7 @@ export default function CustomerPortal() {
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
+        localStorage.setItem("realtimeToken", data.realtimeToken);
         localStorage.setItem("customerId", data.customerId);
         localStorage.setItem("customerName", data.companyName);
         localStorage.setItem("isLoggedIn", "true");

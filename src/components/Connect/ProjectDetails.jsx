@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ProjectDetails.css";
 import { API_URL } from "../Config/Config";
+import { supabase, authenticateRealtime, } from "../Config/supabaseClient";
 
 export default function ProjectDetails() {
 
@@ -11,32 +12,123 @@ export default function ProjectDetails() {
     const [loading, setLoading] = useState(true);
 
 
+    // useEffect(() => {
+
+    //     const customerId =
+    //         localStorage.getItem("customerId");
+
+    //     if (!customerId) {
+    //         setLoading(false);
+    //         return;
+    //     }
+
+
+    //     fetch(
+    //         `${API_URL}/api/customers/${customerId}/projects`
+    //     )
+    //         .then((res) => {
+
+    //             if (!res.ok) {
+    //                 throw new Error(
+    //                     "Failed to fetch projects"
+    //                 );
+    //             }
+
+    //             return res.json();
+
+    //         })
+    //         .then((data) => {
+
+    //             const sortedProjects =
+    //                 [...data].sort((a, b) => {
+
+    //                     if (
+    //                         a.status === "Delivered" &&
+    //                         b.status !== "Delivered"
+    //                     ) {
+    //                         return 1;
+    //                     }
+
+    //                     if (
+    //                         a.status !== "Delivered" &&
+    //                         b.status === "Delivered"
+    //                     ) {
+    //                         return -1;
+    //                     }
+
+    //                     return 0;
+
+    //                 });
+
+    //             setProjects(sortedProjects);
+
+    //             setLoading(false);
+
+    //         })
+    //         .catch((error) => {
+
+    //             console.error(
+    //                 "Project details error:",
+    //                 error
+    //             );
+
+    //             setLoading(false);
+
+    //         });
+
+    // }, []);
+
+
     useEffect(() => {
 
         const customerId =
             localStorage.getItem("customerId");
 
+
         if (!customerId) {
+
             setLoading(false);
+
             return;
+
         }
 
 
-        fetch(
-            `${API_URL}/api/customers/${customerId}/projects`
-        )
-            .then((res) => {
+        let channel = null;
+        let cancelled = false;
 
-                if (!res.ok) {
+
+        /* =========================================================
+           LOAD PROJECTS
+        ========================================================= */
+
+        const loadProjects = async () => {
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${API_URL}/api/customers/${customerId}/projects`
+                    );
+
+
+                if (!response.ok) {
+
                     throw new Error(
                         "Failed to fetch projects"
                     );
+
                 }
 
-                return res.json();
 
-            })
-            .then((data) => {
+                const data =
+                    await response.json();
+
+
+                if (cancelled) {
+                    return;
+                }
+
 
                 const sortedProjects =
                     [...data].sort((a, b) => {
@@ -45,35 +137,217 @@ export default function ProjectDetails() {
                             a.status === "Delivered" &&
                             b.status !== "Delivered"
                         ) {
+
                             return 1;
+
                         }
+
 
                         if (
                             a.status !== "Delivered" &&
                             b.status === "Delivered"
                         ) {
+
                             return -1;
+
                         }
+
 
                         return 0;
 
                     });
 
-                setProjects(sortedProjects);
+
+                setProjects(
+                    sortedProjects
+                );
+
 
                 setLoading(false);
 
-            })
-            .catch((error) => {
+
+            } catch (error) {
 
                 console.error(
                     "Project details error:",
                     error
                 );
 
-                setLoading(false);
 
-            });
+                if (!cancelled) {
+
+                    setLoading(false);
+
+                }
+
+            }
+
+        };
+
+
+        /* =========================================================
+           REALTIME SETUP
+        ========================================================= */
+
+        const setupRealtime = async () => {
+
+            try {
+
+                console.log(
+                    "Authenticating Supabase Realtime for ProjectDetails..."
+                );
+
+
+                // const authenticated =
+                //     await authenticateRealtime();
+
+
+                // if (
+                //     !authenticated ||
+                //     cancelled
+                // ) {
+
+                //     console.error(
+                //         "Unable to authenticate Supabase Realtime for ProjectDetails"
+                //     );
+
+                //     return;
+
+
+                // }
+
+
+                console.log(
+                    "Authenticating Supabase Realtime for ProjectDetails..."
+                );
+                
+                await authenticateRealtime();
+
+                if (cancelled) {
+                    return;
+                }
+
+
+                console.log(
+                    "Supabase Realtime authenticated for ProjectDetails"
+                );
+
+
+                /* =============================================
+                   INITIAL LOAD
+                ============================================= */
+
+                await loadProjects();
+
+
+                if (cancelled) {
+                    return;
+                }
+
+
+                /* =============================================
+                   START REALTIME
+                ============================================= */
+
+                console.log(
+                    "Starting ProjectDetails realtime:",
+                    customerId
+                );
+
+
+                channel =
+                    supabase
+                        .channel(
+                            `project-details-${customerId}`
+                        )
+                        .on(
+                            "postgres_changes",
+                            {
+                                event: "*",
+                                schema: "public",
+                                table: "projects",
+                                filter:
+                                    `customer_id=eq.${customerId}`,
+                            },
+                            async (payload) => {
+
+                                console.log(
+                                    "🔥 PROJECT DETAILS REALTIME EVENT:",
+                                    payload
+                                );
+
+
+                                /*
+                                 * Reload the complete project list
+                                 * from your backend.
+                                 *
+                                 * This keeps every field synchronized:
+                                 *
+                                 * status
+                                 * dispatch_status
+                                 * panel_type
+                                 * completion_percentage
+                                 * PO number
+                                 * expected delivery
+                                 * engineer
+                                 * etc.
+                                 */
+
+                                await loadProjects();
+
+                            }
+                        )
+                        .subscribe(
+                            (status) => {
+
+                                console.log(
+                                    "ProjectDetails realtime status:",
+                                    status
+                                );
+
+                            }
+                        );
+
+
+            } catch (error) {
+
+                console.error(
+                    "ProjectDetails realtime setup failed:",
+                    error
+                );
+
+            }
+
+        };
+
+
+        setupRealtime();
+
+
+        /* =========================================================
+           CLEANUP
+        ========================================================= */
+
+        return () => {
+
+            cancelled = true;
+
+
+            if (channel) {
+
+                console.log(
+                    "Removing ProjectDetails realtime channel"
+                );
+
+
+                supabase.removeChannel(
+                    channel
+                );
+
+            }
+
+        };
+
 
     }, []);
 

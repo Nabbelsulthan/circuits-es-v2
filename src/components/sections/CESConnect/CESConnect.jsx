@@ -7,11 +7,14 @@ import CustomerBanner from "../../Connect/CustomerBanner";
 import ProjectDetails from "../../Connect/ProjectDetails";
 import CompletedProjectCard from "../../Connect/CompletedProjectCard";
 import ConnectLoading from "../../Connect/ConnectLoading";
-
+import { supabase, authenticateRealtime, } from "../../Config/supabaseClient";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { API_URL } from "../../Config/Config";
+
+
+
 
 
 export default function CESConnect() {
@@ -35,9 +38,105 @@ export default function CESConnect() {
        LOAD CUSTOMER PROJECTS
     ========================================= */
 
+    // useEffect(() => {
+
+    //     const customerId = localStorage.getItem("customerId");
+
+    //     if (!customerId) {
+
+    //         navigate("/portal", {
+    //             replace: true,
+    //         });
+
+    //         return;
+    //     }
+
+
+    //     const fetchProjects = async () => {
+
+    //         try {
+
+    //             const response = await fetch(
+    //                 `${API_URL}/api/customers/${customerId}/projects`
+    //             );
+
+
+    //             if (!response.ok) {
+
+    //                 throw new Error(
+    //                     `Failed to load projects: ${response.status}`
+    //                 );
+
+    //             }
+
+
+    //             const data = await response.json();
+
+    //             console.log(
+    //                 "CES Connect Projects:",
+    //                 data
+    //             );
+
+
+    //             const projectData = Array.isArray(data)
+    //                 ? data
+    //                 : [];
+
+
+    //             setProjects(projectData);
+
+
+    //             /* =================================
+    //                ACTIVE PROJECT DISPLAY
+    //             ================================= */
+
+    //             const activeCount = projectData.filter(
+    //                 (project) =>
+    //                     project.status !== "Delivered"
+    //             ).length;
+
+
+    //             /*
+    //                 One or zero active projects:
+    //                 expand automatically.
+
+    //                 Multiple active projects:
+    //                 collapse by default.
+    //             */
+
+    //             setShowActive(activeCount <= 1);
+
+
+    //         } catch (error) {
+
+    //             console.error(
+    //                 "CES Connect project loading error:",
+    //                 error
+    //             );
+
+    //             setProjects([]);
+
+    //         } finally {
+
+    //             setLoading(false);
+
+    //         }
+
+    //     };
+
+
+    //     fetchProjects();
+
+    // }, [navigate]);
+
+
+
+
     useEffect(() => {
 
-        const customerId = localStorage.getItem("customerId");
+        const customerId =
+            localStorage.getItem("customerId");
+
 
         if (!customerId) {
 
@@ -46,87 +145,492 @@ export default function CESConnect() {
             });
 
             return;
+
         }
 
 
-        const fetchProjects = async () => {
+        let channel = null;
+        let cancelled = false;
+
+
+        const setupRealtime = async () => {
 
             try {
 
-                const response = await fetch(
-                    `${API_URL}/api/customers/${customerId}/projects`
+                /* =========================================
+                   AUTHENTICATE SUPABASE REALTIME
+                ========================================= */
+
+                console.log(
+                    "Authenticating Supabase Realtime..."
                 );
 
 
-                if (!response.ok) {
+                const realtimeToken =
+                    localStorage.getItem("realtimeToken");
 
-                    throw new Error(
-                        `Failed to load projects: ${response.status}`
-                    );
+                console.log(
+                    "Realtime token exists:",
+                    !!realtimeToken
+                );
+
+                if (realtimeToken) {
+
+                    try {
+
+                        const payload =
+                            JSON.parse(
+                                atob(
+                                    realtimeToken
+                                        .split(".")[1]
+                                        .replace(/-/g, "+")
+                                        .replace(/_/g, "/")
+                                )
+                            );
+
+                        console.log(
+                            "Realtime JWT payload:",
+                            payload
+                        );
+
+                        console.log(
+                            "Realtime JWT customerId:",
+                            payload.customerId
+                        );
+
+                        console.log(
+                            "Realtime JWT role:",
+                            payload.role
+                        );
+
+                    } catch (error) {
+
+                        console.error(
+                            "Failed to decode Realtime JWT:",
+                            error
+                        );
+
+                    }
 
                 }
 
 
-                const data = await response.json();
+                // const authenticated =
+                //     await authenticateRealtime();
+
+
+                // if (!authenticated || cancelled) {
+
+                //     console.error(
+                //         "Unable to authenticate Supabase Realtime"
+                //     );
+
+                //     return;
+
+                // }
+
+
+                // console.log(
+                //     "Supabase Realtime authenticated"
+                // );
+
+
+                await authenticateRealtime();
+
+                if (cancelled) {
+                    return;
+                }
 
                 console.log(
-                    "CES Connect Projects:",
-                    data
+                    "Supabase Realtime authentication completed"
                 );
 
 
-                const projectData = Array.isArray(data)
-                    ? data
-                    : [];
+                /* =========================================
+                   LOAD CUSTOMER PROJECTS
+                ========================================= */
+
+                const fetchProjects = async (
+                    updateDisplayState = false
+                ) => {
+
+                    try {
+
+                        const response =
+                            await fetch(
+                                `${API_URL}/api/customers/${customerId}/projects`
+                            );
 
 
-                setProjects(projectData);
+                        if (!response.ok) {
+
+                            throw new Error(
+                                `Failed to load projects: ${response.status}`
+                            );
+
+                        }
 
 
-                /* =================================
-                   ACTIVE PROJECT DISPLAY
-                ================================= */
-
-                const activeCount = projectData.filter(
-                    (project) =>
-                        project.status !== "Delivered"
-                ).length;
+                        const data =
+                            await response.json();
 
 
-                /*
-                    One or zero active projects:
-                    expand automatically.
+                        console.log(
+                            "CES Connect Projects:",
+                            data
+                        );
 
-                    Multiple active projects:
-                    collapse by default.
-                */
 
-                setShowActive(activeCount <= 1);
+                        const projectData =
+                            Array.isArray(data)
+                                ? data
+                                : [];
+
+
+                        setProjects(
+                            projectData
+                        );
+
+
+                        /* Initial load only */
+
+                        if (updateDisplayState) {
+
+                            const activeCount =
+                                projectData.filter(
+                                    (project) =>
+                                        project.status !==
+                                        "Delivered"
+                                ).length;
+
+
+                            setShowActive(
+                                activeCount <= 1
+                            );
+
+                        }
+
+
+                    } catch (error) {
+
+                        console.error(
+                            "CES Connect project loading error:",
+                            error
+                        );
+
+
+                        if (updateDisplayState) {
+
+                            setProjects([]);
+
+                        }
+
+                    } finally {
+
+                        if (updateDisplayState) {
+
+                            setLoading(false);
+
+                        }
+
+                    }
+
+                };
+
+
+                /* =========================================
+                   INITIAL LOAD
+                ========================================= */
+
+                await fetchProjects(true);
+
+
+                if (cancelled) {
+                    return;
+                }
+
+
+                /* =========================================
+                   PROJECT REALTIME
+                ========================================= */
+
+                console.log(
+                    "Starting customer projects realtime:",
+                    customerId
+                );
+
+
+                channel =
+                    supabase
+                        .channel(
+                            `customer-projects-${customerId}`
+                        )
+                        .on(
+                            "postgres_changes",
+                            {
+                                event: "*",
+                                schema: "public",
+                                table: "projects",
+                                filter:
+                                    `customer_id=eq.${customerId}`,
+                            },
+                            async (payload) => {
+
+                                console.log(
+                                    "🔥 PROJECT REALTIME EVENT:",
+                                    payload
+                                );
+
+
+                                await fetchProjects(
+                                    false
+                                );
+
+                            }
+                        )
+                        .subscribe(
+                            (status) => {
+
+                                console.log(
+                                    "Customer projects realtime status:",
+                                    status
+                                );
+
+                            }
+                        );
 
 
             } catch (error) {
 
                 console.error(
-                    "CES Connect project loading error:",
+                    "Projects realtime setup failed:",
                     error
                 );
-
-                setProjects([]);
-
-            } finally {
-
-                setLoading(false);
 
             }
 
         };
 
 
-        fetchProjects();
+        setupRealtime();
+
+
+        /* =========================================
+           CLEANUP
+        ========================================= */
+
+        return () => {
+
+            cancelled = true;
+
+
+            if (channel) {
+
+                console.log(
+                    "Removing customer projects realtime channel"
+                );
+
+
+                supabase.removeChannel(
+                    channel
+                );
+
+            }
+
+        };
+
 
     }, [navigate]);
 
+    useEffect(() => {
 
+        const customerId =
+            localStorage.getItem("customerId");
+
+
+        if (!customerId) {
+            return;
+        }
+
+
+        let channel = null;
+        let cancelled = false;
+
+
+        const setupDocumentsRealtime = async () => {
+
+            try {
+
+                /* =========================================
+                   AUTHENTICATE SUPABASE REALTIME
+                ========================================= */
+
+                // const authenticated =
+                //     await authenticateRealtime();
+
+                // if (!authenticated || cancelled) {
+
+                //     console.error(
+                //         "Unable to authenticate Supabase Realtime for documents"
+                //     );
+
+                //     return;
+
+                // }
+
+                console.log(
+                    "Authenticating Supabase Realtime for documents"
+                );
+
+                await authenticateRealtime();
+
+                if (cancelled) {
+                    return;
+                }
+
+
+                console.log(
+                    "Supabase Realtime authenticated for documents"
+                );
+
+                /* =========================================
+                   START DOCUMENT REALTIME
+                ========================================= */
+
+                console.log(
+                    "Starting documents realtime for customer:",
+                    customerId
+                );
+
+
+                channel =
+                    supabase
+                        .channel(
+                            `customer-documents-${customerId}`
+                        )
+                        .on(
+                            "postgres_changes",
+                            {
+                                event: "*",
+                                schema: "public",
+                                table: "documents",
+                            },
+                            async (payload) => {
+
+                                console.log(
+                                    "📄 DOCUMENT REALTIME EVENT:",
+                                    payload
+                                );
+
+
+                                /*
+                                 * Document changed.
+                                 * Refresh projects so the
+                                 * current project state stays fresh.
+                                 */
+
+                                try {
+
+                                    const response =
+                                        await fetch(
+                                            `${API_URL}/api/customers/${customerId}/projects`
+                                        );
+
+
+                                    if (!response.ok) {
+
+                                        throw new Error(
+                                            `Failed to refresh projects: ${response.status}`
+                                        );
+
+                                    }
+
+
+                                    const data =
+                                        await response.json();
+
+
+                                    if (!cancelled) {
+
+                                        console.log(
+                                            "Projects refreshed after document change:",
+                                            data
+                                        );
+
+
+                                        setProjects(
+                                            Array.isArray(data)
+                                                ? data
+                                                : []
+                                        );
+
+                                    }
+
+
+                                } catch (error) {
+
+                                    console.error(
+                                        "Document realtime refresh failed:",
+                                        error
+                                    );
+
+                                }
+
+                            }
+                        )
+                        .subscribe(
+                            (status) => {
+
+                                console.log(
+                                    "Customer documents realtime status:",
+                                    status
+                                );
+
+                            }
+                        );
+
+
+            } catch (error) {
+
+                console.error(
+                    "Documents realtime setup failed:",
+                    error
+                );
+
+            }
+
+        };
+
+
+        setupDocumentsRealtime();
+
+
+        /* =========================================
+           CLEANUP
+        ========================================= */
+
+        return () => {
+
+            cancelled = true;
+
+
+            if (channel) {
+
+                console.log(
+                    "Removing customer documents realtime channel"
+                );
+
+
+                supabase.removeChannel(
+                    channel
+                );
+
+            }
+
+        };
+
+
+    }, []);
     /* =========================================
        PROJECT FILTERS
     ========================================= */

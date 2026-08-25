@@ -106,9 +106,23 @@ export default function ProjectDetails() {
 
             try {
 
+                // const response =
+                //     await fetch(
+                //         `${API_URL}/api/customers/${customerId}/projects`
+                //     );
+
                 const response =
                     await fetch(
-                        `${API_URL}/api/customers/${customerId}/projects`
+                        `${API_URL}/api/customers/${customerId}/projects`,
+                        {
+                            method: "GET",
+                            cache: "no-store",
+                            headers: {
+                                Authorization:
+                                    `Bearer ${localStorage.getItem("token")}`,
+                                "Cache-Control": "no-cache",
+                            },
+                        }
                     );
 
 
@@ -220,7 +234,7 @@ export default function ProjectDetails() {
                 console.log(
                     "Authenticating Supabase Realtime for ProjectDetails..."
                 );
-                
+
                 await authenticateRealtime();
 
                 if (cancelled) {

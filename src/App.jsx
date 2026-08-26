@@ -57,7 +57,9 @@ import "./components/styles/utilities.css";
 // import IndependenceSplash
 //     from "./components/effects/IndependenceSplash/IndependenceSplash";
 
-import OnamSplash from "./components/effects/IndependenceSplash/OnamSplash";
+// import OnamSplash from "./components/effects/IndependenceSplash/OnamSplash";
+
+import EidMiladSplash from "./components/effects/IndependenceSplash/EidMiladSplash";
 
 
 function App() {
@@ -86,7 +88,7 @@ function App() {
 
             {showSplash && (
 
-                <OnamSplash
+                <EidMiladSplash
                     onComplete={() => setShowSplash(false)}
                 />
 

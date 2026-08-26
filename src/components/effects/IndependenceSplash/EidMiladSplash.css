@@ -1,0 +1,1760 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN SPLASH
+   ========================================================= */
+
+.eid-milad-splash {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    width: 100%;
+
+    height: 100dvh;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(211, 174, 82, 0.10),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #031b18 0%,
+            #052923 45%,
+            #021410 100%
+        );
+
+    opacity: 1;
+
+    animation:
+        eidSplashIn
+        0.8s
+        ease-out
+        both;
+
+}
+
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.eid-milad-splash.is-closing {
+
+    animation:
+        eidSplashOut
+        0.6s
+        cubic-bezier(
+            0.65,
+            0,
+            0.35,
+            1
+        )
+        forwards;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.eid-milad-glow {
+
+    position: absolute;
+
+    width: min(65vw, 720px);
+
+    height: min(65vw, 720px);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(222, 185, 83, 0.16),
+            rgba(222, 185, 83, 0.05) 35%,
+            transparent 70%
+        );
+
+    filter: blur(12px);
+
+    pointer-events: none;
+
+    animation:
+        eidGlow
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =========================================================
+   ISLAMIC GEOMETRIC PATTERN
+   ========================================================= */
+
+.eid-pattern {
+
+    position: absolute;
+
+    inset: -50%;
+
+    opacity: 0.055;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            30deg,
+            #dcb954 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dcb954 87.5%,
+            #dcb954
+        ),
+        linear-gradient(
+            150deg,
+            #dcb954 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dcb954 87.5%,
+            #dcb954
+        ),
+        linear-gradient(
+            30deg,
+            #dcb954 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dcb954 87.5%,
+            #dcb954
+        ),
+        linear-gradient(
+            150deg,
+            #dcb954 12%,
+            transparent 12.5%,
+            transparent 87%,
+            #dcb954 87.5%,
+            #dcb954
+        );
+
+    background-position:
+        0 0,
+        0 0,
+        24px 42px,
+        24px 42px;
+
+    background-size:
+        48px 84px;
+
+    transform: rotate(2deg);
+
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.eid-stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+
+.eid-stars span {
+
+    position: absolute;
+
+    color: #e4c66b;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 12px
+        rgba(228, 198, 107, 0.65);
+
+    animation:
+        eidStar
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.eid-stars span:nth-child(1) {
+
+    top: 18%;
+
+    left: 16%;
+
+    font-size: 1rem;
+
+    animation-delay: 0.3s;
+
+}
+
+
+.eid-stars span:nth-child(2) {
+
+    top: 26%;
+
+    right: 19%;
+
+    font-size: 1.2rem;
+
+    animation-delay: 1s;
+
+}
+
+
+.eid-stars span:nth-child(3) {
+
+    top: 53%;
+
+    left: 10%;
+
+    animation-delay: 1.7s;
+
+}
+
+
+.eid-stars span:nth-child(4) {
+
+    bottom: 22%;
+
+    right: 13%;
+
+    font-size: 1.1rem;
+
+    animation-delay: 2.3s;
+
+}
+
+
+.eid-stars span:nth-child(5) {
+
+    bottom: 18%;
+
+    left: 23%;
+
+    animation-delay: 3s;
+
+}
+
+
+.eid-stars span:nth-child(6) {
+
+    top: 43%;
+
+    right: 9%;
+
+    font-size: 1.3rem;
+
+    animation-delay: 3.6s;
+
+}
+
+
+.eid-stars span:nth-child(7) {
+
+    top: 13%;
+
+    right: 35%;
+
+    font-size: 0.8rem;
+
+    animation-delay: 4.2s;
+
+}
+
+
+/* =========================================================
+   LANTERNS
+   ========================================================= */
+
+.eid-lantern {
+
+    position: absolute;
+
+    top: 9%;
+
+    width: 42px;
+
+    height: 105px;
+
+    opacity: 0.72;
+
+    transform-origin: top center;
+
+    animation:
+        lanternSwing
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.lantern-left {
+
+    left: 8%;
+
+}
+
+
+.lantern-right {
+
+    right: 8%;
+
+    animation-delay: 1.2s;
+
+}
+
+
+/* Lantern string */
+
+.eid-lantern::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+
+    left: 50%;
+
+    width: 1px;
+
+    height: 80px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        rgba(
+            220,
+            185,
+            84,
+            0.55
+        );
+
+}
+
+
+/* Lantern top */
+
+.lantern-top {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 15px;
+
+    height: 7px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        3px
+        3px
+        0
+        0;
+
+    background: #d9b653;
+
+}
+
+
+/* Lantern body */
+
+.lantern-body {
+
+    position: absolute;
+
+    top: 7px;
+
+    left: 50%;
+
+    width: 34px;
+
+    height: 62px;
+
+    transform:
+        translateX(-50%);
+
+    border:
+        1px solid
+        rgba(
+            218,
+            183,
+            80,
+            0.7
+        );
+
+    clip-path:
+        polygon(
+            20% 0,
+            80% 0,
+            100% 18%,
+            82% 100%,
+            18% 100%,
+            0 18%
+        );
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(
+                247,
+                210,
+                105,
+                0.30
+            ),
+            rgba(
+                155,
+                116,
+                31,
+                0.08
+            )
+        );
+
+    box-shadow:
+        0 0 22px
+        rgba(
+            230,
+            194,
+            88,
+            0.15
+        );
+
+}
+
+
+.lantern-body span {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 11px;
+
+    height: 18px;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    border-radius: 50%;
+
+    background:
+        #f2d77e;
+
+    box-shadow:
+        0 0 15px
+        rgba(
+            242,
+            215,
+            126,
+            0.8
+        );
+
+}
+
+
+/* Lantern bottom */
+
+.lantern-bottom {
+
+    position: absolute;
+
+    top: 69px;
+
+    left: 50%;
+
+    width: 14px;
+
+    height: 22px;
+
+    transform:
+        translateX(-50%);
+
+    border-left:
+        1px solid
+        #d9b653;
+
+    border-right:
+        1px solid
+        #d9b653;
+
+    border-bottom:
+        5px solid
+        #d9b653;
+
+    clip-path:
+        polygon(
+            25% 0,
+            75% 0,
+            100% 100%,
+            0 100%
+        );
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.eid-milad-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(
+        92%,
+        720px
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        1.5rem
+        1rem;
+
+    animation:
+        eidContentIn
+        1.1s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        both;
+
+}
+
+
+/* =========================================================
+   CRESCENT
+   ========================================================= */
+
+.eid-crescent-wrap {
+
+    position: relative;
+
+    width: 100px;
+
+    height: 100px;
+
+    margin-bottom: 1.15rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation:
+        crescentFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.eid-crescent {
+
+    position: relative;
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3d77c,
+            #c99d38
+        );
+
+    box-shadow:
+        0 0 28px
+        rgba(
+            231,
+            197,
+            102,
+            0.20
+        );
+
+}
+
+
+.eid-crescent-cut {
+
+    position: absolute;
+
+    top: -8px;
+
+    left: 20px;
+
+    width: 72px;
+
+    height: 72px;
+
+    border-radius: 50%;
+
+    background: #06231e;
+
+}
+
+
+.crescent-star {
+
+    position: absolute;
+
+    top: 6px;
+
+    right: 1px;
+
+    color: #f1d77f;
+
+    font-size: 1.15rem;
+
+    text-shadow:
+        0 0 12px
+        rgba(
+            241,
+            215,
+            127,
+            0.75
+        );
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.eid-logo-wrap {
+
+    margin-bottom: 0.95rem;
+
+}
+
+
+.eid-logo {
+
+    width: min(
+        230px,
+        55vw
+    );
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0)
+        invert(1);
+
+    opacity: 0.96;
+
+    animation:
+        eidLogoReveal
+        1s
+        ease-out
+        0.25s
+        both;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.eid-divider {
+
+    width: min(
+        270px,
+        60%
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 0.95rem;
+
+}
+
+
+.eid-divider span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(
+                224,
+                190,
+                87,
+                0.65
+            )
+        );
+
+}
+
+
+.eid-divider span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                224,
+                190,
+                87,
+                0.65
+            ),
+            transparent
+        );
+
+}
+
+
+.eid-divider strong {
+
+    color: #e4c263;
+
+    font-size: 0.7rem;
+
+}
+
+
+/* =========================================================
+   KICKER
+   ========================================================= */
+
+.eid-kicker {
+
+    margin:
+        0
+        0
+        0.65rem;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.55
+        );
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.22em;
+
+    text-transform: uppercase;
+
+    animation:
+        eidTextReveal
+        0.8s
+        ease-out
+        0.4s
+        both;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.eid-title {
+
+    margin: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0.08rem;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        2.5rem,
+        6vw,
+        4.7rem
+    );
+
+    font-weight: 300;
+
+    line-height: 0.98;
+
+    letter-spacing: -0.045em;
+
+    animation:
+        eidTitleReveal
+        1s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        0.5s
+        both;
+
+}
+
+
+.eid-title strong {
+
+    color: #e7c96c;
+
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+
+    text-shadow:
+        0 0 30px
+        rgba(
+            231,
+            201,
+            108,
+            0.16
+        );
+
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.eid-date {
+
+    margin:
+        1rem
+        0
+        0.85rem;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.28em;
+
+    animation:
+        eidTextReveal
+        0.8s
+        ease-out
+        0.75s
+        both;
+
+}
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.eid-quote {
+
+    max-width: 520px;
+
+    margin:
+        0
+        auto
+        0.75rem;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.74
+        );
+
+    font-size: clamp(
+        0.78rem,
+        1.5vw,
+        0.92rem
+    );
+
+    line-height: 1.7;
+
+    animation:
+        eidTextReveal
+        0.8s
+        ease-out
+        1s
+        both;
+
+}
+
+
+/* =========================================================
+   CES MESSAGE
+   ========================================================= */
+
+.eid-message {
+
+    margin: 0;
+
+    color: #e5c66b;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+
+    animation:
+        eidTextReveal
+        0.8s
+        ease-out
+        1.2s
+        both;
+
+}
+
+
+/* =========================================================
+   DECORATION
+   ========================================================= */
+
+.eid-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 1.25rem;
+
+}
+
+
+.eid-decoration span {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #dcb957;
+
+    box-shadow:
+        0 0 8px
+        rgba(
+            220,
+            185,
+            87,
+            0.45
+        );
+
+}
+
+
+.eid-decoration span:nth-child(3) {
+
+    width: 8px;
+
+    height: 8px;
+
+}
+
+
+/* =========================================================
+   BOTTOM BRAND
+   ========================================================= */
+
+.eid-bottom {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 1.5rem;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 100%;
+
+    padding:
+        0
+        1rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.34
+        );
+
+    font-size: 0.58rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.17em;
+
+    text-align: center;
+
+}
+
+
+.eid-dot {
+
+    color: #dcb957;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes eidSplashIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes eidSplashOut {
+
+    0% {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform: scale(1.025);
+
+        visibility: hidden;
+
+    }
+
+}
+
+
+@keyframes eidContentIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(28px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes eidLogoReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 0.96;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes eidTitleReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes eidTextReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes eidGlow {
+
+    0%,
+    100% {
+
+        transform: scale(0.95);
+
+        opacity: 0.7;
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes crescentFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-6px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes lanternSwing {
+
+    0%,
+    100% {
+
+        transform:
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes eidStar {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.7);
+
+    }
+
+    25% {
+
+        opacity: 0.7;
+
+    }
+
+    50% {
+
+        opacity: 0.35;
+
+        transform:
+            translateY(-8px)
+            scale(1);
+
+    }
+
+    75% {
+
+        opacity: 0.6;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-25px)
+            scale(0.7);
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .eid-milad-content {
+
+        width: 94%;
+
+        padding: 1rem;
+
+    }
+
+
+    .eid-crescent-wrap {
+
+        width: 88px;
+
+        height: 88px;
+
+        margin-bottom: 0.9rem;
+
+    }
+
+
+    .eid-crescent {
+
+        width: 64px;
+
+        height: 64px;
+
+    }
+
+
+    .eid-crescent-cut {
+
+        width: 64px;
+
+        height: 64px;
+
+        left: 18px;
+
+        top: -7px;
+
+    }
+
+
+    .eid-logo {
+
+        width: 200px;
+
+    }
+
+
+    .eid-kicker {
+
+        font-size: 0.58rem;
+
+        letter-spacing: 0.16em;
+
+    }
+
+
+    .eid-title {
+
+        font-size: clamp(
+            2.3rem,
+            10vw,
+            3.8rem
+        );
+
+    }
+
+
+    .eid-quote {
+
+        max-width: 430px;
+
+        font-size: 0.8rem;
+
+        line-height: 1.6;
+
+    }
+
+
+    .eid-bottom {
+
+        bottom: 1rem;
+
+        font-size: 0.5rem;
+
+        letter-spacing: 0.12em;
+
+    }
+
+
+    .eid-lantern {
+
+        transform: scale(0.8);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .eid-milad-content {
+
+        width: 100%;
+
+        padding: 0.5rem;
+
+    }
+
+
+    .eid-milad-glow {
+
+        width: 100vw;
+
+        height: 100vw;
+
+    }
+
+
+    .eid-crescent-wrap {
+
+        width: 76px;
+
+        height: 76px;
+
+        margin-bottom: 0.65rem;
+
+    }
+
+
+    .eid-crescent {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    .eid-crescent-cut {
+
+        width: 55px;
+
+        height: 55px;
+
+        left: 15px;
+
+        top: -6px;
+
+    }
+
+
+    .crescent-star {
+
+        top: 3px;
+
+        right: 2px;
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .eid-logo {
+
+        width: 170px;
+
+    }
+
+
+    .eid-logo-wrap {
+
+        margin-bottom: 0.65rem;
+
+    }
+
+
+    .eid-divider {
+
+        width: 190px;
+
+        gap: 8px;
+
+        margin-bottom: 0.7rem;
+
+    }
+
+
+    .eid-kicker {
+
+        margin-bottom: 0.5rem;
+
+        font-size: 0.48rem;
+
+        letter-spacing: 0.1em;
+
+        white-space: nowrap;
+
+    }
+
+
+    .eid-title {
+
+        font-size: clamp(
+            2.15rem,
+            13vw,
+            3.2rem
+        );
+
+    }
+
+
+    .eid-date {
+
+        margin:
+            0.75rem
+            0
+            0.6rem;
+
+        font-size: 0.56rem;
+
+        letter-spacing: 0.18em;
+
+    }
+
+
+    .eid-quote {
+
+        max-width: 310px;
+
+        font-size: 0.72rem;
+
+        line-height: 1.55;
+
+    }
+
+
+    .eid-message {
+
+        max-width: 290px;
+
+        font-size: 0.6rem;
+
+        line-height: 1.5;
+
+    }
+
+
+    .eid-decoration {
+
+        margin-top: 0.85rem;
+
+    }
+
+
+    .eid-bottom {
+
+        bottom: 0.8rem;
+
+        flex-wrap: wrap;
+
+        gap: 6px;
+
+        font-size: 0.44rem;
+
+        letter-spacing: 0.09em;
+
+    }
+
+
+    .eid-lantern {
+
+        transform: scale(0.55);
+
+        top: 5%;
+
+    }
+
+
+    .lantern-left {
+
+        left: 1%;
+
+    }
+
+
+    .lantern-right {
+
+        right: 1%;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-height: 650px) {
+
+    .eid-crescent-wrap {
+
+        width: 62px;
+
+        height: 62px;
+
+        margin-bottom: 0.4rem;
+
+    }
+
+
+    .eid-crescent {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .eid-crescent-cut {
+
+        width: 48px;
+
+        height: 48px;
+
+        left: 13px;
+
+        top: -5px;
+
+    }
+
+
+    .eid-logo {
+
+        width: 145px;
+
+    }
+
+
+    .eid-logo-wrap {
+
+        margin-bottom: 0.4rem;
+
+    }
+
+
+    .eid-divider {
+
+        margin-bottom: 0.4rem;
+
+    }
+
+
+    .eid-date {
+
+        margin:
+            0.5rem
+            0
+            0.4rem;
+
+    }
+
+
+    .eid-quote {
+
+        line-height: 1.4;
+
+    }
+
+
+    .eid-decoration {
+
+        margin-top: 0.5rem;
+
+    }
+
+
+    .eid-bottom {
+
+        bottom: 0.45rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .eid-milad-splash,
+    .eid-milad-content,
+    .eid-logo,
+    .eid-title,
+    .eid-kicker,
+    .eid-date,
+    .eid-quote,
+    .eid-message,
+    .eid-milad-glow,
+    .eid-crescent-wrap,
+    .eid-lantern,
+    .eid-stars span {
+
+        animation: none !important;
+
+    }
+
+}

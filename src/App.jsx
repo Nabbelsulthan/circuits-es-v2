@@ -64,7 +64,7 @@ import "./components/styles/utilities.css";
 
 function App() {
 
-    const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(false);
 
 
     useEffect(() => {

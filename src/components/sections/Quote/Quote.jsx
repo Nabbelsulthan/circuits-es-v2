@@ -177,6 +177,105 @@ Please contact the customer regarding this engineering enquiry.
     };
 
 
+    // const validateForm = () => {
+
+    //     const trimmedName = formData.name.trim();
+    //     const trimmedCompany = formData.company.trim();
+    //     const trimmedLocation = formData.location.trim();
+    //     const trimmedMessage = formData.message.trim();
+
+
+    //     if (formData.website.trim()) {
+    //         return "Unable to submit this enquiry.";
+    //     }
+
+
+    //     if (!selectedPanel) {
+    //         return "Please select the panel or solution you are looking for.";
+    //     }
+
+
+    //     if (
+    //         trimmedName.length < 2 ||
+    //         trimmedName.length > 80
+    //     ) {
+    //         return "Please enter a valid name between 2 and 80 characters.";
+    //     }
+
+
+    //     if (
+    //         trimmedCompany.length > 120
+    //     ) {
+    //         return "Company name must be 120 characters or less.";
+    //     }
+
+
+    //     const phone = formData.phone.replace(
+    //         /[\s\-().]/g,
+    //         ""
+    //     );
+
+
+    //     if (
+    //         !/^(?:\+91|91)?[6-9]\d{9}$/.test(phone)
+    //     ) {
+    //         return "Please enter a valid Indian mobile number.";
+    //     }
+
+
+    //     if (
+    //         !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+    //             formData.email
+    //         )
+    //     ) {
+    //         return "Please enter a valid email address.";
+    //     }
+
+
+    //     if (
+    //         trimmedLocation.length < 2 ||
+    //         trimmedLocation.length > 100
+    //     ) {
+    //         return "Please enter the project location.";
+    //     }
+
+
+    //     const quantity = Number(
+    //         formData.quantity
+    //     );
+
+
+    //     if (
+    //         !Number.isInteger(quantity) ||
+    //         quantity < 1 ||
+    //         quantity > 9999
+    //     ) {
+    //         return "Please enter a valid quantity between 1 and 9999.";
+    //     }
+
+
+    //     if (!formData.timeline) {
+    //         return "Please select your required timeline.";
+    //     }
+
+
+    //     if (
+    //         trimmedMessage.length < 2 ||
+    //         trimmedMessage.length > 1500
+    //     ) {
+    //         return "Please describe your requirement in 20–1500 characters.";
+    //     }
+
+
+    //     return "";
+
+
+
+
+    // };
+
+
+
     const validateForm = () => {
 
         const trimmedName = formData.name.trim();
@@ -184,91 +283,181 @@ Please contact the customer regarding this engineering enquiry.
         const trimmedLocation = formData.location.trim();
         const trimmedMessage = formData.message.trim();
 
+        // =====================================================
+        // HONEYPOT
+        // =====================================================
 
         if (formData.website.trim()) {
             return "Unable to submit this enquiry.";
         }
 
 
+        // =====================================================
+        // STEP 01 — PANEL SELECTION
+        // =====================================================
+
         if (!selectedPanel) {
-            return "Please select the panel or solution you are looking for.";
+            return "Please select a panel or solution.";
         }
 
 
-        if (
-            trimmedName.length < 2 ||
-            trimmedName.length > 80
-        ) {
-            return "Please enter a valid name between 2 and 80 characters.";
+        // =====================================================
+        // STEP 02 — PROJECT DETAILS
+        // =====================================================
+
+
+        // Company / Organisation
+
+        if (!trimmedCompany) {
+
+            return "Please enter your Company / Organisation name.";
+
+        }
+
+        if (trimmedCompany.length < 2) {
+
+            return "Company / Organisation name must contain at least 2 characters.";
+
+        }
+
+        if (trimmedCompany.length > 120) {
+
+            return "Company / Organisation name must be 120 characters or less.";
+
         }
 
 
-        if (
-            trimmedCompany.length > 120
-        ) {
-            return "Company name must be 120 characters or less.";
+        // Quantity
+        if (!formData.quantity) {
+            return "Please enter the project quantity.";
+        }
+
+        const quantity = Number(formData.quantity);
+
+        if (!Number.isInteger(quantity)) {
+            return "Quantity must be a whole number.";
+        }
+
+        if (quantity < 1) {
+            return "Quantity must be at least 1.";
+        }
+
+        if (quantity > 9999) {
+            return "Quantity cannot exceed 9999.";
         }
 
 
-        const phone = formData.phone.replace(
-            /[\s\-().]/g,
-            ""
-        );
-
-
-        if (
-            !/^(?:\+91|91)?[6-9]\d{9}$/.test(phone)
-        ) {
-            return "Please enter a valid Indian mobile number.";
-        }
-
-
-        if (
-            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
-                formData.email
-            )
-        ) {
-            return "Please enter a valid email address.";
-        }
-
-
-        if (
-            trimmedLocation.length < 2 ||
-            trimmedLocation.length > 100
-        ) {
-            return "Please enter the project location.";
-        }
-
-
-        const quantity = Number(
-            formData.quantity
-        );
-
-
-        if (
-            !Number.isInteger(quantity) ||
-            quantity < 1 ||
-            quantity > 9999
-        ) {
-            return "Please enter a valid quantity between 1 and 9999.";
-        }
-
-
+        // Timeline
         if (!formData.timeline) {
             return "Please select your required timeline.";
         }
 
 
-        if (
-            trimmedMessage.length < 2 ||
-            trimmedMessage.length > 1500
-        ) {
-            return "Please describe your requirement in 20–1500 characters.";
+        // Project Location
+        if (!trimmedLocation) {
+            return "Please enter the project location.";
+        }
+
+        if (trimmedLocation.length < 2) {
+            return "Project location must contain at least 2 characters.";
+        }
+
+        if (trimmedLocation.length > 100) {
+            return "Project location must be 100 characters or less.";
         }
 
 
+        // Requirement
+        if (!trimmedMessage) {
+            return "Please describe your requirement.";
+        }
+
+        if (trimmedMessage.length < 2) {
+            return "Your requirement must contain at least 2 characters.";
+        }
+
+        if (trimmedMessage.length > 1500) {
+            return "Your requirement must be 1500 characters or less.";
+        }
+
+
+        // =====================================================
+        // STEP 03 — CONTACT DETAILS
+        // =====================================================
+
+        // Name
+        if (!trimmedName) {
+            return "Please enter your full name.";
+        }
+
+        if (trimmedName.length < 2) {
+            return "Your name must contain at least 2 characters.";
+        }
+
+        if (trimmedName.length > 80) {
+            return "Your name must be 80 characters or less.";
+        }
+
+
+        // Phone
+        const phone = formData.phone.replace(
+            /[\s\-().]/g,
+            ""
+        );
+
+        if (!formData.phone.trim()) {
+            return "Please enter your phone number.";
+        }
+
+        if (!/^(?:\+91|91)?[6-9]\d{9}$/.test(phone)) {
+            return "Please enter a valid Indian mobile number.";
+        }
+
+
+        // Email
+        if (!formData.email.trim()) {
+            return "Please enter your email address.";
+        }
+
+        if (
+            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+                formData.email.trim()
+            )
+        ) {
+            return "Please enter a valid email address, for example you@company.com.";
+        }
+
+
+        // =====================================================
+        // EVERYTHING VALID
+        // =====================================================
+
         return "";
     };
+
+
+
+
+
+
+
+
+    const isStep1Complete = Boolean(selectedPanel);
+
+    const isStep2Complete =
+        Boolean(
+            formData.quantity &&
+            formData.timeline &&
+            formData.location.trim() &&
+            formData.message.trim()
+        );
+
+    const isStep3Complete =
+        Boolean(
+            formData.name.trim() &&
+            formData.phone.trim() &&
+            formData.email.trim()
+        );
 
 
     const handleSubmit = async (event) => {
@@ -277,19 +466,63 @@ Please contact the customer regarding this engineering enquiry.
 
         const validationError = validateForm();
 
+        // if (validationError) {
+
+        //     setError(validationError);
+
+        //     const formCard =
+        //         document.querySelector(".quote-form-card");
+
+        //     if (formCard) {
+
+        //         formCard.scrollIntoView({
+        //             behavior: "smooth",
+        //             block: "start",
+        //         });
+
+        //     }
+
+        //     return;
+        // }
+
+
         if (validationError) {
 
             setError(validationError);
 
-            const formCard =
-                document.querySelector(".quote-form-card");
+            // Find the first invalid field
+            const invalidField = document.querySelector(
+                ".quote-input input:invalid, " +
+                ".quote-input select:invalid, " +
+                ".quote-input textarea:invalid"
+            );
 
-            if (formCard) {
+            if (invalidField) {
 
-                formCard.scrollIntoView({
+                invalidField.scrollIntoView({
                     behavior: "smooth",
-                    block: "start",
+                    block: "center",
                 });
+
+                // Focus the field after scrolling
+                setTimeout(() => {
+                    invalidField.focus();
+                }, 350);
+
+            } else if (!selectedPanel) {
+
+                // If no panel is selected, go directly to Step 01
+                const panelSection =
+                    document.querySelector("#quote-panel-selection");
+
+                if (panelSection) {
+
+                    panelSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                    });
+
+                }
 
             }
 
@@ -656,9 +889,11 @@ Please contact the customer regarding this engineering enquiry.
 
                             <div className="quote-form-progress">
 
-                                <span className="active" />
-                                <span />
-                                <span />
+                                <span className={isStep1Complete ? "active" : ""} />
+
+                                <span className={isStep2Complete ? "active" : ""} />
+
+                                <span className={isStep3Complete ? "active" : ""} />
 
                             </div>
 

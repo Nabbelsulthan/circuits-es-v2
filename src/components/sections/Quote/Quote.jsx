@@ -459,6 +459,25 @@ Please contact the customer regarding this engineering enquiry.
             formData.email.trim()
         );
 
+    const scrollToField = (fieldName) => {
+        const field = document.querySelector(
+            `[name="${fieldName}"]`
+        );
+
+        if (!field) return;
+
+        const headerOffset = 100;
+
+        const fieldPosition =
+            field.getBoundingClientRect().top +
+            window.scrollY;
+
+        window.scrollTo({
+            top: Math.max(0, fieldPosition - headerOffset),
+            behavior: "smooth",
+        });
+    };
+
 
     const handleSubmit = async (event) => {
 
@@ -467,76 +486,116 @@ Please contact the customer regarding this engineering enquiry.
         const validationError = validateForm();
 
 
+
         if (validationError) {
 
             setError(validationError);
 
-            // Wait for the error message/layout to render
-            requestAnimationFrame(() => {
 
-                requestAnimationFrame(() => {
+            // =====================================================
+            // STEP 01
+            // =====================================================
 
-                    // STEP 01 — panel selection
-                    if (!selectedPanel) {
+            if (!selectedPanel) {
 
-                        const panelSection =
-                            document.querySelector("#quote-panel-selection");
+                const panelSection =
+                    document.querySelector("#quote-panel-selection");
 
-                        if (panelSection) {
+                if (panelSection) {
 
-                            const headerOffset = 110;
+                    const headerOffset = 100;
 
-                            const elementPosition =
-                                panelSection.getBoundingClientRect().top +
-                                window.scrollY;
-
-                            window.scrollTo({
-                                top: elementPosition - headerOffset,
-                                behavior: "smooth",
-                            });
-                        }
-
-                        return;
-                    }
-
-
-                    // Find the first invalid field
-                    const invalidField = document.querySelector(
-                        ".quote-input input:invalid, " +
-                        ".quote-input select:invalid, " +
-                        ".quote-input textarea:invalid"
-                    );
-
-                    if (!invalidField) {
-                        return;
-                    }
-
-
-                    // Calculate exact scroll position
-                    const headerOffset = 110;
-
-                    const elementPosition =
-                        invalidField.getBoundingClientRect().top +
+                    const position =
+                        panelSection.getBoundingClientRect().top +
                         window.scrollY;
 
                     window.scrollTo({
-                        top: elementPosition - headerOffset,
+                        top: Math.max(
+                            0,
+                            position - headerOffset
+                        ),
                         behavior: "smooth",
                     });
+                }
+
+                return;
+            }
 
 
-                    // Focus WITHOUT triggering another browser scroll
-                    setTimeout(() => {
+            // =====================================================
+            // STEP 02
+            // =====================================================
 
-                        invalidField.focus({
-                            preventScroll: true,
-                        });
+            if (
+                validationError.includes(
+                    "Company / Organisation"
+                )
+            ) {
+                scrollToField("company");
+                return;
+            }
 
-                    }, 400);
+            if (
+                validationError.includes("quantity")
+            ) {
+                scrollToField("quantity");
+                return;
+            }
 
-                });
+            if (
+                validationError.includes("timeline")
+            ) {
+                scrollToField("timeline");
+                return;
+            }
 
-            });
+            if (
+                validationError.includes("location")
+            ) {
+                scrollToField("location");
+                return;
+            }
+
+            if (
+                validationError.includes("requirement")
+            ) {
+                scrollToField("message");
+                return;
+            }
+
+
+            // =====================================================
+            // STEP 03
+            // =====================================================
+
+            if (
+                validationError.includes("name")
+            ) {
+                scrollToField("name");
+                return;
+            }
+
+            if (
+                validationError.includes("mobile")
+            ) {
+                scrollToField("phone");
+                return;
+            }
+
+            if (
+                validationError.includes("phone")
+            ) {
+                scrollToField("phone");
+                return;
+            }
+
+            if (
+                validationError.includes("email")
+            ) {
+                scrollToField("email");
+                return;
+            }
+
 
             return;
         }

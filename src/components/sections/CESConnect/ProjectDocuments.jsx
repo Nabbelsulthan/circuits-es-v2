@@ -11,7 +11,7 @@ import {
 } from "react";
 
 import {
-    API_URL,STORAGE_URL
+    API_URL, STORAGE_URL
 } from "../../Config/Config";
 
 import FolderOpenRoundedIcon
@@ -140,7 +140,6 @@ const getFileType = (fileName = "") => {
 
 // };
 
-
 const fetchJson = async (url) => {
 
     const token =
@@ -158,10 +157,15 @@ const fetchJson = async (url) => {
 
     if (!response.ok) {
 
-        throw new Error(
-            `Request failed: ${response.status}`
-        );
+        const error =
+            new Error(
+                `Request failed: ${response.status}`
+            );
 
+        error.status =
+            response.status;
+
+        throw error;
     }
 
     return response.json();
@@ -342,16 +346,37 @@ export default function ProjectDocuments() {
                     fetchError
                 );
 
-
                 if (!cancelled) {
 
-                    setError(
-                        "Unable to load this project. Please try again."
-                    );
+                    if (fetchError.status === 401) {
+
+                        setError(
+                            "Your session has expired. Please log in again."
+                        );
+
+                    } else if (fetchError.status === 403) {
+
+                        setError(
+                            "Unauthorized Access. You do not have permission to view this project."
+                        );
+
+                    } else if (fetchError.status === 404) {
+
+                        setError(
+                            "Unauthorized Access. You do not have permission to view this project."
+                        );
+
+                    } else {
+
+                        setError(
+                            "Unable to load this project. Please try again."
+                        );
+
+                    }
 
                 }
 
-            } finally {
+            }  finally {
 
                 if (!cancelled) {
 
@@ -598,11 +623,10 @@ export default function ProjectDocuments() {
 
 
                     <KeyboardArrowRightRoundedIcon
-                        className={`expand-arrow ${
-                            showDocuments
+                        className={`expand-arrow ${showDocuments
                                 ? "expanded"
                                 : ""
-                        }`}
+                            }`}
                     />
 
                 </div>
@@ -738,11 +762,10 @@ export default function ProjectDocuments() {
 
 
                     <KeyboardArrowRightRoundedIcon
-                        className={`expand-arrow ${
-                            showFatReports
+                        className={`expand-arrow ${showFatReports
                                 ? "expanded"
                                 : ""
-                        }`}
+                            }`}
                     />
 
                 </div>
@@ -875,11 +898,10 @@ export default function ProjectDocuments() {
 
 
                     <KeyboardArrowRightRoundedIcon
-                        className={`expand-arrow ${
-                            showGallery
+                        className={`expand-arrow ${showGallery
                                 ? "expanded"
                                 : ""
-                        }`}
+                            }`}
                     />
 
                 </div>

@@ -176,23 +176,23 @@ const Footer = () => {
             </span>
 
 
-            <a href="/#solutions">
+            <a href="/solutions/lt-panels">
               LT Control Panels
             </a>
 
-            <a href="/#solutions">
+            <a href="/solutions/plc">
               PLC Automation
             </a>
 
-            <a href="/#solutions">
+            <a href="/quote">
               Industrial Automation
             </a>
 
-            <a href="/#solutions">
+            <a href="/quote">
               Electrical Panels
             </a>
 
-            <a href="/#home-services">
+            <a href="/services">
               Engineering Services
             </a>
 

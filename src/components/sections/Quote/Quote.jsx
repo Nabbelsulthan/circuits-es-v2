@@ -466,69 +466,80 @@ Please contact the customer regarding this engineering enquiry.
 
         const validationError = validateForm();
 
-        // if (validationError) {
-
-        //     setError(validationError);
-
-        //     const formCard =
-        //         document.querySelector(".quote-form-card");
-
-        //     if (formCard) {
-
-        //         formCard.scrollIntoView({
-        //             behavior: "smooth",
-        //             block: "start",
-        //         });
-
-        //     }
-
-        //     return;
-        // }
-
 
         if (validationError) {
 
             setError(validationError);
 
-            // Find the first invalid field
-            const invalidField = document.querySelector(
-                ".quote-input input:invalid, " +
-                ".quote-input select:invalid, " +
-                ".quote-input textarea:invalid"
-            );
+            // Wait for the error message/layout to render
+            requestAnimationFrame(() => {
 
-            if (invalidField) {
+                requestAnimationFrame(() => {
 
-                invalidField.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                });
+                    // STEP 01 — panel selection
+                    if (!selectedPanel) {
 
-                // Focus the field after scrolling
-                setTimeout(() => {
-                    invalidField.focus();
-                }, 350);
+                        const panelSection =
+                            document.querySelector("#quote-panel-selection");
 
-            } else if (!selectedPanel) {
+                        if (panelSection) {
 
-                // If no panel is selected, go directly to Step 01
-                const panelSection =
-                    document.querySelector("#quote-panel-selection");
+                            const headerOffset = 110;
 
-                if (panelSection) {
+                            const elementPosition =
+                                panelSection.getBoundingClientRect().top +
+                                window.scrollY;
 
-                    panelSection.scrollIntoView({
+                            window.scrollTo({
+                                top: elementPosition - headerOffset,
+                                behavior: "smooth",
+                            });
+                        }
+
+                        return;
+                    }
+
+
+                    // Find the first invalid field
+                    const invalidField = document.querySelector(
+                        ".quote-input input:invalid, " +
+                        ".quote-input select:invalid, " +
+                        ".quote-input textarea:invalid"
+                    );
+
+                    if (!invalidField) {
+                        return;
+                    }
+
+
+                    // Calculate exact scroll position
+                    const headerOffset = 110;
+
+                    const elementPosition =
+                        invalidField.getBoundingClientRect().top +
+                        window.scrollY;
+
+                    window.scrollTo({
+                        top: elementPosition - headerOffset,
                         behavior: "smooth",
-                        block: "center",
                     });
 
-                }
 
-            }
+                    // Focus WITHOUT triggering another browser scroll
+                    setTimeout(() => {
+
+                        invalidField.focus({
+                            preventScroll: true,
+                        });
+
+                    }, 400);
+
+                });
+
+            });
 
             return;
         }
-
 
         setError("");
         setSubmitting(true);

@@ -16,7 +16,7 @@ import CESConnect from "../components/sections/CESConnect/CESConnect";
 import CustomerProjects from "../components/sections/CESConnect/CustomerProjects";
 import DispatchStatus from "../components/sections/CESConnect/DispatchStatus";
 import ProjectDocuments from "../components/sections/CESConnect/ProjectDocuments";
-
+// import MCCPanel from "../components/sections/Products/MCCPanel/MCCPanel";
 
 
 
@@ -52,6 +52,12 @@ const AppRoutes = () => {
                     path="/products"
                     element={<Products />}
                 />
+
+
+                {/* <Route
+                    path="/products/mcc-panels"
+                    element={<MCCPanel />}
+                /> */}
 
                 <Route
                     path="/services"

@@ -528,6 +528,15 @@ const Products = () => {
                                         <span>→</span>
                                     </Link>
 
+{/* 
+                                    <Link
+                                        to="/products/mcc-panels"
+                                        className="product-link"
+                                    >
+                                        Explore MCC Panel
+                                        <span>→</span>
+                                    </Link> */}
+
                                 </div>
 
                             </article>

@@ -59,7 +59,7 @@ import "./components/styles/utilities.css";
 
 // import OnamSplash from "./components/effects/IndependenceSplash/OnamSplash";
 
-import EidMiladSplash from "./components/effects/IndependenceSplash/EidMiladSplash";
+// import EidMiladSplash from "./components/effects/IndependenceSplash/EidMiladSplash";
 
 
 function App() {
@@ -86,13 +86,13 @@ function App() {
                 ONAM  SPLASH
             ================================================= */}
 
-            {showSplash && (
+            {/* {showSplash && (
 
                 <EidMiladSplash
                     onComplete={() => setShowSplash(false)}
                 />
 
-            )}
+            )} */}
 
 
             {/* =================================================

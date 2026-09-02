@@ -583,11 +583,19 @@ export default function StatsCards({
 
                     try {
 
+                        const token =
+                            localStorage.getItem("token");
+
                         const response =
                             await fetch(
-                                `${API_URL}/api/documents/${project.id}`
+                                `${API_URL}/api/documents/${project.id}`,
+                                {
+                                    headers: {
+                                        Authorization:
+                                            `Bearer ${token}`,
+                                    },
+                                }
                             );
-
 
                         if (!response.ok) {
 
@@ -810,11 +818,10 @@ export default function StatsCards({
 
                     className={`
                         stat-card
-                        ${
-                            card.title === "Dispatch Status" ||
+                        ${card.title === "Dispatch Status" ||
                             card.title === "Documents"
-                                ? "stat-card-clickable"
-                                : ""
+                            ? "stat-card-clickable"
+                            : ""
                         }
                     `}
 
